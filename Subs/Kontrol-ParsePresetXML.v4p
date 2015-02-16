@@ -1,0 +1,253 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-ParsePresetXML.v4p" systemname="Kontrol-ParsePresetXML" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-ParsePresetXML.v4p" scrollx="0" scrolly="0">
+   <NODE systemname="Prune (XElement)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Prune (XElement)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="1365" width="3090" height="270">
+   </BOUNDS>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="XPath" slicecount="1" values="*">
+   </PIN>
+   <PIN pinname="Queries" slicecount="1" values="|address, label, tag, subtype, values, fadetype, fadetime, midi, audio, @name|">
+   </PIN>
+   <PIN pinname="values" visible="1">
+   </PIN>
+   <PIN pinname="address" visible="1">
+   </PIN>
+   <PIN pinname="subtype" visible="1">
+   </PIN>
+   <PIN pinname="fadetype" visible="1">
+   </PIN>
+   <PIN pinname="fadetime" visible="1">
+   </PIN>
+   <PIN pinname="preset" visible="1">
+   </PIN>
+   <PIN pinname="pin" visible="1">
+   </PIN>
+   <PIN pinname="@name" visible="1">
+   </PIN>
+   <PIN pinname="label" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsXElement (XML)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsXElement (XML)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1515" top="915" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XML" visible="1" slicecount="2" values="|&lt;preset&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/0/Color Input&lt;/address&gt;&cr;&lf;    &lt;label&gt;MovingLights&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.5704,0.0000,0.6200,0.8400&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/1/Color Input&lt;/address&gt;&cr;&lf;    &lt;label&gt;LEDs&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.2992,0.0000,0.6800,0.8200&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/10/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Zoom&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.4453&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Width&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -1, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0964&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/3/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Height&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -1, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;-0.0243&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/4/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Period&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 60, 0.01, s, 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;17.8077&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/5/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Length&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 10, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;7.2920&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/6/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;LengthFront&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 10, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;6.7892&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/7/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Fx&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 30, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/9/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;ColFx&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 30, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;0&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;0&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;&lt;/preset&gt;|,|&lt;preset&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/12/0/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;CameraPos&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 3, 0, -100, 100, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000,3.9000,-50.6600&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000,3.0000,3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/12/1/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;CameraTarget&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 3, 0, -100, 100, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000,3.0000,-28.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000,3.0000,3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/12/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;FOV&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 1, 0.001, 160, 0.01, , 1&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;43.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/16/0/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Fx Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 10, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/16/1/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Pos&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 3, 0, -100, 100, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0,0,0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000,10.0000,3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/16/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;TIme&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 60, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/16/3/Color Input&lt;/address&gt;&cr;&lf;    &lt;label&gt;Colour&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0,0,0,0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/19/0/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;PropsIndex&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 20, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/19/1/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Props Pos&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 3, 0, -99999999, 99999999, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000,0.0000,0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000,10.0000,3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/19/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Rot&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -99999999, 99999999, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/10/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist3 Rot&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -360, 360, 0.01, , 1&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/11/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist3 Pos&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 3, 0, -100, 100, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000,2.0000,-10.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000,3.0000,10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/12/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist2 Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 20, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;14.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/13/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist2 Rot&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -360, 360, 0.01, , 1&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/14/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist2 Pos&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 3, 0, -100, 100, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000,0.0000,0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000,3.0000,3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/15/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist1 Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 20, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;15.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/16/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist1 Rot&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -360, 360, 0.01, , 1&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/17/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist1 Pos&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 3, 0, -100, 100, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000,2.0000,-28.1692&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000,10.0000,3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/6/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist4 Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 20, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/7/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist4 Rot&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -360, 360, 0.01, , 1&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/8/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist4 Pos&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 3, 0, -100, 100, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0,0,0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000,3.0000,10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/22/9/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Artist3 Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 20, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/0/Color Input&lt;/address&gt;&cr;&lf;    &lt;label&gt;MovingLights&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.6200,0.0000,0.0000,0.8400&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/1/Color Input&lt;/address&gt;&cr;&lf;    &lt;label&gt;LEDs&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.6800,0.0000,0.0000,0.8200&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/10/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Zoom&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.4453&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Width&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -1, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0964&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/3/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Height&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, -1, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;-0.0243&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/4/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Period&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 60, 0.01, s, 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;17.8077&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/5/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Length&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 10, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;7.2920&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/6/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;LengthFront&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 10, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;6.7892&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/7/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Fx&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 30, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/27/9/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;ColFx&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 30, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/4/0/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Proj File Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 50, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;4.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/4/1/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Proj Alpha&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/4/10/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;ProjSyncOffset&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 500, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/4/11/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;ProjPlay&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/4/12/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;MaskAlpha&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/4/13/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;MaskFile&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 20, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;2.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/4/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Proj Sync&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/4/9/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;MaskPlay&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/5/0/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;CubeFile Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 50, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/5/1/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;CubeAlpha&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/5/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;CubeSync&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;0&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/5/5/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;CubePlay&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/6/0/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Floor File Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 50, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;5.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/6/1/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Floor Alpha&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/6/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Floor Sync&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/6/5/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;FloorPlay&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/7/0/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Rear File Index&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 50, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;6.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/7/1/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Rear Alpha&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Endless, 1, 0, 0, 1, 0.01, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/7/2/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;Rear Sync&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;10.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;  &lt;pin&gt;&cr;&lf;    &lt;address&gt;/73/896/7/6/Y Input Value&lt;/address&gt;&cr;&lf;    &lt;label&gt;RearPlay&lt;/label&gt;&cr;&lf;    &lt;tag&gt;&lt;/tag&gt;&cr;&lf;    &lt;subtype&gt;Toggle, 1, 0, 0, 1, 1, , 4&lt;/subtype&gt;&cr;&lf;    &lt;values&gt;1.0000&lt;/values&gt;&cr;&lf;    &lt;fadetype&gt;&lt;/fadetype&gt;&cr;&lf;    &lt;fadetime&gt;3.0000&lt;/fadetime&gt;&cr;&lf;    &lt;midi&gt;0&lt;/midi&gt;&cr;&lf;    &lt;audio&gt;0&lt;/audio&gt;&cr;&lf;  &lt;/pin&gt;&cr;&lf;&lt;/preset&gt;|">
+   </PIN>
+   <PIN pinname="Element" visible="1">
+   </PIN>
+   <PIN pinname="Validation" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Element" dstnodeid="0" dstpinname="Element">
+   </LINK>
+   <NODE id="2" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="address">
+   </PIN>
+   <BOUNDS type="Box" left="105" top="4295" width="2115" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="105" top="4295" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="3" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="values">
+   </PIN>
+   <BOUNDS type="Box" left="2415" top="4295" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2415" top="4295" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="4" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="fadetype">
+   </PIN>
+   <BOUNDS type="Box" left="3315" top="4295" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3315" top="4295" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="5" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="fadetime">
+   </PIN>
+   <BOUNDS type="Box" left="4215" top="4295" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4215" top="4295" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="6" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="XML">
+   </PIN>
+   <BOUNDS type="Box" left="1530" top="245" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1530" top="245" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="14265" top="0" width="10755" height="7140">
+   </BOUNDS>
+   <PACK Name="imagepack" Version="0.1.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE systemname="Occurrence (String)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (String)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="4695" top="2760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="First Occurrence" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="1515" top="3435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="First Occurrence" dstnodeid="8" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="2" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="2430" top="3420" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="First Occurrence" dstnodeid="9" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="3" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="3330" top="3405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="First Occurrence" dstnodeid="10" dstpinname="Index">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="4230" top="3360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="First Occurrence" dstnodeid="11" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="5" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="4" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="12" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4830" top="435" width="7980" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4830" top="435" width="4215" height="570">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|if we&apos;re playing from a timeline, then we dont want to double up channels if 2 presets contain the same channels|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Zip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (String)" componentmode="Hidden" id="14" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5715" top="4560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="13" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5730" top="4965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="FadesSend_Preset">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="13" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="14" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="6780" top="1545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="20" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6795" top="2595" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6795" top="2595" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="PresetName">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AvoidNIL3" filename="%VVVV%\lib\nodes\modules\String\AvoidNIL3.v4p" nodename="AvoidNIL3" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="6795" top="2100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="none">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="21" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="20" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="1" dstpinname="XML">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="address" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="values" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="fadetype" dstnodeid="10" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="fadetime" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="@name" dstnodeid="19" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="address" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   </PATCH>
