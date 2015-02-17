@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\ReconvertColours.v4p" systemname="ReconvertColours" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\ReconvertColours.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\ReconvertColours.v4p" systemname="ReconvertColours" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\ReconvertColours.v4p" bgcolor="11574407">
    <NODE systemname="RGB (Color Split)" nodename="RGB (Color Split)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1695" top="4050" width="100" height="100">
    </BOUNDS>
@@ -234,11 +234,11 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="12" dstpinname="Color Input">
    </LINK>
-   <BOUNDS type="Window" left="14070" top="6285" width="9945" height="8370">
+   <BOUNDS type="Window" left="17955" top="4725" width="9945" height="8370">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="31.9.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="15" systemname="IOBox (String)">
    <BOUNDS type="Node" left="3675" top="2820" width="3030" height="270">
@@ -267,5 +267,21 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="16" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="15" top="375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Background Kalle" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="15" top="15" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Kalle">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Input Value" dstnodeid="18" dstpinname="Background Kalle">
    </LINK>
    </PATCH>

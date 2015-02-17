@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4 - Copy\Subs\Kontrol-FadeTimes.v4p" systemname="Kontrol-FadeTimes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-FadeTimes.v4p" scrollx="0" scrolly="4320" bgcolor="14011070">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes.v4p" systemname="Kontrol-FadeTimes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-FadeTimes.v4p" scrollx="0" scrolly="1080" bgcolor="11574407">
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2985" top="7020" width="100" height="100">
    </BOUNDS>
@@ -1060,4 +1060,28 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
+   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="121">
+   <BOUNDS type="Node" left="13710" top="4545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="121" dstpinname="Up">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="122" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13725" top="5625" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13725" top="5625" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="122" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

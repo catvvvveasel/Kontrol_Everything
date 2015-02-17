@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha33.2.dtd" >
-   <PATCH nodename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-ParsePresetXML.v4p" systemname="Kontrol-ParsePresetXML" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-ParsePresetXML.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-ParsePresetXML.v4p" systemname="Kontrol-ParsePresetXML" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-ParsePresetXML.v4p" scrollx="0" scrolly="0">
    <NODE systemname="Prune (XElement)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Prune (XElement)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="1365" width="3090" height="270">
    </BOUNDS>
@@ -94,7 +94,7 @@
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Occurrence (String)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (String)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="4695" top="2760" width="100" height="100">
@@ -236,120 +236,6 @@
    </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="20" dstpinname="Input String">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="8085" top="3960" width="1020" height="2925">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8085" top="3960" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="16">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="25" dstpinname="Input String">
-   </LINK>
-   <NODE systemname="Sort (String)" nodename="Sort (String)" componentmode="Hidden" id="26">
-   <BOUNDS type="Node" left="5280" top="1875" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Former Index" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="0" srcpinname="address" dstnodeid="26" dstpinname="Input">
-   </LINK>
-   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="27">
-   <BOUNDS type="Node" left="390" top="2595" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Former Index" dstnodeid="27" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="values" dstnodeid="27" dstpinname="Input">
-   </LINK>
-   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="15" top="2400" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Former Index" dstnodeid="29" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="fadetype" dstnodeid="29" dstpinname="Input">
-   </LINK>
-   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="15" top="2550" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Former Index" dstnodeid="30" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="fadetime" dstnodeid="30" dstpinname="Input">
-   </LINK>
-   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="31">
-   <BOUNDS type="Node" left="15" top="2910" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Former Index" dstnodeid="31" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="@name" dstnodeid="31" dstpinname="Input">
-   </LINK>
-   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="32">
-   <BOUNDS type="Node" left="9465" top="3270" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Former Index" dstnodeid="32" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="label" dstnodeid="32" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="9165" top="3930" width="1650" height="1680">
-   </BOUNDS>
-   <BOUNDS type="Node" left="9165" top="3930" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="9">
-   </PIN>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="1" dstpinname="XML">
    </LINK>
    <LINK srcnodeid="0" srcpinname="address" dstnodeid="8" dstpinname="Input">
@@ -363,9 +249,5 @@
    <LINK srcnodeid="0" srcpinname="@name" dstnodeid="19" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="0" srcpinname="address" dstnodeid="7" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="label" dstnodeid="33" dstpinname="Input String">
-   <LINKPOINT x="9135" y="3915">
-   </LINKPOINT>
    </LINK>
    </PATCH>

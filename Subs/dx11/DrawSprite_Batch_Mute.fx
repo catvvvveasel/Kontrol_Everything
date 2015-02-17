@@ -77,6 +77,7 @@ float4 PS(vs2ps In): SV_Target
 //	float temp =(In.TexCd2.x>In.TexCd.x);
 //	col = (temp*cBG*In.Vcol)+((1-temp)*cSlider)*In.Vcol;
 	col.a *= Alpha;
+	//if (col.a<0.01){discard;}
     return col;
 }
 

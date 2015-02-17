@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TogBangButtons.v4p" systemname="TogBangButtons" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TogBangButtons.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="16140" top="4395" width="13470" height="10980">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\TogBangButtons.v4p" systemname="TogBangButtons" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TogBangButtons.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="6675" top="2730" width="13470" height="10980">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="960" top="6435" width="100" height="100">
@@ -353,7 +353,7 @@
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="66" dstpinname="Input">
    </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="68">
-   <BOUNDS type="Node" left="5220" top="2940" width="630" height="270">
+   <BOUNDS type="Node" left="8085" top="2445" width="630" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -363,7 +363,7 @@
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Input">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="71">
-   <BOUNDS type="Node" left="7755" top="4230" width="100" height="100">
+   <BOUNDS type="Node" left="7740" top="4455" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
@@ -375,11 +375,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Output 1" dstnodeid="71" dstpinname="Input 1">
-   <LINKPOINT x="6806" y="7609">
+   <LINKPOINT x="6802" y="7665">
    </LINKPOINT>
-   <LINKPOINT x="6788" y="4897">
+   <LINKPOINT x="6780" y="5009">
    </LINKPOINT>
-   <LINKPOINT x="7654" y="3986">
+   <LINKPOINT x="7643" y="4155">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="71" dstpinname="Input 2">
@@ -389,7 +389,7 @@
    <LINK srcnodeid="71" srcpinname="Output" dstnodeid="59" dstpinname="Spread">
    </LINK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="73">
-   <BOUNDS type="Node" left="4500" top="2505" width="100" height="100">
+   <BOUNDS type="Node" left="7365" top="2010" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -399,7 +399,7 @@
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="73" dstpinname="Input">
    </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="4500" top="2970" width="630" height="270">
+   <BOUNDS type="Node" left="7365" top="2475" width="630" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -409,13 +409,17 @@
    <LINK srcnodeid="73" srcpinname="Count" dstnodeid="74" dstpinname="Input">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="4500" top="3435" width="100" height="100">
+   <BOUNDS type="Node" left="7380" top="3135" width="360" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="74" srcpinname="OnChange" dstnodeid="75" dstpinname="Input 1">
@@ -505,5 +509,45 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="81">
+   <BOUNDS type="Node" left="5115" top="780" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="4800" top="1260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Select" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="82" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="81" srcpinname="Output" dstnodeid="82" dstpinname="Input">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="83">
+   <BOUNDS type="Node" left="4815" top="1980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="83" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="75" dstpinname="Input 3">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4 - Copy\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="5790" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="3780" bgcolor="11574407">
    <BOUNDS type="Window" left="4380" top="1635" width="20265" height="12525">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -1007,9 +1007,9 @@
    <LINK srcnodeid="222" srcpinname="RightClicked" dstnodeid="302" dstpinname="RightClicked">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="304" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8835" top="9645" width="480" height="480">
+   <BOUNDS type="Box" left="7440" top="11595" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="8835" top="9645" width="0" height="0">
+   <BOUNDS type="Node" left="7440" top="11595" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1092,8 +1092,6 @@
    </NODE>
    <LINK srcnodeid="222" srcpinname="RightClicked" dstnodeid="312" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="303" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="225" srcpinname="Layer" dstnodeid="100" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="292" srcpinname="Layer" dstnodeid="100" dstpinname="Layer 2">
@@ -1114,4 +1112,24 @@
    </LINK>
    <LINK srcnodeid="243" srcpinname="Y Output Value" dstnodeid="313" dstpinname="Input 2">
    </LINK>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="303" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="315" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="14595" top="6975" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14595" top="6975" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input Value|">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
    </PATCH>

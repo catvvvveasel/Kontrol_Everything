@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4 - Copy\Subs\Gui2.v4p" systemname="Gui2" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Gui2.v4p" scrollx="0" scrolly="5385" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Gui2.v4p" systemname="Gui2" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Gui2.v4p" scrollx="3615" scrolly="2100" bgcolor="11574407">
    <NODE id="7" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -661,7 +661,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4470" top="10500" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="16140" top="4395" width="13470" height="10980">
+   <BOUNDS type="Window" left="6675" top="2730" width="13470" height="10980">
    </BOUNDS>
    <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
@@ -888,8 +888,6 @@
    </NODE>
    <LINK srcnodeid="336" srcpinname="Output" dstnodeid="339" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="339" srcpinname="Inverse Output" dstnodeid="308" dstpinname="Set">
-   </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="340">
    <BOUNDS type="Node" left="13920" top="13800" width="100" height="100">
    </BOUNDS>
@@ -1115,5 +1113,41 @@
    <LINK srcnodeid="256" srcpinname="Output" dstnodeid="131" dstpinname="Change">
    </LINK>
    <LINK srcnodeid="256" srcpinname="Output" dstnodeid="89" dstpinname="ScrollGui">
+   </LINK>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="359">
+   <BOUNDS type="Node" left="15165" top="10965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="305" srcpinname="Output 2" dstnodeid="359" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="360">
+   <BOUNDS type="Node" left="15195" top="11505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="359" srcpinname="Count" dstnodeid="360" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="361">
+   <BOUNDS type="Node" left="15000" top="14115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="339" srcpinname="Inverse Output" dstnodeid="361" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="360" srcpinname="Inverse Output" dstnodeid="361" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="361" srcpinname="Output" dstnodeid="308" dstpinname="Set">
    </LINK>
    </PATCH>

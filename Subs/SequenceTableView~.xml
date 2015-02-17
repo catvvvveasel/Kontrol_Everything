@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4 - Copy\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="960" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="1605" bgcolor="11574407">
    <BOUNDS type="Window" left="2250" top="5145" width="17355" height="9870">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -19,32 +19,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Bang" dstnodeid="28" dstpinname="Input 1">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="27" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7395" top="3330" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7395" top="3330" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Create">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="28" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Table (DataTable)" filename="plugins\Table.dll" nodename="Table (DataTable)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="3810" top="5325" width="100" height="100">
@@ -291,15 +269,13 @@
    </BOUNDS>
    <BOUNDS type="Box" left="570" top="6075">
    </BOUNDS>
-   <PIN pinname="Table" visible="1">
+   <PIN pinname="Table" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Index" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="26" srcpinname="Table" dstnodeid="5" dstpinname="Table">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
    <BOUNDS type="Box" left="120" top="9675" width="795" height="240">
    </BOUNDS>
@@ -906,7 +882,7 @@
    </LINK>
    <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="122" dstpinname="Select">
    </LINK>
-   <NODE systemname="TableView (DataTable)" filename="C:\Users\chris\Desktop\VW\Git_HA\mlf_vwpls2015\Scenes\Shared\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="InAWindow" id="124">
+   <NODE systemname="TableView (DataTable)" filename="C:\Users\chris\Desktop\VW\Git_HA\mlf_vwpls2015\Scenes\Shared\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="Hidden" id="124">
    <BOUNDS type="Node" left="3120" top="6255" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Table" visible="1" slicecount="1" values="||">
@@ -1028,8 +1004,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Clear">
-   </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="139">
    <BOUNDS type="Node" left="10545" top="1950" width="600" height="270">
    </BOUNDS>
@@ -1094,6 +1068,10 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Bang" dstnodeid="145" dstpinname="Input 1">
@@ -1215,5 +1193,47 @@
    <LINK srcnodeid="114" srcpinname="Output" dstnodeid="154" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="154" srcpinname="Output" dstnodeid="118" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Table" dstnodeid="5" dstpinname="Table">
+   </LINK>
+   <NODE systemname="Exists (File)" nodename="Exists (File)" componentmode="Hidden" id="155">
+   <BOUNDS type="Node" left="11475" top="2985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Read" visible="1">
+   </PIN>
+   <PIN pinname="Exists" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="139" srcpinname="Output" dstnodeid="155" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="143" srcpinname="OnChange" dstnodeid="155" dstpinname="Read">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="156">
+   <BOUNDS type="Node" left="11475" top="3390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Exists" dstnodeid="156" dstpinname="Input">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="157">
+   <BOUNDS type="Node" left="11490" top="3870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="156" srcpinname="Output" dstnodeid="157" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="157" srcpinname="Up Edge" dstnodeid="145" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="157" srcpinname="Up Edge" dstnodeid="28" dstpinname="Input 2">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4 - Copy\Subs\Text_SpriteSheets.v4p" systemname="Text_SpriteSheets" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Text_SpriteSheets.v4p" scrollx="0" scrolly="0" bgcolor="14011070">
-   <BOUNDS type="Window" left="570" top="5130" width="17310" height="12840">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Text_SpriteSheets.v4p" systemname="Text_SpriteSheets" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Text_SpriteSheets.v4p" scrollx="0" scrolly="4320" bgcolor="11574407">
+   <BOUNDS type="Window" left="-510" top="3900" width="17310" height="12840">
    </BOUNDS>
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="1035" top="3225" width="100" height="100">
@@ -167,7 +167,7 @@
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="TextDefault">
+   <PIN pinname="Mode" slicecount="1" values="Blend">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="32" systemname="IOBox (Node)">
@@ -989,6 +989,8 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="151" srcpinname="Layer Out" dstnodeid="32" dstpinname="Input Node">
    </LINK>
@@ -1006,6 +1008,8 @@
    <PIN pinname="String" visible="1">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="153">
@@ -1147,7 +1151,7 @@
    </PIN>
    <PIN pinname="Do Save" pintype="Configuration" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Render State" pintype="Input" visible="1">
+   <PIN pinname="Render State" pintype="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Apply Only" pintype="Input" visible="-1" slicecount="1" values="0">
    </PIN>
@@ -1197,8 +1201,6 @@
    <LINK srcnodeid="27" srcpinname="Texture Out" dstnodeid="88" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="93" srcpinname="Buffer" dstnodeid="88" dstpinname="TexCords">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Render State" dstnodeid="88" dstpinname="Render State">
    </LINK>
    <LINK srcnodeid="111" srcpinname="Color Output" dstnodeid="88" dstpinname="Color">
    </LINK>
@@ -1359,5 +1361,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="175" srcpinname="Count" dstnodeid="176" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Render State" dstnodeid="152" dstpinname="Render State">
+   <LINKPOINT x="9810" y="12615">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Render State" dstnodeid="88" dstpinname="Render State">
    </LINK>
    </PATCH>

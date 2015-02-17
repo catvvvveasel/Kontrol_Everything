@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4 - Copy\_KontrolGui.v4p" systemname="_Main3" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\_Main3.v4p" scrollx="0" scrolly="360" bgcolor="14011070">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\_KontrolGui.v4p" systemname="_Main3" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\_Main3.v4p" scrollx="0" scrolly="360" bgcolor="11574407">
    <BOUNDS type="Window" left="12855" top="2700" width="14685" height="12615">
    </BOUNDS>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="108">
@@ -505,7 +505,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Lightness" slicecount="1" values="0.79">
+   <PIN pinname="Lightness" slicecount="1" values="0.61">
    </PIN>
    <PIN pinname="Saturation" slicecount="1" values="0.21">
    </PIN>
@@ -967,7 +967,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7950" top="6405" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -979,7 +979,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Mute">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="397" srcpinname="Y Output Value" dstnodeid="329" dstpinname="Mute">
@@ -999,11 +999,11 @@
    <LINK srcnodeid="329" srcpinname="Layer" dstnodeid="167" dstpinname="Layer 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="398" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7905" top="8550" width="480" height="480">
+   <BOUNDS type="Box" left="7875" top="8775" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="7905" top="8550" width="0" height="0">
+   <BOUNDS type="Node" left="7875" top="8775" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1013,7 +1013,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="398" srcpinname="Y Output Value" dstnodeid="108" dstpinname="Log Messages">
@@ -1281,6 +1281,8 @@
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
+   <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
+   </PIN>
    </NODE>
    <LINK srcnodeid="410" srcpinname="Buffer SizeXY" dstnodeid="157" dstpinname="Input 1">
    </LINK>
@@ -1289,7 +1291,7 @@
    <LINK srcnodeid="96" srcpinname="LayerDX11" dstnodeid="167" dstpinname="Layer 3">
    </LINK>
    <NODE id="78" systemname="Kontrol_Separate" filename="Subs\Kontrol_Separate.v4p" nodename="Subs\Kontrol_Separate.v4p" componentmode="Hidden" stayontop="0">
-   <BOUNDS type="Window" left="7695" top="1650" width="19050" height="15585">
+   <BOUNDS type="Window" left="210" top="1620" width="19050" height="15585">
    </BOUNDS>
    <BOUNDS type="Node" left="1680" top="4785" width="100" height="100">
    </BOUNDS>
@@ -1336,6 +1338,8 @@
    <PIN pinname="Clear" slicecount="1" values="0">
    </PIN>
    <PIN pinname="ReorderTracks" visible="1">
+   </PIN>
+   <PIN pinname="Load" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="96" srcpinname="ValuesOUT" dstnodeid="78" dstpinname="GUI">
