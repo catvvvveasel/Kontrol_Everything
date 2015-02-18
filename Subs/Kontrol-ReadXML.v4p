@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-ReadXML.v4p" systemname="Kontrol-ReadXML" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-ReadXML.v4p" scrollx="0" scrolly="3276">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-ReadXML.v4p" systemname="Kontrol-ReadXML" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-ReadXML.v4p" scrollx="0" scrolly="0" bgcolor="11574407">
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2295" top="4440" width="100" height="100">
    </BOUNDS>
@@ -60,7 +60,7 @@
    </NODE>
    <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="7" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="17670" top="3135" width="9870" height="15750">
+   <BOUNDS type="Window" left="7155" top="4470" width="9870" height="15750">
    </BOUNDS>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="13">
    <BOUNDS type="Node" left="3690" top="480" width="100" height="100">
@@ -107,7 +107,7 @@
    <NODE systemname="Reader (Raw)" nodename="Reader (Raw)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="465" top="10680" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" visible="1" slicecount="1" values="file.txt">
+   <PIN pinname="Filename" visible="1" slicecount="5" values="..\..\..\Tracks\United_Kingdom\Presets\PatchPreset_-001_0000.xml,..\..\..\Tracks\United_Kingdom\Presets\PatchPreset_0000_0013.xml,..\..\..\Tracks\United_Kingdom\Presets\PatchPreset_0005_0001.xml,..\..\..\Tracks\United_Kingdom\Presets\PatchPreset_0006_0000.xml,..\..\..\Tracks\United_Kingdom\Presets\PatchPreset_0008_0000.xml">
    </PIN>
    <PIN pinname="Read" visible="1" slicecount="1" values="0">
    </PIN>
@@ -309,7 +309,7 @@
    <LINK srcnodeid="55" srcpinname="Output" dstnodeid="52" dstpinname="Input">
    </LINK>
    <NODE systemname="Sort (String)" nodename="Sort (String)" componentmode="Hidden" id="56">
-   <BOUNDS type="Node" left="450" top="8430" width="100" height="100">
+   <BOUNDS type="Node" left="615" top="8520" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -318,8 +318,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="17" dstpinname="Filename">
-   </LINK>
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="58">
    <BOUNDS type="Node" left="8340" top="8670" width="100" height="100">
    </BOUNDS>
@@ -393,7 +391,7 @@
    <LINK srcnodeid="61" srcpinname="Y Output Value" dstnodeid="63" dstpinname="Input 1">
    </LINK>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="67">
-   <BOUNDS type="Node" left="465" top="2055" width="100" height="100">
+   <BOUNDS type="Node" left="600" top="2055" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" visible="1" slicecount="1" values="..\..\_Durham_VVVV_Main\Presets\Lincoln\Presets\PatchPreset_-001_0000.xml">
    </PIN>
@@ -401,7 +399,7 @@
    </PIN>
    </NODE>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="66">
-   <BOUNDS type="Node" left="765" top="2535" width="100" height="100">
+   <BOUNDS type="Node" left="900" top="2595" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -495,7 +493,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1005" top="10020" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -505,11 +503,87 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Read">
    </LINK>
-   <LINK srcnodeid="53" srcpinname="Output" dstnodeid="11" dstpinname="Y Input Value">
+   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="17" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="3555" top="9180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="84" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="85">
+   <BOUNDS type="Node" left="3615" top="9675" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Count" dstnodeid="85" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="3030" top="10080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="OnChange" dstnodeid="86" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="1080" top="9330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="87" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="OnChange" dstnodeid="86" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="1665" top="10725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="88" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="83" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="30" top="390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Background Kalle" slicecount="1" visible="1" values="|0.74590,0.79176,0.83410,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="15" top="75" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Kalle">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Input Value" dstnodeid="90" dstpinname="Background Kalle">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

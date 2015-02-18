@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\FormatText.v4p" systemname="FormatText" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\FormatText.v4p" scrollx="0" scrolly="0" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\FormatText.v4p" systemname="FormatText" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\FormatText.v4p" scrollx="810" scrolly="1635" bgcolor="11574407">
    <NODE id="0" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -211,7 +211,7 @@
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="TakeCamera-Kontrols_0000_0027">
+   <PIN pinname="Input 1" visible="1" slicecount="5" values="AllControls_0000,TakeCamera-Kontrols_0013,ProjVideoControls_0001,CubeVideoControls_0000,RearVideoControls_0000">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" visible="1" values="||">
    </PIN>
@@ -792,8 +792,6 @@
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output 2" dstnodeid="65" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="20" dstpinname="Input 1">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="66" systemname="IOBox (String)">
    <BOUNDS type="Box" left="10305" top="9780" width="2325" height="315">
    </BOUNDS>
@@ -807,5 +805,19 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="54" srcpinname="Shortname" dstnodeid="66" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="67">
+   <BOUNDS type="Node" left="10950" top="7695" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="CommaPlusSpace">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="67" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="20" dstpinname="Input 1">
    </LINK>
    </PATCH>

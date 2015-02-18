@@ -844,7 +844,7 @@
    </NODE>
    <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="125" dstpinname="Spread">
    </LINK>
-   <NODE systemname="Kontrol-Client_Osc" filename="..\CatGui0.4\Subs\Kontrol-Client_Osc.v4p" componentmode="InAWindow" id="126" nodename="Subs\Kontrol-Client_Osc.v4p">
+   <NODE systemname="Kontrol-Client_Osc" filename="..\CatGui0.4\Subs\Kontrol-Client_Osc.v4p" componentmode="Hidden" id="126" nodename="Subs\Kontrol-Client_Osc.v4p">
    <BOUNDS type="Node" left="3855" top="14325" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3855" top="14325" width="4800" height="3600">
@@ -859,7 +859,7 @@
    </PIN>
    <PIN pinname="ChangePreset" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Init" visible="1">
+   <PIN pinname="Init" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="126" dstpinname="Port">
@@ -1019,8 +1019,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="138" srcpinname="Input Value" dstnodeid="139" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="139" srcpinname="Output" dstnodeid="126" dstpinname="Init">
    </LINK>
    <NODE systemname="Reader (Raw SharedMemory)" nodename="Reader (Raw SharedMemory)" componentmode="Hidden" id="140">
    <BOUNDS type="Node" left="8265" top="9045" width="100" height="100">
@@ -1352,8 +1350,6 @@
    </NODE>
    <LINK srcnodeid="169" srcpinname="Output" dstnodeid="170" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="170" srcpinname="OnChange" dstnodeid="125" dstpinname="ChangeSeq">
-   </LINK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="171">
    <BOUNDS type="Node" left="13680" top="11700" width="100" height="100">
    </BOUNDS>
@@ -1451,5 +1447,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="174" srcpinname="Output" dstnodeid="177" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="170" srcpinname="OnChange" dstnodeid="125" dstpinname="ChangeSeq">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="178">
+   <BOUNDS type="Node" left="6075" top="14250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="139" srcpinname="Output" dstnodeid="178" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="170" srcpinname="OnChange" dstnodeid="178" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="Output" dstnodeid="126" dstpinname="Init">
    </LINK>
    </PATCH>
