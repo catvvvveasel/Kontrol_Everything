@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\LTP_String.v4p" systemname="LTP_String" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\LTP_String.v4p" scrollx="0" scrolly="510">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\LTP_String.v4p" systemname="LTP_String" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\LTP_String.v4p" scrollx="0" scrolly="510">
    <BOUNDS type="Window" left="11400" top="10140" width="14415" height="6000">
    </BOUNDS>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="0">
@@ -30,6 +30,8 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output String" dstnodeid="2" dstpinname="Input 1">
@@ -80,7 +82,7 @@
    </NODE>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="6" dstpinname="Input String">
    </LINK>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="9">
    <BOUNDS type="Node" left="4260" top="1335" width="100" height="100">
@@ -199,5 +201,15 @@
    <LINK srcnodeid="3" srcpinname="OnChange" dstnodeid="5" dstpinname="Reset">
    </LINK>
    <LINK srcnodeid="4" srcpinname="OnChange" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="1575" top="3495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="ActivePresets">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="17" dstpinname="Input Value">
    </LINK>
    </PATCH>

@@ -448,8 +448,6 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="222" srcpinname="MouseXY" dstnodeid="225" dstpinname="MouseXY">
-   </LINK>
    <LINK srcnodeid="222" srcpinname="TransFormX" dstnodeid="225" dstpinname="TransformX">
    </LINK>
    <LINK srcnodeid="96" srcpinname="Output" dstnodeid="225" dstpinname="Y Pos">
@@ -977,10 +975,10 @@
    </PIN>
    <PIN pinname="LeftClick" visible="1">
    </PIN>
+   <PIN pinname="RecordLive" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="228" srcpinname="Output" dstnodeid="302" dstpinname="Insert">
-   </LINK>
-   <LINK srcnodeid="136" srcpinname="Former Slice" dstnodeid="302" dstpinname="EditSlice">
    </LINK>
    <LINK srcnodeid="23" srcpinname="Input Value" dstnodeid="302" dstpinname="Time">
    </LINK>
@@ -1115,9 +1113,9 @@
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="303" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="315" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="14595" top="6975" width="480" height="480">
+   <BOUNDS type="Box" left="14715" top="7095" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="14595" top="6975" width="0" height="0">
+   <BOUNDS type="Node" left="14715" top="7095" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1127,9 +1125,15 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input Value|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="RecordLive">
    </PIN>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
+   <LINK srcnodeid="294" srcpinname="Input Value" dstnodeid="315" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="315" srcpinname="Y Output Value" dstnodeid="302" dstpinname="RecordLive">
+   </LINK>
    </PATCH>
