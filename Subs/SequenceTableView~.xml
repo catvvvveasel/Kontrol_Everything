@@ -876,7 +876,7 @@
    </LINK>
    <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="122" dstpinname="Select">
    </LINK>
-   <NODE systemname="TableView (DataTable)" filename="C:\Users\chris\Desktop\VW\Git_HA\mlf_vwpls2015\Scenes\Shared\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="InAWindow" id="124">
+   <NODE systemname="TableView (DataTable)" filename="C:\Users\chris\Desktop\VW\Git_HA\mlf_vwpls2015\Scenes\Shared\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="Hidden" id="124">
    <BOUNDS type="Node" left="3120" top="6255" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Table" visible="1" slicecount="1" values="||">
@@ -1102,6 +1102,10 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="139" srcpinname="Output" dstnodeid="143" dstpinname="Input">
@@ -1329,5 +1333,27 @@
    <LINK srcnodeid="148" srcpinname="Output" dstnodeid="144" dstpinname="Input 1">
    <LINKPOINT x="6465" y="6465">
    </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="164" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13995" top="4605" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13995" top="4605" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Reload">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="148" dstpinname="Input 3">
    </LINK>
    </PATCH>

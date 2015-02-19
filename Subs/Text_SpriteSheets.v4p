@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Text_SpriteSheets.v4p" systemname="Text_SpriteSheets" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Text_SpriteSheets.v4p" scrollx="0" scrolly="4320" bgcolor="11574407">
-   <BOUNDS type="Window" left="-510" top="3900" width="17310" height="12840">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Text_SpriteSheets.v4p" systemname="Text_SpriteSheets" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Text_SpriteSheets.v4p" scrollx="1620" scrolly="2610" bgcolor="11574407">
+   <BOUNDS type="Window" left="1380" top="2280" width="17310" height="12840">
    </BOUNDS>
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="1035" top="3225" width="100" height="100">
@@ -133,7 +133,7 @@
    </PIN>
    </NODE>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="27">
-   <BOUNDS type="Node" left="6165" top="7785" width="100" height="100">
+   <BOUNDS type="Node" left="6210" top="8475" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" slicecount="1" visible="1" values="..\CatGui0.3_DB1\Subs\Assets\Arial_SpriteSheet_1024.dds">
    </PIN>
@@ -145,7 +145,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="28">
-   <BOUNDS type="Node" left="6000" top="6735" width="100" height="100">
+   <BOUNDS type="Node" left="5985" top="6345" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -181,9 +181,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="35" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4950" top="4335" width="795" height="240">
+   <BOUNDS type="Box" left="4335" top="4545" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4950" top="4335" width="0" height="0">
+   <BOUNDS type="Node" left="4335" top="4545" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -225,7 +225,7 @@
    <LINK srcnodeid="39" srcpinname="Output String" dstnodeid="40" dstpinname="Input">
    </LINK>
    <NODE componentmode="Hidden" id="63" nodename="Length (String)" systemname="Length (String)">
-   <BOUNDS height="100" left="7065" top="1410" type="Node" width="100">
+   <BOUNDS height="100" left="7200" top="930" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="11" values="text">
    </PIN>
@@ -341,9 +341,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="82" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6180" top="7335" width="2850" height="255">
+   <BOUNDS type="Box" left="6225" top="8025" width="2850" height="255">
    </BOUNDS>
-   <BOUNDS type="Node" left="6180" top="7335" width="0" height="0">
+   <BOUNDS type="Node" left="6225" top="8025" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="Assets\Arial_SpriteSheet_512.dds">
    </PIN>
@@ -417,13 +417,13 @@
    </PIN>
    </NODE>
    <NODE systemname="DynamicBuffer (DX11.Buffer Transform)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer Transform)" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="11295" top="7140" width="100" height="100">
+   <BOUNDS type="Node" left="11295" top="7290" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Data" visible="1">
    </PIN>
    <PIN pinname="Buffer" visible="1">
    </PIN>
-   <PIN pinname="Apply" visible="1">
+   <PIN pinname="Apply" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Transform Out" dstnodeid="92" dstpinname="Data">
@@ -435,7 +435,7 @@
    </PIN>
    <PIN pinname="Buffer" visible="1">
    </PIN>
-   <PIN pinname="Apply" visible="1">
+   <PIN pinname="Apply" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Ord (String)" nodename="Ord (String)" componentmode="Hidden" id="102">
@@ -517,7 +517,7 @@
    <LINK srcnodeid="100" srcpinname="X Out" dstnodeid="97" dstpinname="Input">
    </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="96">
-   <BOUNDS type="Node" left="12435" top="4905" width="100" height="100">
+   <BOUNDS type="Node" left="12555" top="4920" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -671,9 +671,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="113" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="12705" top="6885" width="2655" height="270">
+   <BOUNDS type="Node" left="15930" top="7380" width="2655" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="12705" top="6885" width="2655" height="270">
+   <BOUNDS type="Box" left="15930" top="7380" width="2655" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|make this spreadable at some point|">
    </PIN>
@@ -737,7 +737,7 @@
    <LINK srcnodeid="118" srcpinname="Y Output Value" dstnodeid="120" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="121">
-   <BOUNDS type="Node" left="6765" top="5805" width="450" height="270">
+   <BOUNDS type="Node" left="6705" top="5655" width="450" height="270">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
@@ -783,9 +783,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="131" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="13320" top="7260" width="480" height="480">
+   <BOUNDS type="Box" left="13455" top="7605" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="13320" top="7260" width="0" height="0">
+   <BOUNDS type="Node" left="13455" top="7605" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -802,10 +802,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="131" srcpinname="Y Output Value" dstnodeid="92" dstpinname="Apply">
-   </LINK>
-   <LINK srcnodeid="131" srcpinname="Y Output Value" dstnodeid="93" dstpinname="Apply">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="137" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="10035" top="5625" width="795" height="240">
    </BOUNDS>
@@ -849,9 +845,9 @@
    <LINK srcnodeid="39" srcpinname="Output String" dstnodeid="139" dstpinname="Input">
    </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="140">
-   <BOUNDS type="Node" left="13320" top="6825" width="100" height="100">
+   <BOUNDS type="Node" left="12510" top="6975" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Set" visible="1">
+   <PIN pinname="Set" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Time" slicecount="1" values="0.1">
    </PIN>
@@ -873,7 +869,7 @@
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="142">
-   <BOUNDS type="Node" left="14910" top="4710" width="100" height="100">
+   <BOUNDS type="Node" left="15210" top="4680" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -916,8 +912,6 @@
    <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="145" srcpinname="Output" dstnodeid="140" dstpinname="Set">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="146" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="15675" top="5910" width="480" height="480">
    </BOUNDS>
@@ -939,7 +933,7 @@
    <LINK srcnodeid="146" srcpinname="Y Output Value" dstnodeid="145" dstpinname="Input 2">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="147">
-   <BOUNDS type="Node" left="13590" top="6210" width="100" height="100">
+   <BOUNDS type="Node" left="13860" top="5700" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -947,13 +941,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="147" srcpinname="Down Edge" dstnodeid="145" dstpinname="Input 1">
-   <LINKPOINT x="15150" y="6660">
-   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="140" srcpinname="Output" dstnodeid="131" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="148">
-   <BOUNDS type="Node" left="13560" top="5760" width="100" height="100">
+   <BOUNDS type="Node" left="13830" top="5250" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1">
    </PIN>
@@ -1216,8 +1208,6 @@
    </LINK>
    <LINK srcnodeid="88" srcpinname="Layer" dstnodeid="151" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="152" srcpinname="Layer" dstnodeid="151" dstpinname="Layer 2">
-   </LINK>
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="164" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" left="15165" top="8895" width="100" height="100">
    </BOUNDS>
@@ -1293,9 +1283,9 @@
    <LINK srcnodeid="171" srcpinname="Output" dstnodeid="157" dstpinname="Select">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="173" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="11910" top="12360" width="5940" height="270">
+   <BOUNDS type="Node" left="11535" top="14895" width="5940" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="11910" top="12360" width="3150" height="615">
+   <BOUNDS type="Box" left="11535" top="14895" width="3150" height="615">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|dynamic text only when values change otherwise use sprites map for performance|">
    </PIN>
@@ -1367,5 +1357,49 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="31" srcpinname="Render State" dstnodeid="88" dstpinname="Render State">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="178">
+   <BOUNDS type="Node" left="12375" top="6645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="2194">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="138" srcpinname="Output" dstnodeid="178" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="OnChange" dstnodeid="140" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="140" srcpinname="Output" dstnodeid="92" dstpinname="Apply">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="179">
+   <BOUNDS type="Node" left="14010" top="6990" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="179" srcpinname="Output" dstnodeid="93" dstpinname="Apply">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="180" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9945" top="555" width="5055" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9945" top="555" width="5025" height="885">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Look at this, can we transfrom a static and add an offset via a buffer?|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="145" srcpinname="Output" dstnodeid="179" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="152" srcpinname="Layer" dstnodeid="151" dstpinname="Layer 2">
    </LINK>
    </PATCH>

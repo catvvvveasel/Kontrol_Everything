@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="0" scrolly="11220" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="765" scrolly="11940" bgcolor="11574407">
    <NODE id="12" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -154,10 +154,10 @@
    </LINK>
    <LINK srcnodeid="125" srcpinname="Y Output Value" dstnodeid="124" dstpinname="Source Maximum">
    </LINK>
-   <NODE systemname="Text_SpriteSheets" filename="Text_SpriteSheets.v4p" nodename="Text_SpriteSheets.v4p" componentmode="Hidden" id="126">
+   <NODE systemname="Text_SpriteSheets" filename="Text_SpriteSheets.v4p" nodename="Text_SpriteSheets.v4p" componentmode="InAWindow" id="126">
    <BOUNDS type="Node" left="9315" top="18435" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="-510" top="3900" width="17310" height="12840">
+   <BOUNDS type="Window" left="1380" top="2280" width="17310" height="12840">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -1270,10 +1270,6 @@
    </LINK>
    <LINK srcnodeid="346" srcpinname="Output" dstnodeid="347" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="347" srcpinname="Output" dstnodeid="126" dstpinname="Evaluate">
-   </LINK>
-   <LINK srcnodeid="347" srcpinname="Output" dstnodeid="126" dstpinname="UpdatePos">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="359">
    <BOUNDS type="Node" left="16335" top="13920" width="100" height="100">
    </BOUNDS>
@@ -1639,5 +1635,7 @@
    <LINK srcnodeid="304" srcpinname="Output Node" dstnodeid="191" dstpinname="Render State">
    </LINK>
    <LINK srcnodeid="379" srcpinname="Output Bin Size" dstnodeid="191" dstpinname="Count">
+   </LINK>
+   <LINK srcnodeid="346" srcpinname="Output" dstnodeid="126" dstpinname="UpdatePos">
    </LINK>
    </PATCH>
