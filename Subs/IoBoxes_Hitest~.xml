@@ -249,7 +249,7 @@
    <LINK srcnodeid="21" srcpinname="LPatchButtons" dstnodeid="74" dstpinname="Input Value">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="8565" top="5640" width="100" height="100">
+   <BOUNDS type="Node" left="7740" top="6915" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -257,5 +257,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="RSliders" dstnodeid="75" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="DoubleClick" filename="DoubleClick.v4p" nodename="DoubleClick.v4p" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="9270" top="6045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="29" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="16125" top="4635" width="4320" height="6000">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="RSliders" dstnodeid="76" dstpinname="Set">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="9300" top="7425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="DoubleRightClickSlider">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="77" dstpinname="Input Value">
    </LINK>
    </PATCH>

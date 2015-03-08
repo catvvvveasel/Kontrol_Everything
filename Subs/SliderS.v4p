@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SliderS.v4p" systemname="SliderS" filename="C:\Users\cat\Desktop\expo\Subs\SliderS.v4p" scrollx="90" scrolly="30">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SliderS.v4p" systemname="SliderS" filename="C:\Users\cat\Desktop\expo\Subs\SliderS.v4p" scrollx="0" scrolly="-345">
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1845" top="6630" width="100" height="100">
    </BOUNDS>
@@ -61,7 +61,9 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="2">
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="11">
@@ -317,7 +319,7 @@
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="225" top="6360" width="100" height="100">
+   <BOUNDS type="Node" left="270" top="6015" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -327,7 +329,7 @@
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="50" dstpinname="Input Value">
    </LINK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="6405" top="7125" width="100" height="100">
+   <BOUNDS type="Node" left="4365" top="5790" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="7" values="-28.4,4.2,-47.8,0,3,-28,43">
    </PIN>
@@ -423,7 +425,7 @@
    <LINK srcnodeid="58" srcpinname="Output 1" dstnodeid="2" dstpinname="TranslateX">
    </LINK>
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="84">
-   <BOUNDS type="Node" left="6915" top="4515" width="100" height="100">
+   <BOUNDS type="Node" left="4995" top="4860" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="1">
    </PIN>
@@ -437,9 +439,9 @@
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="52" dstpinname="Input">
    </LINK>
    <NODE systemname="SliderS-Finetune" filename="SliderS-Finetune.v4p" nodename="SliderS-Finetune.v4p" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="4937" top="5571" width="0" height="0">
+   <BOUNDS type="Node" left="4982" top="5781" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="1880" top="1959" width="6115" height="7225">
+   <BOUNDS type="Box" left="1925" top="2169" width="6115" height="7225">
    </BOUNDS>
    <BOUNDS type="Window" left="20415" top="7095" width="7875" height="7965">
    </BOUNDS>
@@ -453,9 +455,9 @@
    <LINK srcnodeid="1" srcpinname="Intersects Quad" dstnodeid="90" dstpinname="Intersect">
    </LINK>
    <LINK srcnodeid="90" srcpinname="RightMouseActive" dstnodeid="84" dstpinname="Set">
-   <LINKPOINT x="6975" y="6420">
+   <LINKPOINT x="6720" y="6885">
    </LINKPOINT>
-   <LINKPOINT x="7995" y="4500">
+   <LINKPOINT x="6735" y="4800">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="90" dstpinname="CurrentValues">
@@ -463,5 +465,25 @@
    <LINK srcnodeid="90" srcpinname="Output" dstnodeid="36" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="47" srcpinname="Y Output Value" dstnodeid="90" dstpinname="Min/Max">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="300" top="4305" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="MenuOpen">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="92">
+   <BOUNDS type="Node" left="315" top="4680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Input Value" dstnodeid="92" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="Output" dstnodeid="4" dstpinname="Input 3">
    </LINK>
    </PATCH>

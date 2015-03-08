@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\App\EuroVision\CatGui0.5\_KontrolGui.v4p" systemname="_Main3" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\_Main3.v4p" scrollx="0" scrolly="735" bgcolor="11574407">
-   <BOUNDS type="Window" left="12600" top="255" width="14685" height="12615">
+   <BOUNDS type="Window" left="14115" top="2895" width="14685" height="12615">
    </BOUNDS>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="108">
    <BOUNDS type="Node" left="6975" top="9405" width="100" height="100">
@@ -76,7 +76,7 @@
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <NODE id="96" componentmode="Hidden" systemname="Gui2" filename="Subs\Gui2.v4p" nodename="Subs\Gui2.v4p">
+   <NODE id="96" componentmode="InAWindow" systemname="Gui2" filename="Subs\Gui2.v4p" nodename="Subs\Gui2.v4p">
    <PIN pinname="Layer Out" visible="1">
    </PIN>
    <PIN pinname="RenderSize" visible="1">
@@ -85,7 +85,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="360" top="2354" width="4510" height="6910">
    </BOUNDS>
-   <BOUNDS type="Window" left="8430" top="2145" width="19155" height="12645">
+   <BOUNDS type="Window" left="8025" top="2625" width="19155" height="12645">
    </BOUNDS>
    <PIN pinname="SubType" visible="1" slicecount="4" values="|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 1, 1, 0.001, 160, 0.01, , 1|,|Endless, 3, 0, -100, 100, 0.01, , 4|">
    </PIN>
@@ -127,11 +127,13 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="157" srcpinname="Output 1" dstnodeid="96" dstpinname="RenderSize">
-   <LINKPOINT x="2734" y="9705">
+   <LINKPOINT x="2730" y="9705">
    </LINKPOINT>
-   <LINKPOINT x="968" y="9676">
+   <LINKPOINT x="510" y="9825">
    </LINKPOINT>
-   <LINKPOINT x="701" y="5070">
+   <LINKPOINT x="105" y="7155">
+   </LINKPOINT>
+   <LINKPOINT x="720" y="5205">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="151" srcpinname="MidiSliders" dstnodeid="96" dstpinname="MidiValues">
@@ -303,7 +305,7 @@
    </PIN>
    <PIN pinname="PipeLineStatistics" pintype="Input" visible="1">
    </PIN>
-   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
    </PIN>
@@ -1291,7 +1293,7 @@
    <LINK srcnodeid="96" srcpinname="LayerDX11" dstnodeid="167" dstpinname="Layer 3">
    </LINK>
    <NODE id="78" systemname="Kontrol_Separate" filename="Subs\Kontrol_Separate.v4p" nodename="Subs\Kontrol_Separate.v4p" componentmode="Hidden" stayontop="0">
-   <BOUNDS type="Window" left="7830" top="1575" width="19050" height="15585">
+   <BOUNDS type="Window" left="5925" top="855" width="19050" height="15585">
    </BOUNDS>
    <BOUNDS type="Node" left="1680" top="4785" width="100" height="100">
    </BOUNDS>
@@ -1340,6 +1342,8 @@
    <PIN pinname="ReorderTracks" visible="1">
    </PIN>
    <PIN pinname="Load" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ReLoadSequence" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="96" srcpinname="ValuesOUT" dstnodeid="78" dstpinname="GUI">

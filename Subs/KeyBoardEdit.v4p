@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4\Subs\KeyBoardEdit.v4p" systemname="KeyBoardEdit" filename="C:\Users\cat\Desktop\CatGui0.1\Subs\KeyBoardEdit.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\KeyBoardEdit.v4p" systemname="KeyBoardEdit" filename="C:\Users\cat\Desktop\CatGui0.1\Subs\KeyBoardEdit.v4p" scrollx="0" scrolly="0" bgcolor="11574407">
    <NODE systemname="Typewriter2" filename="Typewriter2.v4p" nodename="Typewriter2.v4p" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3825" top="4800" width="1530" height="270">
    </BOUNDS>
@@ -295,9 +295,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="55" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="675" top="600" width="795" height="240">
+   <BOUNDS type="Box" left="870" top="1335" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="675" top="600" width="0" height="0">
+   <BOUNDS type="Node" left="870" top="1335" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="72" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
    </PIN>
@@ -348,16 +348,6 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <NODE systemname="DoubleClick" filename="DoubleClick.v4p" nodename="DoubleClick.v4p" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="7515" top="3465" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Set" visible="1" slicecount="29" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="16125" top="4635" width="4320" height="6000">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="66">
    <BOUNDS type="Node" left="9192" top="2595" width="100" height="100">
    </BOUNDS>
@@ -415,7 +405,7 @@
    </BOUNDS>
    <BOUNDS type="Window" left="615" top="8160" width="7155" height="6420">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="7" values="0,0,0,0,0,0,0">
+   <PIN pinname="Input" visible="1" slicecount="99" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
@@ -423,8 +413,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Output" dstnodeid="60" dstpinname="Reset">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="60" dstpinname="Input">
    </LINK>
    <NODE systemname="R (VALUE)" nodename="R (Value)" componentmode="Hidden" id="67">
    <BOUNDS type="Node" left="9015" top="2115" width="255" height="270">
@@ -590,8 +578,6 @@
    </NODE>
    <LINK srcnodeid="81" srcpinname="Input Value" dstnodeid="82" dstpinname="Index">
    </LINK>
-   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="58" dstpinname="Set">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2100" top="8325" width="480" height="480">
    </BOUNDS>
@@ -615,7 +601,7 @@
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="86">
    <BOUNDS type="Node" left="7485" top="825" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="RightClickSlider">
+   <PIN pinname="Receive String" slicecount="1" values="DoubleRightClickSlider">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -633,5 +619,23 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="70" srcpinname="Output 2" dstnodeid="73" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="15" top="375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Background Kalle" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="15" top="15" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Kalle">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Input Value" dstnodeid="88" dstpinname="Background Kalle">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="60" dstpinname="Input">
    </LINK>
    </PATCH>

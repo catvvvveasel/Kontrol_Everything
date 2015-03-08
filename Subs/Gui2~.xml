@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Gui2.v4p" systemname="Gui2" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Gui2.v4p" scrollx="0" scrolly="3120" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Gui2.v4p" systemname="Gui2" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Gui2.v4p" scrollx="0" scrolly="1890" bgcolor="11574407">
    <NODE id="7" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="8430" top="2145" width="19155" height="12645">
+   <BOUNDS type="Window" left="8025" top="2625" width="19155" height="12645">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="915" top="1035" width="100" height="100">
@@ -22,12 +22,12 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Kontrol-GetSubTypes" filename="Kontrol-GetSubTypes.v4p" nodename="Kontrol-GetSubTypes.v4p" componentmode="Hidden" id="19" stayontop="0">
+   <NODE systemname="Kontrol-GetSubTypes" filename="Kontrol-GetSubTypes.v4p" nodename="Kontrol-GetSubTypes.v4p" componentmode="InAWindow" id="19" stayontop="0">
    <BOUNDS type="Node" left="5820" top="5445" width="2805" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="930" top="5190" width="11625" height="7060">
    </BOUNDS>
-   <BOUNDS type="Window" left="8055" top="1410" width="18150" height="12045">
+   <BOUNDS type="Window" left="3015" top="5460" width="25095" height="12045">
    </BOUNDS>
    <PIN pinname="Precision" visible="1">
    </PIN>
@@ -64,6 +64,10 @@
    <PIN pinname="Enums" visible="1">
    </PIN>
    <PIN pinname="IsEnum" visible="1">
+   </PIN>
+   <PIN pinname="ISenum" visible="1">
+   </PIN>
+   <PIN pinname="EnumEntries" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="20" systemname="IOBox (String)">
@@ -223,7 +227,7 @@
    <LINK srcnodeid="19" srcpinname="VectorSize" dstnodeid="101" dstpinname="VectorSize">
    </LINK>
    <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="102">
-   <BOUNDS type="Node" left="9720" top="7530" width="100" height="100">
+   <BOUNDS type="Node" left="9570" top="7455" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -285,9 +289,9 @@
    </PIN>
    </NODE>
    <NODE systemname="KeyBoardEdit" filename="KeyBoardEdit.v4p" nodename="KeyBoardEdit.v4p" componentmode="Hidden" id="182">
-   <BOUNDS type="Node" left="9992" top="12581" width="0" height="0">
+   <BOUNDS type="Node" left="9707" top="12146" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6385" top="8519" width="7215" height="8125">
+   <BOUNDS type="Box" left="6100" top="8084" width="7215" height="8125">
    </BOUNDS>
    <BOUNDS type="Window" left="8595" top="810" width="13620" height="15540">
    </BOUNDS>
@@ -393,7 +397,7 @@
    </PIN>
    <PIN pinname="Layer 13" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Layer 14" visible="1">
+   <PIN pinname="Layer 14" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
    </PIN>
@@ -409,9 +413,9 @@
    <LINK srcnodeid="197" srcpinname="Layer Out" dstnodeid="198" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="210" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9735" top="8460" width="795" height="240">
+   <BOUNDS type="Box" left="9870" top="9060" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9735" top="8460" width="0" height="0">
+   <BOUNDS type="Node" left="9870" top="9060" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -453,11 +457,11 @@
    </PIN>
    </NODE>
    <NODE systemname="ScaleMidiCC" filename="ScaleMidiCC.v4p" nodename="ScaleMidiCC.v4p" componentmode="Hidden" id="235">
-   <BOUNDS type="Node" left="9738" top="7991" width="1170" height="270">
+   <BOUNDS type="Node" left="9858" top="8471" width="1170" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="6838" top="3231" width="5800" height="9520">
+   <BOUNDS type="Box" left="6958" top="3711" width="5800" height="9520">
    </BOUNDS>
-   <BOUNDS type="Window" left="13605" top="990" width="5805" height="9525">
+   <BOUNDS type="Window" left="7005" top="990" width="9495" height="9525">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -469,6 +473,8 @@
    </PIN>
    <PIN pinname="ToMidi" visible="1">
    </PIN>
+   <PIN pinname="IsEnum" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="215" srcpinname="Y Output Value" dstnodeid="235" dstpinname="MidiCC">
    </LINK>
@@ -477,11 +483,11 @@
    <LINK srcnodeid="19" srcpinname="MinMax" dstnodeid="235" dstpinname="MinMax" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="Format_Values" filename="Format_Values.v4p" nodename="Format_Values.v4p" componentmode="Hidden" id="237">
-   <BOUNDS type="Node" left="5471" top="11077" width="0" height="0">
+   <BOUNDS type="Node" left="6986" top="10942" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="3666" top="8935" width="3610" height="4285">
+   <BOUNDS type="Box" left="5181" top="8800" width="3610" height="4285">
    </BOUNDS>
-   <BOUNDS type="Window" left="3390" top="1125" width="6120" height="5235">
+   <BOUNDS type="Window" left="3390" top="1125" width="10860" height="5235">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -490,6 +496,10 @@
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="IsEnum" visible="1">
+   </PIN>
+   <PIN pinname="VectorSize" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="237" srcpinname="Output" dstnodeid="182" dstpinname="FormatedValues">
@@ -500,7 +510,7 @@
    </LINK>
    <LINK srcnodeid="19" srcpinname="Is  String" dstnodeid="237" dstpinname="ISString" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="19" srcpinname="Is  String" dstnodeid="235" dstpinname="Select" hiddenwhenlocked="1">
+   <LINK srcnodeid="19" srcpinname="Is  String" dstnodeid="235" dstpinname="IsText" hiddenwhenlocked="1">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="240" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="525" top="8775" width="630" height="240">
@@ -552,7 +562,7 @@
    </LINK>
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="235" dstpinname="Values">
    </LINK>
-   <LINK srcnodeid="102" srcpinname="Output" dstnodeid="237" dstpinname="Input 1 1">
+   <LINK srcnodeid="102" srcpinname="Output" dstnodeid="237" dstpinname="Values As String">
    </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="254">
    <BOUNDS type="Node" left="1860" top="5880" width="100" height="100">
@@ -585,7 +595,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2985" top="5535" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -597,7 +607,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="257" srcpinname="Y Output Value" dstnodeid="256" dstpinname="Input 3">
@@ -649,9 +659,9 @@
    <LINK srcnodeid="101" srcpinname="Former Slice" dstnodeid="284" dstpinname="Index">
    </LINK>
    <NODE systemname="TogBangButtons" filename="TogBangButtons.v4p" componentmode="Hidden" id="290" nodename="TogBangButtons.v4p">
-   <BOUNDS type="Node" left="4470" top="10500" width="100" height="100">
+   <BOUNDS type="Node" left="4530" top="10035" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4470" top="10500" width="4800" height="3600">
+   <BOUNDS type="Box" left="4530" top="10035" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="6675" top="2730" width="13470" height="10980">
    </BOUNDS>
@@ -942,26 +952,28 @@
    </LINK>
    <LINK srcnodeid="247" srcpinname="Output" dstnodeid="254" dstpinname="Input">
    </LINK>
-   <NODE systemname="Enums" filename="Enums.v4p" componentmode="Hidden" id="346" nodename="Enums.v4p">
-   <BOUNDS type="Node" left="7470" top="9615" width="780" height="270">
+   <NODE systemname="Enums" filename="Enums.v4p" componentmode="InAWindow" id="346" nodename="Enums.v4p">
+   <BOUNDS type="Node" left="8760" top="13590" width="780" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="7470" top="9615" width="4800" height="3600">
+   <BOUNDS type="Box" left="8760" top="13590" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="18675" top="9750" width="9000" height="6000">
+   <BOUNDS type="Window" left="12255" top="1650" width="14310" height="6000">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="IsEnum" visible="1">
+   <PIN pinname="IsEnum" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Transforms" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="ValuesIn" visible="1" slicecount="62" values=",,,|FitIn, FitWidth, FitHeight, FitOut|,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="VectorSize" visible="1">
+   </PIN>
+   <PIN pinname="EnumList" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Enums" dstnodeid="346" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="IsEnum" dstnodeid="346" dstpinname="IsEnum">
-   </LINK>
    <LINK srcnodeid="346" srcpinname="Layer" dstnodeid="197" dstpinname="Layer 7">
    </LINK>
    <LINK srcnodeid="87" srcpinname="SliderPositionsOnly" dstnodeid="346" dstpinname="Transforms">
@@ -989,8 +1001,6 @@
    <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="357" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="267" srcpinname="Y Output Value" dstnodeid="357" dstpinname="EnableGui">
-   </LINK>
-   <LINK srcnodeid="357" srcpinname="Output" dstnodeid="19" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="357" srcpinname="Output" dstnodeid="256" dstpinname="Input 2">
    </LINK>
@@ -1139,5 +1149,39 @@
    <LINK srcnodeid="360" srcpinname="Inverse Output" dstnodeid="361" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="361" srcpinname="Output" dstnodeid="308" dstpinname="Set">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="362" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8685" top="4230" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8685" top="4230" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="362" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="ISenum" dstnodeid="237" dstpinname="IsEnum">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="VectorSize" dstnodeid="237" dstpinname="VectorSize">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="ISenum" dstnodeid="346" dstpinname="IsEnum">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="ISenum" dstnodeid="235" dstpinname="IsEnum">
+   </LINK>
+   <LINK srcnodeid="182" srcpinname="Output" dstnodeid="346" dstpinname="ValuesIn">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="VectorSize" dstnodeid="346" dstpinname="VectorSize">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="EnumEntries" dstnodeid="346" dstpinname="EnumList">
    </LINK>
    </PATCH>

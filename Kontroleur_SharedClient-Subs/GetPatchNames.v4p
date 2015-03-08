@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\chris\Desktop\CatGui0.3_DB1\Kontroleur_SharedClient-Subs\GetPatchNames.v4p" systemname="GetPatchNames" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Kontroleur_SharedClient-Subs\GetPatchNames.v4p" scrollx="0" scrolly="-360">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNames.v4p" systemname="GetPatchNames" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Kontroleur_SharedClient-Subs\GetPatchNames.v4p" scrollx="0" scrolly="-360">
    <NODE id="0" systemname="GetSubpatchName (VVVV)" filename="D:\App\EuroVision\Subs\plugins\VVVVGetSubpatchName\VVVVGetSubpatchName.csproj" nodename="GetSubpatchName (VVVV)" componentmode="Hidden">
    <PIN pinname="Node Path" visible="1">
    </PIN>
@@ -74,9 +74,9 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Node Found" dstnodeid="6" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="10740" top="5955" width="14835" height="9030">
+   <BOUNDS type="Window" left="825" top="3630" width="14835" height="9030">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="PinInfo (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="PinInfo (VVVV)" componentmode="Hidden" id="13">
    <BOUNDS type="Node" left="2910" top="3450" width="100" height="100">
@@ -224,4 +224,70 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
+   <NODE systemname="PinInfo (VVVV)" filename="..\Subs\VVVVPinInfoAdvanced\VVVVPinInfoAdvanced.csproj" nodename="PinInfo (VVVV)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="5970" top="4515" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Node Label" visible="1">
+   </PIN>
+   <PIN pinname="Update" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Node Tag" visible="1">
+   </PIN>
+   <PIN pinname="Subtype" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="17" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5580" top="5535" width="2550" height="465">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5580" top="5535" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Node Label|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Node Label" dstnodeid="17" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Change" dstnodeid="16" dstpinname="Update">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="18" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6180" top="6540" width="1680" height="465">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6180" top="6540" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Node Tag|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Node Tag" dstnodeid="18" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="19" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8310" top="6555" width="4470" height="360">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8310" top="6555" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Subtype">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Subtype" dstnodeid="19" dstpinname="Input String">
+   </LINK>
    </PATCH>

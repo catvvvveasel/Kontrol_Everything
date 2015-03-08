@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Text_SpriteSheets.v4p" systemname="Text_SpriteSheets" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Text_SpriteSheets.v4p" scrollx="1620" scrolly="2610" bgcolor="11574407">
-   <BOUNDS type="Window" left="1380" top="2280" width="17310" height="12840">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Text_SpriteSheets.v4p" systemname="Text_SpriteSheets" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Text_SpriteSheets.v4p" scrollx="0" scrolly="0" bgcolor="11574407">
+   <BOUNDS type="Window" left="630" top="3255" width="17310" height="12840">
    </BOUNDS>
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="1035" top="3225" width="100" height="100">
@@ -409,7 +409,7 @@
    <LINK srcnodeid="89" srcpinname="Geometry Out" dstnodeid="90" dstpinname="Geometry In">
    </LINK>
    <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="10455" top="7530" width="100" height="100">
+   <BOUNDS type="Node" left="9810" top="6435" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -709,9 +709,11 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="1" values="1.08">
    </PIN>
    </NODE>
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="119" dstpinname="Input 2">
@@ -729,7 +731,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="1" values="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="1.04">
    </PIN>
    </NODE>
    <LINK srcnodeid="120" srcpinname="Output" dstnodeid="28" dstpinname="ScaleX">
@@ -783,11 +785,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="131" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="13455" top="7605" width="480" height="480">
+   <BOUNDS type="Box" left="12720" top="7290" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="13455" top="7605" width="0" height="0">
+   <BOUNDS type="Node" left="12720" top="7290" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -799,7 +801,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="137" systemname="IOBox (Value Advanced)">
@@ -807,7 +809,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="10035" top="5625" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.44">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.43">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -941,8 +943,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="147" srcpinname="Down Edge" dstnodeid="145" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="140" srcpinname="Output" dstnodeid="131" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="148">
    <BOUNDS type="Node" left="13830" top="5250" width="100" height="100">
@@ -1370,8 +1370,6 @@
    </LINK>
    <LINK srcnodeid="178" srcpinname="OnChange" dstnodeid="140" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="140" srcpinname="Output" dstnodeid="92" dstpinname="Apply">
-   </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="179">
    <BOUNDS type="Node" left="14010" top="6990" width="100" height="100">
    </BOUNDS>
@@ -1401,5 +1399,7 @@
    <LINK srcnodeid="145" srcpinname="Output" dstnodeid="179" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="152" srcpinname="Layer" dstnodeid="151" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Y Output Value" dstnodeid="92" dstpinname="Apply">
    </LINK>
    </PATCH>

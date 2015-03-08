@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="15" scrolly="405" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="-360" bgcolor="11574407">
    <BOUNDS type="Window" left="4575" top="2190" width="17355" height="14325">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -11,7 +11,7 @@
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
-   <PIN pinname="Simulate" visible="1">
+   <PIN pinname="Simulate" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="28">
@@ -910,8 +910,6 @@
    </LINK>
    <LINK srcnodeid="116" srcpinname="Output" dstnodeid="62" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Table" dstnodeid="124" dstpinname="Table">
-   </LINK>
    <LINK srcnodeid="23" srcpinname="Commands" dstnodeid="30" dstpinname="Commands">
    </LINK>
    <NODE systemname="AvoidNIL (String)" filename="%VVVV%\lib\nodes\modules\String\AvoidNIL (String).v4p" nodename="AvoidNIL (String)" componentmode="Hidden" id="135">
@@ -1023,8 +1021,6 @@
    <LINK srcnodeid="142" srcpinname="Output" dstnodeid="141" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="138" srcpinname="Y Output Value" dstnodeid="141" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="26" dstpinname="Auto Save">
    </LINK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="143">
    <BOUNDS type="Node" left="11205" top="2280" width="100" height="100">
@@ -1324,10 +1320,6 @@
    </LINK>
    <LINK srcnodeid="163" srcpinname="PatchNames" dstnodeid="75" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="143" srcpinname="OnChange" dstnodeid="29" dstpinname="Simulate">
-   </LINK>
-   <LINK srcnodeid="144" srcpinname="Output 1" dstnodeid="26" dstpinname="Load">
-   </LINK>
    <LINK srcnodeid="28" srcpinname="Output" dstnodeid="30" dstpinname="Insert">
    </LINK>
    <LINK srcnodeid="148" srcpinname="Output" dstnodeid="144" dstpinname="Input 1">
@@ -1355,5 +1347,33 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="148" dstpinname="Input 3">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="165" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5685" top="5355" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5685" top="5355" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="165" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Load">
+   </LINK>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="26" dstpinname="Auto Save">
+   </LINK>
+   <LINK srcnodeid="143" srcpinname="OnChange" dstnodeid="29" dstpinname="Simulate">
+   </LINK>
+   <LINK srcnodeid="144" srcpinname="Output 1" dstnodeid="165" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Table" dstnodeid="124" dstpinname="Table">
    </LINK>
    </PATCH>
