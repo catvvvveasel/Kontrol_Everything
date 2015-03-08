@@ -63,7 +63,7 @@
    </BOUNDS>
    <PIN pinname="Spread" visible="1" slicecount="7" values="-28.4,4.2,-47.8,0,3,-28,43">
    </PIN>
-   <PIN pinname="Index" visible="1" slicecount="1" values="0">
+   <PIN pinname="Index" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -157,8 +157,6 @@
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Spread">
    </LINK>
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="6" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Former Slice" dstnodeid="6" dstpinname="Index">
    </LINK>
    <NODE id="16" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
@@ -254,7 +252,7 @@
    </LINK>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="20415" top="7095" width="7875" height="7965">
+   <BOUNDS type="Window" left="3570" top="3510" width="10005" height="8640">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -273,5 +271,33 @@
    <LINK srcnodeid="24" srcpinname="Output 2" dstnodeid="3" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output 1" dstnodeid="3" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7140" top="885" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7140" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Amount">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="2640" top="5100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Former Slice" dstnodeid="26" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output 1" dstnodeid="6" dstpinname="Index">
    </LINK>
    </PATCH>

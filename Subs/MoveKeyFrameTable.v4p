@@ -14,26 +14,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3480" top="900" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3480" top="900" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Real">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Move">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="4260" top="2910" width="100" height="100">
    </BOUNDS>
@@ -62,6 +42,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Real">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="7">
@@ -150,24 +132,18 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output String" dstnodeid="12" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="4" srcpinname="Inverse Output" dstnodeid="7" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Count" dstnodeid="4" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Inverse Output" dstnodeid="10" dstpinname="Input" linkstyle="PolyLine">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Y Input Value">
-   </LINK>
-   <BOUNDS type="Window" left="17880" top="1380" width="7110" height="9570">
+   <BOUNDS type="Window" left="17880" top="1380" width="9270" height="9570">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Input">
-   </LINK>
    <NODE id="2" systemname="SetRow (DataTable String)" filename="C:\Users\chris\Desktop\VW\Git_HA\mlf_vwpls2015\Scenes\Shared\plugins\Table.dll" nodename="SetRow (DataTable String)" componentmode="Hidden">
    <BOUNDS type="Node" left="1560" top="6045" width="100" height="100">
    </BOUNDS>
@@ -253,5 +229,31 @@
    <LINK srcnodeid="10" srcpinname="Down Edge" dstnodeid="28" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="28" srcpinname="Output" dstnodeid="2" dstpinname="Set">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
+   <BOUNDS type="Node" left="6015" top="420" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6015" top="420" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="LeftClick">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="5385" top="870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1" slicecount="6" values="0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="29" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Former Slice" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Former Slice" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Former Slice" dstnodeid="5" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

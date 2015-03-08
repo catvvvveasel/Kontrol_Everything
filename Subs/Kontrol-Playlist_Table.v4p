@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="4905" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="1800" bgcolor="11574407">
    <BOUNDS type="Window" left="4380" top="1635" width="20265" height="12525">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -973,7 +973,7 @@
    </PIN>
    <PIN pinname="Edit Preset Name" visible="1">
    </PIN>
-   <PIN pinname="LeftClick" visible="1">
+   <PIN pinname="LeftClick" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="RecordLive" visible="1">
    </PIN>
@@ -1076,8 +1076,6 @@
    </LINK>
    <LINK srcnodeid="302" srcpinname="Edit Preset Name" dstnodeid="215" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="222" srcpinname="LeftClicked" dstnodeid="302" dstpinname="LeftClick">
-   </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="312">
    <BOUNDS type="Node" left="4560" top="13725" width="100" height="100">
    </BOUNDS>
@@ -1135,5 +1133,7 @@
    <LINK srcnodeid="294" srcpinname="Input Value" dstnodeid="315" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="315" srcpinname="Y Output Value" dstnodeid="302" dstpinname="RecordLive">
+   </LINK>
+   <LINK srcnodeid="230" srcpinname="Y Output Value" dstnodeid="302" dstpinname="LeftClick">
    </LINK>
    </PATCH>

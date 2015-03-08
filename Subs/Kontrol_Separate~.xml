@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol_Separate.v4p" systemname="Kontrol_Separate" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol_Separate.v4p" scrollx="0" scrolly="0" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol_Separate.v4p" systemname="Kontrol_Separate" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol_Separate.v4p" scrollx="0" scrolly="-360" bgcolor="11574407">
    <BOUNDS type="Window" left="5925" top="855" width="19050" height="15585">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="159" systemname="IOBox (Value Advanced)">
@@ -403,6 +403,8 @@
    </PIN>
    <PIN pinname="Input 1 1" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE id="428" systemname="R (Value)" nodename="R (Value)" componentmode="Hidden">
    <PIN pinname="Display Channel" slicecount="1" values="1">
@@ -663,11 +665,11 @@
    </PIN>
    <PIN pinname="FromPatches" visible="1">
    </PIN>
-   <PIN pinname="Spread" visible="1" slicecount="60" values="|15.8423,3.9052,-44.2330|,|0.0000,3.0000,-28.0000|,43.0000,0,|0, 0, 0|,0,|HasAlpha, HasAlpha, HasAlpha, HasAlpha|,0,|0, 0, 0|,0,0,|2.8000,2.0000,-22.5000|,9.0000,0,|3.5734,2.0000,-22.5254|,4.0000,0,|0.0000,1.9500,-27.0000|,1.0000,0,|-3.0000,2.0000,-22.5254|,1.0000,|0.0000,0.0590,0.5900,0.1100|,|0.1352,0.0000,0.5200,0.9100|,0,-0.0160,0,21.4610,10.0000,6.1740,0.0000,0.0000,2.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0,|1.0000,1.0000,1.0000,0.0000|,1.0000,0.0000,4.0000,0.0000,0.0000,1.0000,0,|1.00000,1.00000,1.00000,0.00000|,3.0000,1.0000,1.0000,1.0000,0,|1.00000,1.00000,1.00000,1.00000|,1.0000,1.0000,1.0000,1.0000,-1.0350,|1.0000,1.0000,1.0000,1.0000|">
+   <PIN pinname="Spread" visible="1" slicecount="62" values="| 0, 0, 0|,| 0, 0, 0|,| 1|,| Wrap|,,| 4|,|4.0000,0.0000,0.2083|,4.0000,|0.0200,1.0000,0.0000,0.0000|,| 4|,|1.0000,4.0000,1.0000|,0.0000,0.0,|4.0000,4.0000,-12.0000|,| 4|,| 1|,|0.2000,0.0000,3.0000|,| 4|,4.0,|1.0000,3.0000,1.0000|,| 4|,| 1|,|0.1979,4.0000,4.0000|,-12,|0.0000,0.0000,0.0000,0.0000|,|-0.5200,13.0000,-39.0000,0.0000|,| 4|,0.3300,1.0000,4.0000,1.0000,4.0000,4,4,| 4|,| 4|,| 4|,| 4|,0.0000,0,-0.0000,|1.0400,0.0000,4.0000,0.0000|,| 4|,| 4|,| 4|,0.1667,| 4|,| 4|,-2.0000,|-12.0000,1.0000,0.2200,0.0000|,4,4.0000,| 4|,| 4|,4.0000,|0.0200,1.0000,0.0000,0.0000|,4,4.0000,| 4|,| 4|,| 4|,|0.0000,0.0400,1.0000,0.0000|">
+   </PIN>
+   <PIN pinname="Init" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="570" srcpinname="Output" dstnodeid="762" dstpinname="Init">
-   </LINK>
    <LINK srcnodeid="189" srcpinname="Former Slice" dstnodeid="762" dstpinname="FormerSlice">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="763" systemname="IOBox (Value Advanced)">
@@ -1261,7 +1263,7 @@
    <LINK srcnodeid="878" srcpinname="Layer Out" dstnodeid="865" dstpinname="Layer 2">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="879">
-   <BOUNDS type="Node" left="8985" top="5730" width="100" height="100">
+   <BOUNDS type="Node" left="9030" top="5670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1273,8 +1275,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="360" srcpinname="Output" dstnodeid="879" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="879" srcpinname="Output" dstnodeid="762" dstpinname="Spread">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="880">
    <BOUNDS type="Node" left="9555" top="14700" width="100" height="100">
@@ -1391,5 +1391,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="882" srcpinname="Y Output Value" dstnodeid="189" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="879" srcpinname="Output" dstnodeid="762" dstpinname="Spread">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="885">
+   <BOUNDS type="Node" left="10815" top="5790" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="570" srcpinname="Output" dstnodeid="885" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="885" srcpinname="Output" dstnodeid="762" dstpinname="Init">
+   </LINK>
+   <LINK srcnodeid="575" srcpinname="Output" dstnodeid="885" dstpinname="Input 2">
    </LINK>
    </PATCH>
