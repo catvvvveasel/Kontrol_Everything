@@ -83,9 +83,9 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1515" top="3410" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Output Node" dstnodeid="1" dstpinname="Transform Quad">
-   </LINK>
    <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform Line">
    </LINK>
    <NODE id="16" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -314,16 +314,6 @@
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="270" top="6015" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Send String" slicecount="1" values="SliderAction">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="50" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="52">
    <BOUNDS type="Node" left="4365" top="5790" width="100" height="100">
    </BOUNDS>
@@ -437,7 +427,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1925" top="2169" width="6115" height="7225">
    </BOUNDS>
-   <BOUNDS type="Window" left="3570" top="3510" width="10005" height="8640">
+   <BOUNDS type="Window" left="180" top="6780" width="10005" height="8640">
    </BOUNDS>
    <PIN pinname="Max" visible="1" slicecount="7" values="100,100,100,100,100,100,160">
    </PIN>
@@ -619,5 +609,11 @@
    <LINK srcnodeid="99" srcpinname="Input Value" dstnodeid="101" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="101" srcpinname="Output" dstnodeid="53" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Output 2" dstnodeid="0" dstpinname="Destination Maximum">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Output 1" dstnodeid="0" dstpinname="Destination Minimum">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output Node" dstnodeid="1" dstpinname="Transform Quad">
    </LINK>
    </PATCH>

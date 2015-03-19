@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="3390" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="6420" bgcolor="11574407">
    <BOUNDS type="Window" left="4575" top="2190" width="17355" height="14325">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -1011,7 +1011,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Y Input Value">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="148">
@@ -1225,7 +1225,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Evaluate" pintype="Input" visible="1" slicecount="1" values="1">
+   <PIN pinname="Evaluate" pintype="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Window Handle" pintype="Output" visible="-1">
    </PIN>
@@ -1320,8 +1320,6 @@
    </NODE>
    <LINK srcnodeid="166" srcpinname="OnChange" dstnodeid="167" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="167" srcpinname="Output" dstnodeid="163" dstpinname="Evaluate">
-   </LINK>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="168">
    <BOUNDS type="Node" left="9720" top="9180" width="100" height="100">
    </BOUNDS>
@@ -1398,6 +1396,30 @@
    </LINK>
    <LINK srcnodeid="174" srcpinname="Shortname" dstnodeid="59" dstpinname="Input String">
    </LINK>
-   <LINK srcnodeid="167" srcpinname="Output" dstnodeid="174" dstpinname="Evaluate">
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="175">
+   <BOUNDS type="Node" left="7740" top="16035" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="167" srcpinname="Output" dstnodeid="175" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="175" srcpinname="Output" dstnodeid="163" dstpinname="Evaluate">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="176">
+   <BOUNDS type="Node" left="8505" top="15555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="67" srcpinname="Index" dstnodeid="176" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="OnChange" dstnodeid="175" dstpinname="Input 2">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="4500">
    <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1560" top="3810" width="100" height="100">
    </BOUNDS>
@@ -63,7 +63,7 @@
    </PIN>
    <PIN pinname="AsyncThreadPriority" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Increase Timing Precision" slicecount="1" values="1">
+   <PIN pinname="Increase Timing Precision" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Current Frame" visible="1">
    </PIN>
@@ -385,9 +385,9 @@
    <LINK srcnodeid="75" srcpinname="Output" dstnodeid="13" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="76" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3015" top="10230" width="480" height="480">
+   <BOUNDS type="Box" left="2430" top="9960" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3015" top="10230" width="0" height="0">
+   <BOUNDS type="Node" left="2430" top="9960" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -400,6 +400,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="76" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Write">
@@ -485,7 +487,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Intersperse String" slicecount="1" values="||" visible="1">
+   <PIN pinname="Intersperse String" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="71" dstpinname="Input">
@@ -939,7 +941,7 @@
    <LINK srcnodeid="138" srcpinname="Input Value" dstnodeid="139" dstpinname="Input">
    </LINK>
    <NODE systemname="Reader (Raw SharedMemory)" nodename="Reader (Raw SharedMemory)" componentmode="Hidden" id="140">
-   <BOUNDS type="Node" left="8265" top="9045" width="100" height="100">
+   <BOUNDS type="Node" left="8265" top="8655" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Size in Bytes" slicecount="1" values="4">
    </PIN>
@@ -947,11 +949,11 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Read" visible="1">
+   <PIN pinname="Read" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="AsValue (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsValue (Raw)" componentmode="Hidden" id="141">
-   <BOUNDS type="Node" left="8250" top="9450" width="100" height="100">
+   <BOUNDS type="Node" left="8250" top="9060" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -965,13 +967,11 @@
    <NODE systemname="FromSharedTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FromSharedTexture (DX11.Texture 2d)" componentmode="Hidden" id="142">
    <BOUNDS type="Node" left="8235" top="10005" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Pointer" visible="1">
+   <PIN pinname="Pointer" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="142" dstpinname="Pointer">
-   </LINK>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="145">
    <BOUNDS type="Node" left="9900" top="10260" width="100" height="100">
    </BOUNDS>
@@ -1107,8 +1107,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="162" srcpinname="Y Output Value" dstnodeid="94" dstpinname="Read">
-   </LINK>
-   <LINK srcnodeid="162" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Read">
    </LINK>
    <LINK srcnodeid="162" srcpinname="Y Output Value" dstnodeid="53" dstpinname="Read">
    </LINK>
@@ -1515,5 +1513,39 @@
    <LINK srcnodeid="194" srcpinname="Output" dstnodeid="195" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="186" srcpinname="Y Output Value" dstnodeid="110" dstpinname="Evaluate">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="199">
+   <BOUNDS type="Node" left="8235" top="9465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="141" srcpinname="Output" dstnodeid="199" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Output" dstnodeid="142" dstpinname="Pointer">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="200" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8565" top="8025" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8565" top="8025" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="200" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Read">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="Output" dstnodeid="193" dstpinname="Write">
    </LINK>
    </PATCH>

@@ -199,7 +199,7 @@
    </PIN>
    </NODE>
    <NODE systemname="PinInfo (VVVV)" filename="VVVVPinInfoAdvanced\VVVVPinInfoAdvanced.csproj" nodename="PinInfo (VVVV)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="6285" top="4035" width="4530" height="270">
+   <BOUNDS type="Node" left="6510" top="3870" width="4530" height="270">
    </BOUNDS>
    <PIN pinname="Update" visible="1">
    </PIN>
@@ -251,7 +251,7 @@
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="5865" top="4890" width="5160" height="270">
    </BOUNDS>
-   <PIN pinname="Input Count" slicecount="1" values="13">
+   <PIN pinname="Input Count" slicecount="1" values="7">
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="60" values="CameraPos,CameraTarget,FOV,|Fx Index|,Pos,TIme,Colour,PropsIndex,|Props Pos|,Rot,|Artist3 Rot|,|Artist3 Pos|,|Artist2 Index|,|Artist2 Rot|,|Artist2 Pos|,|Artist1 Index|,|Artist1 Rot|,|Artist1 Pos|,|Artist4 Index|,|Artist4 Rot|,|Artist4 Pos|,|Artist3 Index|,MovingLights,LEDs,Zoom,Width,Height,Period,Length,LengthFront,Fx,ColFx,|Proj File Index|,|Proj Alpha|,ProjSyncOffset,ProjPlay,MaskAlpha,MaskFile,Offset,ProjCol,|Proj Sync|,MaskPlay,|CubeFile Index|,CubeAlpha,CubeSync,CubePlay,Offset,CubeCol,|Floor File Index|,|Floor Alpha|,|Floor Sync|,FloorPlay,Offset,FloorCol,|Rear File Index|,|Rear Alpha|,|Rear Sync|,RearPlay,Offset,RearCol">
    </PIN>
@@ -267,9 +267,9 @@
    </PIN>
    <PIN pinname="Input 5" visible="1">
    </PIN>
-   <PIN pinname="Input 6" visible="1">
+   <PIN pinname="Input 6" visible="1" slicecount="1" values="text">
    </PIN>
-   <PIN pinname="Input 7" visible="1">
+   <PIN pinname="Input 7" visible="1" slicecount="60" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
    </PIN>
    <PIN pinname="Input 8" visible="1">
    </PIN>
@@ -296,10 +296,6 @@
    </LINK>
    <LINK srcnodeid="20" srcpinname="Subtype" dstnodeid="21" dstpinname="Input 4">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Type" dstnodeid="21" dstpinname="Input 6">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="ValueType" dstnodeid="21" dstpinname="Input 7">
-   </LINK>
    <LINK srcnodeid="20" srcpinname="SliderBehavior" dstnodeid="21" dstpinname="Input 8">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Value Minimum" dstnodeid="21" dstpinname="Input 9">
@@ -311,7 +307,7 @@
    <LINK srcnodeid="20" srcpinname="Enum Entries" dstnodeid="21" dstpinname="Input 12">
    </LINK>
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="10245" top="4455" width="100" height="100">
+   <BOUNDS type="Node" left="9690" top="4455" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -323,5 +319,9 @@
    <LINK srcnodeid="20" srcpinname="Enum Entry Count" dstnodeid="22" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="21" dstpinname="Input 13">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Enum Entries" dstnodeid="21" dstpinname="Input 6">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="21" dstpinname="Input 7">
    </LINK>
    </PATCH>
