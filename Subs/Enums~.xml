@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="9390" top="780" width="14310" height="14070">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="5505" scrolly="0">
+   <BOUNDS type="Window" left="29295" top="2130" width="14310" height="14070">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -411,7 +411,7 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Select" visible="1" slicecount="2" values="0,0">
+   <PIN pinname="Select" visible="1" slicecount="2" values="-1,-1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -725,13 +725,11 @@
    <NODE systemname="Clean (String)" filename="" nodename="Clean (String)" componentmode="Hidden" id="87">
    <BOUNDS type="Node" left="6015" top="8940" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="9" values="FitIn,| FitWidth|,| FitHeight|,| FitOut|,Wrap,| Mirror|,| Clamp|,| Border|,| MirrorOnce|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="87" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="87" srcpinname="Output" dstnodeid="74" dstpinname="String">
    </LINK>
    <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="88">
@@ -932,8 +930,6 @@
    </NODE>
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="46" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="50" dstpinname="Select">
-   </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="103">
    <BOUNDS type="Node" left="6615" top="3525" width="100" height="100">
    </BOUNDS>
@@ -991,5 +987,9 @@
    <LINK srcnodeid="107" srcpinname="Output" dstnodeid="104" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="14" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="50" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="87" dstpinname="Input">
    </LINK>
    </PATCH>

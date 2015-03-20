@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha33.2.dtd" >
-   <PATCH nodename="D:\App\EuroVision\Subs\AudioWaveform\Subs\CopyProject.v4p" systemname="CopyProject" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\App\EuroVision\Subs\AudioWaveform\Subs\CopyProject.v4p">
-   <BOUNDS type="Window" left="8325" top="8100" width="15600" height="7350">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\DropDownMenu\CopyProject.v4p" systemname="CopyProject" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\App\EuroVision\Subs\AudioWaveform\Subs\CopyProject.v4p" scrollx="30" scrolly="15">
+   <BOUNDS type="Window" left="8520" top="465" width="15600" height="10530">
    </BOUNDS>
    <NODE systemname="SubDir (File)" nodename="SubDir (File)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2370" top="1125" width="100" height="100">
@@ -11,9 +11,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="2355" top="285" width="5640" height="240">
+   <BOUNDS type="Box" left="2355" top="165" width="5640" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2355" top="285" width="0" height="0">
+   <BOUNDS type="Node" left="2355" top="165" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="..\Copy\Projects\EuroVisionPreViz\App\Tracks\Track1">
    </PIN>
@@ -27,13 +27,13 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Dir">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Dir From|">
    </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="1" dstpinname="Directory">
    </LINK>
    <NODE systemname="Directory (File)" nodename="Directory (File)" componentmode="Hidden" id="0" filename="%VVVV%\addonpack\lib\nodes\plugins\Directory.dll">
-   <BOUNDS type="Node" left="1875" top="3015" width="100" height="100">
+   <BOUNDS type="Node" left="1725" top="3105" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Directory" visible="1">
    </PIN>
@@ -41,9 +41,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6330" top="2430" width="8460" height="4035">
+   <BOUNDS type="Box" left="9285" top="2430" width="8460" height="4035">
    </BOUNDS>
-   <BOUNDS type="Node" left="6330" top="2430" width="0" height="0">
+   <BOUNDS type="Node" left="9285" top="2430" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -59,11 +59,11 @@
    </PIN>
    </NODE>
    <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="1935" top="2310" width="100" height="100">
+   <BOUNDS type="Node" left="1935" top="1665" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="D:\App\Tracks\Azerbaijan\">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -71,9 +71,9 @@
    <LINK srcnodeid="1" srcpinname="Subdirectories" dstnodeid="4" dstpinname="Input 2">
    </LINK>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="3900" top="900" width="100" height="100">
+   <BOUNDS type="Node" left="3735" top="1575" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" visible="1">
+   <PIN pinname="Filename" visible="1" slicecount="1" values="..\..\..\..\Tracks\333\">
    </PIN>
    <PIN pinname="Path" visible="1">
    </PIN>
@@ -81,7 +81,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="3870" top="1470" width="100" height="100">
+   <BOUNDS type="Node" left="3705" top="2145" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="Track1">
    </PIN>
@@ -95,9 +95,9 @@
    <LINK srcnodeid="5" srcpinname="Shortname" dstnodeid="6" dstpinname="From">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="5310" top="645" width="795" height="240">
+   <BOUNDS type="Box" left="5400" top="825" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5310" top="645" width="0" height="0">
+   <BOUNDS type="Node" left="5400" top="825" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="Test4">
    </PIN>
@@ -107,7 +107,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|New Name|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Dir To|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -130,16 +130,6 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="0" dstpinname="Directory">
    </LINK>
-   <NODE systemname="AND (Boolean Spectral)" nodename="AND (Boolean Spectral)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="1890" top="3675" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="0" srcpinname="Exists" dstnodeid="9" dstpinname="Input">
-   </LINK>
    <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="3285" top="3045" width="100" height="100">
    </BOUNDS>
@@ -155,7 +145,7 @@
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="11" dstpinname="Directory">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="3825" top="4230" width="100" height="100">
+   <BOUNDS type="Node" left="3720" top="4290" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -166,20 +156,8 @@
    </NODE>
    <LINK srcnodeid="11" srcpinname="Short Filenames" dstnodeid="13" dstpinname="Input 2">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1905" top="5760" width="1920" height="660">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1905" top="5760" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="1470" top="5385" width="100" height="100">
+   <BOUNDS type="Node" left="2550" top="6480" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -213,7 +191,7 @@
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Create">
    </LINK>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="3825" top="3735" width="100" height="100">
+   <BOUNDS type="Node" left="3720" top="3795" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -229,9 +207,9 @@
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="13" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4905" top="4515" width="480" height="480">
+   <BOUNDS type="Box" left="7800" top="5535" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4905" top="4515" width="0" height="0">
+   <BOUNDS type="Node" left="7800" top="5535" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -247,35 +225,15 @@
    </PIN>
    </NODE>
    <NODE systemname="Copier (File)" nodename="Copier (File)" componentmode="Hidden" id="10">
-   <BOUNDS type="Node" left="3570" top="5265" width="100" height="100">
+   <BOUNDS type="Node" left="2835" top="6900" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="To Filename" visible="1">
+   <PIN pinname="To Filename" visible="1" slicecount="82" values="..\..\..\..\Tracks\\Audio\Azerbaijan_Master.wav,..\..\..\..\Tracks\\Playlists\Playlist01,..\..\..\..\Tracks\\Playlists\Playlist01.xml,..\..\..\..\Tracks\\Presets\PatchPreset_-001_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_-001_0001.xml,..\..\..\..\Tracks\\Presets\PatchPreset_-001_0002.xml,..\..\..\..\Tracks\\Presets\PatchPreset_-001_0003.xml,..\..\..\..\Tracks\\Presets\PatchPreset_-001_0008.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0001.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0002.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0003.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0004.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0005.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0006.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0007.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0008.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0009.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0010.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0011.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0012.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0013.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0014.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0015.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0016.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0017.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0018.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0019.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0020.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0021.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0022.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0023.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0024.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0025.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0026.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0027.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0028.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0029.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0000_0030.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0001_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0001_0001.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0002_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0003_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0001.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0002.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0003.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0004.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0005.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0008.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0010.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0011.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0012.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0024.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0004_0031.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0001.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0002.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0003.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0004.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0005.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0006.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0007.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0005_0010.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0006_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0006_0001.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0007_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0007_0001.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0008_0000.xml,..\..\..\..\Tracks\\Presets\PatchPreset_0008_0001.xml,..\..\..\..\Tracks\\Thumbs\PatchPreset_-001_0000.jpg,..\..\..\..\Tracks\\Thumbs\PatchPreset_0004_0000.jpg,..\..\..\..\Tracks\\Thumbs\PatchPreset_0005_0000.jpg,..\..\..\..\Tracks\\Thumbs\PatchPreset_0007_0000.jpg,..\..\..\..\Tracks\\Video\AZE_Backwall_WholeSong_v6.mov,..\..\..\..\Tracks\\Video\AZE_Cube_Dimming_UnknownSection2_v2.mov,..\..\..\..\Tracks\\Video\AZE_Cube_Dimming_WholeSong_v4.mov,..\..\..\..\Tracks\\Video\AZE_Cube_Projection_WholeSong_v5.mov,..\..\..\..\Tracks\\Video\AZE_Floor_WholeSong_v5.mov,..\..\..\..\Tracks\\Video\bAZE_Backwall_WholeSong_v2_Smaller.avi,..\..\..\..\Tracks\\Video\cAZE_Cube_Dimming_UnknownSection1_v2.png,|..\..\..\..\Tracks\\Video\Use Freemake Video to create AVI Xvid.txt|">
    </PIN>
-   <PIN pinname="From Filename" visible="1">
+   <PIN pinname="From Filename" visible="1" slicecount="82" values="..\..\..\..\Tracks\Azerbaijan\Audio\Azerbaijan_Master.wav,..\..\..\..\Tracks\Azerbaijan\Playlists\Playlist01,..\..\..\..\Tracks\Azerbaijan\Playlists\Playlist01.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_-001_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_-001_0001.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_-001_0002.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_-001_0003.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_-001_0008.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0001.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0002.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0003.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0004.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0005.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0006.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0007.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0008.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0009.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0010.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0011.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0012.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0013.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0014.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0015.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0016.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0017.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0018.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0019.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0020.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0021.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0022.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0023.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0024.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0025.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0026.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0027.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0028.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0029.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0000_0030.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0001_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0001_0001.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0002_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0003_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0001.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0002.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0003.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0004.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0005.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0008.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0010.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0011.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0012.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0024.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0004_0031.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0001.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0002.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0003.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0004.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0005.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0006.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0007.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0005_0010.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0006_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0006_0001.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0007_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0007_0001.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0008_0000.xml,..\..\..\..\Tracks\Azerbaijan\Presets\PatchPreset_0008_0001.xml,..\..\..\..\Tracks\Azerbaijan\Thumbs\PatchPreset_-001_0000.jpg,..\..\..\..\Tracks\Azerbaijan\Thumbs\PatchPreset_0004_0000.jpg,..\..\..\..\Tracks\Azerbaijan\Thumbs\PatchPreset_0005_0000.jpg,..\..\..\..\Tracks\Azerbaijan\Thumbs\PatchPreset_0007_0000.jpg,..\..\..\..\Tracks\Azerbaijan\Video\AZE_Backwall_WholeSong_v6.mov,..\..\..\..\Tracks\Azerbaijan\Video\AZE_Cube_Dimming_UnknownSection2_v2.mov,..\..\..\..\Tracks\Azerbaijan\Video\AZE_Cube_Dimming_WholeSong_v4.mov,..\..\..\..\Tracks\Azerbaijan\Video\AZE_Cube_Projection_WholeSong_v5.mov,..\..\..\..\Tracks\Azerbaijan\Video\AZE_Floor_WholeSong_v5.mov,..\..\..\..\Tracks\Azerbaijan\Video\bAZE_Backwall_WholeSong_v2_Smaller.avi,..\..\..\..\Tracks\Azerbaijan\Video\cAZE_Cube_Dimming_UnknownSection1_v2.png,|..\..\..\..\Tracks\Azerbaijan\Video\Use Freemake Video to create AVI Xvid.txt|">
    </PIN>
    <PIN pinname="Copy" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="10" dstpinname="To Filename">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Filenames" dstnodeid="10" dstpinname="From Filename">
-   </LINK>
-   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="3270" top="600" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Operand 1" visible="1">
-   </PIN>
-   <PIN pinname="Operand 2" slicecount="1" values="\">
-   </PIN>
-   <PIN pinname="Occurence Mode" slicecount="1" values="Last">
-   </PIN>
-   <PIN pinname="Result" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="19" dstpinname="Operand 1">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Result" dstnodeid="5" dstpinname="Filename">
-   </LINK>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="5370" top="1290" width="100" height="100">
    </BOUNDS>
@@ -290,26 +248,10 @@
    </LINK>
    <LINK srcnodeid="20" srcpinname="Shortname" dstnodeid="6" dstpinname="To">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="4" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="TimerFlop (Animation)" filename="%VVVV%\addonpack\lib\nodes\plugins\TimerFlop.dll" nodename="TimerFlop (Animation)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="1950" top="4740" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Set" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Time" slicecount="1" values="0.2">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="22" dstpinname="Set">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4920" top="6030" width="480" height="480">
+   <BOUNDS type="Box" left="1245" top="6165" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4920" top="6030" width="0" height="0">
+   <BOUNDS type="Node" left="1245" top="6165" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -324,8 +266,6 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Reset">
-   </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="630" top="4665" width="100" height="100">
    </BOUNDS>
@@ -341,13 +281,11 @@
    <LINK srcnodeid="24" srcpinname="Inverse Output" dstnodeid="15" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="24" srcpinname="Inverse Output" dstnodeid="23" dstpinname="Y Input Value">
-   <LINKPOINT x="5010" y="6045">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="630" top="4140" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
@@ -370,11 +308,135 @@
    </NODE>
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="26" dstpinname="Y Input Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="27" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2340" top="3930" width="480" height="480">
+   <LINK srcnodeid="15" srcpinname="Down Edge" dstnodeid="10" dstpinname="Copy">
+   </LINK>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="4" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="4605" top="3315" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Node" left="2340" top="3930" width="0" height="0">
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Extension" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Short Filenames" dstnodeid="28" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="5310" top="3810" width="100" height="100">
    </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="avi">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Extension" dstnodeid="29" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="5865" top="3840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="mov">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Extension" dstnodeid="30" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="6420" top="3825" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="mp4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Extension" dstnodeid="31" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="5295" top="4200" width="2340" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="32" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="32" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="32" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="3510" top="5670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="5310" top="4530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="34" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="33" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="33" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="2820" top="5445" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Filenames" dstnodeid="35" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="36" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2010" top="4770" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2010" top="4770" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
@@ -383,13 +445,131 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="27" dstpinname="Y Input Value">
+   <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Input">
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="37">
+   <BOUNDS type="Node" left="3030" top="6045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Down Edge" dstnodeid="10" dstpinname="Copy">
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="37" dstpinname="Input 1">
    </LINK>
-   <PACK Name="addonpack" Version="33.0.0">
-   </PACK>
+   <LINK srcnodeid="37" srcpinname="Output" dstnodeid="10" dstpinname="To Filename">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="10" dstpinname="From Filename">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="37" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="3300" top="4965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="38" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Filenames" dstnodeid="38" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="35" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="3810" top="975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" values="\">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="Last">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="39" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="Result" dstnodeid="5" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="1995" top="3810" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Shift">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="1995" top="4305" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Input Value" dstnodeid="41" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output" dstnodeid="36" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="7005" top="3810" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="wav">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Extension" dstnodeid="42" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="32" dstpinname="Input 4">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="7560" top="3795" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="obj">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Extension" dstnodeid="43" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="32" dstpinname="Input 5">
+   </LINK>
+   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="45">
+   <BOUNDS type="Node" left="90" top="330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Background Kalle" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="75" top="30" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Kalle">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Input Value" dstnodeid="45" dstpinname="Background Kalle">
+   </LINK>
    </PATCH>

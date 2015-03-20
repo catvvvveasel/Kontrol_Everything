@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="0" bgcolor="11574407">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="0" bgcolor="11442820">
    <BOUNDS type="Window" left="1080" top="630" width="12300" height="15750">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -293,7 +293,7 @@
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="79">
-   <BOUNDS type="Node" left="2430" top="3780" width="100" height="100">
+   <BOUNDS type="Node" left="1950" top="1800" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="MenuOpen">
    </PIN>
@@ -318,8 +318,6 @@
    </LINK>
    <LINK srcnodeid="81" srcpinname="Output" dstnodeid="78" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="79" srcpinname="Input Value" dstnodeid="78" dstpinname="Switch">
-   </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="86">
    <BOUNDS type="Node" left="5415" top="5880" width="100" height="100">
    </BOUNDS>
@@ -329,5 +327,29 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="LSliders" dstnodeid="86" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="1845" top="2850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Input Value" dstnodeid="87" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="78" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="2280" top="2310" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="PrefsOpen">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Input Value" dstnodeid="87" dstpinname="Input 2">
    </LINK>
    </PATCH>

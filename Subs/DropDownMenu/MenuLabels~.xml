@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4\Subs\MenuLabels.v4p" systemname="MenuLabels" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\App\EuroVision\Subs\AudioWaveform\Subs\MenuLabels.v4p">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\DropDownMenu\MenuLabels.v4p" systemname="MenuLabels" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\App\EuroVision\Subs\AudioWaveform\Subs\MenuLabels.v4p">
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="4005" width="100" height="100">
    </BOUNDS>
@@ -18,6 +18,10 @@
    <PIN pinname="Size" slicecount="1" values="60">
    </PIN>
    <PIN pinname="Normalize" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="1">
@@ -278,4 +282,14 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
+   <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="360" top="3480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Add">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Render State" dstnodeid="0" dstpinname="Render State">
+   </LINK>
    </PATCH>

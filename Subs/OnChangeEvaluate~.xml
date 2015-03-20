@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4\Subs\OnChangeEvaluate.v4p" systemname="OnChangeEvaluate" filename="D:\App\EuroVision\CatGui0.4\Subs\OnChangeEvaluate.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\OnChangeEvaluate.v4p" systemname="OnChangeEvaluate" filename="D:\App\EuroVision\CatGui0.4\Subs\OnChangeEvaluate.v4p" scrollx="0" scrolly="0">
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1515" top="2595" width="100" height="100">
    </BOUNDS>
@@ -29,7 +29,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input 4" visible="1">
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 5" visible="1">
    </PIN>
@@ -187,6 +187,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1515" top="500" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Output String" dstnodeid="0" dstpinname="Input">
    </LINK>
@@ -195,8 +197,6 @@
    <LINK srcnodeid="4" srcpinname="Input Value" dstnodeid="2" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="17" srcpinname="OnChange" dstnodeid="2" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Input 4">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="2" dstpinname="Input 5">
    </LINK>
@@ -261,5 +261,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="23" srcpinname="Input Value" dstnodeid="2" dstpinname="Input 9">
+   </LINK>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="1680" top="960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output String" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="1695" top="1440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Count" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="OnChange" dstnodeid="2" dstpinname="Input 4">
    </LINK>
    </PATCH>
