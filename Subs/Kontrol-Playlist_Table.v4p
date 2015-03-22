@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="4680" bgcolor="11442820">
-   <BOUNDS type="Window" left="4380" top="1635" width="20265" height="12525">
+   <BOUNDS type="Window" left="1830" top="0" width="20265" height="12525">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -1047,7 +1047,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="308">
-   <BOUNDS type="Node" left="30" top="9195" width="100" height="100">
+   <BOUNDS type="Node" left="15" top="8805" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1067,8 +1067,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="308" srcpinname="Output" dstnodeid="307" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="285" srcpinname="Output String" dstnodeid="307" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="307" srcpinname="Output" dstnodeid="302" dstpinname="Filename">
    </LINK>
@@ -1135,5 +1133,15 @@
    <LINK srcnodeid="315" srcpinname="Y Output Value" dstnodeid="302" dstpinname="RecordLive">
    </LINK>
    <LINK srcnodeid="230" srcpinname="Y Output Value" dstnodeid="302" dstpinname="LeftClick">
+   </LINK>
+   <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="316">
+   <BOUNDS type="Node" left="225" top="9255" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="PlaylistFromMenu">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="316" srcpinname="Input Value" dstnodeid="307" dstpinname="Input 2">
    </LINK>
    </PATCH>
