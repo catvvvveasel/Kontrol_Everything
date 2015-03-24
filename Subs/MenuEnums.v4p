@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" systemname="MenuEnums" filename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" scrollx="3165" scrolly="1185">
-   <BOUNDS type="Window" left="8490" top="300" width="15885" height="15060">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" systemname="MenuEnums" filename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" scrollx="0" scrolly="1305">
+   <BOUNDS type="Window" left="17220" top="1110" width="15885" height="15060">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="68" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4515" top="1200" width="1365" height="240">
@@ -251,7 +251,7 @@
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" values="-0.5">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.86" visible="1">
+   <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.86">
    </PIN>
    </NODE>
    <LINK srcnodeid="49" srcpinname="Transform Out" dstnodeid="54" dstpinname="Transform In">
@@ -309,7 +309,7 @@
    </PIN>
    </NODE>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="41">
-   <BOUNDS type="Node" left="4260" top="6825" width="100" height="100">
+   <BOUNDS type="Node" left="4215" top="7065" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
    </PIN>
@@ -331,8 +331,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="40" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="40" srcpinname="Output 1" dstnodeid="41" dstpinname="Input Value">
    </LINK>
    <NODE systemname="Select (Node)" filename="%VVVV%\lib\nodes\modules\Node\Select (Node).v4p" nodename="Select (Node)" componentmode="Hidden" id="39">
    <BOUNDS type="Node" left="6015" top="5160" width="1995" height="270">
@@ -447,7 +445,7 @@
    <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="11640" top="12135" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Spread" visible="1">
+   <PIN pinname="Spread" visible="1" slicecount="3" values="Azerbaijan,|Disable Crowd|,Playlist01">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -456,8 +454,6 @@
    <PIN pinname="Index" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="68" srcpinname="Output String" dstnodeid="30" dstpinname="Spread">
-   </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="29">
    <BOUNDS type="Node" left="11700" top="9525" width="100" height="100">
    </BOUNDS>
@@ -899,7 +895,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="10" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="10">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1351,5 +1347,37 @@
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="27" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="116" srcpinname="Output" dstnodeid="26" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="168">
+   <BOUNDS type="Node" left="4230" top="6525" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Frames" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Output 1" dstnodeid="168" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="168" srcpinname="Output" dstnodeid="41" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="172" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="10290" top="12960" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10290" top="12960" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="FileName">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="172" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output String" dstnodeid="30" dstpinname="Spread">
    </LINK>
    </PATCH>

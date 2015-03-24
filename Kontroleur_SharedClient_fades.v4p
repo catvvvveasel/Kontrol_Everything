@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="3000">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="4920">
    <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1560" top="3810" width="100" height="100">
    </BOUNDS>
@@ -202,7 +202,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Feedback Target UDP Port">
    </LINK>
-   <BOUNDS type="Window" left="3840" top="1470" width="15795" height="11820">
+   <BOUNDS type="Window" left="495" top="2190" width="15795" height="11820">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -563,7 +563,7 @@
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Filter" slicecount="1" values="End">
+   <PIN pinname="Filter" slicecount="1" values="¬¬¬¬" visible="1">
    </PIN>
    <PIN pinname="Comparison" slicecount="1" values="Contains">
    </PIN>
@@ -963,7 +963,7 @@
    <LINK srcnodeid="140" srcpinname="Output" dstnodeid="141" dstpinname="Input">
    </LINK>
    <NODE systemname="FromSharedTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FromSharedTexture (DX11.Texture 2d)" componentmode="Hidden" id="142">
-   <BOUNDS type="Node" left="8235" top="10005" width="100" height="100">
+   <BOUNDS type="Node" left="8280" top="10080" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Pointer" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1279,7 +1279,7 @@
    </PIN>
    </NODE>
    <NODE id="125" systemname="Kontrol-DoFades_Client" filename="Subs\Kontrol-DoFades_Client.v4p" nodename="Subs\Kontrol-DoFades_Client.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="4455" top="12705" width="100" height="100">
+   <BOUNDS type="Node" left="4455" top="12735" width="100" height="100">
    </BOUNDS>
    <PIN pinname="AllFadesString" visible="1" slicecount="60" pintype="Input" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
@@ -1291,9 +1291,9 @@
    </PIN>
    <PIN pinname="Index" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Window" left="1155" top="0" width="22905" height="14940">
+   <BOUNDS type="Window" left="-3315" top="6255" width="22905" height="14940">
    </BOUNDS>
-   <BOUNDS type="Box" left="0" top="0" width="4800" height="3600">
+   <BOUNDS type="Box" left="0" top="30" width="4800" height="3600">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -1561,5 +1561,35 @@
    <LINK srcnodeid="201" srcpinname="Output" dstnodeid="10" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="132" srcpinname="Output" dstnodeid="201" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="202" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6330" top="9195" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6330" top="9195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="QPLAKOSWIJDEHFRTY">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="202" srcpinname="Output String" dstnodeid="98" dstpinname="Filter">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="203" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6405" top="11700" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6405" top="11700" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Former Slice" dstnodeid="203" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

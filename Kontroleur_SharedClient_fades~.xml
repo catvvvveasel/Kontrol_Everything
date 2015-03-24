@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="4500">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="3000">
    <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1560" top="3810" width="100" height="100">
    </BOUNDS>
@@ -89,7 +89,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Writer (Raw SharedMemory)" nodename="Writer (Raw SharedMemory)" componentmode="Hidden" id="10">
-   <BOUNDS type="Node" left="1500" top="10140" width="100" height="100">
+   <BOUNDS type="Node" left="1365" top="11310" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Shared Memory Name" slicecount="1" values="#ExposedPins">
    </PIN>
@@ -117,9 +117,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="915" top="10815" width="480" height="480">
+   <BOUNDS type="Box" left="780" top="11985" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="915" top="10815" width="0" height="0">
+   <BOUNDS type="Node" left="780" top="11985" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -131,9 +131,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1845" top="11595" width="1095" height="510">
+   <BOUNDS type="Box" left="1710" top="12765" width="1095" height="510">
    </BOUNDS>
-   <BOUNDS type="Node" left="1845" top="11595" width="0" height="0">
+   <BOUNDS type="Node" left="1710" top="12765" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -202,7 +202,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Feedback Target UDP Port">
    </LINK>
-   <BOUNDS type="Window" left="3840" top="1470" width="15795" height="11820">
+   <BOUNDS type="Window" left="495" top="2190" width="15795" height="11820">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -369,7 +369,7 @@
    <LINK srcnodeid="73" srcpinname="Output" dstnodeid="71" dstpinname="Size">
    </LINK>
    <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="1890" top="10815" width="100" height="100">
+   <BOUNDS type="Node" left="1755" top="11985" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -385,9 +385,9 @@
    <LINK srcnodeid="75" srcpinname="Output" dstnodeid="13" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="76" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2430" top="9960" width="480" height="480">
+   <BOUNDS type="Box" left="2295" top="11130" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2430" top="9960" width="0" height="0">
+   <BOUNDS type="Node" left="2295" top="11130" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -563,9 +563,9 @@
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Filter" slicecount="1" values="End">
+   <PIN pinname="Filter" slicecount="1" values="¬~`£">
    </PIN>
-   <PIN pinname="Comparison" slicecount="1" values="Contains">
+   <PIN pinname="Comparison" slicecount="1" values="Matches">
    </PIN>
    <PIN pinname="Found At Position" visible="1">
    </PIN>
@@ -851,8 +851,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="123" srcpinname="Output" dstnodeid="132" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="132" srcpinname="Output" dstnodeid="10" dstpinname="Input">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="133">
    <BOUNDS type="Node" left="705" top="8460" width="100" height="100">
@@ -1293,7 +1291,7 @@
    </PIN>
    <PIN pinname="Index" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Window" left="1155" top="0" width="22905" height="14940">
+   <BOUNDS type="Window" left="-3315" top="6255" width="22905" height="14940">
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="0" width="4800" height="3600">
    </BOUNDS>
@@ -1546,6 +1544,22 @@
    </NODE>
    <LINK srcnodeid="200" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Read">
    </LINK>
-   <LINK srcnodeid="163" srcpinname="Output" dstnodeid="193" dstpinname="Write">
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="201">
+   <BOUNDS type="Node" left="375" top="10560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="163" srcpinname="Output" dstnodeid="201" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="201" srcpinname="Output" dstnodeid="10" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="132" srcpinname="Output" dstnodeid="201" dstpinname="Input 2">
    </LINK>
    </PATCH>

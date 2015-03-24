@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="4680" bgcolor="11442820">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="5640" bgcolor="11442820">
    <BOUNDS type="Window" left="1830" top="0" width="20265" height="12525">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -85,7 +85,7 @@
    <LINK srcnodeid="26" srcpinname="Extension" dstnodeid="27" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="31" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1380" top="16410" width="6675" height="405">
+   <BOUNDS type="Box" left="1380" top="16410" width="6660" height="825">
    </BOUNDS>
    <BOUNDS type="Node" left="1380" top="16410" width="0" height="0">
    </BOUNDS>
@@ -98,6 +98,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="SequencePreset">
    </PIN>
    <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="35">
@@ -373,9 +375,11 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="2" values="PatchPreset_-001_0000.xml,PatchPreset_0005_0000.xml">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="215" srcpinname="Output" dstnodeid="216" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="215" srcpinname="Output" dstnodeid="35" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="215" srcpinname="Output" dstnodeid="180" dstpinname="Input">
@@ -1143,5 +1147,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="316" srcpinname="Input Value" dstnodeid="307" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="302" srcpinname="Output" dstnodeid="216" dstpinname="Input String">
    </LINK>
    </PATCH>

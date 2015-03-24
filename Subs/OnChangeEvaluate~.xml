@@ -275,13 +275,23 @@
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="1695" top="1440" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="63">
    </PIN>
    <PIN pinname="OnChange" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="24" srcpinname="Count" dstnodeid="25" dstpinname="Input">
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="555" top="1950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="OnChange" dstnodeid="26" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="25" srcpinname="OnChange" dstnodeid="2" dstpinname="Input 4">
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="2" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Count" dstnodeid="25" dstpinname="Input">
    </LINK>
    </PATCH>

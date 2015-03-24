@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Gui2.v4p" systemname="Gui2" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Gui2.v4p" scrollx="0" scrolly="2160" bgcolor="11442820">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Gui2.v4p" systemname="Gui2" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Gui2.v4p" scrollx="1005" scrolly="4860" bgcolor="11442820">
    <NODE id="7" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -89,9 +89,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="21" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="9825" top="5220" width="1110" height="240">
+   <BOUNDS type="Box" left="9810" top="4485" width="1110" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9825" top="5220" width="0" height="0">
+   <BOUNDS type="Node" left="9810" top="4485" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -777,9 +777,9 @@
    </PIN>
    </NODE>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="310">
-   <BOUNDS type="Node" left="13875" top="15150" width="100" height="100">
+   <BOUNDS type="Node" left="13875" top="15780" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Input Value" visible="1" slicecount="12" values="S,0.0000,S,0.0000,S,15.0000,S,0,S,0,S,0">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="FadesGUI">
    </PIN>
@@ -905,8 +905,6 @@
    <LINK srcnodeid="305" srcpinname="Output 2" dstnodeid="340" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="340" srcpinname="Output" dstnodeid="312" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="310" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="339" srcpinname="Inverse Output" dstnodeid="340" dstpinname="Switch">
    </LINK>
@@ -1191,5 +1189,35 @@
    <LINK srcnodeid="256" srcpinname="Output" dstnodeid="363" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="256" srcpinname="Output" dstnodeid="89" dstpinname="ScrollGui">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="365" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="15960" top="13350" width="3360" height="3090">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15960" top="13350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="6" values="0.0000,0.0000,15.0,0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="365" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="FrameDelay (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (String)" componentmode="Hidden" id="366">
+   <BOUNDS type="Node" left="14115" top="15225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="366" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="310" dstpinname="Input Value">
    </LINK>
    </PATCH>

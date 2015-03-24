@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" systemname="Kontrol-FadeTimes2" filename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" scrollx="0" scrolly="4125" bgcolor="11442820">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" systemname="Kontrol-FadeTimes2" filename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" scrollx="0" scrolly="3960" bgcolor="11442820">
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2985" top="7020" width="100" height="100">
    </BOUNDS>
@@ -63,7 +63,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AvoidNIL3" filename="AvoidNIL3.v4p" nodename="AvoidNIL3" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="11190" top="2580" width="100" height="100">
+   <BOUNDS type="Node" left="11220" top="2055" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -95,7 +95,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="5865" top="7380" width="100" height="100">
+   <BOUNDS type="Node" left="5280" top="7500" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -303,8 +303,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="34" srcpinname="Output" dstnodeid="33" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="12" dstpinname="Switch">
    </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="37">
    <BOUNDS type="Node" left="9840" top="10695" width="100" height="100">
@@ -697,9 +695,9 @@
    <LINK srcnodeid="86" srcpinname="Output" dstnodeid="13" dstpinname="Input 3">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="88">
-   <BOUNDS type="Node" left="15495" top="6525" width="100" height="100">
+   <BOUNDS type="Node" left="15600" top="6420" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="15495" top="6525" width="795" height="240">
+   <BOUNDS type="Box" left="15600" top="6420" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="SliceIndex">
    </PIN>
@@ -1117,7 +1115,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3270" top="12765" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="End">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="QPLAKOSWIJDEHFRTY">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -1249,7 +1247,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="33">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="52" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Input String" visible="1" slicecount="63" values="5.0220,5.0220,15.0000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Show SliceIndex" slicecount="1" values="1">
    </PIN>
@@ -1259,7 +1257,7 @@
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="143" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="145" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="10875" top="11385" width="570" height="1905">
+   <BOUNDS type="Box" left="10875" top="11385" width="1245" height="1725">
    </BOUNDS>
    <BOUNDS type="Node" left="10875" top="11385" width="0" height="0">
    </BOUNDS>
@@ -1288,8 +1286,36 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Spread">
    </LINK>
-   <LINK srcnodeid="114" srcpinname="Output" dstnodeid="144" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Output 1" dstnodeid="109" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="147" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6780" top="8700" width="840" height="1230">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6780" top="8700" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="147" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="148">
+   <BOUNDS type="Node" left="8355" top="6930" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Frames" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="148" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="148" srcpinname="Output" dstnodeid="12" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="144" dstpinname="Input String">
    </LINK>
    </PATCH>
