@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-DoFades_Client.v4p" systemname="Kontrol-DoFades_Client" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-DoFades_Client.v4p" scrollx="0" scrolly="4590" bgcolor="16777215">
+   <PATCH nodename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-DoFades_Client.v4p" systemname="Kontrol-DoFades_Client" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-DoFades_Client.v4p" scrollx="0" scrolly="0" bgcolor="16777215">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4020" top="1080" width="795" height="240">
    </BOUNDS>
@@ -131,7 +131,7 @@
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="15" dstpinname="Input">
    </LINK>
    <NODE systemname="Stopwatch (Animation)" nodename="Stopwatch (Animation)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="10020" top="3255" width="100" height="100">
+   <BOUNDS type="Node" left="10020" top="2760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Run" slicecount="1" values="1">
    </PIN>
@@ -283,7 +283,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -292,14 +292,6 @@
    </LINK>
    <LINK srcnodeid="44" srcpinname="Output" dstnodeid="18" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="11295" top="3255" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="(nil)">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="47">
    <BOUNDS type="Node" left="1860" top="5760" width="100" height="100">
    </BOUNDS>
@@ -325,7 +317,7 @@
    <LINK srcnodeid="48" srcpinname="Output" dstnodeid="12" dstpinname="Switch">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="9060" top="3465" width="100" height="100">
+   <BOUNDS type="Node" left="9045" top="2880" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
@@ -582,22 +574,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="94">
-   <BOUNDS type="Node" left="30" top="720" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Background Kalle" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="93">
-   <BOUNDS type="Node" left="15" top="405" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="(nil)">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="93" srcpinname="Input Value" dstnodeid="94" dstpinname="Background Kalle">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Bin Size">
    </LINK>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="95">
@@ -723,20 +699,16 @@
    </PIN>
    </NODE>
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="110">
-   <BOUNDS type="Node" left="11250" top="3885" width="100" height="100">
+   <BOUNDS type="Node" left="10260" top="3555" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Set" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="45" srcpinname="Input Value" dstnodeid="110" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="50" srcpinname="Output" dstnodeid="110" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="45" srcpinname="Input Value" dstnodeid="44" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="111">
    <BOUNDS type="Node" left="10005" top="3945" width="100" height="100">
@@ -769,7 +741,7 @@
    <LINK srcnodeid="72" srcpinname="Up Edge" dstnodeid="17" dstpinname="Set">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="113">
-   <BOUNDS type="Node" left="11130" top="2295" width="100" height="100">
+   <BOUNDS type="Node" left="11130" top="1800" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -783,7 +755,7 @@
    <LINK srcnodeid="34" srcpinname="Output" dstnodeid="113" dstpinname="Input 2">
    </LINK>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="114">
-   <BOUNDS type="Node" left="10785" top="2835" width="100" height="100">
+   <BOUNDS type="Node" left="10785" top="2340" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1029,25 +1001,5 @@
    <LINK srcnodeid="154" srcpinname="Count" dstnodeid="1" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="140" srcpinname="Inverse Output" dstnodeid="2" dstpinname="Switch">
-   </LINK>
-   <NODE id="49" systemname="R (Value)" nodename="R (Value)" componentmode="Hidden">
-   <BOUNDS type="Node" left="9075" top="2100" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="(nil)">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="49" srcpinname="Input Value" dstnodeid="50" dstpinname="Input 1">
-   </LINK>
-   <NODE id="51" systemname="R (Value)" nodename="R (Value)" componentmode="Hidden">
-   <BOUNDS type="Node" left="9345" top="2490" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="(nil)">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="51" srcpinname="Input Value" dstnodeid="50" dstpinname="Input 2">
    </LINK>
    </PATCH>

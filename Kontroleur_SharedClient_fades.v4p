@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="4920">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="4410">
    <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1560" top="3810" width="100" height="100">
    </BOUNDS>
@@ -385,11 +385,11 @@
    <LINK srcnodeid="75" srcpinname="Output" dstnodeid="13" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="76" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2295" top="11130" width="480" height="480">
+   <BOUNDS type="Box" left="2010" top="10590" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2295" top="11130" width="0" height="0">
+   <BOUNDS type="Node" left="2010" top="10590" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -399,7 +399,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -563,7 +563,7 @@
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Filter" slicecount="1" values="¬¬¬¬" visible="1">
+   <PIN pinname="Filter" slicecount="1" visible="1" values="¬¬¬¬">
    </PIN>
    <PIN pinname="Comparison" slicecount="1" values="Contains">
    </PIN>
@@ -1291,7 +1291,7 @@
    </PIN>
    <PIN pinname="Index" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Window" left="-3315" top="6255" width="22905" height="14940">
+   <BOUNDS type="Window" left="-120" top="-120" width="29040" height="16380">
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="30" width="4800" height="3600">
    </BOUNDS>
@@ -1311,7 +1311,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3855" top="14325" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="3465" top="3135" width="15750" height="13800">
+   <BOUNDS type="Window" left="9885" top="1005" width="15750" height="13800">
    </BOUNDS>
    <PIN pinname="Port" visible="1" pintype="Input">
    </PIN>
@@ -1370,6 +1370,8 @@
    <PIN pinname="Node Name" visible="1">
    </PIN>
    <PIN pinname="AdvancedInfo" visible="1">
+   </PIN>
+   <PIN pinname="Node Label" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="110" srcpinname="Output 1" dstnodeid="135" dstpinname="Input">
@@ -1591,5 +1593,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="99" srcpinname="Former Slice" dstnodeid="203" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="Node Label" dstnodeid="126" dstpinname="Labels">
    </LINK>
    </PATCH>

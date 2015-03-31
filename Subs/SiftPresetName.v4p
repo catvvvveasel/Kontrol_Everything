@@ -29,6 +29,8 @@
    </PIN>
    <PIN pinname="Output 3" visible="1">
    </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="2445" top="1725" width="100" height="100">
@@ -82,4 +84,22 @@
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="750" top="3255" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="750" top="3255" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Track">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output 2" dstnodeid="7" dstpinname="Input String">
+   </LINK>
    </PATCH>

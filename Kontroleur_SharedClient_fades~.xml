@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="3000">
+   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="4770">
    <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1560" top="3810" width="100" height="100">
    </BOUNDS>
@@ -563,9 +563,9 @@
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Filter" slicecount="1" values="¬~`£">
+   <PIN pinname="Filter" slicecount="1" visible="1" values="¬¬¬¬">
    </PIN>
-   <PIN pinname="Comparison" slicecount="1" values="Matches">
+   <PIN pinname="Comparison" slicecount="1" values="Contains">
    </PIN>
    <PIN pinname="Found At Position" visible="1">
    </PIN>
@@ -963,7 +963,7 @@
    <LINK srcnodeid="140" srcpinname="Output" dstnodeid="141" dstpinname="Input">
    </LINK>
    <NODE systemname="FromSharedTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FromSharedTexture (DX11.Texture 2d)" componentmode="Hidden" id="142">
-   <BOUNDS type="Node" left="8235" top="10005" width="100" height="100">
+   <BOUNDS type="Node" left="8280" top="10080" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Pointer" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1279,7 +1279,7 @@
    </PIN>
    </NODE>
    <NODE id="125" systemname="Kontrol-DoFades_Client" filename="Subs\Kontrol-DoFades_Client.v4p" nodename="Subs\Kontrol-DoFades_Client.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="4455" top="12705" width="100" height="100">
+   <BOUNDS type="Node" left="4455" top="12735" width="100" height="100">
    </BOUNDS>
    <PIN pinname="AllFadesString" visible="1" slicecount="60" pintype="Input" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
@@ -1291,9 +1291,9 @@
    </PIN>
    <PIN pinname="Index" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Window" left="-3315" top="6255" width="22905" height="14940">
+   <BOUNDS type="Window" left="-120" top="-120" width="29040" height="16380">
    </BOUNDS>
-   <BOUNDS type="Box" left="0" top="0" width="4800" height="3600">
+   <BOUNDS type="Box" left="0" top="30" width="4800" height="3600">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -1311,7 +1311,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3855" top="14325" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="3465" top="3135" width="15750" height="13800">
+   <BOUNDS type="Window" left="9885" top="1005" width="15750" height="13800">
    </BOUNDS>
    <PIN pinname="Port" visible="1" pintype="Input">
    </PIN>
@@ -1354,7 +1354,7 @@
    </LINK>
    <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="AllFadesString">
    </LINK>
-   <NODE id="110" systemname="GetPatchNamesClient" filename="Subs\GetPatchNamesClient.v4p" nodename="Subs\GetPatchNamesClient.v4p" componentmode="Hidden">
+   <NODE id="110" systemname="GetPatchNamesClient" filename="Subs\GetPatchNamesClient.v4p" nodename="Subs\GetPatchNamesClient.v4p" componentmode="InAWindow">
    <BOUNDS type="Node" left="1605" top="4837" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="45" top="2865" width="7440" height="3945">
@@ -1370,6 +1370,8 @@
    <PIN pinname="Node Name" visible="1">
    </PIN>
    <PIN pinname="AdvancedInfo" visible="1">
+   </PIN>
+   <PIN pinname="Node Label" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="110" srcpinname="Output 1" dstnodeid="135" dstpinname="Input">
@@ -1561,5 +1563,37 @@
    <LINK srcnodeid="201" srcpinname="Output" dstnodeid="10" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="132" srcpinname="Output" dstnodeid="201" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="202" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6330" top="9195" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6330" top="9195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="QPLAKOSWIJDEHFRTY">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="202" srcpinname="Output String" dstnodeid="98" dstpinname="Filter">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="203" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6405" top="11700" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6405" top="11700" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Former Slice" dstnodeid="203" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="Node Label" dstnodeid="126" dstpinname="Labels">
    </LINK>
    </PATCH>
