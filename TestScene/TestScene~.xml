@@ -1,0 +1,131 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\TestScene\TestScene.v4p" systemname="TestScene" filename="D:\Copy\Projects\CatGui0.5\TestScene\TestScene.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="990" top="5715" width="9000" height="6855">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE systemname="Kontroleur_SharedClient_fades" filename="..\Kontroleur_SharedClient_fades.v4p" nodename="..\Kontroleur_SharedClient_fades.v4p" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="510" top="3090" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5205" top="2850" width="15795" height="11820">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
+   <BOUNDS type="Node" left="1110" top="4245" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1110" top="4245" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="34485" top="1590" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1275" top="3720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 2" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Patch1" filename="Subs\Patch1.v4p" nodename="Subs\Patch1.v4p" componentmode="InAWindow" id="4">
+   <BOUNDS type="Node" left="1680" top="1440" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="130" top="0" width="3100" height="3100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5145" top="570" width="15705" height="7170">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1485" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Layer Out" dstnodeid="2" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="6" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2985" top="3090" width="5535" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2985" top="3090" width="2565" height="735">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;- we need to add this to the root of the  patch to communicate with the GUI|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3045" top="4185" width="5415" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3045" top="4185" width="2400" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;- And set show curser on out renderer if we want the GUI in this instance|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="45" top="195" width="4680" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="45" top="195" width="7125" height="300">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|All ctl+k parameters should be at the same depth for consitancy its set for 1 patch in|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="9">
+   <BOUNDS type="Node" left="2760" top="5280" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2760" top="5280" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1065" top="12870" width="14370" height="2880">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\addonpack\lib\nodes\modules\Transform\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="2370" top="3840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Projection" dstnodeid="1" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="View" dstnodeid="1" dstpinname="View">
+   </LINK>
+   </PATCH>

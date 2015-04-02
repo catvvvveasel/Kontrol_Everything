@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\Gui2.v4p" systemname="Gui2" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Gui2.v4p" scrollx="1005" scrolly="4860" bgcolor="11442820">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui2.v4p" systemname="Gui2" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Gui2.v4p" scrollx="1755" scrolly="3525" bgcolor="11442820">
    <NODE id="7" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="8025" top="2625" width="19155" height="12645">
+   <BOUNDS type="Window" left="6150" top="2520" width="19155" height="12645">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="915" top="1035" width="100" height="100">
@@ -913,7 +913,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2160" top="12975" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="1080" top="630" width="12300" height="15750">
+   <BOUNDS type="Window" left="1080" top="4500" width="12300" height="8715">
    </BOUNDS>
    <PIN pinname="Output Bin Size" visible="1" slicecount="5" values="10,32,1,60,97">
    </PIN>
@@ -1219,5 +1219,23 @@
    <LINK srcnodeid="308" srcpinname="Output" dstnodeid="366" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="308" srcpinname="Output" dstnodeid="310" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="KeyframeEase" filename="KeyframeEase.v4p" nodename="KeyframeEase.v4p" componentmode="InAWindow" id="382">
+   <BOUNDS type="Node" left="17097" top="9709" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13655" top="6194" width="6885" height="7030">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1170" top="300" width="12180" height="8865">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Ease" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="382" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 10">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="SliderPositionsOnly" dstnodeid="382" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="305" srcpinname="Output 1" dstnodeid="382" dstpinname="Ease">
    </LINK>
    </PATCH>

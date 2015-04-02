@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" systemname="MenuEnums" filename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" scrollx="5250" scrolly="1170">
-   <BOUNDS type="Window" left="17220" top="1110" width="15885" height="15060">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\MenuEnums.v4p" systemname="MenuEnums" filename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" scrollx="0" scrolly="630">
+   <BOUNDS type="Window" left="10515" top="-150" width="15885" height="15060">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="68" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4515" top="1200" width="1365" height="240">
@@ -41,9 +41,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="66">
-   <BOUNDS type="Node" left="2310" top="1590" width="100" height="100">
+   <BOUNDS type="Node" left="1980" top="1575" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2310" top="1590" width="795" height="240">
+   <BOUNDS type="Box" left="1980" top="1575" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Transforms">
    </PIN>
@@ -933,7 +933,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="MaxMenuSize">
    </PIN>
-   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   <PIN pinname="Pin Visibility" slicecount="1" values="Hidden">
    </PIN>
    </NODE>
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="122" dstpinname="Input 2">
@@ -1015,7 +1015,7 @@
    </PIN>
    <PIN pinname="XYZ" slicecount="3" visible="1" values="1,0.5625,1">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="1.17">
+   <PIN pinname="ScaleY" slicecount="1" values="1.17" visible="1">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.16">
    </PIN>
@@ -1381,5 +1381,37 @@
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="172" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="68" srcpinname="Output String" dstnodeid="30" dstpinname="Spread">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="173" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9060" top="10320" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9060" top="10320" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.16">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="TextScaleX">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="173" srcpinname="Y Output Value" dstnodeid="134" dstpinname="ScaleX">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="174" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9330" top="10785" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9330" top="10785" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.17">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="TextScaleY">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="174" srcpinname="Y Output Value" dstnodeid="134" dstpinname="ScaleY">
    </LINK>
    </PATCH>

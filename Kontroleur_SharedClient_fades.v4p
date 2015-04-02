@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="4410">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient_fades.v4p" systemname="Kontroleur_SharedClient_fades" filename="D:\App\EuroVision\CatGui0.5\Kontroleur_SharedClient_fades.v4p" scrollx="0" scrolly="5820">
    <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1560" top="3810" width="100" height="100">
    </BOUNDS>
@@ -202,7 +202,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Feedback Target UDP Port">
    </LINK>
-   <BOUNDS type="Window" left="495" top="2190" width="15795" height="11820">
+   <BOUNDS type="Window" left="5205" top="2850" width="15795" height="11820">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -979,13 +979,13 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="146" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="9660" top="11910" width="885" height="240">
+   <BOUNDS type="Box" left="9615" top="12570" width="885" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9660" top="11910" width="0" height="0">
+   <BOUNDS type="Node" left="9615" top="12570" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
-   <PIN pinname="Input Node" slicecount="1" values="||">
+   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="147">
@@ -1075,7 +1075,7 @@
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="161">
    <BOUNDS type="Node" left="8655" top="4920" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="Alt">
+   <PIN pinname="Receive String" slicecount="1" values="(nil)">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -1254,10 +1254,6 @@
    </LINK>
    <LINK srcnodeid="147" srcpinname="Render State" dstnodeid="144" dstpinname="Render State">
    </LINK>
-   <LINK srcnodeid="144" srcpinname="Layer" dstnodeid="146" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="142" srcpinname="Texture" dstnodeid="144" dstpinname="Texture">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="186" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3015" top="4125" width="480" height="480">
    </BOUNDS>
@@ -1278,8 +1274,8 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE id="125" systemname="Kontrol-DoFades_Client" filename="Subs\Kontrol-DoFades_Client.v4p" nodename="Subs\Kontrol-DoFades_Client.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="4455" top="12735" width="100" height="100">
+   <NODE id="125" systemname="Kontrol-DoFades_Client" filename="Kontroleur_SharedClient-Subs\Kontrol-DoFades_Client.v4p" nodename="Kontroleur_SharedClient-Subs\Kontrol-DoFades_Client.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="4335" top="12885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="AllFadesString" visible="1" slicecount="60" pintype="Input" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
@@ -1293,7 +1289,7 @@
    </PIN>
    <BOUNDS type="Window" left="-120" top="-120" width="29040" height="16380">
    </BOUNDS>
-   <BOUNDS type="Box" left="0" top="30" width="4800" height="3600">
+   <BOUNDS type="Box" left="0" top="180" width="4800" height="3600">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -1306,7 +1302,7 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE id="126" systemname="Kontrol-Client_Osc" filename="Subs\Kontrol-Client_Osc.v4p" componentmode="Hidden" nodename="Subs\Kontrol-Client_Osc.v4p" hiddenwhenlocked="0" managers="">
+   <NODE id="126" systemname="Kontrol-Client_Osc" filename="Kontroleur_SharedClient-Subs\Kontrol-Client_Osc.v4p" componentmode="Hidden" nodename="Kontroleur_SharedClient-Subs\Kontrol-Client_Osc.v4p" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="3855" top="14325" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3855" top="14325" width="4800" height="3600">
@@ -1354,7 +1350,7 @@
    </LINK>
    <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="AllFadesString">
    </LINK>
-   <NODE id="110" systemname="GetPatchNamesClient" filename="Subs\GetPatchNamesClient.v4p" nodename="Subs\GetPatchNamesClient.v4p" componentmode="Hidden">
+   <NODE id="110" systemname="GetPatchNamesClient" filename="Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" nodename="Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" componentmode="Hidden">
    <BOUNDS type="Node" left="1605" top="4837" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="45" top="2865" width="7440" height="3945">
@@ -1595,5 +1591,19 @@
    <LINK srcnodeid="99" srcpinname="Former Slice" dstnodeid="203" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="110" srcpinname="Node Label" dstnodeid="126" dstpinname="Labels">
+   </LINK>
+   <NODE systemname="WithinProjection (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="WithinProjection (DX11.Layer)" componentmode="Hidden" id="204">
+   <BOUNDS type="Node" left="9615" top="11850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="144" srcpinname="Layer" dstnodeid="204" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="204" srcpinname="Layer Out" dstnodeid="146" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Texture" dstnodeid="144" dstpinname="Texture">
    </LINK>
    </PATCH>
