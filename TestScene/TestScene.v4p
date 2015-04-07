@@ -17,7 +17,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1110" top="4245" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="405" top="150" width="12315" height="7710">
+   <BOUNDS type="Window" left="405" top="150" width="17835" height="11685">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -26,6 +26,8 @@
    <PIN pinname="Projection" visible="1">
    </PIN>
    <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="2">
@@ -129,7 +131,7 @@
    </PIN>
    <BOUNDS type="Window" left="870" top="6255" width="11220" height="7170">
    </BOUNDS>
-   <PIN pinname="Mode" slicecount="1" values="Disabled">
+   <PIN pinname="Mode" slicecount="1" values="Add">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
@@ -207,11 +209,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="295" top="300" width="3100" height="3100">
    </BOUNDS>
-   <BOUNDS type="Window" left="-18945" top="8265" width="15705" height="7170">
+   <BOUNDS type="Window" left="3165" top="8580" width="15705" height="7170">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="1.1300">
+   <PIN pinname="Mode" slicecount="1" values="Add">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 2">
@@ -228,4 +230,20 @@
    </LINK>
    <LINK srcnodeid="18" srcpinname="Layer Out" dstnodeid="2" dstpinname="Layer 1">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1620" top="5280" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1620" top="5280" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1001,689">
+   </PIN>
+   </NODE>
    </PATCH>

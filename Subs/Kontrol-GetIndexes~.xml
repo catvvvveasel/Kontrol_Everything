@@ -385,7 +385,7 @@
    <LINK srcnodeid="30" srcpinname="Output" dstnodeid="45" dstpinname="Input">
    </LINK>
    <NODE id="48" systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden">
-   <BOUNDS type="Node" left="3735" top="4245" width="100" height="100">
+   <BOUNDS type="Node" left="3480" top="4080" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Bin Size" visible="1" slicecount="1" values="20">
    </PIN>
@@ -397,15 +397,13 @@
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="49">
    <BOUNDS type="Node" left="570" top="6720" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Default" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="49" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="49" srcpinname="Output" dstnodeid="39" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="41" srcpinname="Output" dstnodeid="49" dstpinname="Default" linkstyle="PolyLine">
@@ -415,5 +413,21 @@
    <LINK srcnodeid="45" srcpinname="Hits" dstnodeid="48" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Count" dstnodeid="48" dstpinname="Bin Size">
+   </LINK>
+   <NODE systemname="Resample (Spreads)" nodename="Resample (Spreads)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="525" top="5775" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="50" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Count" dstnodeid="50" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="49" dstpinname="Input">
    </LINK>
    </PATCH>

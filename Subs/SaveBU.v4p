@@ -1,0 +1,105 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SaveBU.v4p" systemname="SaveBU" filename="D:\Copy\Projects\CatGui0.5\Subs\SaveBU.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2490" top="2790" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Copier (File Async)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.File.dll" nodename="Copier (File Async)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1980" top="3300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="From Filename" visible="1">
+   </PIN>
+   <PIN pinname="To Filename" visible="1">
+   </PIN>
+   <PIN pinname="Copy" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Progress" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2265" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Playlists\playlist">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values=".xml">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="CurrentTime (Astronomy)" nodename="CurrentTime (Astronomy)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2445" top="1335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="GMT" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TimeToString (String)" nodename="TimeToString (String)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2445" top="1785" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Time" visible="1">
+   </PIN>
+   <PIN pinname="String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="GMT" dstnodeid="4" dstpinname="Time">
+   </LINK>
+   <NODE id="5" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|From Filename|">
+   </PIN>
+   <BOUNDS type="Box" left="3450" top="470" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3450" top="470" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="1" dstpinname="From Filename">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="To Filename">
+   </LINK>
+   <NODE id="6" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="ToFilename">
+   </PIN>
+   <BOUNDS type="Box" left="2250" top="470" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2250" top="470" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="2" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="String" dstnodeid="2" dstpinname="Input 2">
+   </LINK>
+   <NODE id="7" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="855" top="575" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="855" top="575" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <BOUNDS type="Window" left="11370" top="1650" width="13470" height="8850">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1995" top="4380" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1995" top="4380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Progress" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Up Edge" dstnodeid="1" dstpinname="Copy">
+   </LINK>
+   </PATCH>

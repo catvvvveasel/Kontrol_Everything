@@ -103,7 +103,7 @@
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" visible="1">
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="4">
    </PIN>
    </NODE>
    <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="8" dstpinname="Input 1">
@@ -127,7 +127,7 @@
    <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="10" dstpinname="Input">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="3900" top="2895" width="100" height="100">
+   <BOUNDS type="Node" left="4065" top="2850" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -137,8 +137,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Count" dstnodeid="11" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="8" dstpinname="Spread Count">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
    <BOUNDS type="Box" left="960" top="2625" width="1065" height="3465">
@@ -529,5 +527,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Count" dstnodeid="8" dstpinname="Spread Count">
    </LINK>
    </PATCH>

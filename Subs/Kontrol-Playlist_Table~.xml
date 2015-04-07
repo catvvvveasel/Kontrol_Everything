@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="-720" bgcolor="11442563">
-   <BOUNDS type="Window" left="7785" top="2895" width="20265" height="12525">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-Playlist_Table.v4p" systemname="Kontrol-Playlist_Table" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist_Table.v4p" scrollx="0" scrolly="1800" bgcolor="11442563">
+   <BOUNDS type="Window" left="10260" top="2565" width="20265" height="12525">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -452,10 +452,10 @@
    </LINK>
    <LINK srcnodeid="96" srcpinname="Output" dstnodeid="225" dstpinname="Y Pos">
    </LINK>
-   <NODE systemname="Kontrol-Playlist-ZipParamsTable" filename="Kontrol-Playlist-ZipParamsTable.v4p" nodename="Kontrol-Playlist-ZipParamsTable.v4p" componentmode="Hidden" id="228">
-   <BOUNDS type="Node" left="2409" top="9204" width="0" height="0">
+   <NODE systemname="Kontrol-Playlist-ZipParamsTable" filename="Kontrol-Playlist-ZipParamsTable.v4p" nodename="Kontrol-Playlist-ZipParamsTable.v4p" componentmode="InAWindow" id="228">
+   <BOUNDS type="Node" left="2124" top="8724" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="99" top="6897" width="4620" height="4615">
+   <BOUNDS type="Box" left="0" top="6417" width="4620" height="4615">
    </BOUNDS>
    <BOUNDS type="Window" left="315" top="5880" width="16575" height="11175">
    </BOUNDS>
@@ -921,7 +921,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1635" top="10800" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="12690" top="180" width="17355" height="16200">
+   <BOUNDS type="Window" left="14880" top="375" width="17355" height="16200">
    </BOUNDS>
    <PIN pinname="Insert" visible="1" slicecount="1" values="|&lt;Event&gt;&cr;&lf;  &lt;Preset&gt;PatchPreset_-001_0000.xml&lt;/Preset&gt;&cr;&lf;  &lt;Time&gt;0.0000&lt;/Time&gt;&cr;&lf;  &lt;Macro&gt;Play&lt;/Macro&gt;&cr;&lf;  &lt;Type&gt;0&lt;/Type&gt;&cr;&lf;&lt;/Event&gt;|">
    </PIN>
@@ -1004,22 +1004,6 @@
    </LINK>
    <LINK srcnodeid="225" srcpinname="KeyFrameTimes" dstnodeid="228" dstpinname="KeyFrameTimes">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="305" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1680" top="10200" width="3375" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1680" top="10200" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\..\Tracks\SequenceTableTest.xml">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="spreadtable.xml">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="|XML File (*.xml)||*.xml|">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="Filename">
-   </PIN>
-   </NODE>
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="309">
    <BOUNDS type="Node" left="45" top="7260" width="100" height="100">
    </BOUNDS>
@@ -1210,4 +1194,18 @@
    </LINK>
    <LINK srcnodeid="96" srcpinname="Output" dstnodeid="220" dstpinname="YPos">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="322" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2235" top="7650" width="4110" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2235" top="7650" width="4275" height="855">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|We need to only have 1 playlist going into the keyframer&cr;&lf;also look at shift drag to copy again&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
