@@ -1,13 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\TestScene\TestScene.v4p" systemname="TestScene" filename="D:\Copy\Projects\CatGui0.5\TestScene\TestScene.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="990" top="5715" width="9000" height="6855">
+   <BOUNDS type="Window" left="-13680" top="9420" width="11790" height="8565">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE systemname="Kontroleur_SharedClient_fades" filename="..\Kontroleur_SharedClient_fades.v4p" nodename="..\Kontroleur_SharedClient_fades.v4p" componentmode="Hidden" id="0">
+   <NODE systemname="Kontroleur_SharedClient2" filename="..\Kontroleur_SharedClient2.v4p" nodename="..\Kontroleur_SharedClient2.v4p" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="510" top="3090" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="5205" top="2850" width="15795" height="11820">
+   <BOUNDS type="Window" left="1140" top="3930" width="15795" height="11820">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -17,7 +17,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1110" top="4245" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="34485" top="1590" width="6240" height="5085">
+   <BOUNDS type="Window" left="28710" top="0" width="28710" height="16200">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -37,21 +37,15 @@
    </PIN>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 2" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layers">
    </LINK>
-   <NODE systemname="Patch1" filename="Subs\Patch1.v4p" nodename="Subs\Patch1.v4p" componentmode="InAWindow" id="4">
-   <BOUNDS type="Node" left="1680" top="1440" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="130" top="0" width="3100" height="3100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5145" top="570" width="15705" height="7170">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="1485" top="2340" width="100" height="100">
    </BOUNDS>
@@ -61,11 +55,11 @@
    </PIN>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 1">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Layer Out" dstnodeid="2" dstpinname="Layer 1">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="6" systemname="IOBox (String)">
    <BOUNDS type="Node" left="2985" top="3090" width="5535" height="270">
    </BOUNDS>
@@ -95,11 +89,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="45" top="195" width="4680" height="270">
+   <BOUNDS type="Node" left="60" top="15" width="4680" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="45" top="195" width="7125" height="300">
+   <BOUNDS type="Box" left="60" top="15" width="7110" height="465">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|All ctl+k parameters should be at the same depth for consitancy its set for 1 patch in|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|All ctl+k parameters should be at the same depth for consitancy its set for 1 patch in. You can change this with the root depth setting in the GUI patch|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -127,5 +121,111 @@
    <LINK srcnodeid="10" srcpinname="Projection" dstnodeid="1" dstpinname="Projection">
    </LINK>
    <LINK srcnodeid="10" srcpinname="View" dstnodeid="1" dstpinname="View">
+   </LINK>
+   <NODE systemname="Patch1" filename="Subs\Patch1.v4p" nodename="Subs\Patch1.v4p" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="1665" top="855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="870" top="6255" width="11220" height="7170">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Add">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3540" top="840" width="2610" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3540" top="840" width="2610" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;- The patches need unique names|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="14" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7215" top="330" width="6600" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7215" top="330" width="4125" height="1830">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Known issues, things can go weird when you add a new patch, and new exposed parameters.&cr;&lf;Especially if you have no presets defined.&cr;&lf;Esc should reset thing, but also hitting a preset can also sort things out, not so good for live updates however!|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="PerfMeter (DX11.Debug)" filename="%VVVV%\packs\dx11\nodes\modules\PerfMeter (DX11.Debug).v4p" nodename="PerfMeter (DX11.Debug)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="3165" top="2550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 3">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4845" top="2535" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4845" top="2535" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="3150" top="2160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="1.53">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="15" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Patch2" filename="Subs\Patch2.v4p" nodename="Subs\Patch2.v4p" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="1845" top="1335" width="1650" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="295" top="300" width="3100" height="3100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-18945" top="8265" width="15705" height="7170">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Add">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="1440" top="2745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Layer Out" dstnodeid="18" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Layer Out" dstnodeid="2" dstpinname="Layer 1">
    </LINK>
    </PATCH>

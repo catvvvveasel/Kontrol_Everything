@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-DrawKeyframes.v4p" systemname="Kontrol-DrawKeyframes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-DrawKeyframes.v4p" scrollx="0" scrolly="-90">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-DrawKeyframes.v4p" systemname="Kontrol-DrawKeyframes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-DrawKeyframes.v4p" scrollx="0" scrolly="-90" bgcolor="11442563">
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2205" top="1500" width="100" height="100">
    </BOUNDS>
@@ -207,6 +207,8 @@
    </PIN>
    <PIN pinname="colorcount" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="8" srcpinname="Buffer" dstnodeid="7" dstpinname="sbWorld">
    </LINK>
@@ -315,7 +317,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Update">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="35">
@@ -334,10 +336,6 @@
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Y Input Value">
-   <LINKPOINT x="8295" y="3465">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="36" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4650" top="1755" width="795" height="240">
    </BOUNDS>
@@ -353,5 +351,7 @@
    <LINK srcnodeid="29" srcpinname="Count" dstnodeid="36" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="8" dstpinname="Apply">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="34" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

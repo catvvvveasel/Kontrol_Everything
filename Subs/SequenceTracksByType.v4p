@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTracksByType.v4p" systemname="SequenceTracksByType" filename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTracksByType.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTracksByType.v4p" systemname="SequenceTracksByType" filename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTracksByType.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <BOUNDS type="Window" left="6240" top="2220" width="17730" height="12930">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
@@ -235,11 +235,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="39" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6150" top="8025" width="2925" height="1755">
+   <BOUNDS type="Box" left="6180" top="9660" width="2925" height="1755">
    </BOUNDS>
-   <BOUNDS type="Node" left="6150" top="8025" width="0" height="0">
+   <BOUNDS type="Node" left="6180" top="9660" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="34" visible="1" values="PatchPreset_-001_0000.xml,PatchPreset_0000_0000.xml,PatchPreset_0000_0024.xml,PatchPreset_0000_0002.xml,PatchPreset_0000_0003.xml,PatchPreset_0000_0006.xml,PatchPreset_0000_0009.xml,PatchPreset_0000_0008.xml,PatchPreset_0000_0016.xml,PatchPreset_0000_0013.xml,PatchPreset_0000_0019.xml,PatchPreset_0000_0020.xml,PatchPreset_0000_0023.xml,PatchPreset_0000_0028.xml,PatchPreset_0000_0026.xml,PatchPreset_0000_0005.xml,PatchPreset_0001_0001.xml,PatchPreset_0001_0000.xml,PatchPreset_0001_0001.xml,PatchPreset_0005_0000.xml,PatchPreset_0005_0001.xml,PatchPreset_0006_0001.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0002.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0001.xml,PatchPreset_0007_0000.xml,PatchPreset_0007_0000.xml,PatchPreset_0007_0002.xml,PatchPreset_0007_0000.xml,PatchPreset_0008_0001.xml,PatchPreset_0008_0001.xml,PatchPreset_0008_0000.xml">
+   <PIN pinname="Input String" slicecount="4" visible="1" values="1000001.,1001001.,1002003.,2002001.">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -336,8 +336,22 @@
    </LINK>
    <LINK srcnodeid="59" srcpinname="Last Slice" dstnodeid="61" dstpinname="Index">
    </LINK>
-   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="39" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="43" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Sort (String)" nodename="Sort (String)" componentmode="Hidden" id="62">
+   <BOUNDS type="Node" left="6180" top="8280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alphabetic Sorting" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Reverse Sorting" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="62" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="39" dstpinname="Input String">
    </LINK>
    </PATCH>

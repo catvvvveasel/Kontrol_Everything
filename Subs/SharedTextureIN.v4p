@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SharedTextureIN.v4p" systemname="SharedTextureIN" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\SharedTextureIN.v4p" scrollx="0" scrolly="0" bgcolor="11442820">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SharedTextureIN.v4p" systemname="SharedTextureIN" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\SharedTextureIN.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2820" top="3990" width="100" height="100">
    </BOUNDS>
@@ -14,6 +14,8 @@
    <PIN pinname="Query" visible="1">
    </PIN>
    <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="1">
@@ -244,22 +246,12 @@
    </PACK>
    <LINK srcnodeid="5" srcpinname="Texture" dstnodeid="2" dstpinname="Texture">
    </LINK>
-   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="15" top="375" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Background Kalle" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="15" top="15" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="Kalle">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="19" srcpinname="Input Value" dstnodeid="20" dstpinname="Background Kalle">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Read">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output 1" dstnodeid="5" dstpinname="Pointer">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output 2" dstnodeid="17" dstpinname="Pointer">
    </LINK>
    </PATCH>

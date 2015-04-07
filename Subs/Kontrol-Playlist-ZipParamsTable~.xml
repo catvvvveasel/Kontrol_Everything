@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist-ZipParamsTable.v4p" systemname="Kontrol-Playlist-ZipParamsTable" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist-ZipParamsTable.v4p">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-Playlist-ZipParamsTable.v4p" systemname="Kontrol-Playlist-ZipParamsTable" filename="D:\App\EuroVision\CatGui0.4\Subs\Kontrol-Playlist-ZipParamsTable.v4p" bgcolor="11442563">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
    <BOUNDS type="Box" left="3120" top="1500" width="795" height="240">
    </BOUNDS>
@@ -51,9 +51,9 @@
    <NODE id="5" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="PatchName">
    </PIN>
-   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   <BOUNDS type="Box" left="855" top="125" width="2640" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   <BOUNDS type="Node" left="855" top="125" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -84,7 +84,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Input Value" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="870" top="3780" width="16575" height="11175">
+   <BOUNDS type="Window" left="315" top="5880" width="16575" height="11175">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -185,9 +185,9 @@
    <NODE id="37" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Select">
    </PIN>
-   <BOUNDS type="Box" left="11820" top="865" width="960" height="1605">
+   <BOUNDS type="Box" left="13740" top="1165" width="960" height="1605">
    </BOUNDS>
-   <BOUNDS type="Node" left="11820" top="865" width="750" height="240">
+   <BOUNDS type="Node" left="13740" top="1165" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -315,9 +315,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9570" top="6135" width="795" height="240">
+   <BOUNDS type="Box" left="8070" top="4665" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9570" top="6135" width="0" height="0">
+   <BOUNDS type="Node" left="8070" top="4665" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -355,7 +355,7 @@
    <LINK srcnodeid="27" srcpinname="Output" dstnodeid="36" dstpinname="Input String">
    </LINK>
    <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="10455" top="30" width="100" height="100">
+   <BOUNDS type="Node" left="11535" top="600" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="Mouse">
    </PIN>
@@ -363,7 +363,7 @@
    </PIN>
    </NODE>
    <NODE systemname="MouseStates (Mouse Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Split)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="10455" top="435" width="100" height="100">
+   <BOUNDS type="Node" left="11535" top="1005" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
    </PIN>
@@ -373,7 +373,7 @@
    <LINK srcnodeid="24" srcpinname="Input Value" dstnodeid="23" dstpinname="Mouse">
    </LINK>
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="10455" top="945" width="100" height="100">
+   <BOUNDS type="Node" left="11535" top="1515" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -492,4 +492,42 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="40" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="11580" top="8250" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11580" top="8250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="40" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13635" top="5430" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13635" top="5430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="41" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="42" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="KeyFrameTimes">
+   </PIN>
+   <BOUNDS type="Box" left="10635" top="2100" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10635" top="2100" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Input">
+   </LINK>
    </PATCH>

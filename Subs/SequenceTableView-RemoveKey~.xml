@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTableView-RemoveKey.v4p" systemname="SequenceTableView-RemoveKey" filename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTableView-RemoveKey.v4p">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView-RemoveKey.v4p" systemname="SequenceTableView-RemoveKey" filename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTableView-RemoveKey.v4p" bgcolor="11442563">
    <NODE systemname="RemoveRow (DataTable)" filename="C:\Users\chris\Desktop\VW\Git_HA\mlf_vwpls2015\Scenes\Shared\plugins\Table.dll" nodename="RemoveRow (DataTable)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1665" top="4965" width="100" height="100">
    </BOUNDS>
@@ -130,8 +130,36 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Set">
    </LINK>
-   <BOUNDS type="Window" left="-1" top="-1" width="5395" height="6565">
+   <BOUNDS type="Window" left="14085" top="2415" width="9960" height="8145">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2655" top="5640" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2655" top="5640" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="11" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3945" top="5535" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3945" top="5535" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="12" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\_KontrolGui.v4p" systemname="_Main3" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\_Main3.v4p" scrollx="15" scrolly="15" bgcolor="11442820">
-   <BOUNDS type="Window" left="13440" top="0" width="15360" height="15750">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <BOUNDS type="Window" left="13440" top="30" width="15360" height="15720">
    </BOUNDS>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="108">
    <BOUNDS type="Node" left="6975" top="9405" width="100" height="100">
@@ -15,7 +15,7 @@
    </PIN>
    </NODE>
    <NODE systemname="KeyBoardShortcuts" filename="Subs\KeyBoardShortcuts.v4p" nodename="Subs\KeyBoardShortcuts.v4p" componentmode="Hidden" id="113">
-   <BOUNDS type="Node" left="1995" top="2790" width="100" height="100">
+   <BOUNDS type="Node" left="1680" top="2655" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="1260" top="4440" width="21375" height="10695">
    </BOUNDS>
@@ -26,7 +26,7 @@
    <PIN pinname="Enable v4 Shortcuts" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="S (NODE)" nodename="S (Node)" componentmode="Hidden" id="138">
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="138">
    <BOUNDS type="Node" left="7080" top="10275" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
@@ -77,7 +77,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="360" top="2354" width="4510" height="6910">
    </BOUNDS>
-   <BOUNDS type="Window" left="6150" top="2520" width="19155" height="12645">
+   <BOUNDS type="Window" left="1065" top="4755" width="19155" height="12645">
    </BOUNDS>
    <PIN pinname="SubType" visible="1" slicecount="4" values="|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 1, 1, 0.001, 160, 0.01, , 1|,|Endless, 3, 0, -100, 100, 0.01, , 4|">
    </PIN>
@@ -138,7 +138,7 @@
    <PIN pinname="TranslateX" visible="1" slicecount="1" values="1.75">
    </PIN>
    </NODE>
-   <NODE systemname="MAINLOOP (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
+   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
    <BOUNDS type="Node" left="10260" top="12120" width="795" height="270">
    </BOUNDS>
    <PIN pinname="Increase Timing Precision" slicecount="1" values="0">
@@ -150,7 +150,7 @@
    <PIN pinname="Current Frame" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="167">
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="167">
    <BOUNDS type="Node" left="975" top="7785" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
@@ -188,7 +188,7 @@
    <PIN pinname="Filenames" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="S (STRING)" nodename="S (String)" componentmode="Hidden" id="201">
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="201">
    <BOUNDS type="Node" left="11340" top="1755" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
@@ -476,12 +476,6 @@
    </LINK>
    <LINK srcnodeid="236" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum background fpsS">
    </LINK>
-   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="353">
-   <BOUNDS type="Node" left="225" top="1365" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Background Kalle" slicecount="1" visible="1" values="|0.81299,0.81299,0.81299,0.00000|">
-   </PIN>
-   </NODE>
    <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="354">
    <BOUNDS type="Node" left="210" top="915" width="100" height="100">
    </BOUNDS>
@@ -494,18 +488,6 @@
    <PIN pinname="Hue" slicecount="1" values="0.58">
    </PIN>
    </NODE>
-   <LINK srcnodeid="354" srcpinname="Output" dstnodeid="353" dstpinname="Background Kalle">
-   </LINK>
-   <NODE systemname="S (Color)" nodename="S (Color)" componentmode="Hidden" id="355">
-   <BOUNDS type="Node" left="225" top="1650" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Send String" slicecount="1" values="Kalle">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="354" srcpinname="Output" dstnodeid="355" dstpinname="Input Value">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="356" systemname="IOBox (String)">
    <BOUNDS type="Node" left="840" top="900" width="6015" height="270">
    </BOUNDS>
@@ -577,7 +559,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10920" top="3795" width="3810" height="5340">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|time line&cr;&lf;double right click -&gt;delete keyframe&cr;&lf;left click move&cr;&lf;single right click also makes the preset active so you cna see the values stored&cr;&lf;ctl+z undo shft control z redo&cr;&lf;shift + drag copy key frame (key is left where you hit shift, so if you drag before hitting shift, the keyframe will move from its original position)&cr;&lf;&cr;&lf;Keys&cr;&lf;left arrow back 5secs&cr;&lf;right arrow for 5secs&cr;&lf;up Loop&cr;&lf;Down Play&cr;&lf;Home goto start&cr;&lf;scroll up previous key&cr;&lf;scroll down next key&cr;&lf;&cr;&lf;Sliders&cr;&lf;LEft click to change value, right click to fine tune&cr;&lf;double right click to type entry&cr;&lf;to do, middle set to default value|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|time line&cr;&lf;double right click -&gt;delete keyframe&cr;&lf;left click move&cr;&lf;single right click also makes the preset active so you cna see the values stored&cr;&lf;ctl+z undo shft control z redo&cr;&lf;shift + drag copy key frame (key is left where you hit shift, so if you drag before hitting shift, the keyframe will move from its original position)]#&cr;&lf;+/- zoom in and out timeline &cr;&lf;Shift+ +/- zoom all the way in/out&cr;&lf;&cr;&lf;Keys&cr;&lf;left arrow back 5secs&cr;&lf;right arrow for 5secs&cr;&lf;up Loop&cr;&lf;Down Play&cr;&lf;Home goto start&cr;&lf;scroll up previous key&cr;&lf;scroll down next key&cr;&lf;&cr;&lf;Sliders&cr;&lf;LEft click to change value, right click to fine tune&cr;&lf;double right click to type entry&cr;&lf;to do, middle set to default value|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -703,7 +685,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8880" top="5625" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="15">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="30">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -933,7 +915,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7950" top="6405" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -945,7 +927,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Mute">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="397" srcpinname="Y Output Value" dstnodeid="329" dstpinname="Mute">
@@ -1076,7 +1058,7 @@
    </NODE>
    <LINK srcnodeid="407" srcpinname="Output" dstnodeid="406" dstpinname="Input">
    </LINK>
-   <NODE id="155" componentmode="Hidden" systemname="Renderer (DX11)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)">
+   <NODE id="155" componentmode="Hidden" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)">
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
@@ -1252,8 +1234,8 @@
    </LINK>
    <LINK srcnodeid="96" srcpinname="LayerDX11" dstnodeid="167" dstpinname="Layer 3">
    </LINK>
-   <NODE id="78" systemname="Kontrol_Separate" filename="Subs\Kontrol_Separate.v4p" nodename="Subs\Kontrol_Separate.v4p" componentmode="Hidden" stayontop="0">
-   <BOUNDS type="Window" left="4680" top="0" width="13035" height="15750">
+   <NODE id="78" systemname="Kontrol_SeparateTable" filename="Subs\Kontrol_SeparateTable.v4p" nodename="Subs\Kontrol_SeparateTable.v4p" componentmode="Hidden" stayontop="0">
+   <BOUNDS type="Window" left="7890" top="435" width="19920" height="11820">
    </BOUNDS>
    <BOUNDS type="Node" left="1680" top="4785" width="100" height="100">
    </BOUNDS>
@@ -1544,8 +1526,68 @@
    </LINK>
    <LINK srcnodeid="424" srcpinname="Y Output Value" dstnodeid="96" dstpinname="RenderSize">
    </LINK>
-   <NODE systemname="Tweener (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\TweenerShaper.dll" nodename="Tweener (Value)" componentmode="Hidden" id="425">
-   <BOUNDS type="Node" left="525" top="11595" width="100" height="100">
+   <LINK srcnodeid="357" srcpinname="Layer Out" dstnodeid="167" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="426" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="8355" top="7755" width="495" height="270">
    </BOUNDS>
+   <BOUNDS type="Box" left="8355" top="7755" width="495" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="table">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="427" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7620" top="13065" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7620" top="13065" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" values="0,,,">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="409" srcpinname="Output" dstnodeid="427" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="UberKalle (VVVV)" filename="Subs\plugins\UberKalle.csproj" nodename="UberKalle (VVVV)" componentmode="Hidden" id="429">
+   <BOUNDS type="Node" left="180" top="1800" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Update" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="354" srcpinname="Output" dstnodeid="429" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="430" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6900" top="14250" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6900" top="14250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1001,689">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    </PATCH>

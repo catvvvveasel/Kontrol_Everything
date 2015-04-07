@@ -1,23 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\TextSprites_Seq.v4p" scrollx="0" scrolly="1245" systemname="TextSprites_Seq" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TextSprites_Seq.v4p">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\TextSprites_Seq.v4p" scrollx="0" scrolly="1245" systemname="TextSprites_Seq" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TextSprites_Seq.v4p" bgcolor="11442563">
    <BOUNDS type="Window" left="1485" top="3060" width="14295" height="11385">
    </BOUNDS>
-   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="3075" top="8775" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Reload" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="No Mips" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Load In Background" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Keep In Memory" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="50">
    <BOUNDS type="Node" left="2910" top="7725" width="100" height="100">
    </BOUNDS>
@@ -212,8 +196,6 @@
    <PIN pinname="String Type" slicecount="1" values="Filename">
    </PIN>
    </NODE>
-   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="51" dstpinname="Filename">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="36" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6405" top="1365" width="795" height="240">
    </BOUNDS>
@@ -785,7 +767,7 @@
    </PIN>
    <PIN pinname="Color Transform" pintype="Input" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Texture" pintype="Input" visible="1">
+   <PIN pinname="Texture" pintype="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Technique" pintype="Input" visible="1" slicecount="1" values="Constant">
    </PIN>
@@ -823,8 +805,6 @@
    <LINK srcnodeid="34" srcpinname="Layer" dstnodeid="48" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="29" srcpinname="Buffer" dstnodeid="34" dstpinname="TexCords">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Texture Out" dstnodeid="34" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Buffer" dstnodeid="34" dstpinname="world">
    </LINK>
@@ -1065,5 +1045,25 @@
    <LINK srcnodeid="72" srcpinname="Output" dstnodeid="60" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="FileTexture (DX11 2d.Pooled)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d.Pooled)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="3120" top="8820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="No Mips" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Load In Background" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Keep In Memory" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="51" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Texture Out" dstnodeid="34" dstpinname="Texture">
    </LINK>
    </PATCH>

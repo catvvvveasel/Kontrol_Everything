@@ -230,12 +230,12 @@
    </INFO>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <NODE systemname="PresetWriter" filename="PresetWriter.v4p" componentmode="Hidden" id="444" nodename="PresetWriter.v4p">
+   <NODE systemname="PresetWriter" filename="PresetWriter.v4p" componentmode="InAWindow" id="444" nodename="PresetWriter.v4p">
    <BOUNDS type="Node" left="5310" top="8445" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="5310" top="8445" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="-495" top="1545" width="16875" height="13005">
+   <BOUNDS type="Window" left="12360" top="600" width="16875" height="13005">
    </BOUNDS>
    <PIN pinname="FilePath" visible="1">
    </PIN>
@@ -262,6 +262,8 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="ShortName" visible="1" slicecount="1" values="-001_0027">
+   </PIN>
+   <PIN pinname="Write" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="367" srcpinname="Output" dstnodeid="251" dstpinname="Input String">
@@ -478,12 +480,12 @@
    </NODE>
    <LINK srcnodeid="189" srcpinname="ExposedPins" dstnodeid="605" dstpinname="Exposed Pins">
    </LINK>
-   <NODE systemname="Kontrol-FormXML" filename="Kontrol-FormXML.v4p" nodename="Kontrol-FormXML.v4p" componentmode="Hidden" id="655">
-   <BOUNDS type="Node" left="5090" top="7417" width="0" height="0">
+   <NODE systemname="Kontrol-FormXML" filename="Kontrol-FormXML.v4p" nodename="Kontrol-FormXML.v4p" componentmode="InAWindow" id="655">
+   <BOUNDS type="Node" left="5300" top="7597" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="2803" top="3722" width="4575" height="7390">
+   <BOUNDS type="Box" left="3013" top="3902" width="4575" height="7390">
    </BOUNDS>
-   <BOUNDS type="Window" left="1605" top="450" width="18945" height="15750">
+   <BOUNDS type="Window" left="-19950" top="2790" width="18945" height="15750">
    </BOUNDS>
    <PIN pinname="Attrib Count" visible="1">
    </PIN>
@@ -1478,4 +1480,26 @@
    </LINK>
    <LINK srcnodeid="869" srcpinname="PinsExtra" dstnodeid="870" dstpinname="Input 1">
    </LINK>
+   <NODE systemname="Kontrol_PresetsTable" filename="Kontrol_PresetsTable.v4p" componentmode="Hidden" id="891" nodename="Kontrol_PresetsTable.v4p">
+   <BOUNDS type="Node" left="1605" top="7650" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1605" top="7650" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="7485" width="21180" height="13110">
+   </BOUNDS>
+   <PIN pinname="Insert" visible="1" slicecount="54" values="|/73/4/12/Y Input Value|,|Spread Count|,,|Endless, 1, 1, 1, 500, 1, , 4|,223,S,0,0,0,|/73/4/14/Y Input Value|,|Spread Count2|,,|Endless, 1, 1, 1, 500, 1, , 4|,11,S,0,0,0,|/73/4/2/Color Input|,Color,,|HSVAField, r=100% g=100% b=100% a=100% , HasAlpha|,|0.0000,0.2486,1.1300,0.9400|,S,0,0,0,|/73/4/4/Y Input Value|,|Scale XYZ|,,|Endless, 3, 1, 0, 4, 0.01, , 4|,|0.0495,3.0844,0.3080|,S,0,0,0,|/73/4/7/Input Enum|,Mode,,|PullDown, DX11.BlendPresets, Disabled|,Add,S,0,0,0,|/73/4/8/Y Input Value|,|Center XYZ|,,|Slider, 3, 0, -2, 2, 0.01, , 4|,|4.0167,-0.3170,1.7586|,S,0,0,0">
+   </PIN>
+   <PIN pinname="DoInsert" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="444" srcpinname="Write" dstnodeid="891" dstpinname="DoInsert">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="PresetSpread" dstnodeid="891" dstpinname="Insert">
+   </LINK>
+   <NODE systemname="table test" filename="TableTest\table test.v4p" nodename="TableTest\table test.v4p" componentmode="InAWindow" id="893">
+   <BOUNDS type="Node" left="2775" top="5670" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-22830" top="3720" width="23655" height="14580">
+   </BOUNDS>
+   </NODE>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="0" bgcolor="11442820">
-   <BOUNDS type="Window" left="30165" top="0" width="17355" height="16200">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="210" bgcolor="11442563">
+   <BOUNDS type="Window" left="12690" top="180" width="17355" height="16200">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -266,22 +266,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="300" top="9585" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="300" top="9585" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Address">
-   </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="2" values="PatchPreset_0002_0000.xml,PatchPreset_0000_0000.xml">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="46" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2940" top="9720" width="795" height="240">
    </BOUNDS>
@@ -353,7 +337,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="PresetNo">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="60" values="0000,0000,0004,0000,0003,0001,0001,0000,0000,0000,0002,0001,0000,0000,0024,0002,0003,0016,0013,0020,0023,0028,0026,0005,0006,0010,0020,0022,0007,0002,0011,0011,0012,0001,0004,0005,0009,0005,0007,0013,0001,0002,0021,0000,0016,0011,0005,0004,0010,0003,0001,0001,0011,0004,0006,0003,0001,0001,0002,0001">
+   <PIN pinname="Input String" visible="1" slicecount="111" values="1000002,2002002,1001001,1001001,1001001,1001001,1001003,1001003,1000001,1000001,1000002,1000001,1000002,1000003,1000000,1000000,1000002,1000003,1000002,1000003,1000000,1000001,1000000,1000001,1000002,1000003,1000002,1000001,1000003,1000002,1000003,1000003,1000000,1000004,1000010,1000008,1000000,1000003,1000002,1000008,1000000,1000000,1000008,1000000,1000008,1000000,1000001,1000000,1000008,1000009,1000001,1000009,1000000,1000009,1000000,1000002,1000000,1000001,1000003,1000002,1000001,1000002,1000001,1000002,1000001,1000002,1000001,1000002,1000001,1000002,1000001,1000002,1000001,1000002,1000001,1000002,1000001,1000002,1000000,1000002,1000001,1000003,1000002,1000001,1000000,1000002,1000001,1000003,1000000,1000002,1000001,1000000,1000003,1000000,1000002,1000001,1000000,1000003,1000000,1000002,1000001,1000003,1000003,1000002,1000009,1000003,1001001,2002001,1002003,1002000,1002002">
    </PIN>
    </NODE>
    <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="61">
@@ -463,8 +447,6 @@
    <LINK srcnodeid="54" srcpinname="Output 3" dstnodeid="46" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="54" srcpinname="Output 4" dstnodeid="52" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="54" srcpinname="Output 1" dstnodeid="45" dstpinname="Input String">
    </LINK>
    <NODE id="76" systemname="AddKeyframeTable" filename="AddKeyframeTable.v4p" nodename="AddKeyframeTable.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="9495" top="7050" width="100" height="100">
@@ -598,16 +580,6 @@
    </LINK>
    <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="122" dstpinname="Select">
    </LINK>
-   <NODE systemname="TableView (DataTable)" filename="C:\Users\chris\Desktop\VW\Git_HA\mlf_vwpls2015\Scenes\Shared\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="3120" top="6255" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Table" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Window" left="0" top="0" width="18000" height="4500">
-   </BOUNDS>
-   <PIN pinname="Up" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="66" srcpinname="Output" dstnodeid="67" dstpinname="Intervals">
    </LINK>
    <LINK srcnodeid="23" srcpinname="Commands" dstnodeid="30" dstpinname="Commands">
@@ -807,22 +779,6 @@
    <LINK srcnodeid="149" srcpinname="Input Value" dstnodeid="150" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="150" srcpinname="Up Edge" dstnodeid="148" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="152">
-   <BOUNDS type="Node" left="690" top="2145" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Background Kalle" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="151">
-   <BOUNDS type="Node" left="690" top="1785" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="Kalle">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="151" srcpinname="Input Value" dstnodeid="152" dstpinname="Background Kalle">
    </LINK>
    <LINK srcnodeid="142" srcpinname="Output" dstnodeid="148" dstpinname="Input 1">
    </LINK>
@@ -1032,8 +988,6 @@
    </LINK>
    <LINK srcnodeid="144" srcpinname="Output 1" dstnodeid="165" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Table" dstnodeid="124" dstpinname="Table">
-   </LINK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="166">
    <BOUNDS type="Node" left="1650" top="6420" width="100" height="100">
    </BOUNDS>
@@ -1088,22 +1042,6 @@
    </LINK>
    <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="96" dstpinname="LeftClick">
    </LINK>
-   <NODE systemname="SiftPresetName" filename="SiftPresetName.v4p" nodename="SiftPresetName.v4p" componentmode="Hidden" id="174">
-   <BOUNDS type="Node" left="630" top="14055" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="11860" width="4060" height="4390">
-   </BOUNDS>
-   <BOUNDS type="Window" left="32235" top="3900" width="4050" height="4380">
-   </BOUNDS>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Track" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="54" srcpinname="Output 1" dstnodeid="174" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="174" srcpinname="Shortname" dstnodeid="59" dstpinname="Input String">
-   </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="175">
    <BOUNDS type="Node" left="7740" top="16035" width="100" height="100">
    </BOUNDS>
@@ -1127,8 +1065,6 @@
    <LINK srcnodeid="67" srcpinname="Index" dstnodeid="176" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="176" srcpinname="OnChange" dstnodeid="175" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="30" dstpinname="Insert">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="177">
    <BOUNDS type="Node" left="11925" top="1575" width="100" height="100">
@@ -1225,6 +1161,8 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1" slicecount="111" values="1000001.,2002001.,1001001.,1001002.,1001002.,1001002.,1001001.,1001001.,1000001.,1000002.,1000002.,1000000.,1000002.,1000000.,1000000.,1000004.,1000002.,1000001.,1000002.,1000000.,1000000.,1000003.,1000000.,1000001.,1000002.,1000003.,1000002.,1000001.,1000003.,1000002.,1000003.,1000003.,1000000.,1000004.,1000010.,1000008.,1000000.,1000003.,1000002.,1000008.,1000000.,1000000.,1000008.,1000000.,1000008.,1000000.,1000001.,1000000.,1000008.,1000009.,1000001.,1000009.,1000000.,1000009.,1000000.,1000002.,1000000.,1000001.,1000003.,1000002.,1000001.,1000002.,1000001.,1000002.,1000001.,1000002.,1000001.,1000002.,1000001.,1000002.,1000001.,1000002.,1000001.,1000002.,1000001.,1000002.,1000001.,1000002.,1000000.,1000002.,1000001.,1000003.,1000002.,1000001.,1000000.,1000002.,1000001.,1000003.,1000000.,1000002.,1000001.,1000000.,1000003.,1000000.,1000002.,1000001.,1000000.,1000003.,1000000.,1000002.,1000001.,1000003.,1000003.,1001001.,2002001.,2002001.,1000000.,1001001.,1001002.,1002000.,1002002.">
+   </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Output" dstnodeid="243" dstpinname="Input 1">
    </LINK>
@@ -1232,6 +1170,10 @@
    </LINK>
    <LINK srcnodeid="54" srcpinname="Output 1" dstnodeid="243" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="174" srcpinname="Track" dstnodeid="243" dstpinname="Input">
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="30" dstpinname="Insert">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output 1" dstnodeid="243" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output 1" dstnodeid="59" dstpinname="Input String">
    </LINK>
    </PATCH>

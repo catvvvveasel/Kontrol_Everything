@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\App\EuroVision\CatGui0.5\Subs\PresetWriter.v4p" systemname="PresetWriter" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PresetWriter.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="-495" top="1545" width="16875" height="13005">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\PresetWriter.v4p" systemname="PresetWriter" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PresetWriter.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="12360" top="600" width="16875" height="13005">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="35" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7365" top="4090" width="480" height="480">
@@ -787,5 +787,37 @@
    <LINK srcnodeid="62" srcpinname="Output 1" dstnodeid="141" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output 1" dstnodeid="47" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="142" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="60" top="9720" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="60" top="9720" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Name">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="126" srcpinname="Output" dstnodeid="142" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="143" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1005" top="9720" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1005" top="9720" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Write">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="98" srcpinname="Output 1" dstnodeid="143" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

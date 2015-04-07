@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="0" bgcolor="11442820">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <BOUNDS type="Window" left="1260" top="4440" width="21375" height="10695">
    </BOUNDS>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="1">
@@ -7,7 +7,7 @@
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Key Match" slicecount="1" values="|escape,tab,Menu,next,c,v, controlkey,left,right,up,down,End,Home,PageUp,z,shiftKey,f4|">
+   <PIN pinname="Key Match" slicecount="1" values="|escape,tab,Menu,next,c,v, controlkey,left,right,up,down,End,Home,PageUp,z,shiftKey,f4,oemminus,oemplus|">
    </PIN>
    <PIN pinname="Capital" visible="1">
    </PIN>
@@ -54,6 +54,10 @@
    <PIN pinname="ShiftKey" visible="1">
    </PIN>
    <PIN pinname="F4" visible="1">
+   </PIN>
+   <PIN pinname="OemMinus" visible="1">
+   </PIN>
+   <PIN pinname="Oemplus" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="KeyboardState (System Split Legacy)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyboardState (System Split)" componentmode="Hidden" id="6">
@@ -531,7 +535,7 @@
    <LINK srcnodeid="1" srcpinname="ControlKey" dstnodeid="116" dstpinname="Input 1">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="121">
-   <BOUNDS type="Node" left="11760" top="1080" width="100" height="100">
+   <BOUNDS type="Node" left="10215" top="1230" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -650,22 +654,6 @@
    </NODE>
    <LINK srcnodeid="117" srcpinname="Output" dstnodeid="135" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="137">
-   <BOUNDS type="Node" left="15" top="375" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Background Kalle" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="136">
-   <BOUNDS type="Node" left="15" top="15" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="Kalle">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="136" srcpinname="Input Value" dstnodeid="137" dstpinname="Background Kalle">
-   </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="138">
    <BOUNDS type="Node" left="5430" top="5130" width="100" height="100">
    </BOUNDS>
@@ -741,9 +729,9 @@
    <LINK srcnodeid="142" srcpinname="Y Output Value" dstnodeid="83" dstpinname="Switch">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="143" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1875" top="7260" width="945" height="270">
+   <BOUNDS type="Box" left="2010" top="7005" width="4095" height="285">
    </BOUNDS>
-   <BOUNDS type="Node" left="1875" top="7260" width="0" height="0">
+   <BOUNDS type="Node" left="2010" top="7005" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="|D1,D2,D3,D4,D5,D6,D7,D8,q,w,e,r,t,y,u,i,a,s,d,f,g,h,j,k,z,x,c,v,b,n,m,oemcomma,oemperiod|">
    </PIN>
@@ -913,5 +901,29 @@
    <LINK srcnodeid="159" srcpinname="Input Value" dstnodeid="161" dstpinname="Run">
    </LINK>
    <LINK srcnodeid="159" srcpinname="Input Value" dstnodeid="160" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="162">
+   <BOUNDS type="Node" left="12000" top="720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="OemMinus" dstnodeid="162" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Oemplus" dstnodeid="162" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="163">
+   <BOUNDS type="Node" left="11955" top="1350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="Plus/Minus">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="162" srcpinname="Output" dstnodeid="163" dstpinname="Input Value">
    </LINK>
    </PATCH>

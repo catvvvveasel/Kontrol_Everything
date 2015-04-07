@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha33.2.dtd" >
-   <PATCH nodename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Debug.v4p" systemname="Debug" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Debug.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Debug.v4p" systemname="Debug" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Debug.v4p" bgcolor="11442563">
    <BOUNDS type="Window" left="16410" top="9210" width="9000" height="6000">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.0.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2055" top="2070" width="100" height="100">
@@ -34,6 +34,8 @@
    <PIN pinname="Shared Memory Name" slicecount="1" values="#Files">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Read" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="AsString (Raw)" nodename="AsString (Raw)" componentmode="Hidden" id="4">
@@ -109,5 +111,25 @@
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="9" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="0" dstpinname="String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6150" top="375" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6150" top="375" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Read">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Read">
    </LINK>
    </PATCH>

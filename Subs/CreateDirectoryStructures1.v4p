@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\CreateDirectoryStructures1.v4p" systemname="CreateDirectoryStructures" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\CreateDirectoryStructures.v4p" scrollx="0" scrolly="3690" bgcolor="11442820">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\CreateDirectoryStructures1.v4p" systemname="CreateDirectoryStructures" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\CreateDirectoryStructures.v4p" scrollx="0" scrolly="720" bgcolor="11442563">
    <BOUNDS type="Window" left="2190" top="2190" width="22350" height="10230">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -456,22 +456,6 @@
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="360" top="2955" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Background Kalle" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="47">
-   <BOUNDS type="Node" left="345" top="2655" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="Kalle">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="47" srcpinname="Input Value" dstnodeid="48" dstpinname="Background Kalle">
-   </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="49">
    <BOUNDS type="Node" left="5400" top="5700" width="100" height="100">
    </BOUNDS>
@@ -534,6 +518,8 @@
    <PIN pinname="String Type" slicecount="1" values="Filename">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="PatchtoLoad">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Output String" dstnodeid="33" dstpinname="Input">
@@ -1110,8 +1096,6 @@
    </LINK>
    <LINK srcnodeid="229" srcpinname="Output" dstnodeid="225" dstpinname="FileName">
    </LINK>
-   <LINK srcnodeid="39" srcpinname="Up Edge" dstnodeid="35" dstpinname="Do Execute">
-   </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="231">
    <BOUNDS type="Node" left="14250" top="8085" width="100" height="100">
    </BOUNDS>
@@ -1251,5 +1235,31 @@
    <LINK srcnodeid="124" srcpinname="Output" dstnodeid="242" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="239" srcpinname="Output 1" dstnodeid="56" dstpinname="Create">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="243">
+   <BOUNDS type="Node" left="1380" top="7125" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Up Edge" dstnodeid="243" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="244">
+   <BOUNDS type="Node" left="15" top="5310" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Output String" dstnodeid="244" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="244" srcpinname="OnChange" dstnodeid="243" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="243" srcpinname="Output" dstnodeid="35" dstpinname="Do Execute">
    </LINK>
    </PATCH>
