@@ -10,7 +10,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="9225" top="2055" width="11895" height="8895">
+   <BOUNDS type="Window" left="15480" top="2730" width="11895" height="8895">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="22">
    <BOUNDS type="Node" left="5055" top="180" width="100" height="100">
@@ -27,11 +27,11 @@
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <NODE systemname="SliderS" filename="SliderS.v4p" nodename="SliderS.v4p" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="4140" top="3840" width="900" height="270">
+   <BOUNDS type="Node" left="4035" top="5340" width="900" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="730" top="2265" width="6820" height="8155">
+   <BOUNDS type="Box" left="625" top="3765" width="6820" height="8155">
    </BOUNDS>
-   <BOUNDS type="Window" left="1275" top="1005" width="10770" height="12870">
+   <BOUNDS type="Window" left="465" top="2325" width="10770" height="12870">
    </BOUNDS>
    <PIN pinname="CurretnValues" visible="1">
    </PIN>
@@ -63,6 +63,8 @@
    </PIN>
    <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="IsEndless" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="54" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6540" top="4515" width="795" height="240">
@@ -79,9 +81,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4125" top="4515" width="795" height="480">
+   <BOUNDS type="Box" left="4020" top="6015" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4125" top="4515" width="0" height="0">
+   <BOUNDS type="Node" left="4020" top="6015" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -270,8 +272,6 @@
    </LINK>
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="73" dstpinname="Index">
    </LINK>
-   <LINK srcnodeid="73" srcpinname="Output Node" dstnodeid="51" dstpinname="Transform Quad">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="86" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="1215" top="4830" width="795" height="240">
    </BOUNDS>
@@ -281,5 +281,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="73" srcpinname="Output Node" dstnodeid="86" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="87" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7770" top="3255" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7770" top="3255" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="IsEndless">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="51" dstpinname="IsEndless">
    </LINK>
    </PATCH>

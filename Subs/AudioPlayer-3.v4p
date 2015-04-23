@@ -309,7 +309,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 3" slicecount="1" values="99999999999">
+   <PIN pinname="Input 3" slicecount="1" values="99999999999" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -775,5 +775,27 @@
    <LINK srcnodeid="24" srcpinname="Input Value" dstnodeid="62" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output" dstnodeid="25" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="63" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11895" top="615" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11895" top="615" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="99999999999">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="64">
+   <BOUNDS type="Node" left="11820" top="1320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname=".. To [" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="25" dstpinname="Input 3">
    </LINK>
    </PATCH>

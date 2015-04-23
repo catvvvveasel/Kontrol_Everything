@@ -1,17 +1,9 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SharedMemoryRead_ExposedKontrols-1.v4p" bgcolor="11442563">
-   <NODE systemname="AsString (Raw)" nodename="AsString (Raw)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1515" top="1500" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SharedMemoryRead_ExposedKontrols-1.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
    <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="1515" top="2010" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   <PIN pinname="Input" visible="1" slicecount="1" values="|/73/76/2/Y Input Value&cr;&lf;Max Radius&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/52/Y Input Value&cr;&lf;Period o No&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/56/Y Input Value&cr;&lf;ThresoldNo&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/57/Y Input Value&cr;&lf;Period2 Never&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/58/Y Input Value&cr;&lf;ThresoldNever&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/59/Y Input Value&cr;&lf;SwitchWords&cr;&lf;&cr;&lf;Value&cr;&lf;Slider, 1, 0, 0, 50, 1, , 4&cr;&lf;Integer&cr;&lf;Slider&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/60/Input Enum&cr;&lf;Text Rendering Mode&cr;&lf;&cr;&lf;Enumeration&cr;&lf;PullDown, TextRenderingMode, SingleLine&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;SingleLine, MultiLine, MultiLineWordWrap&cr;&lf;3&cr;&lf;SingleLine&cr;&lf;NodesAndWords&cr;&lf;/7|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -69,7 +61,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="2445" top="4230" width="100" height="100">
+   <BOUNDS type="Node" left="2265" top="4410" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -77,7 +69,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSpread (String)" nodename="GetSpread (String)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="2010" top="4800" width="100" height="100">
+   <BOUNDS type="Node" left="1515" top="4830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -89,28 +81,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="2" dstpinname="Input">
-   </LINK>
-   <NODE id="8" systemname="IOBox (String)" componentmode="InABox">
-   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
-   </PIN>
-   <BOUNDS type="Box" left="1500" top="5400" width="750" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="5400" width="750" height="240">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="8" dstpinname="Input String">
-   </LINK>
-   <NODE id="9" systemname="IOBox (Node)" componentmode="InABox">
-   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
-   </PIN>
-   <BOUNDS type="Box" left="1515" top="500" width="750" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1515" top="500" width="750" height="240">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="0" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="1" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="4" dstpinname="Input">
    </LINK>
@@ -125,19 +95,35 @@
    <NODE id="10" systemname="IOBox (String)" componentmode="InABox">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Output 1|">
    </PIN>
-   <BOUNDS type="Box" left="2400" top="5400" width="750" height="240">
+   <BOUNDS type="Box" left="1515" top="5415" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2400" top="5400" width="750" height="240">
+   <BOUNDS type="Node" left="1515" top="5415" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="10" dstpinname="Input String">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Former Slice" dstnodeid="6" dstpinname="Input">
-   <LINKPOINT x="2490" y="4170">
-   </LINKPOINT>
+   <LINK srcnodeid="5" srcpinname="Former Slice" dstnodeid="6" dstpinname="Input" linkstyle="PolyLine">
    </LINK>
-   <BOUNDS type="Window" left="-1" top="-1" width="4695" height="6400">
+   <BOUNDS type="Window" left="7080" top="165" width="4695" height="6390">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1515" top="1065" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1515" top="1065" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|/73/76/2/Y Input Value&cr;&lf;Max Radius&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/52/Y Input Value&cr;&lf;Period o No&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/56/Y Input Value&cr;&lf;ThresoldNo&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/57/Y Input Value&cr;&lf;Period2 Never&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/58/Y Input Value&cr;&lf;ThresoldNever&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/59/Y Input Value&cr;&lf;SwitchWords&cr;&lf;&cr;&lf;Value&cr;&lf;Slider, 1, 0, 0, 50, 1, , 4&cr;&lf;Integer&cr;&lf;Slider&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/60/Input Enum&cr;&lf;Text Rendering Mode&cr;&lf;&cr;&lf;Enumeration&cr;&lf;PullDown, TextRenderingMode, SingleLine&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;SingleLine, MultiLine, MultiLineWordWrap&cr;&lf;3&cr;&lf;SingleLine&cr;&lf;NodesAndWords&cr;&lf;/7|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="1" dstpinname="Input">
+   </LINK>
    </PATCH>

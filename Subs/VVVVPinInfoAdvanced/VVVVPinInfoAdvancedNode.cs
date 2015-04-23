@@ -7,7 +7,7 @@ using VVVV.PluginInterfaces.V2;
 using VVVV.PluginInterfaces.V2.Graph;
 using VVVV.Utils.VColor;
 using VVVV.Utils.VMath;
-
+using System.IO; //needed for truncating the path
 using VVVV.Core.Logging;
 #endregion usings
 
@@ -73,6 +73,9 @@ namespace VVVV.Nodes
 		[Output("Values")]
 		ISpread<string> FValues;
 		
+		[Output("Node Name")]
+		public ISpread<string> FNodeName;
+		
 		[Import()]
 		IHDEHost FHDEHost;
 		
@@ -82,7 +85,7 @@ namespace VVVV.Nodes
 		//called when data for any output pin is requested
 		public void Evaluate(int SpreadMax)
 		{
-
+				FNodeName.SliceCount = SpreadMax;
 				FLabel.SliceCount = SpreadMax;
 				FTag.SliceCount = SpreadMax;
 				FSubtype.SliceCount = SpreadMax;
@@ -102,6 +105,13 @@ namespace VVVV.Nodes
 				{
 					var nodePath = FInput[i].Substring(0, FInput[i].LastIndexOf('/'));
 					var node = FHDEHost.GetNodeFromPath(nodePath);
+					
+					string path = FInput[i].Substring(0, FInput[i].LastIndexOf('/'));
+					path = Path.GetDirectoryName(path);
+					path = path.Replace(@"\", "/");
+					//path =  Path.GetDirectoryName( path ) ;
+					var node2 = FHDEHost.GetNodeFromPath(path);
+					
 					if (FUpdate[i])
 					{
 						if (node != null)
@@ -109,6 +119,8 @@ namespace VVVV.Nodes
 							//Rectangle
 							Rectangle rectangle1 = node.GetBounds(0);
 							FBounds[i] = rectangle1.Left;
+							string nodename = node2.Name;
+							FNodeName[i] = nodename;
 							
 							FLabel[i] = node.LabelPin.Spread.Trim('|');
 							var tag = node.FindPin("Tag");
@@ -116,7 +128,7 @@ namespace VVVV.Nodes
 							FTag[i] = tag.Spread.Trim('|');
 							else
 							FTag[i] = "";
-							
+							FNodeName[i] = nodename;
 							var parts = FInput[i].Split('/');
 							var pin = node.FindPin(parts[parts.Length - 1]);
 							

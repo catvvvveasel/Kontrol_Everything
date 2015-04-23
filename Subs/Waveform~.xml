@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Waveform.v4p" systemname="Waveform" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Waveform.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Waveform.v4p" systemname="Waveform" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Waveform.v4p" scrollx="1740" scrolly="1635" bgcolor="11442563">
    <BOUNDS type="Window" left="675" top="4590" width="12225" height="10980">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -357,9 +357,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11970" top="9465" width="480" height="480">
+   <BOUNDS type="Box" left="11880" top="9195" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="11970" top="9465" width="0" height="0">
+   <BOUNDS type="Node" left="11880" top="9195" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -680,18 +680,6 @@
    </LINK>
    <LINK srcnodeid="78" srcpinname="OnChange" dstnodeid="70" dstpinname="Input 5">
    </LINK>
-   <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="80">
-   <BOUNDS type="Node" left="9195" top="4455" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Set" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Frames" slicecount="1" values="30">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="80" dstpinname="Set">
-   </LINK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="81">
    <BOUNDS type="Node" left="6765" top="4695" width="100" height="100">
    </BOUNDS>
@@ -745,11 +733,11 @@
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="54" dstpinname="Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="87" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8115" top="3360" width="480" height="480">
+   <BOUNDS type="Box" left="8025" top="3900" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="8115" top="3360" width="0" height="0">
+   <BOUNDS type="Node" left="8025" top="3900" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -761,17 +749,17 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="88">
    <BOUNDS type="Node" left="11880" top="7875" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="50" srcpinname="Down Edge" dstnodeid="88" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="88" srcpinname="Output" dstnodeid="52" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="89">
@@ -800,8 +788,6 @@
    </NODE>
    <LINK srcnodeid="53" srcpinname="Output" dstnodeid="90" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="69" dstpinname="Evaluate">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="91" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11895" top="2715" width="285" height="1140">
    </BOUNDS>
@@ -819,8 +805,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="77" srcpinname="OnChange" dstnodeid="91" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="87" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="FrameDifference (Animation)" nodename="FrameDifference (Animation)" componentmode="Hidden" id="94">
    <BOUNDS type="Node" left="4305" top="2640" width="100" height="100">
@@ -889,5 +873,25 @@
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="103" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="70" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="69" dstpinname="Evaluate">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" filename="" nodename="MonoFlop (Animation)" componentmode="Hidden" id="80">
+   <BOUNDS type="Node" left="9195" top="4455" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Frames" slicecount="1" values="30">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="80" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="87" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="88" dstpinname="Input">
    </LINK>
    </PATCH>

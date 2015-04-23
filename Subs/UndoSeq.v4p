@@ -248,7 +248,7 @@
    </LINK>
    <LINK srcnodeid="0" srcpinname="Filenames" dstnodeid="1" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="6735" top="4665" width="9120" height="9870">
+   <BOUNDS type="Window" left="450" top="5880" width="9120" height="9870">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -294,80 +294,18 @@
    </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="6" dstpinname="Reset">
    </LINK>
-   <NODE id="26" systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="4965" top="3615" width="100" height="100">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4995" top="3705" width="3975" height="270">
    </BOUNDS>
-   <PIN pinname="Output" visible="1" pintype="Output">
+   <BOUNDS type="Box" left="4995" top="3705" width="2625" height="990">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|to undo we delete the current table and load a newone|">
    </PIN>
-   <PIN pinname="Input" visible="1" pintype="Input" slicecount="1" values="0">
+   <PIN pinname="Output String" visible="0">
    </PIN>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE id="25" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="4950" top="4005" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" pintype="Input" values="0">
-   </PIN>
-   <PIN pinname="Output 1" visible="1" pintype="Output">
-   </PIN>
-   <BOUNDS type="Box" left="1110" top="1770" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Count" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Default 1" pintype="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Initialize" pintype="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Window Handle" pintype="Output">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
-   <NODE id="24" systemname="Directory (File)" nodename="Directory (File)" componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\Directory.dll" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="4965" top="3195" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Exists" visible="1" pintype="Output">
-   </PIN>
-   <PIN pinname="Create" visible="1" pintype="Input" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Directory" visible="1" pintype="Input" slicecount="1" values="C:\">
-   </PIN>
-   <BOUNDS type="Box" left="1110" top="1770" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Remove" pintype="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="New Name" pintype="Input" visible="1" slicecount="1" values="C:\">
-   </PIN>
-   <PIN pinname="Rename" pintype="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Window Handle" pintype="Output">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="24" srcpinname="Exists" dstnodeid="26" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Output 1" dstnodeid="24" dstpinname="Create">
-   <LINKPOINT x="4395" y="3900">
-   </LINKPOINT>
-   <LINKPOINT x="4456" y="3359">
-   </LINKPOINT>
-   <LINKPOINT x="5205" y="3180">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="25" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Output String" dstnodeid="24" dstpinname="Directory">
-   </LINK>
    </PATCH>

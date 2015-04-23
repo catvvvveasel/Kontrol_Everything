@@ -31,7 +31,7 @@ cbuffer cbPerObj : register( b1 )
 	float4 cBG <bool color=true;String uiname="Color";> = { 1.0f,1.0f,1.0f,1.0f };
 	float4 cSlider <bool color=true;String uiname="Color2";> = { 0.0f,1.0f,1.0f,1.0f };
 	float4x4 tTex <string uiname="Texture Transform"; bool uvspace=true; >;
-	float4x4 tColor <string uiname="Color Transform";>;
+
 };
 
 struct VS_IN
@@ -70,11 +70,11 @@ vs2ps VS(VS_IN input)
 
 float4 PS(vs2ps In): SV_Target
 {
-    float4 col = texture2d.Sample(g_samLinear,In.TexCd.xy) ;
+   // float4 col = texture2d.Sample(g_samLinear,In.TexCd.xy) ;
 	
 	//col = mul(col, tColor)*(In.TexCd2.x>In.TexCd.x);
 	float temp =(In.TexCd2.x>In.TexCd.x);
-	col = (temp*cBG*In.Vcol)+((1-temp)*cSlider)*In.Vcol;
+	float4 col = (temp*cBG*In.Vcol)+((1-temp)*cSlider)*In.Vcol;
 	col.a *= Alpha;
     return col;
 }

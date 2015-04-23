@@ -41,7 +41,7 @@ namespace VVVV.Nodes
 				string path = FInput[i];
 				
 			//	string path = FInput[i].Substring(0, FInput[i].LastIndexOf('/'));
-				path = Path.GetDirectoryName(path);
+			//	path = Path.GetDirectoryName(path);
 				path = Path.GetDirectoryName(path);
 				path = path.Replace(@"\", "/");
 				
