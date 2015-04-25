@@ -1,23 +1,15 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\TestScene\TestScene.v4p" systemname="TestScene" filename="D:\Copy\Projects\CatGui0.5\TestScene\TestScene.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="-150" top="7710" width="11790" height="8565">
+   <BOUNDS type="Window" left="0" top="7650" width="11790" height="8580">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE systemname="Kontroleur_SharedClient2" filename="..\Kontroleur_SharedClient2.v4p" nodename="..\Kontroleur_SharedClient2.v4p" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="510" top="3090" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1140" top="3930" width="15795" height="11820">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
    <BOUNDS type="Node" left="1110" top="4245" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1110" top="4245" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="405" top="150" width="17835" height="11685">
+   <BOUNDS type="Window" left="-22725" top="2370" width="17835" height="11685">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -29,11 +21,15 @@
    </PIN>
    <PIN pinname="Actual BackBuffer SizeXY" visible="1">
    </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="1275" top="3720" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Layer 2" visible="1">
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
@@ -44,8 +40,6 @@
    <PIN pinname="Layer 3" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 2" linkstyle="PolyLine">
-   </LINK>
    <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layers">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="5">
@@ -129,7 +123,7 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="870" top="6255" width="11220" height="7170">
+   <BOUNDS type="Window" left="510" top="0" width="11220" height="7170">
    </BOUNDS>
    <PIN pinname="Mode" slicecount="1" values="Add">
    </PIN>
@@ -201,6 +195,8 @@
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" values="1.53">
    </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="-0.19">
+   </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="15" dstpinname="Transform">
    </LINK>
@@ -209,11 +205,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="295" top="300" width="3100" height="3100">
    </BOUNDS>
-   <BOUNDS type="Window" left="3165" top="8580" width="15705" height="7170">
+   <BOUNDS type="Window" left="405" top="0" width="15705" height="7170">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Add">
+   <PIN pinname="Mode" slicecount="1" values="Disabled">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 2">
@@ -246,4 +242,76 @@
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1001,689">
    </PIN>
    </NODE>
+   <NODE systemname="Kontrol_Client" filename="..\Kontrol_Client.v4p" nodename="..\Kontrol_Client.v4p" componentmode="InAWindow" id="20">
+   <BOUNDS type="Node" left="6210" top="3780" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-27510" top="525" width="20310" height="15030">
+   </BOUNDS>
+   <PIN pinname="Dx11 Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="DualScreen" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="21" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7650" top="3780" width="5085" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7650" top="3780" width="1950" height="750">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; you need to add this patch to your patch to do the communications|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="20" dstpinname="Dx11 Texture">
+   <LINKPOINT x="3915" y="5220">
+   </LINKPOINT>
+   <LINKPOINT x="6855" y="3000">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 2">
+   <LINKPOINT x="6660" y="4485">
+   </LINKPOINT>
+   <LINKPOINT x="1785" y="3495">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="23" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7425" top="2400" width="3930" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7425" top="2400" width="3855" height="1125">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|You can have the GUI in the output render or if you want, to run the GUI in a separate renderer with a preview of this patches renderer in it, then you must enable this button (GUI performance is sluggish with 1 output)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="22">
+   <BOUNDS type="Node" left="6840" top="2355" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6840" top="2355" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="DualScreen">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="20" dstpinname="DualScreen">
+   </LINK>
    </PATCH>

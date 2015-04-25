@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\NetSendTCP_.v4p" scrollx="0" scrolly="0" systemname="NetSendTCP_" filename="D:\Copy\Projects\CatGui0.5\Subs\NetSendTCP_.v4p" bgcolor="11442563">
-   <BOUNDS height="8085" left="0" top="705" type="Window" width="6705">
+   <BOUNDS height="8085" left="9285" top="315" type="Window" width="9705">
    </BOUNDS>
    <INFO author="vvvv group" description="Sends strings via UDP or TCP using PD&apos;s FUDI-protocol" tags="pd, udp, tcp">
    </INFO>
@@ -91,7 +91,7 @@
    </PIN>
    </NODE>
    <NODE id="58" nodename="Change (String)" systemname="Change (String)">
-   <BOUNDS height="0" left="5160" top="3195" type="Node" width="0">
+   <BOUNDS height="0" left="5700" top="2730" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="OnChange" visible="1">
    </PIN>
@@ -158,18 +158,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE id="49" nodename="AND (Boolean)" systemname="AND (Boolean)">
-   <BOUNDS height="0" left="3195" top="3285" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="49" dstpinname="Input 2" srcnodeid="62" srcpinname="Y Output Value">
-   </LINK>
    <NODE id="48" nodename="AND (Boolean)" systemname="AND (Boolean)">
    <BOUNDS height="0" left="4185" top="3285" type="Node" width="0">
    </BOUNDS>
@@ -191,13 +179,11 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="47" dstpinname="Input 1" srcnodeid="58" srcpinname="OnChange">
-   </LINK>
    <LINK dstnodeid="47" dstpinname="Input 2" srcnodeid="48" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="46" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -227,8 +213,6 @@
    <LINK dstnodeid="45" dstpinname="Input 1" srcnodeid="51" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="50" dstpinname="Input" srcnodeid="45" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="49" dstpinname="Input 1" srcnodeid="45" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="64" dstpinname="Y Input Value" srcnodeid="52" srcpinname="Connected">
    </LINK>
@@ -264,18 +248,6 @@
    </LINK>
    <LINK srcnodeid="70" srcpinname="Bang" dstnodeid="52" dstpinname="Do Send">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="71" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="780" top="3405" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="780" top="3405" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="1" values="|/73/76/2/Y Input Value&cr;&lf;Max Radius&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.3386&cr;&lf;NodesAndWords&cr;&lf;/73/76/52/Y Input Value&cr;&lf;Period o No&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;1&cr;&lf;NodesAndWords&cr;&lf;/73/76/56/Y Input Value&cr;&lf;ThresoldNo&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/57/Y Input Value&cr;&lf;Period2 Never&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;1&cr;&lf;NodesAndWords&cr;&lf;/73/76/58/Y Input Value&cr;&lf;ThresoldNever&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/59/Y Input Value&cr;&lf;SwitchWords&cr;&lf;&cr;&lf;Value&cr;&lf;Slider, 1, 0, 0, 50, 1, , 4&cr;&lf;Integer&cr;&lf;Slider&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/60/Input Enum&cr;&lf;Text Rendering Mode&cr;&lf;&cr;&lf;Enumeration&cr;&lf;PullDown, TextRenderingMode, SingleLine&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;SingleLine, MultiLine, MultiLineWordWrap&cr;&lf;3&cr;&lf;SingleLine&cr;&lf;NodesAndWords&cr;&lf;/73/76/61/Y Input Value&cr;&lf;Enabled&cr;&lf;&cr;&lf;Value&cr;&lf;Toggle, 1, 1, 0, 1, 1, , 4&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;1&cr;&lf;NodesAndWords&cr;&lf;/73/76/62/Y Input Value&cr;&lf;Bang&cr;&lf;&cr;&lf;Value&cr;&lf;Bang, 1, 0, 0, 1, 1, , 4&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Bang&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/63/Input String&cr;&lf;text&cr;&lf;&cr;&lf;String&cr;&lf;String, , , -1&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;yhwr&cr;&lf;NodesAndWords&cr;&lf;/73/76/64/Color Input&cr;&lf;Color&cr;&lf;&cr;&lf;Color&cr;&lf;HSVAField, r=100% g=100% b=100% a=100% , HasAlpha&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;||0.34000,0.34000,0.34000,0.00000||&cr;&lf;NodesAndWords&cr;&lf;/73/88/1/Y Input Value&cr;&lf;Position&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 3, 0, -20, 20, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-20&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0,0,-1.4323&cr;&lf;ManualCam&cr;&lf;/73/88/5/Y Input Value&cr;&lf;FOV&cr;&lf;&cr;&lf;Value&cr;&lf;Rotary, 1, 0.25, 0, 0.5, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;0.5&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.2068&cr;&lf;ManualCam&cr;&lf;;|">
-   </PIN>
-   </NODE>
+   <LINK srcnodeid="58" srcpinname="OnChange" dstnodeid="47" dstpinname="Input 1">
+   </LINK>
    </PATCH>

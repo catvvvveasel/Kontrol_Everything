@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SaveMenuStates.v4p" systemname="SaveMenuStates" filename="D:\App\EuroVision\CatGui0.5\Subs\SaveMenuStates.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SaveMenuStates.v4p" systemname="SaveMenuStates" filename="D:\App\EuroVision\CatGui0.5\Subs\SaveMenuStates.v4p" bgcolor="11442563" scrollx="0" scrolly="-360">
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2580" top="3555" width="100" height="100">
    </BOUNDS>
@@ -157,21 +157,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="SavePrefs" filename="SavePrefs.v4p" nodename="SavePrefs.v4p" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="4820" top="3205" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2393" top="575" width="4855" height="5260">
-   </BOUNDS>
-   <BOUNDS type="Window" left="16890" top="6900" width="4860" height="6465">
-   </BOUNDS>
-   <PIN pinname="Set - Read" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
@@ -402,8 +388,6 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Up Edge" dstnodeid="14" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Up Edge" dstnodeid="14" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="33" srcpinname="Output" dstnodeid="32" dstpinname="Spread">
    </LINK>
    <NODE id="44" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -434,14 +418,6 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="21" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="15" dstpinname="Input">
-   <LINKPOINT x="4125" y="4395">
-   </LINKPOINT>
-   <LINKPOINT x="4035" y="3375">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="12" srcpinname="Up Edge" dstnodeid="15" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="18" srcpinname="OnChange" dstnodeid="19" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="12" srcpinname="Up Edge" dstnodeid="18" dstpinname="Input">
@@ -466,7 +442,7 @@
    </LINK>
    <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="1470" top="4590" width="10215" height="12435">
+   <BOUNDS type="Window" left="12780" top="3030" width="10215" height="12435">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="49" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7350" top="7560" width="480" height="480">
@@ -831,23 +807,37 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="91" srcpinname="Input Value" dstnodeid="90" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="89">
-   <BOUNDS type="Node" left="8865" top="2550" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="PrefsOpen1">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="89" srcpinname="Input Value" dstnodeid="90" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="90" srcpinname="Output" dstnodeid="53" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="90" srcpinname="Output" dstnodeid="75" dstpinname="Set">
+   </LINK>
+   <NODE systemname="SavePrefs" filename="SavePrefs.v4p" nodename="SavePrefs.v4p" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="4820" top="3205" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2393" top="575" width="4855" height="5260">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16890" top="6900" width="4860" height="6465">
+   </BOUNDS>
+   <PIN pinname="Set - Read" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Up Edge" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="15" dstpinname="Input">
+   <LINKPOINT x="4125" y="4395">
+   </LINKPOINT>
+   <LINKPOINT x="4035" y="3375">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Up Edge" dstnodeid="15" dstpinname="Input 1">
    </LINK>
    </PATCH>

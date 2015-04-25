@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Typewriter2.v4p" systemname="Typewriter2" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1\Subs\Typewriter2.v4p" scrollx="0" scrolly="4290" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Typewriter2.v4p" systemname="Typewriter2" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1\Subs\Typewriter2.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
    <BOUNDS type="Window" left="13800" top="2370" width="19590" height="15600">
    </BOUNDS>
    <NODE systemname="TYPEWRITER (STRING)" filename="%VVVV%\addonpack\lib\nodes\plugins\TypeWriter.dll" nodename="Typewriter (String)" componentmode="Hidden" id="22">
@@ -634,24 +634,6 @@
    <LINKPOINT x="10883" y="3442">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="ClampValue" filename="ClampValue.v4p" componentmode="Hidden" id="178" nodename="ClampValue.v4p">
-   <BOUNDS type="Node" left="3915" top="13875" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3915" top="13875" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="420" top="9600" width="9000" height="6000">
-   </BOUNDS>
-   <PIN pinname="MinMax" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="178" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="179" srcpinname="Y Output Value" dstnodeid="178" dstpinname="MinMax">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="185" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="9660" top="165" width="1590" height="240">
    </BOUNDS>
@@ -1257,7 +1239,7 @@
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="275">
    <BOUNDS type="Node" left="3675" top="15060" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="12" values="0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
@@ -1266,23 +1248,9 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="178" srcpinname="Output" dstnodeid="275" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="80" srcpinname="Output" dstnodeid="275" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="275" srcpinname="Output" dstnodeid="196" dstpinname="Input">
-   </LINK>
-   <NODE systemname="RadioSliceSpectral (Value)" filename="DropDownMenu\plugins\ValueRadioSliceSpectral\ValueRadioSliceSpectral.csproj" nodename="RadioSliceSpectral (Value)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="5175" top="4920" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="138" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="169" srcpinname="Output" dstnodeid="95" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="277" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3390" top="14130" width="480" height="480">
@@ -1303,5 +1271,37 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="277" srcpinname="Y Output Value" dstnodeid="275" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="RadioSliceSpectral (Value)" filename="plugins\ValueRadioSliceSpectral\ValueRadioSliceSpectral.csproj" nodename="RadioSliceSpectral (Value)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="5175" top="4920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="138" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="169" srcpinname="Output" dstnodeid="95" dstpinname="Input">
+   </LINK>
+   <NODE systemname="ClampValue" filename="ClampValue.v4p" componentmode="Hidden" id="178" nodename="ClampValue.v4p">
+   <BOUNDS type="Node" left="4140" top="13875" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4140" top="13875" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="420" top="9600" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="MinMax" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="178" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="179" srcpinname="Y Output Value" dstnodeid="178" dstpinname="MinMax">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="Output" dstnodeid="275" dstpinname="Input 1">
    </LINK>
    </PATCH>

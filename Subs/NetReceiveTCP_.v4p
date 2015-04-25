@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\NetReceiveTCP_.v4p" systemname="NetReceiveTCP_" filename="D:\Copy\Projects\CatGui0.5\Subs\NetReceiveTCP_.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
-   <BOUNDS height="8520" left="4230" top="405" type="Window" width="6015">
+   <BOUNDS height="8520" left="16290" top="1785" type="Window" width="6015">
    </BOUNDS>
    <NODE componentmode="InABox" id="13" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="2685" top="585" type="Node" width="0">
@@ -65,9 +65,11 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Queue Mode" slicecount="1" values="Spread">
+   </PIN>
    </NODE>
    <NODE id="3" nodename="S+H (String)" systemname="S+H (String)">
-   <BOUNDS height="0" left="510" top="4320" type="Node" width="0">
+   <BOUNDS height="0" left="495" top="4935" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -76,18 +78,14 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="4" srcpinname="Output">
-   </LINK>
    <NODE id="2" nodename="EQ (String)" systemname="EQ (String)">
-   <BOUNDS height="0" left="630" top="3915" type="Node" width="0">
+   <BOUNDS height="0" left="615" top="4530" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Inverse Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="2" dstpinname="Input 1" srcnodeid="4" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="3" dstpinname="Set" srcnodeid="2" srcpinname="Inverse Output">
    </LINK>
    <INFO author="vvvv group" description="Receives strings via UDP or TCP using PD&apos;s FUDI-protocol" tags="pd, udp, tcp">
@@ -155,5 +153,21 @@
    <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="4" dstpinname="Separator">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="12" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="AvoidNIL (String)" filename="%VVVV%\lib\nodes\modules\String\AvoidNIL (String).v4p" nodename="AvoidNIL (String)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="510" top="4035" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="21" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="2" dstpinname="Input 1">
    </LINK>
    </PATCH>

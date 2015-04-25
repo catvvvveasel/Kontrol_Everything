@@ -56,7 +56,7 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Count" dstnodeid="7" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="10125" top="600" width="7455" height="9645">
+   <BOUNDS type="Window" left="14160" top="0" width="7455" height="9780">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -74,22 +74,6 @@
    </LINK>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="11" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="SharedMemoryRead_ExposedKontrols-1" filename="SharedMemoryRead_ExposedKontrols-1.v4p" nodename="SharedMemoryRead_ExposedKontrols-1.v4p" componentmode="Hidden" id="62">
-   <BOUNDS type="Node" left="2615" top="2525" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="268" top="585" width="4695" height="6400">
-   </BOUNDS>
-   <BOUNDS type="Window" left="7080" top="165" width="4695" height="6390">
-   </BOUNDS>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="|/73/76/2/Y Input Value&cr;&lf;Max Radius&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/52/Y Input Value&cr;&lf;Period o No&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/56/Y Input Value&cr;&lf;ThresoldNo&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/57/Y Input Value&cr;&lf;Period2 Never&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/58/Y Input Value&cr;&lf;ThresoldNever&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/59/Y Input Value&cr;&lf;SwitchWords&cr;&lf;&cr;&lf;Value&cr;&lf;Slider, 1, 0, 0, 50, 1, , 4&cr;&lf;Integer&cr;&lf;Slider&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/60/Input Enum&cr;&lf;Text Rendering Mode&cr;&lf;&cr;&lf;Enumeration&cr;&lf;PullDown, TextRenderingMode, SingleLine&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;SingleLine, MultiLine, MultiLineWordWrap&cr;&lf;3&cr;&lf;SingleLine&cr;&lf;NodesAndWords&cr;&lf;/7|">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="64" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4665" top="7485" width="795" height="240">
    </BOUNDS>
@@ -160,20 +144,6 @@
    </LINK>
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="64" dstpinname="Input String">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Output 1" dstnodeid="68" dstpinname="Operand 1">
-   </LINK>
-   <NODE systemname="NetReceiveTCP_" filename="NetReceiveTCP_.v4p" nodename="NetReceiveTCP_" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="915" top="2010" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Port" visible="1">
-   </PIN>
-   <PIN pinname="Protocol" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Strings" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="4230" top="405" width="6015" height="8520">
-   </BOUNDS>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="75" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1785" top="1530" width="795" height="240">
    </BOUNDS>
@@ -188,10 +158,40 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
+   <NODE systemname="SharedMemoryRead_ExposedKontrols-1" filename="SharedMemoryRead_ExposedKontrols-1.v4p" nodename="SharedMemoryRead_ExposedKontrols-1.v4p" componentmode="Hidden" id="62">
+   <BOUNDS type="Node" left="2615" top="2525" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="268" top="585" width="4695" height="6400">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7080" top="165" width="4695" height="6390">
+   </BOUNDS>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="|/73/76/2/Y Input Value&cr;&lf;Max Radius&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/52/Y Input Value&cr;&lf;Period o No&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/56/Y Input Value&cr;&lf;ThresoldNo&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/57/Y Input Value&cr;&lf;Period2 Never&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/58/Y Input Value&cr;&lf;ThresoldNever&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/59/Y Input Value&cr;&lf;SwitchWords&cr;&lf;&cr;&lf;Value&cr;&lf;Slider, 1, 0, 0, 50, 1, , 4&cr;&lf;Integer&cr;&lf;Slider&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.34&cr;&lf;NodesAndWords&cr;&lf;/73/76/60/Input Enum&cr;&lf;Text Rendering Mode&cr;&lf;&cr;&lf;Enumeration&cr;&lf;PullDown, TextRenderingMode, SingleLine&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;SingleLine, MultiLine, MultiLineWordWrap&cr;&lf;3&cr;&lf;SingleLine&cr;&lf;NodesAndWords&cr;&lf;/7|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Output 1" dstnodeid="68" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="Output 1" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <NODE systemname="NetReceiveTCP_" filename="NetReceiveTCP_.v4p" nodename="NetReceiveTCP_.v4p" componentmode="Hidden" id="74">
+   <BOUNDS type="Node" left="915" top="2010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Port" visible="1">
+   </PIN>
+   <PIN pinname="Protocol" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Strings" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="16290" top="1785" width="6015" height="8520">
+   </BOUNDS>
+   </NODE>
    <LINK srcnodeid="75" srcpinname="Y Output Value" dstnodeid="74" dstpinname="Port">
    </LINK>
    <LINK srcnodeid="74" srcpinname="Strings" dstnodeid="62" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Output 1" dstnodeid="6" dstpinname="Input">
    </LINK>
    </PATCH>

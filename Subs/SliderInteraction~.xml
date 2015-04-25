@@ -26,46 +26,6 @@
    </PACK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <NODE systemname="SliderS" filename="SliderS.v4p" nodename="SliderS.v4p" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="4035" top="5340" width="900" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="625" top="3765" width="6820" height="8155">
-   </BOUNDS>
-   <BOUNDS type="Window" left="465" top="2325" width="10770" height="12870">
-   </BOUNDS>
-   <PIN pinname="CurretnValues" visible="1">
-   </PIN>
-   <PIN pinname="KnobPos" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="LeftButton" visible="1">
-   </PIN>
-   <PIN pinname="RightMouse" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="CurrentValues" visible="1" slicecount="30" values="0.5">
-   </PIN>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <PIN pinname="BinSize" visible="1">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="XYZW" visible="1">
-   </PIN>
-   <PIN pinname="MinMax" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Transform Quad" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="IsEndless" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="54" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6540" top="4515" width="795" height="240">
    </BOUNDS>
@@ -93,15 +53,11 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Y Input Value">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Mouse">
    </PIN>
    </NODE>
-   <LINK srcnodeid="51" srcpinname="XYZW" dstnodeid="55" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="51" dstpinname="MinMax">
-   </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="65">
    <BOUNDS type="Node" left="6735" top="2220" width="100" height="100">
    </BOUNDS>
@@ -121,13 +77,11 @@
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
-   <PIN pinname="Spread" visible="1">
+   <PIN pinname="Spread" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="66" dstpinname="Spread">
-   </LINK>
    <NODE systemname="FrameDelay (Value)" nodename="FrameDelay (Value)" componentmode="Hidden" id="67" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" left="6555" top="3690" width="100" height="100">
    </BOUNDS>
@@ -151,8 +105,6 @@
    <LINK srcnodeid="68" srcpinname="Input Value" dstnodeid="66" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="65" srcpinname="Output" dstnodeid="66" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="51" dstpinname="CurrentValues">
    </LINK>
    <LINK srcnodeid="67" srcpinname="Output 1" dstnodeid="54" dstpinname="Y Input Value">
    </LINK>
@@ -300,6 +252,54 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
+   <NODE systemname="SliderS" filename="SliderS.v4p" nodename="SliderS.v4p" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="4035" top="5340" width="900" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="625" top="3765" width="6820" height="8155">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8505" top="390" width="10770" height="12870">
+   </BOUNDS>
+   <PIN pinname="CurretnValues" visible="1">
+   </PIN>
+   <PIN pinname="KnobPos" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="LeftButton" visible="1">
+   </PIN>
+   <PIN pinname="RightMouse" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="CurrentValues" visible="1" slicecount="30" values="0.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="BinSize" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="XYZW" visible="1">
+   </PIN>
+   <PIN pinname="MinMax" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Transform Quad" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="IsEndless" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="XYZW" dstnodeid="55" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="51" dstpinname="MinMax">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="66" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="51" dstpinname="CurrentValues">
+   </LINK>
    <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="51" dstpinname="IsEndless">
    </LINK>
    </PATCH>

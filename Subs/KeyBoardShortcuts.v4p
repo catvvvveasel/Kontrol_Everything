@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <BOUNDS type="Window" left="1260" top="4440" width="21375" height="10695">
    </BOUNDS>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="1">
@@ -654,14 +654,6 @@
    </LINK>
    <LINK srcnodeid="138" srcpinname="Output" dstnodeid="86" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="139">
-   <BOUNDS type="Node" left="3810" top="3510" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="PrefsOpen0">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="140">
    <BOUNDS type="Node" left="4275" top="4815" width="100" height="100">
    </BOUNDS>
@@ -929,21 +921,19 @@
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="165">
    <BOUNDS type="Node" left="3885" top="4410" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="139" srcpinname="Input Value" dstnodeid="165" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="165" srcpinname="Output" dstnodeid="140" dstpinname="Input">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="166">
    <BOUNDS type="Node" left="4185" top="3900" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="PrefsOpen1">
+   <PIN pinname="Receive String" slicecount="1" values="PrefsOpen0">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>

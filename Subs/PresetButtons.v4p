@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\PresetButtons.v4p" systemname="PresetButtons" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\PresetButtons.v4p" scrollx="0" scrolly="4500" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\PresetButtons.v4p" systemname="PresetButtons" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\PresetButtons.v4p" scrollx="0" scrolly="3255" bgcolor="11442563">
    <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="3345" top="8685" width="555" height="270">
    </BOUNDS>
@@ -7,7 +7,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="32" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -60,24 +60,6 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="ButtonTexture" filename="ButtonTexture.v4p" nodename="ButtonTexture.v4p" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="2730" top="7535" width="2115" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="713" top="4228" width="4035" height="6615">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="5040" width="15705" height="6615">
-   </BOUNDS>
-   <PIN pinname="Exists" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Texture DX9" visible="1">
-   </PIN>
-   <PIN pinname="Reload" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE id="35" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
    </PIN>
@@ -109,17 +91,15 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2730" top="6485" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="30" dstpinname="Path">
-   </LINK>
    <BOUNDS type="Window" left="12525" top="1680" width="14730" height="11400">
    </BOUNDS>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="28" dstpinname="Color">
    </LINK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <LINK srcnodeid="30" srcpinname="Texture Out" dstnodeid="28" dstpinname="Texture">
-   </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="59" systemname="IOBox (Value Advanced)">
@@ -149,13 +129,11 @@
    </BOUNDS>
    <PIN pinname="Set" visible="1">
    </PIN>
-   <PIN pinname="Frames" slicecount="1" values="1">
+   <PIN pinname="Frames" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="30" dstpinname="Evaluate">
-   </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="61">
    <BOUNDS type="Node" left="5190" top="6495" width="100" height="100">
    </BOUNDS>
@@ -177,12 +155,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="65" srcpinname="Output" dstnodeid="61" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="65" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="66">
    <BOUNDS type="Node" left="2475" top="13695" width="100" height="100">
@@ -291,8 +267,6 @@
    <LINK srcnodeid="78" srcpinname="Y Output Value" dstnodeid="71" dstpinname="ScaleXY">
    </LINK>
    <LINK srcnodeid="28" srcpinname="Layer" dstnodeid="66" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="30" dstpinname="Reload">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="88" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="330" top="7305" width="795" height="240">
@@ -435,5 +409,91 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="99" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="ButtonTexture" filename="ButtonTexture.v4p" nodename="ButtonTexture.v4p" componentmode="InAWindow" id="30">
+   <BOUNDS type="Node" left="2730" top="7445" width="2115" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="713" top="4138" width="4035" height="6615">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="5040" width="6465" height="6990">
+   </BOUNDS>
+   <PIN pinname="Exists" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Texture DX9" visible="1">
+   </PIN>
+   <PIN pinname="Reload" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Path" visible="1" slicecount="32" values="D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000000.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000001.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000002.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000003.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000004.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000005.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000006.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000007.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000008.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000009.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000010.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000011.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000012.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000013.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000014.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000015.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000016.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000017.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000018.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000019.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000020.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000021.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000022.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000023.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000024.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000025.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000026.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000027.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000028.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000029.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000030.jpg,D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Thumbs\1000031.jpg">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="30" dstpinname="Reload">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="100" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4125" top="5205" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4125" top="5205" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="5265" top="5430" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Frames" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="101" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="65" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="102" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7170" top="7080" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7170" top="7080" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="102" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="2865" top="6960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="104" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="30" dstpinname="Path">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Texture Out" dstnodeid="28" dstpinname="Texture">
    </LINK>
    </PATCH>

@@ -8,24 +8,12 @@
    <PIN pinname="Former Slice" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="AvoidNIL2" filename="AvoidNIL2.v4p" nodename="AvoidNIL2" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="2685" top="3090" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="IsNull" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2700" top="3810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -33,7 +21,7 @@
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="3045" top="3435" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -124,8 +112,6 @@
    </NODE>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="7" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="1" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="9" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="12" srcpinname="Output" dstnodeid="9" dstpinname="Input 2">
@@ -134,17 +120,13 @@
    </LINK>
    <LINK srcnodeid="0" srcpinname="Former Slice" dstnodeid="13" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="2" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="2" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Output 1" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="IsNull" dstnodeid="3" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="19515" top="4020" width="8430" height="9525">
+   <BOUNDS type="Window" left="6315" top="600" width="8430" height="9525">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -301,5 +283,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="30" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="AvoidNIL2" filename="AvoidNIL2.v4p" nodename="AvoidNIL2.v4p" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="2685" top="3090" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="IsNull" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="IsNull" dstnodeid="3" dstpinname="Input">
    </LINK>
    </PATCH>

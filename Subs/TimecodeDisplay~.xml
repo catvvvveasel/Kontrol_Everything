@@ -80,22 +80,6 @@
    </LINK>
    <BOUNDS type="Window" left="10920" top="300" width="9390" height="5595">
    </BOUNDS>
-   <NODE systemname="Time-Timecode" filename="Time-Timecode.v4p" nodename="Time-Timecode.v4p" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1431" top="2543" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="0" width="6225" height="7685">
-   </BOUNDS>
-   <BOUNDS type="Window" left="22335" top="1455" width="6225" height="10410">
-   </BOUNDS>
-   <PIN pinname="Timecode" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="0" srcpinname="Timecode" dstnodeid="1" dstpinname="String">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Duration/position">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="0" dstpinname="FPS">
-   </LINK>
    <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform In">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
@@ -177,7 +161,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5880" top="3315" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Center">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Left">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Horizontal Align|">
    </PIN>
@@ -186,4 +170,20 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
+   <NODE systemname="Time-Timecode" filename="Time-Timecode.v4p" nodename="Time-Timecode.v4p" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1431" top="2543" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="6225" height="7685">
+   </BOUNDS>
+   <BOUNDS type="Window" left="22335" top="1455" width="6225" height="10410">
+   </BOUNDS>
+   <PIN pinname="Timecode" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Timecode" dstnodeid="1" dstpinname="String">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Duration/position">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="0" dstpinname="FPS">
+   </LINK>
    </PATCH>

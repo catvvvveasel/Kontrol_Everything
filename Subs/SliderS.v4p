@@ -10,7 +10,7 @@
    <PIN pinname="Y Input Value" visible="1" slicecount="3" values="0.6855,0,444.3159,13.13,15.03,1,0,0,0.6855,102.8333,371.0688">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="465" top="2325" width="10770" height="12870">
+   <BOUNDS type="Window" left="8505" top="390" width="10770" height="12870">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="24" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4980" top="4380" width="795" height="240">
@@ -158,36 +158,6 @@
    </LINK>
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="52" dstpinname="Input">
    </LINK>
-   <NODE systemname="SliderS-Finetune" filename="SliderS-Finetune.v4p" nodename="SliderS-Finetune.v4p" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="4982" top="5781" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1925" top="2169" width="6115" height="7225">
-   </BOUNDS>
-   <BOUNDS type="Window" left="10080" top="5550" width="10005" height="8640">
-   </BOUNDS>
-   <PIN pinname="Max" visible="1" slicecount="7" values="100,100,100,100,100,100,160">
-   </PIN>
-   <PIN pinname="Amount" visible="1" slicecount="1" values="0.1">
-   </PIN>
-   <PIN pinname="Click" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Intersect" visible="1" slicecount="100" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="58" srcpinname="Output 1" dstnodeid="90" dstpinname="MouseX">
-   </LINK>
-   <LINK srcnodeid="90" srcpinname="RightMouseActive" dstnodeid="84" dstpinname="Set">
-   <LINKPOINT x="6720" y="6885">
-   </LINKPOINT>
-   <LINKPOINT x="6735" y="4800">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="90" dstpinname="CurrentValues">
-   </LINK>
-   <LINK srcnodeid="47" srcpinname="Y Output Value" dstnodeid="90" dstpinname="Min/Max">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="91">
    <BOUNDS type="Node" left="5460" top="1665" width="100" height="100">
    </BOUNDS>
@@ -250,8 +220,6 @@
    </LINK>
    <LINK srcnodeid="58" srcpinname="Output 5" dstnodeid="95" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="90" dstpinname="Amount">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="96">
    <BOUNDS type="Node" left="7815" top="1815" width="100" height="100">
    </BOUNDS>
@@ -282,8 +250,6 @@
    </LINK>
    <LINK srcnodeid="97" srcpinname="Input Value" dstnodeid="98" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="90" dstpinname="Intersect">
-   </LINK>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="100">
    <BOUNDS type="Node" left="5970" top="8475" width="100" height="100">
    </BOUNDS>
@@ -291,7 +257,7 @@
    </PIN>
    <PIN pinname="Destination Maximum" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="Source Minimum" visible="1">
    </PIN>
@@ -306,8 +272,6 @@
    </LINK>
    <LINK srcnodeid="48" srcpinname="Output 2" dstnodeid="100" dstpinname="Destination Maximum">
    </LINK>
-   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="100" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="48" srcpinname="Output 1" dstnodeid="100" dstpinname="Source Minimum">
    </LINK>
    <LINK srcnodeid="48" srcpinname="Output 2" dstnodeid="100" dstpinname="Source Maximum">
@@ -315,7 +279,7 @@
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="101">
    <BOUNDS type="Node" left="4185" top="8970" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -324,8 +288,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="101" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="100" srcpinname="Output" dstnodeid="101" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="101" srcpinname="Output" dstnodeid="53" dstpinname="Input">
@@ -364,8 +326,6 @@
    </LINK>
    <LINK srcnodeid="94" srcpinname="Output" dstnodeid="103" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="103" srcpinname="Output" dstnodeid="90" dstpinname="Click">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="104" systemname="IOBox (String)">
    <BOUNDS type="Node" left="5430" top="8940" width="2235" height="270">
    </BOUNDS>
@@ -394,4 +354,44 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="SliderS-Finetune" filename="SliderS-Finetune.v4p" nodename="SliderS-Finetune.v4p" componentmode="InAWindow" id="90">
+   <BOUNDS type="Node" left="4982" top="5781" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1925" top="2169" width="6115" height="7225">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16380" top="6120" width="10005" height="8640">
+   </BOUNDS>
+   <PIN pinname="Max" visible="1" slicecount="7" values="100,100,100,100,100,100,160">
+   </PIN>
+   <PIN pinname="Amount" visible="1" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Click" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersect" visible="1" slicecount="100" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Output 1" dstnodeid="90" dstpinname="MouseX">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="RightMouseActive" dstnodeid="84" dstpinname="Set">
+   <LINKPOINT x="6720" y="6885">
+   </LINKPOINT>
+   <LINKPOINT x="6735" y="4800">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="90" dstpinname="CurrentValues">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Y Output Value" dstnodeid="90" dstpinname="Min/Max">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="90" dstpinname="Amount">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="90" dstpinname="Intersect">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="100" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="101" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="103" srcpinname="Output" dstnodeid="90" dstpinname="Click">
+   </LINK>
    </PATCH>

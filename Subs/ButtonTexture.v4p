@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ButtonTexture.v4p" systemname="ButtonTexture" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\ButtonTexture.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ButtonTexture.v4p" systemname="ButtonTexture" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\ButtonTexture.v4p" scrollx="30" scrolly="0" bgcolor="11442563">
    <NODE systemname="Exists (File)" nodename="Exists (File)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2295" top="2820" width="100" height="100">
    </BOUNDS>
@@ -53,9 +53,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="7" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="2505" top="5070" width="735" height="240">
+   <BOUNDS type="Box" left="2310" top="5070" width="735" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2505" top="5070" width="0" height="0">
+   <BOUNDS type="Node" left="2310" top="5070" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
    </PIN>
@@ -86,7 +86,7 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="0" top="5040" width="15705" height="6615">
+   <BOUNDS type="Window" left="0" top="5040" width="6465" height="6990">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -110,14 +110,56 @@
    </NODE>
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Bin Size">
    </LINK>
-   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="2295" top="4425" width="100" height="100">
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Read">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="0" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="4" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="3225" top="3825" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" visible="1">
+   <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Reload" visible="1">
+   <PIN pinname="Select" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Load In Background" slicecount="1" values="0">
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="2280" top="4200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="14" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="5145" top="6930" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Frames" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (DX11 2d.Pooled)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d.Pooled)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2295" top="4635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1" slicecount="32" values="..\TestScene\Projects\Start3\Thumbs\1000000.jpg,..\TestScene\Projects\Start3\Thumbs\1000001.jpg,..\TestScene\Projects\Start3\Thumbs\1000002.jpg,..\TestScene\Projects\Start3\Thumbs\1000003.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,..\TestScene\Projects\Start3\Thumbs\1000008.jpg,..\TestScene\Projects\Start3\Thumbs\1000009.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg,blank.jpg">
+   </PIN>
+   <PIN pinname="Reload" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Load In Background" slicecount="1" values="1">
    </PIN>
    <PIN pinname="No Mips" slicecount="1" values="1">
    </PIN>
@@ -126,16 +168,10 @@
    <PIN pinname="Keep In Memory" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Reload">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Texture Out" dstnodeid="7" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="3" dstpinname="Filename">
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Reload">
    </LINK>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Read">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="0" dstpinname="Filename">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="4" dstpinname="Input 2">
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="3" dstpinname="Filename">
    </LINK>
    </PATCH>

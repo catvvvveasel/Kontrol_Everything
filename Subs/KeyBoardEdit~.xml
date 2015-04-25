@@ -1,51 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardEdit.v4p" systemname="KeyBoardEdit" filename="C:\Users\cat\Desktop\CatGui0.1\Subs\KeyBoardEdit.v4p" scrollx="45" scrolly="0" bgcolor="11442563">
-   <NODE systemname="Typewriter2" filename="Typewriter2.v4p" nodename="Typewriter2.v4p" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="3825" top="4800" width="1530" height="270">
-   </BOUNDS>
-   <BOUNDS type="Window" left="13800" top="2370" width="19590" height="15600">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="DoubleClick" visible="1">
-   </PIN>
-   <PIN pinname="IsString" visible="1">
-   </PIN>
-   <PIN pinname="CurrentValues(stg)" visible="1">
-   </PIN>
-   <PIN pinname="FormatedValues" visible="1">
-   </PIN>
-   <PIN pinname="Values" visible="1">
-   </PIN>
-   <PIN pinname="OutputString" visible="1">
-   </PIN>
-   <PIN pinname="MinMax" visible="1" slicecount="1" values="-20">
-   </PIN>
-   <PIN pinname="VectorSize" visible="1" slicecount="8" values="1,1,1,2,4,1,1,1">
-   </PIN>
-   <PIN pinname="EditingSlice" visible="1">
-   </PIN>
-   <PIN pinname="TextBuffer" visible="1">
-   </PIN>
-   <PIN pinname="AddReplace" visible="1">
-   </PIN>
-   <PIN pinname="KeyboardEntry" visible="1">
-   </PIN>
-   <PIN pinname="Size" visible="1" slicecount="1" values="36">
-   </PIN>
-   <PIN pinname="Font" visible="1" slicecount="1" values="Arial">
-   </PIN>
-   <PIN pinname="MouseClick" visible="1">
-   </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="FliFlopMut" visible="1">
-   </PIN>
-   <PIN pinname="IsEndless" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="3030" top="7860" width="100" height="100">
    </BOUNDS>
@@ -122,8 +76,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="0" dstpinname="IsString">
-   </LINK>
    <NODE id="18" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="FormatedValues">
    </PIN>
@@ -134,8 +86,6 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="18" srcpinname="Output String" dstnodeid="0" dstpinname="FormatedValues">
-   </LINK>
    <NODE id="19" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="MinMax">
    </PIN>
@@ -194,46 +144,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="KeyBoardEdit-ShowText" filename="KeyBoardEdit-ShowText.v4p" nodename="KeyBoardEdit-ShowText.v4p" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="2496" top="6530" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="2053" width="8385" height="8955">
-   </BOUNDS>
-   <BOUNDS type="Window" left="16290" top="3270" width="8385" height="11730">
-   </BOUNDS>
-   <PIN pinname="Text" visible="1">
-   </PIN>
-   <PIN pinname="Size" visible="1">
-   </PIN>
-   <PIN pinname="AddReplace" visible="1">
-   </PIN>
-   <PIN pinname="Font" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="LayerDX9" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="0" srcpinname="EditingSlice" dstnodeid="48" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="48" dstpinname="VectorSize">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="TextBuffer" dstnodeid="48" dstpinname="Text">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Size">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="AddReplace" dstnodeid="48" dstpinname="AddReplace">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Output Enum" dstnodeid="48" dstpinname="Font">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="KeyboardEntry" dstnodeid="48" dstpinname="Enabled">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="49" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="570" top="5925" width="930" height="240">
    </BOUNDS>
@@ -279,14 +189,12 @@
    </PIN>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
-   <PIN pinname="Layer 2" visible="1">
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="53" srcpinname="Layer Out" dstnodeid="52" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="48" srcpinname="LayerDX11" dstnodeid="53" dstpinname="Layer 2">
    </LINK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="54">
    <BOUNDS type="Node" left="930" top="8355" width="100" height="100">
@@ -309,8 +217,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="55" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="55" srcpinname="Output Node" dstnodeid="48" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="56" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="195" top="7905" width="795" height="240">
@@ -400,22 +306,6 @@
    </NODE>
    <LINK srcnodeid="61" srcpinname="OnChange" dstnodeid="64" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="FlipFlopMutex" filename="FlipFlopMutex.v4p" nodename="FlipFlopMutex.v4p" componentmode="Hidden" id="60">
-   <BOUNDS type="Node" left="7815" top="4215" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7797" top="3255" width="4705" height="6415">
-   </BOUNDS>
-   <BOUNDS type="Window" left="615" top="8160" width="7155" height="6420">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="99" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="60" dstpinname="Reset">
-   </LINK>
    <NODE systemname="R (VALUE)" nodename="R (Value)" componentmode="Hidden" id="67">
    <BOUNDS type="Node" left="9015" top="2115" width="255" height="270">
    </BOUNDS>
@@ -431,13 +321,11 @@
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="68">
    <BOUNDS type="Node" left="8475" top="4710" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="68" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="69" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5295" top="3780" width="495" height="240">
    </BOUNDS>
@@ -478,16 +366,12 @@
    <LINKPOINT x="8692" y="5160">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="69" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Evaluate">
-   </LINK>
-   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="0" dstpinname="FliFlopMut">
-   </LINK>
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Input">
    </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="73">
    <BOUNDS type="Node" left="9165" top="6510" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="text">
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
@@ -496,22 +380,18 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="OutputString" dstnodeid="73" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="18" srcpinname="Output String" dstnodeid="73" dstpinname="Input 1">
    </LINK>
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="74">
    <BOUNDS type="Node" left="6525" top="7590" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="OutputString" dstnodeid="74" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="18" srcpinname="Output String" dstnodeid="74" dstpinname="Input 2">
    </LINK>
    <NODE systemname="AND (Boolean Spectral)" nodename="AND (Boolean Spectral)" componentmode="Hidden" id="75">
@@ -620,8 +500,6 @@
    </LINK>
    <LINK srcnodeid="70" srcpinname="Output 2" dstnodeid="73" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="60" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="87" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6060" top="660" width="480" height="480">
    </BOUNDS>
@@ -640,8 +518,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="IsEndless">
    </PIN>
    </NODE>
-   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="0" dstpinname="IsEndless">
-   </LINK>
    <LINK srcnodeid="70" srcpinname="Output 1" dstnodeid="69" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="FrameDelay (Animation Legacy)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="88">
@@ -654,6 +530,130 @@
    </NODE>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Input 1">
    </LINK>
+   <NODE systemname="Typewriter2" filename="Typewriter2.v4p" nodename="Typewriter2.v4p" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="3825" top="4800" width="1530" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13800" top="2370" width="19590" height="15600">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="DoubleClick" visible="1">
+   </PIN>
+   <PIN pinname="IsString" visible="1">
+   </PIN>
+   <PIN pinname="CurrentValues(stg)" visible="1">
+   </PIN>
+   <PIN pinname="FormatedValues" visible="1">
+   </PIN>
+   <PIN pinname="Values" visible="1">
+   </PIN>
+   <PIN pinname="OutputString" visible="1">
+   </PIN>
+   <PIN pinname="MinMax" visible="1" slicecount="1" values="-20">
+   </PIN>
+   <PIN pinname="VectorSize" visible="1" slicecount="8" values="1,1,1,2,4,1,1,1">
+   </PIN>
+   <PIN pinname="EditingSlice" visible="1">
+   </PIN>
+   <PIN pinname="TextBuffer" visible="1">
+   </PIN>
+   <PIN pinname="AddReplace" visible="1">
+   </PIN>
+   <PIN pinname="KeyboardEntry" visible="1">
+   </PIN>
+   <PIN pinname="Size" visible="1" slicecount="1" values="36">
+   </PIN>
+   <PIN pinname="Font" visible="1" slicecount="1" values="Arial">
+   </PIN>
+   <PIN pinname="MouseClick" visible="1">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="FliFlopMut" visible="1" slicecount="27" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="IsEndless" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="0" dstpinname="IsString">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output String" dstnodeid="0" dstpinname="FormatedValues">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="OutputString" dstnodeid="73" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="OutputString" dstnodeid="74" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="0" dstpinname="IsEndless">
+   </LINK>
    <LINK srcnodeid="88" srcpinname="Output 1" dstnodeid="0" dstpinname="MinMax">
+   </LINK>
+   <NODE systemname="FlipFlopMutex" filename="FlipFlopMutex.v4p" nodename="FlipFlopMutex.v4p" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="7815" top="4215" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7797" top="3255" width="4705" height="6415">
+   </BOUNDS>
+   <BOUNDS type="Window" left="615" top="8160" width="7155" height="6420">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="99" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="60" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="68" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="0" dstpinname="FliFlopMut">
+   </LINK>
+   <NODE systemname="KeyBoardEdit-ShowText" filename="KeyBoardEdit-ShowText.v4p" nodename="KeyBoardEdit-ShowText.v4p" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="2496" top="6530" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="2053" width="8385" height="8955">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16290" top="3270" width="8385" height="11730">
+   </BOUNDS>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   <PIN pinname="Size" visible="1">
+   </PIN>
+   <PIN pinname="AddReplace" visible="1">
+   </PIN>
+   <PIN pinname="Font" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="LayerDX9" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="48" dstpinname="VectorSize">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Size">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output Enum" dstnodeid="48" dstpinname="Font">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="LayerDX11" dstnodeid="53" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Output Node" dstnodeid="48" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="EditingSlice" dstnodeid="48" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="TextBuffer" dstnodeid="48" dstpinname="Text">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="AddReplace" dstnodeid="48" dstpinname="AddReplace">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="KeyboardEntry" dstnodeid="48" dstpinname="Enabled">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="6375" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="615" bgcolor="11442563">
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
    <BOUNDS type="Node" left="9120" top="8910" width="100" height="100">
    </BOUNDS>
@@ -789,27 +789,13 @@
    <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="159">
    <BOUNDS type="Node" left="5235" top="13215" width="780" height="270">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
    <PIN pinname="Output 2" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="AvoidNIL3" filename="AvoidNIL3.v4p" nodename="AvoidNIL3" componentmode="Hidden" id="158">
-   <BOUNDS type="Node" left="5220" top="12735" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="160" srcpinname="Input Value" dstnodeid="158" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="158" srcpinname="Output" dstnodeid="159" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="159" srcpinname="Output 2" dstnodeid="155" dstpinname="Input 7">
    </LINK>
    <LINK srcnodeid="70" srcpinname="Output" dstnodeid="154" dstpinname="Input">
@@ -1150,24 +1136,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="PadTypes" filename="PadTypes.v4p" nodename="PadTypes.v4p" componentmode="Hidden" id="210">
-   <BOUNDS type="Node" left="10997" top="6455" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6985" top="3568" width="8025" height="5775">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1650" top="5745" width="9945" height="7560">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input - Input 1" visible="1" slicecount="9" values="|Endless, 1, 1, 0, 1, 0.01, , 4|,|Endless, 1, 1, 0.01, 10, 0.01, s, 4|,|Endless, 1, 0, 0, 1, 0.01, , 4|,|Endless, 1, 1, 0.01, 10, 0.01, s, 4|,|Endless, 1, 0, 0, 1, 0.01, , 4|,|Endless, 1, 0, 0, 50, 1, , 4|,|PullDown, TextRenderingMode, SingleLine|,|Endless, 3, 0, -20, 20, 0.01, , 4|,|Rotary, 1, 0.25, 0, 0.5, 0.01, , 4|">
-   </PIN>
-   <PIN pinname="Input - Input 1 1" visible="1" slicecount="9" values="NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,ManualCam,ManualCam">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="210" srcpinname="Output 1" dstnodeid="179" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="210" srcpinname="Output" dstnodeid="92" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="211" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6465" top="105" width="795" height="240">
    </BOUNDS>
@@ -1236,11 +1204,7 @@
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 5" dstnodeid="61" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="212" srcpinname="Output 5" dstnodeid="210" dstpinname="Input - Input 1">
-   </LINK>
    <LINK srcnodeid="212" srcpinname="Output 5" dstnodeid="75" dstpinname="Input String">
-   </LINK>
-   <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="210" dstpinname="Input - Input 1 1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="213" systemname="IOBox (String)">
    <BOUNDS type="Box" left="9465" top="1665" width="795" height="240">
@@ -1481,5 +1445,51 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="212" srcpinname="Output 3" dstnodeid="227" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="AvoidNIL3" filename="AvoidNIL3.v4p" nodename="AvoidNIL3.v4p" componentmode="Hidden" id="158">
+   <BOUNDS type="Node" left="5220" top="12735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="160" srcpinname="Input Value" dstnodeid="158" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Output" dstnodeid="159" dstpinname="Input">
+   </LINK>
+   <NODE systemname="PadTypes" filename="PadTypes.v4p" nodename="PadTypes.v4p" componentmode="Hidden" id="210">
+   <BOUNDS type="Node" left="10997" top="6455" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6985" top="3568" width="8025" height="5775">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1650" top="5745" width="9945" height="7560">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input - Input 1" visible="1" slicecount="9" values="|Endless, 1, 1, 0, 1, 0.01, , 4|,|Endless, 1, 1, 0.01, 10, 0.01, s, 4|,|Endless, 1, 0, 0, 1, 0.01, , 4|,|Endless, 1, 1, 0.01, 10, 0.01, s, 4|,|Endless, 1, 0, 0, 1, 0.01, , 4|,|Endless, 1, 0, 0, 50, 1, , 4|,|PullDown, TextRenderingMode, SingleLine|,|Endless, 3, 0, -20, 20, 0.01, , 4|,|Rotary, 1, 0.25, 0, 0.5, 0.01, , 4|">
+   </PIN>
+   <PIN pinname="Input - Input 1 1" visible="1" slicecount="9" values="NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,ManualCam,ManualCam">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="210" srcpinname="Output 1" dstnodeid="179" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="210" srcpinname="Output" dstnodeid="92" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 5" dstnodeid="210" dstpinname="Input - Input 1">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="210" dstpinname="Input - Input 1 1">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="228">
+   <BOUNDS type="Node" left="17910" top="7650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="DefaultEnums">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="196" srcpinname="Output" dstnodeid="228" dstpinname="Input Value">
    </LINK>
    </PATCH>

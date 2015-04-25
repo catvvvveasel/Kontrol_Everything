@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SharedTextureIN.v4p" systemname="SharedTextureIN" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\SharedTextureIN.v4p" scrollx="0" scrolly="105" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SharedTextureIN.v4p" systemname="SharedTextureIN" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\SharedTextureIN.v4p" scrollx="0" scrolly="120" bgcolor="11442563">
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2820" top="3990" width="100" height="100">
    </BOUNDS>
@@ -45,7 +45,7 @@
    </PIN>
    <PIN pinname="Query" visible="1">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="0" visible="1">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="3">
@@ -92,12 +92,12 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="2" dstpinname="Transform">
    </LINK>
-   <BOUNDS type="Window" left="10845" top="2220" width="7530" height="7065">
+   <BOUNDS type="Window" left="3360" top="4095" width="7530" height="7065">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="3315" top="2220" width="100" height="100">
+   <BOUNDS type="Node" left="3330" top="1020" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="2" values="0,1073747266">
    </PIN>
@@ -123,7 +123,7 @@
    </PIN>
    <PIN pinname="Query" visible="1">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="15">
@@ -131,14 +131,12 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="XYZ" slicecount="3" values="0.64,0.64,0.64">
+   <PIN pinname="XYZ" slicecount="3" values="2,2,2">
    </PIN>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="16" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 2">
    </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="5580" top="3345" width="100" height="100">
@@ -149,13 +147,11 @@
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="2.06">
+   <PIN pinname="ScaleY" slicecount="1" values="2">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" values="3.12">
    </PIN>
    </NODE>
-   <LINK srcnodeid="18" srcpinname="Transform Out" dstnodeid="15" dstpinname="Transform In">
-   </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <LINK srcnodeid="5" srcpinname="Texture" dstnodeid="2" dstpinname="Texture">
@@ -175,7 +171,7 @@
    <LINK srcnodeid="13" srcpinname="Output 2" dstnodeid="17" dstpinname="Pointer">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="3300" top="1440" width="100" height="100">
+   <BOUNDS type="Node" left="3315" top="240" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="SharedTexture#">
    </PIN>
@@ -200,6 +196,34 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    </NODE>
-   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Enabled">
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="4785" top="840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Input Value" dstnodeid="22" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="5190" top="1455" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="2" values="0,1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Inverse Output" dstnodeid="23" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output 1" dstnodeid="2" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output 2" dstnodeid="16" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 2">
    </LINK>
    </PATCH>
