@@ -65,7 +65,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Queue Mode" slicecount="1" values="Spread">
+   <PIN pinname="Queue Mode" slicecount="1" values="Spread" visible="1">
    </PIN>
    </NODE>
    <NODE id="3" nodename="S+H (String)" systemname="S+H (String)">
@@ -133,9 +133,9 @@
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="4" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="20" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="2850" top="3165" width="795" height="240">
+   <BOUNDS type="Box" left="2010" top="2805" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2850" top="3165" width="0" height="0">
+   <BOUNDS type="Node" left="2010" top="2805" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="¬¬¬¬¬¬">
    </PIN>
@@ -169,5 +169,17 @@
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="3" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="2" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="22" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="3795" top="2730" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3795" top="2730" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Spread">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Queue Mode|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output Enum" dstnodeid="4" dstpinname="Queue Mode">
    </LINK>
    </PATCH>

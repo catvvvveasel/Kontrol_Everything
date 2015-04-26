@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="615" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
    <BOUNDS type="Node" left="9120" top="8910" width="100" height="100">
    </BOUNDS>
@@ -779,7 +779,7 @@
    <LINK srcnodeid="61" srcpinname="Former Slice" dstnodeid="156" dstpinname="Index">
    </LINK>
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="160">
-   <BOUNDS type="Node" left="5235" top="12285" width="100" height="100">
+   <BOUNDS type="Node" left="5925" top="11865" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="FadesGUI">
    </PIN>
@@ -787,7 +787,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="159">
-   <BOUNDS type="Node" left="5235" top="13215" width="780" height="270">
+   <BOUNDS type="Node" left="5925" top="12795" width="780" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1447,7 +1447,7 @@
    <LINK srcnodeid="212" srcpinname="Output 3" dstnodeid="227" dstpinname="Input String">
    </LINK>
    <NODE systemname="AvoidNIL3" filename="AvoidNIL3.v4p" nodename="AvoidNIL3.v4p" componentmode="Hidden" id="158">
-   <BOUNDS type="Node" left="5220" top="12735" width="100" height="100">
+   <BOUNDS type="Node" left="5910" top="12315" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1491,5 +1491,29 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="196" srcpinname="Output" dstnodeid="228" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="Zip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (String)" componentmode="Hidden" id="230">
+   <BOUNDS type="Node" left="10830" top="4050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="60" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="60" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="229">
+   <BOUNDS type="Node" left="10845" top="4650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="EnumsALL">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="230" srcpinname="Output" dstnodeid="229" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 11" dstnodeid="230" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 12" dstnodeid="230" dstpinname="Input 2">
    </LINK>
    </PATCH>

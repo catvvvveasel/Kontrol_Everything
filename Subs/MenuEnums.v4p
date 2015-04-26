@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\MenuEnums.v4p" systemname="MenuEnums" filename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" scrollx="45" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\MenuEnums.v4p" systemname="MenuEnums" filename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" scrollx="0" scrolly="1080" bgcolor="11442563">
    <BOUNDS type="Window" left="9525" top="-255" width="15885" height="15060">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="68" systemname="IOBox (String)">
@@ -259,9 +259,9 @@
    <LINK srcnodeid="56" srcpinname="Output" dstnodeid="49" dstpinname="TranslateY">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="46">
-   <BOUNDS type="Node" left="8235" top="2925" width="100" height="100">
+   <BOUNDS type="Node" left="8355" top="2910" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="3" values="0,0,0">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
@@ -629,15 +629,13 @@
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="7935" top="4170" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="2" values="1,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="46" srcpinname="Up Edge" dstnodeid="3" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="45" dstpinname="Set">
    </LINK>
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="2">
@@ -701,16 +699,12 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="69" srcpinname="Object Hit" dstnodeid="71" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Output 3" dstnodeid="71" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="46" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="61" srcpinname="Output String" dstnodeid="36" dstpinname="Input">
    </LINK>
@@ -1181,7 +1175,7 @@
    <LINK srcnodeid="148" srcpinname="Output" dstnodeid="49" dstpinname="ScaleX">
    </LINK>
    <NODE systemname="Intersect (EX9.Geometry Quad)" nodename="Intersect (EX9.Geometry Quad)" componentmode="Hidden" id="152">
-   <BOUNDS type="Node" left="4440" top="12685" width="100" height="100">
+   <BOUNDS type="Node" left="4275" top="11980" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Quad" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1221,7 +1215,7 @@
    <LINK srcnodeid="153" srcpinname="Transform Out" dstnodeid="132" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="151">
-   <BOUNDS type="Node" left="5430" top="12070" width="100" height="100">
+   <BOUNDS type="Node" left="5190" top="11260" width="100" height="100">
    </BOUNDS>
    <PIN pinname="TranslateX" visible="1" slicecount="1" values="-0.927482903003693">
    </PIN>
@@ -1237,7 +1231,7 @@
    <LINK srcnodeid="70" srcpinname="Output" dstnodeid="151" dstpinname="TranslateXY">
    </LINK>
    <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="154">
-   <BOUNDS type="Node" left="5295" top="13200" width="100" height="100">
+   <BOUNDS type="Node" left="5505" top="12615" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1255,13 +1249,13 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Set" visible="1">
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="156">
-   <BOUNDS type="Node" left="4050" top="13260" width="100" height="100">
+   <BOUNDS type="Node" left="4080" top="12825" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Mapping" slicecount="1" values="Clamp">
    </PIN>
@@ -1279,8 +1273,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="156" srcpinname="Output" dstnodeid="155" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="154" srcpinname="Output" dstnodeid="155" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="152" srcpinname="Position on Quad Y" dstnodeid="156" dstpinname="Input">
    </LINK>
@@ -1511,9 +1503,9 @@
    <LINK srcnodeid="180" srcpinname="Y Output Value" dstnodeid="179" dstpinname="Switch">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="181" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="8415" top="2025" width="1200" height="270">
+   <BOUNDS type="Node" left="11925" top="2085" width="1200" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="8415" top="2025" width="1200" height="270">
+   <BOUNDS type="Box" left="11925" top="2085" width="1200" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|open the menu|">
    </PIN>
@@ -1538,4 +1530,48 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="46" dstpinname="Input">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="183">
+   <BOUNDS type="Node" left="8640" top="1965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Output 3" dstnodeid="183" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="183" srcpinname="Up Edge" dstnodeid="71" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="3" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="184">
+   <BOUNDS type="Node" left="5100" top="13230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="154" srcpinname="Output" dstnodeid="184" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="184" srcpinname="Output" dstnodeid="155" dstpinname="Set">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="185">
+   <BOUNDS type="Node" left="6210" top="12375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="137" srcpinname="Output" dstnodeid="185" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="185" srcpinname="Up Edge" dstnodeid="184" dstpinname="Input 2">
+   <LINKPOINT x="5430" y="13245">
+   </LINKPOINT>
+   </LINK>
    </PATCH>

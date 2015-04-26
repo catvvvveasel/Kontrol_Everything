@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
    <BOUNDS type="Window" left="7095" top="630" width="17025" height="14070">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -253,7 +253,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="34">
-   <BOUNDS type="Node" left="10185" top="1575" width="100" height="100">
+   <BOUNDS type="Node" left="10215" top="1680" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -427,7 +427,7 @@
    <LINK srcnodeid="50" srcpinname="Output" dstnodeid="37" dstpinname="Transform In">
    </LINK>
    <NODE systemname="HitTest (2d Quad)" filename="%VVVV%\addonpack\lib\nodes\plugins\HitTest2dNodes.dll" nodename="HitTest (2d Quad)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="10455" top="5970" width="100" height="100">
+   <BOUNDS type="Node" left="10440" top="5115" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -439,7 +439,7 @@
    <LINK srcnodeid="37" srcpinname="Transform Out" dstnodeid="52" dstpinname="Transform In">
    </LINK>
    <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="53">
-   <BOUNDS type="Node" left="11010" top="5520" width="100" height="100">
+   <BOUNDS type="Node" left="10995" top="4665" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -511,15 +511,13 @@
    </PIN>
    </NODE>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="59">
-   <BOUNDS type="Node" left="10530" top="6630" width="100" height="100">
+   <BOUNDS type="Node" left="10470" top="6075" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
    <PIN pinname="Former Slice" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="52" srcpinname="Object Hit" dstnodeid="59" dstpinname="Select">
-   </LINK>
    <LINK srcnodeid="59" srcpinname="Former Slice" dstnodeid="58" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="57" srcpinname="Inverse Output" dstnodeid="58" dstpinname="Set">
@@ -679,9 +677,9 @@
    </PIN>
    <PIN pinname="XYZ" slicecount="3" visible="1" values="1,0.5625,1">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="1.23">
+   <PIN pinname="ScaleY" slicecount="1" values="1.22">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.65">
+   <PIN pinname="ScaleX" slicecount="1" values="1.13">
    </PIN>
    <PIN pinname="CenterX" slicecount="1" values="0">
    </PIN>
@@ -1061,5 +1059,71 @@
    <LINK srcnodeid="41" srcpinname="Up Edge" dstnodeid="112" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="112" srcpinname="Output" dstnodeid="103" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="114">
+   <BOUNDS type="Node" left="10935" top="5595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="115">
+   <BOUNDS type="Node" left="11970" top="4200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output 3" dstnodeid="115" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="115" srcpinname="Up Edge" dstnodeid="114" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Object Hit" dstnodeid="114" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="114" srcpinname="Output" dstnodeid="59" dstpinname="Select">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="117" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13635" top="5730" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13635" top="5730" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output 3" dstnodeid="117" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="118" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13125" top="6150" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13125" top="6150" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Object Hit" dstnodeid="118" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="119" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13380" top="2475" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13380" top="2475" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="119" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

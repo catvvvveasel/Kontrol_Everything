@@ -145,7 +145,7 @@
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE id="2" systemname="SetRow (DataTable String)" filename="C:\Users\chris\Desktop\VW\Git_HA\mlf_vwpls2015\Scenes\Shared\plugins\Table.dll" nodename="SetRow (DataTable String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="1560" top="6045" width="100" height="100">
+   <BOUNDS type="Node" left="1470" top="5895" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Table" visible="1" slicecount="1" values="||">
    </PIN>
@@ -155,7 +155,7 @@
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
-   <PIN pinname="Input Bin Size" slicecount="1" values="4">
+   <PIN pinname="Input Bin Size" slicecount="1" values="4" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -239,5 +239,23 @@
    <LINK srcnodeid="29" srcpinname="Former Slice" dstnodeid="3" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="29" srcpinname="Former Slice" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="31" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="480" top="5100" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="480" top="5100" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input Bin Size|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Input Bin Size">
    </LINK>
    </PATCH>

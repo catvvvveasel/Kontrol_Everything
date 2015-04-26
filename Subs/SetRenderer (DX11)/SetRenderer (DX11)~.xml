@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SetRenderer (DX11)\SetRenderer (DX11).v4p" systemname="SetRenderer (DX11)" filename="C:\Users\Wuxi_Museum\Desktop\BoygroupMain\sub\SetRenderer (DX11).v4p" scrollx="0" scrolly="3960" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SetRenderer (DX11)\SetRenderer (DX11).v4p" systemname="SetRenderer (DX11)" filename="C:\Users\Wuxi_Museum\Desktop\BoygroupMain\sub\SetRenderer (DX11).v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <BOUNDS height="9375" left="630" top="5070" type="Window" width="17775">
    </BOUNDS>
    <NODE componentmode="Hidden" id="42" nodename="Substitute (String)" systemname="Substitute (String)">
@@ -521,7 +521,7 @@
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="156">
-   <BOUNDS type="Node" left="3630" top="6150" width="100" height="100">
+   <BOUNDS type="Node" left="3630" top="4785" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -533,13 +533,11 @@
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="157">
    <BOUNDS type="Node" left="3645" top="6615" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="8" values="0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="156" srcpinname="OnChange" dstnodeid="157" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="157" srcpinname="Output" dstnodeid="2" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="158">
@@ -603,5 +601,41 @@
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="161" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="162">
+   <BOUNDS type="Node" left="3630" top="5670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="156" srcpinname="OnChange" dstnodeid="162" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="SetSlice (Spreads)" nodename="SetSlice (Spreads)" componentmode="Hidden" id="163">
+   <BOUNDS type="Node" left="5235" top="5025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="164">
+   <BOUNDS type="Node" left="5235" top="4635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Select" slicecount="1" values="8">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="164" srcpinname="Output" dstnodeid="163" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="Output" dstnodeid="162" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="162" srcpinname="Output" dstnodeid="157" dstpinname="Input">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-UpdateFromGUI.v4p" systemname="Kontrol-UpdateFromGUI" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-UpdateFromGUI.v4p" bgcolor="11442563" scrollx="60" scrolly="1860">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-UpdateFromGUI.v4p" systemname="Kontrol-UpdateFromGUI" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-UpdateFromGUI.v4p" bgcolor="11442563" scrollx="60" scrolly="-300">
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="0">
    <BOUNDS type="Node" left="3765" top="3525" width="100" height="100">
    </BOUNDS>
@@ -265,5 +265,17 @@
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="21" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="11" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="46">
+   <BOUNDS type="Node" left="2460" top="7200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="46" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Count" dstnodeid="21" dstpinname="Count">
    </LINK>
    </PATCH>
