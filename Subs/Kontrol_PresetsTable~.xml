@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="4080" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
-   <BOUNDS type="Window" left="9255" top="750" width="19005" height="14610">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="0" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
+   <BOUNDS type="Window" left="1065" top="945" width="15705" height="14610">
    </BOUNDS>
    <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="81">
    <BOUNDS type="Node" left="7335" top="3810" width="100" height="100">
@@ -19,9 +19,11 @@
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="81" srcpinname="Bang" dstnodeid="80" dstpinname="Input 1">
@@ -39,7 +41,7 @@
    </PIN>
    <PIN pinname="Auto Save" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Filename" visible="1" slicecount="1" values="..\TestScene\Projects\Start3\Presets\Presets.xml">
+   <PIN pinname="Filename" visible="1" slicecount="1" values="..\TestScene\Projects\TestScene11\Presets\Presets.xml">
    </PIN>
    <PIN pinname="Load" slicecount="1" visible="1" values="0">
    </PIN>
@@ -283,7 +285,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="38">
-   <BOUNDS type="Node" left="11085" top="5100" width="100" height="100">
+   <BOUNDS type="Node" left="11040" top="5340" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -706,8 +708,6 @@
    </LINK>
    <LINK srcnodeid="68" srcpinname="Output String" dstnodeid="71" dstpinname="Table Name">
    </LINK>
-   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="71" dstpinname="Insert">
-   </LINK>
    <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="116">
    <BOUNDS type="Node" left="10320" top="7455" width="100" height="100">
    </BOUNDS>
@@ -739,7 +739,7 @@
    <LINK srcnodeid="116" srcpinname="Hits" dstnodeid="118" dstpinname="Input">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="120">
-   <BOUNDS type="Node" left="8340" top="4035" width="555" height="270">
+   <BOUNDS type="Node" left="8445" top="3675" width="555" height="270">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -881,8 +881,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="116" srcpinname="Input Index" dstnodeid="149" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="35" srcpinname="Output 1" dstnodeid="79" dstpinname="Load">
    </LINK>
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="151">
    <BOUNDS type="Node" left="14355" top="4935" width="100" height="100">
@@ -1663,7 +1661,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1395" top="6765" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="37">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="6">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1711,7 +1709,7 @@
    </PIN>
    <PIN pinname="Table Index" visible="1" slicecount="1" values="1">
    </PIN>
-   <BOUNDS type="Window" left="0" top="0" width="15855" height="9090">
+   <BOUNDS type="Window" left="0" top="0" width="15855" height="3390">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="234" systemname="IOBox (String)">
@@ -1888,8 +1886,6 @@
    </LINK>
    <LINK srcnodeid="241" srcpinname="Output 1" dstnodeid="240" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="79" dstpinname="Filename">
-   </LINK>
    <LINK srcnodeid="93" srcpinname="Output" dstnodeid="209" dstpinname="Input">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="245">
@@ -1947,7 +1943,7 @@
    <LINK srcnodeid="79" srcpinname="Table" dstnodeid="65" dstpinname="Table">
    </LINK>
    <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="251">
-   <BOUNDS type="Node" left="2595" top="9480" width="100" height="100">
+   <BOUNDS type="Node" left="4215" top="9810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
@@ -1961,7 +1957,7 @@
    <LINK srcnodeid="251" srcpinname="Output" dstnodeid="214" dstpinname="Input">
    </LINK>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="252">
-   <BOUNDS type="Node" left="10050" top="11400" width="100" height="100">
+   <BOUNDS type="Node" left="10050" top="11220" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1973,7 +1969,7 @@
    <LINK srcnodeid="252" srcpinname="Output" dstnodeid="249" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="252" srcpinname="Output" dstnodeid="251" dstpinname="Set">
-   <LINKPOINT x="3241" y="9509">
+   <LINKPOINT x="4051" y="9584">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="251" srcpinname="Inverse Output" dstnodeid="213" dstpinname="Set">
@@ -2018,8 +2014,6 @@
    </NODE>
    <LINK srcnodeid="116" srcpinname="Input Index" dstnodeid="254" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="79" srcpinname="Table" dstnodeid="233" dstpinname="Table">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="255" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11535" top="13995" width="795" height="960">
    </BOUNDS>
@@ -2053,5 +2047,103 @@
    <LINK srcnodeid="116" srcpinname="Input Index" dstnodeid="256" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="256" srcpinname="Output" dstnodeid="65" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="257" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="14055" top="13185" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14055" top="13185" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="252" srcpinname="Output" dstnodeid="257" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Table" dstnodeid="233" dstpinname="Table">
+   </LINK>
+   <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="258">
+   <BOUNDS type="Node" left="8250" top="1755" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="258" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="258" srcpinname="Output" dstnodeid="79" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="71" dstpinname="Insert">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output 1" dstnodeid="79" dstpinname="Load">
+   </LINK>
+   <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="259">
+   <BOUNDS type="Node" left="3465" top="5400" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Commands" dstnodeid="259" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="260">
+   <BOUNDS type="Node" left="3435" top="5820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="259" srcpinname="Count" dstnodeid="260" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="261">
+   <BOUNDS type="Node" left="3435" top="6360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="260" srcpinname="Output" dstnodeid="261" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="261" srcpinname="Inverse Output" dstnodeid="40" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Blinker (Animation)" nodename="Blinker (Animation)" componentmode="Hidden" id="262">
+   <BOUNDS type="Node" left="2355" top="5145" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="260" srcpinname="Output" dstnodeid="262" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="263">
+   <BOUNDS type="Node" left="2130" top="5700" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="262" srcpinname="Output" dstnodeid="263" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="263" srcpinname="Output 1" dstnodeid="80" dstpinname="Input 4">
+   <LINKPOINT x="1335" y="6030">
+   </LINKPOINT>
+   <LINKPOINT x="1140" y="4440">
+   </LINKPOINT>
+   <LINKPOINT x="2745" y="3135">
+   </LINKPOINT>
+   <LINKPOINT x="4815" y="1965">
+   </LINKPOINT>
+   <LINKPOINT x="8070" y="2610">
+   </LINKPOINT>
    </LINK>
    </PATCH>
