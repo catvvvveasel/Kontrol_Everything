@@ -109,7 +109,7 @@
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="5" values="|/73/896/12/0/Y Input Value|,Temp,,|Endless, 3, 0, -100, 100, 0.01, , 4|,PlaceHolder">
+   <PIN pinname="Input 2" visible="1" slicecount="5" values="|/73/896/12/0/Y Input Value|,Temp,,|Endless, 1, 0, -100, 100, 0.01, , 4|,PlaceHolder">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -193,5 +193,37 @@
    <LINK srcnodeid="75" srcpinname="Y Output Value" dstnodeid="74" dstpinname="Port">
    </LINK>
    <LINK srcnodeid="74" srcpinname="Strings" dstnodeid="62" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="77" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6150" top="6810" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6150" top="6810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="5" visible="1" values="|/73/896/12/0/Y Input Value|,Temp,,|Endless, 1, 0, -100, 100, 0.01, , 4|,PlaceHolder">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="78" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5940" top="4275" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5940" top="4275" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="14" visible="1" values="|/73/896/12/0/Y Input Value|,Temp,,|Endless, 1, 0, -100, 100, 0.01, , 4|,,,,,,,,,,PlaceHolder">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="78" srcpinname="Output String" dstnodeid="67" dstpinname="Input 2">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="0" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="5490" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
    <BOUNDS type="Window" left="1065" top="945" width="15705" height="14610">
    </BOUNDS>
    <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="81">
@@ -2064,8 +2064,6 @@
    </NODE>
    <LINK srcnodeid="252" srcpinname="Output" dstnodeid="257" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="79" srcpinname="Table" dstnodeid="233" dstpinname="Table">
-   </LINK>
    <NODE systemname="Clean (String)" nodename="Clean (String)" componentmode="Hidden" id="258">
    <BOUNDS type="Node" left="8250" top="1755" width="100" height="100">
    </BOUNDS>
@@ -2083,25 +2081,21 @@
    <LINK srcnodeid="35" srcpinname="Output 1" dstnodeid="79" dstpinname="Load">
    </LINK>
    <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="259">
-   <BOUNDS type="Node" left="3465" top="5400" width="100" height="100">
+   <BOUNDS type="Node" left="3510" top="4455" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="71" srcpinname="Commands" dstnodeid="259" dstpinname="Input">
-   </LINK>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="260">
    <BOUNDS type="Node" left="3435" top="5820" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="259" srcpinname="Count" dstnodeid="260" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="261">
    <BOUNDS type="Node" left="3435" top="6360" width="100" height="100">
    </BOUNDS>
@@ -2145,5 +2139,27 @@
    </LINKPOINT>
    <LINKPOINT x="8070" y="2610">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="264">
+   <BOUNDS type="Node" left="3255" top="4830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="259" srcpinname="Count" dstnodeid="264" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="264" srcpinname="Output 1" dstnodeid="260" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Table" dstnodeid="259" dstpinname="Input">
+   <LINKPOINT x="3435" y="7215">
+   </LINKPOINT>
+   <LINKPOINT x="2880" y="4440">
+   </LINKPOINT>
+   <LINKPOINT x="3435" y="4275">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Input Index" dstnodeid="124" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

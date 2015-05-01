@@ -545,7 +545,7 @@
    <LINK srcnodeid="54" srcpinname="Shortname" dstnodeid="56" dstpinname="Input">
    </LINK>
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="57">
-   <BOUNDS type="Node" left="11880" top="2940" width="100" height="100">
+   <BOUNDS type="Node" left="11955" top="2985" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="PatchNamesExposed">
    </PIN>
@@ -557,13 +557,11 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="AllControls">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" visible="1" values="AllControls">
+   <PIN pinname="Input 1" slicecount="9" visible="1" values="TakeCamera-Kontrols,Specials-Kontrols,Props-Kontrol,Performers-Kontrol,Lights-Kontrols,ProjVideoControls,CubeVideoControls,FloorVideoControls,RearVideoControls">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="57" srcpinname="Input Value" dstnodeid="58" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="59">
    <BOUNDS type="Node" left="10710" top="6780" width="100" height="100">
    </BOUNDS>
@@ -895,5 +893,27 @@
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="97" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="97" srcpinname="Output" dstnodeid="2" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="98" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="12465" top="2445" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12465" top="2445" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="AllControls">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="98" srcpinname="Output String" dstnodeid="58" dstpinname="Input 1">
+   <LINKPOINT x="11850" y="3705">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Input Value" dstnodeid="58" dstpinname="Input 2">
    </LINK>
    </PATCH>
