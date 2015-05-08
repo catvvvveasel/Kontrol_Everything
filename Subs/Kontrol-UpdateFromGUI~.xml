@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-UpdateFromGUI.v4p" systemname="Kontrol-UpdateFromGUI" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-UpdateFromGUI.v4p" bgcolor="11442563" scrollx="60" scrolly="-300">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-UpdateFromGUI.v4p" systemname="Kontrol-UpdateFromGUI" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-UpdateFromGUI.v4p" bgcolor="11442563" scrollx="60" scrolly="0">
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="0">
    <BOUNDS type="Node" left="3765" top="3525" width="100" height="100">
    </BOUNDS>
@@ -111,10 +111,12 @@
    <NODE id="10" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Spread">
    </PIN>
-   <BOUNDS type="Box" left="1680" top="2525" width="750" height="240">
+   <BOUNDS type="Box" left="900" top="2765" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1680" top="2525" width="750" height="240">
+   <BOUNDS type="Node" left="900" top="2765" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="1" dstpinname="Spread">
    </LINK>
@@ -170,7 +172,7 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="OnChange" dstnodeid="8" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="3465" top="4380" width="17355" height="11370">
+   <BOUNDS type="Window" left="675" top="4380" width="17355" height="11370">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -253,17 +255,15 @@
    <NODE systemname="GetSpread (String)" nodename="GetSpread (String)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="1680" top="8025" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   <PIN pinname="Input" visible="1" slicecount="63" values="|0.0000,10.5207,-72.3830|,|0.0000,0.0000,0.0000|,33.0,FitIn,0,Wrap,0,|0.0000,0.0000,0.0000|,0.0000,FitIn,0,Wrap,0.0000,1.0,|1.0000,1.0000,0.0000|,FitIn,1.0,Wrap,15,0.0,|0.0000,2.0000,-25.5208|,FitIn,0.0,Wrap,0,|0.3300,0.0000,0.0000,0.2800|,|0.3300,0.0429,0.0429,0.5800|,FitIn,0.0673,Wrap,13.6349,4.2404,5.1973,FitIn,0,Wrap,1.0000,0.0000,1.0000,FitIn,3,Wrap,|1.0000,1.0000,1.0000,0.6800|,1.0000,1.0000,FitIn,0.0000,Wrap,0.0000,0.0000,|0.0000,0.0000,0.0000,0.0000|,FitIn,1.0000,Wrap,1.0000,0.0000,|1.0000,1.0000,1.0000,0.9400|,FitIn,1.0000,Wrap,0.9436,0.0000,|1.0000,1.0000,1.0000,1.0000|">
    </PIN>
    <PIN pinname="Offset" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Count" visible="1" slicecount="1" values="22">
+   <PIN pinname="Count" visible="1" slicecount="1" values="63">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="21" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="11" dstpinname="Input String">
    </LINK>
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="46">
@@ -277,5 +277,7 @@
    <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="46" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="46" srcpinname="Count" dstnodeid="21" dstpinname="Count">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="21" dstpinname="Input">
    </LINK>
    </PATCH>

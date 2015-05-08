@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" systemname="TopMenuBar" filename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" scrollx="465" scrolly="435" bgcolor="11442563">
-   <BOUNDS type="Window" left="5100" top="525" width="22350" height="14385">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" systemname="TopMenuBar" filename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" scrollx="0" scrolly="1080" bgcolor="11442563">
+   <BOUNDS type="Window" left="7155" top="2250" width="22350" height="14385">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Directory (File)" filename="%VVVV%\addonpack\lib\nodes\plugins\Directory.dll" nodename="Directory (File)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="2505" top="6435" width="100" height="100">
+   <BOUNDS type="Node" left="2520" top="6240" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Directory" visible="1" slicecount="6" values="C:\">
    </PIN>
@@ -143,11 +143,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output 1" dstnodeid="1" dstpinname="Create">
-   <LINKPOINT x="1694" y="8804">
+   <LINKPOINT x="1698" y="8755">
    </LINKPOINT>
-   <LINKPOINT x="1772" y="6931">
+   <LINKPOINT x="1780" y="6833">
    </LINKPOINT>
-   <LINKPOINT x="2596" y="6421">
+   <LINKPOINT x="2607" y="6275">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="17" systemname="IOBox (String)">
@@ -1059,6 +1059,8 @@
    </PIN>
    <PIN pinname="MenuCounts" visible="1">
    </PIN>
+   <PIN pinname="Default" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="122" dstpinname="Operand 2 - Directory">
    </LINK>
@@ -1081,7 +1083,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="ValuesIn" visible="1" slicecount="3" values="Azerbaijan,|Shiney Floors|,Playlist01">
+   <PIN pinname="ValuesIn" visible="1" slicecount="3" values="Azerbaijan,|Enable bool3|,playlist2.xml">
    </PIN>
    <PIN pinname="EnumList" visible="1" slicecount="3" values="|Azerbaijan, Azerbaijan2, Hungary, Poland, United_Kingdom, _Store|,|Preferences, Enable Light Beams,  Shiney Floors,  Crowd, Clear All Keyframes, EnableCreate Wavefrom, Copy Project To...|,|Playlist01, Playlist01.xml|">
    </PIN>
@@ -1121,7 +1123,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="8024" top="4409" width="10215" height="9250">
    </BOUNDS>
-   <BOUNDS type="Window" left="12780" top="3030" width="10215" height="12435">
+   <BOUNDS type="Window" left="945" top="3795" width="10215" height="12435">
    </BOUNDS>
    <PIN pinname="Output 1" visible="1">
    </PIN>
@@ -1169,12 +1171,6 @@
    <LINK srcnodeid="69" srcpinname="EnumIndex" dstnodeid="176" dstpinname="Index" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="69" srcpinname="WhichMenu" dstnodeid="176" dstpinname="WhichMenu">
-   </LINK>
-   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="69" dstpinname="ValuesIn" linkstyle="PolyLine" hiddenwhenlocked="1">
-   <LINKPOINT x="13035" y="9630">
-   </LINKPOINT>
-   <LINKPOINT x="10260" y="7575">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="Copy_Playlist" filename="Copy_Playlist.v4p" nodename="Copy_Playlist.v4p" componentmode="Hidden" id="225">
    <BOUNDS type="Node" left="16339" top="10297" width="0" height="0">
@@ -1225,7 +1221,7 @@
    <LINK srcnodeid="252" srcpinname="Output" dstnodeid="181" dstpinname="Save">
    </LINK>
    <NODE systemname="AND (Boolean Spectral)" nodename="AND (Boolean Spectral)" componentmode="Hidden" id="270">
-   <BOUNDS type="Node" left="3540" top="6810" width="100" height="100">
+   <BOUNDS type="Node" left="3465" top="6510" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1395,7 +1391,7 @@
    <LINK srcnodeid="286" srcpinname="Output" dstnodeid="271" dstpinname="Set">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="287">
-   <BOUNDS type="Node" left="2475" top="8130" width="360" height="270">
+   <BOUNDS type="Node" left="2475" top="8340" width="360" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1417,19 +1413,61 @@
    </PIN>
    </NODE>
    <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="289">
-   <BOUNDS type="Node" left="3120" top="8070" width="100" height="100">
+   <BOUNDS type="Node" left="2760" top="7815" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
+   <PIN pinname="Input 1" visible="1" slicecount="7" values="0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="289" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="288" srcpinname="Input Value" dstnodeid="289" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="289" srcpinname="Output" dstnodeid="287" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="290">
+   <BOUNDS type="Node" left="13275" top="9420" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="290" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="291">
+   <BOUNDS type="Node" left="12825" top="10320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="Project,Prefs,Playlist">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="291" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="292">
+   <BOUNDS type="Node" left="12795" top="9765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="290" srcpinname="Output" dstnodeid="292" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="292" srcpinname="Output" dstnodeid="291" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="291" srcpinname="Output" dstnodeid="69" dstpinname="ValuesIn" hiddenwhenlocked="1">
+   <LINKPOINT x="12810" y="10890">
+   </LINKPOINT>
+   <LINKPOINT x="10245" y="7485">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="289" dstpinname="Input 1">
    </LINK>
    </PATCH>

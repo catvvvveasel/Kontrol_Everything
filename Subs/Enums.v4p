@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="1890" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <BOUNDS type="Window" left="990" top="2205" width="17025" height="14070">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -1037,5 +1037,17 @@
    <LINK srcnodeid="57" srcpinname="Inverse Output" dstnodeid="58" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="52" srcpinname="Object Hit" dstnodeid="59" dstpinname="Select">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="126">
+   <BOUNDS type="Node" left="8130" top="8055" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Count" dstnodeid="126" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="126" srcpinname="Inverse Output" dstnodeid="83" dstpinname="Enabled">
    </LINK>
    </PATCH>

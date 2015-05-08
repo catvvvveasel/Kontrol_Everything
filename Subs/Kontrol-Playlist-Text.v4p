@@ -415,9 +415,9 @@
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5550" top="9540" width="480" height="480">
+   <BOUNDS type="Box" left="7890" top="9180" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="5550" top="9540" width="0" height="0">
+   <BOUNDS type="Node" left="7890" top="9180" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -553,6 +553,8 @@
    </BOUNDS>
    <PIN pinname="Left/Centre/Right Justify" visible="1">
    </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="15" dstpinname="Input Node">
    </LINK>
@@ -565,5 +567,53 @@
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="32" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="32" dstpinname="UpdatePos">
+   </LINK>
+   <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="5685" top="9465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="47" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="5610" top="9765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="OnChange" dstnodeid="48" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="6585" top="10245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="49" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="49" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="6750" top="10635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Output" dstnodeid="50" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="32" dstpinname="Evaluate">
    </LINK>
    </PATCH>

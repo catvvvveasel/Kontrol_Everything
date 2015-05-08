@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="1530" scrolly="10440" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="0" scrolly="840" bgcolor="11442563">
    <NODE id="12" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -20,7 +20,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="12000" top="1110" width="23250" height="11430">
+   <BOUNDS type="Window" left="6180" top="2595" width="17205" height="11430">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="20">
    <BOUNDS type="Node" left="12180" top="2175" width="100" height="100">
@@ -154,30 +154,6 @@
    </LINK>
    <LINK srcnodeid="125" srcpinname="Y Output Value" dstnodeid="124" dstpinname="Source Maximum">
    </LINK>
-   <NODE systemname="Text_SpriteSheets" filename="Text_SpriteSheets.v4p" nodename="Text_SpriteSheets.v4p" componentmode="Hidden" id="126">
-   <BOUNDS type="Node" left="9315" top="18435" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="630" top="3255" width="17310" height="12840">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="r">
-   </PIN>
-   <PIN pinname="Length" visible="1">
-   </PIN>
-   <PIN pinname="Color" visible="1" slicecount="1" values="|0.70343,0.70343,0.70343,1.00000|">
-   </PIN>
-   <PIN pinname="BinSize" visible="1">
-   </PIN>
-   <PIN pinname="UpdatePos" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="158">
    <BOUNDS type="Node" left="13380" top="15150" width="100" height="100">
    </BOUNDS>
@@ -449,7 +425,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="283">
-   <BOUNDS type="Node" left="10110" top="11535" width="495" height="270">
+   <BOUNDS type="Node" left="10110" top="11430" width="495" height="270">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="32" values="38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7,38.7">
    </PIN>
@@ -517,8 +493,6 @@
    <LINK srcnodeid="278" srcpinname="Y Output Value" dstnodeid="286" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="280" srcpinname="Transform Out" dstnodeid="286" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="286" srcpinname="Output" dstnodeid="126" dstpinname="Transform In">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="288">
    <BOUNDS type="Node" left="5865" top="2625" width="100" height="100">
@@ -1143,7 +1117,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4500" top="2790" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1153,7 +1127,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="381" srcpinname="Y Output Value" dstnodeid="341" dstpinname="Input 4">
@@ -1288,10 +1262,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="385" srcpinname="Y Output Value" dstnodeid="126" dstpinname="Evaluate">
-   </LINK>
-   <LINK srcnodeid="126" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 4">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="416" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2490" top="9870" width="810" height="1440">
    </BOUNDS>
@@ -1533,8 +1503,6 @@
    <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="306" dstpinname="Is Color">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="306" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="306" srcpinname="Output" dstnodeid="126" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="306" srcpinname="Output Bin Size" dstnodeid="353" dstpinname="Y Input Value">
    </LINK>
@@ -1895,5 +1863,37 @@
    <LINK srcnodeid="421" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="191" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="Text_SpriteSheets" filename="Text_SpriteSheets.v4p" nodename="Text_SpriteSheets.v4p" componentmode="Hidden" id="126">
+   <BOUNDS type="Node" left="9315" top="18435" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="630" top="3255" width="17310" height="12840">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="r">
+   </PIN>
+   <PIN pinname="Length" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|0.70343,0.70343,0.70343,1.00000|">
+   </PIN>
+   <PIN pinname="BinSize" visible="1">
+   </PIN>
+   <PIN pinname="UpdatePos" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="286" srcpinname="Output" dstnodeid="126" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="385" srcpinname="Y Output Value" dstnodeid="126" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="306" srcpinname="Output" dstnodeid="126" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="126" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 4">
    </LINK>
    </PATCH>

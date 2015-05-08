@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2775" top="4425" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.78000,0.00000,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.01840,0.46000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color">
    </PIN>
@@ -61,7 +61,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2490" top="705" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,1,1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,4,4">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -111,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="870" top="4005" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Disabled">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Add">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Mode">
    </PIN>
@@ -123,7 +123,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2865" top="1935" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,2,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,3.4152,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -173,7 +173,7 @@
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Mode" slicecount="1" values="NoCullSimple">
+   <PIN pinname="Mode" slicecount="1" visible="1" values="NoCullSimple">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)" exposed="0">
@@ -295,7 +295,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6060" top="1725" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="10">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="120">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -385,7 +385,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9240" top="1800" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -405,7 +405,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8700" top="4590" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.4678">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -425,7 +425,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4710" top="2010" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-1.4561">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -459,5 +459,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Reverse">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="27" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="480" top="750" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="480" top="750" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="NoCullSimple">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Mode">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output Enum" dstnodeid="11" dstpinname="Mode">
    </LINK>
    </PATCH>

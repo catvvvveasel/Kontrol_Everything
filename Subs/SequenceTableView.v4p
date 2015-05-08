@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="2730" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="3240" bgcolor="11442563">
    <BOUNDS type="Window" left="8550" top="-165" width="17355" height="16200">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -641,7 +641,7 @@
    <LINK srcnodeid="34" srcpinname="Output String" dstnodeid="181" dstpinname="Filename">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="182">
-   <BOUNDS type="Node" left="4665" top="1020" width="100" height="100">
+   <BOUNDS type="Node" left="4815" top="1020" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -675,7 +675,7 @@
    <LINK srcnodeid="181" srcpinname="Shortname" dstnodeid="249" dstpinname="Input 3">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="250">
-   <BOUNDS type="Node" left="8775" top="3750" width="750" height="270">
+   <BOUNDS type="Node" left="8715" top="3495" width="750" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
    </PIN>
@@ -711,7 +711,7 @@
    <LINK srcnodeid="251" srcpinname="Output String" dstnodeid="250" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="261">
-   <BOUNDS type="Node" left="8790" top="4695" width="100" height="100">
+   <BOUNDS type="Node" left="8820" top="4935" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="D:\Copy\Projects\CatGui0.5\TestScene\Projects\Start3\Playlists\BU\playlist2015.04.07-09.10.42.xml">
    </PIN>
@@ -805,15 +805,19 @@
    </PIN>
    </NODE>
    <NODE systemname="SaveBU" filename="SaveBU.v4p" nodename="SaveBU.v4p" componentmode="Hidden" id="255">
-   <BOUNDS type="Node" left="4227" top="7896" width="0" height="0">
+   <BOUNDS type="Node" left="4377" top="8691" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="2182" top="5446" width="4090" height="4900">
+   <BOUNDS type="Box" left="2332" top="6241" width="4090" height="4900">
    </BOUNDS>
-   <BOUNDS type="Window" left="11370" top="1650" width="13470" height="8850">
+   <BOUNDS type="Window" left="19950" top="8805" width="7875" height="6270">
    </BOUNDS>
    <PIN pinname="Input">
    </PIN>
    <PIN pinname="From Filename" slicecount="1" values="D:\Copy\Projects\59Productions\Harmonium\ConnectAll3d\Projects\Start\Playlists\playlist.xml">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   <PIN pinname="Undo" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="249" srcpinname="Output" dstnodeid="255" dstpinname="ToFilename">
@@ -843,13 +847,15 @@
    <LINK srcnodeid="296" srcpinname="TableFileName" dstnodeid="255" dstpinname="From Filename">
    </LINK>
    <NODE systemname="UndoSeq" filename="UndoSeq.v4p" nodename="UndoSeq.v4p" componentmode="Hidden" id="277">
-   <BOUNDS type="Node" left="8772" top="4146" width="0" height="0">
+   <BOUNDS type="Node" left="8757" top="4041" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8055" top="2535" width="4315" height="7600">
+   <BOUNDS type="Box" left="8040" top="2430" width="4315" height="7600">
    </BOUNDS>
-   <BOUNDS type="Window" left="450" top="5880" width="9120" height="9870">
+   <BOUNDS type="Window" left="675" top="8400" width="9120" height="9870">
    </BOUNDS>
-   <PIN pinname="Changed" visible="1">
+   <PIN pinname="Changed" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="250" srcpinname="Output" dstnodeid="277" dstpinname="Directory">
@@ -859,14 +865,6 @@
    <LINK srcnodeid="277" srcpinname="Output 1" dstnodeid="266" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="277" srcpinname="Output" dstnodeid="261" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Has Changed" dstnodeid="277" dstpinname="Changed" hiddenwhenlocked="1">
-   <LINKPOINT x="5328" y="7451">
-   </LINKPOINT>
-   <LINKPOINT x="4508" y="7508">
-   </LINKPOINT>
-   <LINKPOINT x="6492" y="3244">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="SequenceTableView-RemoveKey" filename="SequenceTableView-RemoveKey.v4p" nodename="SequenceTableView-RemoveKey.v4p" componentmode="Hidden" id="178">
    <BOUNDS type="Node" left="3748" top="11598" width="0" height="0">
@@ -1157,9 +1155,9 @@
    <LINK srcnodeid="54" srcpinname="Output 5" dstnodeid="316" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="317" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="3270" top="8415" width="795" height="240">
+   <BOUNDS type="Box" left="3315" top="8130" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3270" top="8415" width="0" height="0">
+   <BOUNDS type="Node" left="3315" top="8130" width="0" height="0">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="26" srcpinname="Table" dstnodeid="317" dstpinname="Input Node">
@@ -1318,16 +1316,6 @@
    </NODE>
    <LINK srcnodeid="26" srcpinname="Has Changed" dstnodeid="329" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="UndoSeq" filename="UndoSeq.v4p" nodename="UndoSeq.v4p" componentmode="Hidden" id="330">
-   <BOUNDS type="Node" left="9072" top="4446" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8355" top="2835" width="4315" height="7600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="450" top="5880" width="9120" height="9870">
-   </BOUNDS>
-   <PIN pinname="Changed" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="144" srcpinname="Output 1" dstnodeid="26" dstpinname="Load">
    </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="331">
@@ -1396,4 +1384,14 @@
    <BOUNDS type="Window" left="0" top="0" width="15885" height="7890">
    </BOUNDS>
    </NODE>
+   <LINK srcnodeid="255" srcpinname="Up Edge" dstnodeid="277" dstpinname="Changed">
+   <LINKPOINT x="4162" y="8906">
+   </LINKPOINT>
+   <LINKPOINT x="5460" y="4718">
+   </LINKPOINT>
+   <LINKPOINT x="8468" y="4054">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="277" srcpinname="Output" dstnodeid="255" dstpinname="Undo">
+   </LINK>
    </PATCH>

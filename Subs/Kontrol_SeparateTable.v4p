@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" systemname="Kontrol_SeparateTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" scrollx="0" scrolly="1140" bgcolor="11442563">
-   <BOUNDS type="Window" left="480" top="1020" width="15495" height="13575">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" systemname="Kontrol_SeparateTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" scrollx="0" scrolly="8565" bgcolor="11442563">
+   <BOUNDS type="Window" left="9720" top="570" width="15495" height="13575">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="244" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11250" top="3330" width="795" height="240">
@@ -118,24 +118,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Node Label|">
    </PIN>
    <PIN pinname="Input String" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="432" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6255" top="1485" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6255" top="1485" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="RootDepth">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <PACK Name="addonpack" Version="33.7.0">
@@ -796,8 +778,6 @@
    </LINK>
    <LINK srcnodeid="189" srcpinname="Former Slice" dstnodeid="367" dstpinname="Index" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="432" srcpinname="Y Output Value" dstnodeid="189" dstpinname="RootDepth">
-   </LINK>
    <LINK srcnodeid="189" srcpinname="Label" dstnodeid="422" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="189" srcpinname="Defaults" dstnodeid="360" dstpinname="Input 2" linkstyle="PolyLine">
@@ -807,26 +787,6 @@
    <LINK srcnodeid="882" srcpinname="Y Output Value" dstnodeid="189" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="869" srcpinname="ParsedPinInfo" dstnodeid="189" dstpinname="ParsedPinInfo">
-   </LINK>
-   <NODE systemname="GroupControls" filename="GroupControls.v4p" nodename="GroupControls.v4p" componentmode="Hidden" id="605">
-   <BOUNDS type="Node" left="2828" top="4917" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1485" top="930" width="6765" height="8370">
-   </BOUNDS>
-   <BOUNDS type="Window" left="705" top="2220" width="6765" height="8370">
-   </BOUNDS>
-   <PIN pinname="Exposed Pins" visible="1">
-   </PIN>
-   <PIN pinname="Unique Index" visible="1">
-   </PIN>
-   <PIN pinname="HiLight" visible="1" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Evaluate" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="432" srcpinname="Y Output Value" dstnodeid="605" dstpinname="HiLight">
-   </LINK>
-   <LINK srcnodeid="189" srcpinname="ExposedPins" dstnodeid="605" dstpinname="Exposed Pins">
    </LINK>
    <NODE systemname="FeedbackFromPatches" filename="FeedbackFromPatches.v4p" nodename="FeedbackFromPatches.v4p" componentmode="Hidden" id="358">
    <BOUNDS type="Node" left="9465" top="3813" width="0" height="0">
