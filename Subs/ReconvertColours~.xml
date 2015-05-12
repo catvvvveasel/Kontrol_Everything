@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ReconvertColours.v4p" systemname="ReconvertColours" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\ReconvertColours.v4p" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ReconvertColours.v4p" systemname="ReconvertColours" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\ReconvertColours.v4p" bgcolor="11442563" scrollx="120" scrolly="75">
    <NODE systemname="RGB (Color Split)" nodename="RGB (Color Split)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1695" top="4050" width="100" height="100">
    </BOUNDS>
@@ -33,7 +33,7 @@
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="1725" top="1725" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -107,7 +107,7 @@
    </PIN>
    <PIN pinname="Bin Size" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -132,42 +132,6 @@
    <PIN pinname="Intersperse" slicecount="1" values="Comma">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3210" top="1500" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3210" top="1500" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Index">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3075" top="3555" width="795" height="960">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3075" top="3555" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Y Input Value">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="12" systemname="IOBox (Color)">
    <BOUNDS type="Box" left="3105" top="5085" width="2250" height="480">
    </BOUNDS>
@@ -186,18 +150,16 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="7" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Index">
-   </LINK>
    <NODE id="14" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
-   <BOUNDS type="Box" left="1500" top="6510" width="750" height="240">
+   <BOUNDS type="Box" left="1485" top="7260" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="6510" width="750" height="240">
+   <BOUNDS type="Node" left="1485" top="7260" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Input String" visible="1" slicecount="13" values="7,181,1.8082,1.0000,|1.0000,0.0000,0.8400,1.0000|,0.9479,73.0987,135.1205,|0.0000,0.0000,0.0000|,|0.53,0.04,255.00,1.00|,|0.7890,3.2137,1.0000|,Disabled,|0.3300,2.0000,2.0000|">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="14" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="8" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="0" dstpinname="Input">
@@ -228,32 +190,14 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="2" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="11" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="12" dstpinname="Color Input">
    </LINK>
-   <BOUNDS type="Window" left="17955" top="4725" width="9945" height="8370">
+   <BOUNDS type="Window" left="6705" top="465" width="9945" height="8370">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="15" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3675" top="2820" width="3030" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3675" top="2820" width="3030" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|We only need to convert HSV back to RGB|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
    <BOUNDS type="Box" left="3615" top="6480" width="4290" height="375">
    </BOUNDS>
@@ -267,5 +211,169 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="16" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="17">
+   <BOUNDS type="Node" left="5370" top="675" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5370" top="675" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="IsColour">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="5385" top="1290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="2775" top="1050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output 1" dstnodeid="19" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Former Slice" dstnodeid="2" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Former Slice" dstnodeid="7" dstpinname="Index">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="4680" top="2010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="4665" top="2550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Comma">
+   </PIN>
+   <PIN pinname="Ignore between" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsValue (String)" nodename="AsValue (String)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="4665" top="2970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="21" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="20" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="22" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="4845" top="1650" width="555" height="270">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output 2" dstnodeid="23" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Former Slice" dstnodeid="22" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="24" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6750" top="3735" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6750" top="3735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" values="0,,,">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="24" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="4680" top="3555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="255">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="4710" top="4125" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="4725" top="4575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Comma">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="26" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="27" dstpinname="Input">
+   </LINK>
+   <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="1500" top="6615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Spread" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="28" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="28" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Former Slice" dstnodeid="28" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="14" dstpinname="Input String">
    </LINK>
    </PATCH>

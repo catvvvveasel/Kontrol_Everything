@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" systemname="Kontrol_Client" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" scrollx="0" scrolly="450">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" systemname="Kontrol_Client" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" scrollx="0" scrolly="210">
    <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1560" top="3810" width="100" height="100">
    </BOUNDS>
@@ -116,7 +116,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Feedback Target UDP Port">
    </LINK>
-   <BOUNDS type="Window" left="4155" top="720" width="20310" height="15030">
+   <BOUNDS type="Window" left="0" top="1260" width="16095" height="14775">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -281,7 +281,7 @@
    <LINK srcnodeid="0" srcpinname="Exposed Pins" dstnodeid="121" dstpinname="Input">
    </LINK>
    <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="3315" top="12105" width="100" height="100">
+   <BOUNDS type="Node" left="3180" top="13140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -321,7 +321,7 @@
    <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="112" dstpinname="Texture In">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="138">
-   <BOUNDS type="Node" left="3375" top="13470" width="100" height="100">
+   <BOUNDS type="Node" left="3255" top="15585" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="PlayControlShared">
    </PIN>
@@ -329,7 +329,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="139">
-   <BOUNDS type="Node" left="3375" top="13815" width="100" height="100">
+   <BOUNDS type="Node" left="3255" top="15930" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -449,7 +449,7 @@
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="178">
-   <BOUNDS type="Node" left="3075" top="14190" width="100" height="100">
+   <BOUNDS type="Node" left="2955" top="16305" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -1185,11 +1185,11 @@
    </PIN>
    </NODE>
    <NODE id="125" systemname="Kontrol-DoFades_Client" filename="Kontrol_Client_Subs\Kontrol-DoFades_Client.v4p" nodename="Kontrol_Client_Subs\Kontrol-DoFades_Client.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="2085" top="12705" width="100" height="100">
+   <BOUNDS type="Node" left="1965" top="14820" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="AllFadesString" visible="1" slicecount="60" pintype="Input" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="AllFadesString" visible="1" slicecount="25" pintype="Input" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
-   <PIN pinname="Spread" visible="1" pintype="Input">
+   <PIN pinname="Spread" visible="1" pintype="Input" slicecount="25" values="| 1|,| 1|,| 1|,| 1|,|1.0000,1.0000,1.0000,1.0000|,| 0|,1.0000,| 1|,| 0, 0, 0|,|1.0000,1.0000,1.0000,0.1700|,1.0000,|1.0000,2.6140,3.9006|,Disabled,| 0, 0, 0|,120.0000,|0.0000,0.0000,0.0000,0.0000|,| 0, 0, 0|,| 0|,| 0|,5.0000,-1.4561,| 0|,|1.0000,4.0000,4.0000|,Add,|0.0000,3.4152,0.0000|">
    </PIN>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -1199,7 +1199,7 @@
    </PIN>
    <BOUNDS type="Window" left="7005" top="0" width="20910" height="15750">
    </BOUNDS>
-   <BOUNDS type="Box" left="120" top="30" width="4800" height="3600">
+   <BOUNDS type="Box" left="15" top="2145" width="4800" height="3600">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -1211,19 +1211,15 @@
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
-   <PIN pinname="FadeType" visible="1">
+   <PIN pinname="FadeType" visible="1" slicecount="25" values="|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="125" dstpinname="Spread">
-   </LINK>
    <LINK srcnodeid="127" srcpinname="Up Edge" dstnodeid="125" dstpinname="Index">
    </LINK>
-   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="AllFadesString">
-   </LINK>
    <NODE id="126" systemname="Kontrol-Client_Osc" filename="Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" componentmode="Hidden" nodename="Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="1575" top="14580" width="100" height="100">
+   <BOUNDS type="Node" left="1455" top="16695" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1575" top="14580" width="4800" height="3600">
+   <BOUNDS type="Box" left="1455" top="16695" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="9885" top="1005" width="15750" height="13800">
    </BOUNDS>
@@ -1282,6 +1278,8 @@
    <PIN pinname="Node Label" visible="1">
    </PIN>
    <PIN pinname="ParsedInfo" visible="1">
+   </PIN>
+   <PIN pinname="Values" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="121" srcpinname="Output" dstnodeid="110" dstpinname="Input">
@@ -1365,9 +1363,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="276" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3300" top="14610" width="3315" height="270">
+   <BOUNDS type="Node" left="3180" top="16725" width="3315" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3300" top="14610" width="3315" height="270">
+   <BOUNDS type="Box" left="3180" top="16725" width="3315" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|This sends the data to the pins in your patch|">
    </PIN>
@@ -1379,9 +1377,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="277" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="4200" top="11580" width="2190" height="270">
+   <BOUNDS type="Node" left="4620" top="11580" width="2190" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4200" top="11580" width="2190" height="270">
+   <BOUNDS type="Box" left="4620" top="11580" width="2190" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|We get the Data from the GUI|">
    </PIN>
@@ -1509,9 +1507,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="295" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="15975" top="6405" width="795" height="240">
+   <BOUNDS type="Box" left="16485" top="6360" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="15975" top="6405" width="0" height="0">
+   <BOUNDS type="Node" left="16485" top="6360" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2004">
    </PIN>
@@ -1702,8 +1700,12 @@
    </LINK>
    <LINK srcnodeid="317" srcpinname="Output" dstnodeid="259" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="124" srcpinname="Output 3" dstnodeid="125" dstpinname="FadeType">
-   </LINK>
    <LINK srcnodeid="269" srcpinname="Output" dstnodeid="271" dstpinname="Strings">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="AllFadesString">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="125" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 3" dstnodeid="125" dstpinname="FadeType">
    </LINK>
    </PATCH>

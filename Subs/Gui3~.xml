@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="0" scrolly="7200" bgcolor="11442563">
-   <BOUNDS type="Window" left="3945" top="795" width="19155" height="12645">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="0" scrolly="4680" bgcolor="11442563">
+   <BOUNDS type="Window" left="-570" top="4230" width="19155" height="12645">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="915" top="3765" width="100" height="100">
@@ -49,9 +49,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="98" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="11565" top="14835" width="795" height="240">
+   <BOUNDS type="Box" left="11580" top="16335" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="11565" top="14835" width="0" height="0">
+   <BOUNDS type="Node" left="11580" top="16335" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -313,11 +313,11 @@
    <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="295" dstpinname="Input">
    </LINK>
    <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="297">
-   <BOUNDS type="Node" left="11565" top="14160" width="100" height="100">
+   <BOUNDS type="Node" left="11580" top="15660" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input" visible="1" slicecount="12" values="1,1,1.0000,1.0000,|1.0000,0.0000,0.0000,1.0000|,0.0000,5.0000,1.0000,|0.0000,0.0000,0.0000|,|1.0000,2.6140,3.9006|,Disabled,|0.0000,0.0000,0.0000|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -427,7 +427,7 @@
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="330">
    <BOUNDS type="Node" left="12810" top="420" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="ControlKey">
+   <PIN pinname="Receive String" slicecount="1" values="EditFades">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -743,7 +743,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4170" top="5430" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="1740" top="870" width="10815" height="9165">
+   <BOUNDS type="Window" left="6480" top="0" width="10815" height="9165">
    </BOUNDS>
    <PIN pinname="IsColour" visible="1" slicecount="26" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0">
    </PIN>
@@ -805,9 +805,9 @@
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="235" dstpinname="Values">
    </LINK>
    <NODE systemname="SliderInteraction" filename="SliderInteraction.v4p" nodename="SliderInteraction.v4p" componentmode="Hidden" id="87">
-   <BOUNDS type="Node" left="4532" top="8466" width="1710" height="270">
+   <BOUNDS type="Node" left="4412" top="8451" width="1710" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4080" top="6204" width="7900" height="4525">
+   <BOUNDS type="Box" left="3960" top="6189" width="7900" height="4525">
    </BOUNDS>
    <BOUNDS type="Window" left="15480" top="2730" width="11895" height="8895">
    </BOUNDS>
@@ -861,9 +861,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="SliderPositionsOnly" dstnodeid="101" dstpinname="TransformIn">
-   <LINKPOINT x="3785" y="9295">
+   <LINKPOINT x="3705" y="9285">
    </LINKPOINT>
-   <LINKPOINT x="3715" y="5285">
+   <LINKPOINT x="3675" y="5280">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="235" srcpinname="Values Through" dstnodeid="87" dstpinname="CurrentValue">
@@ -899,7 +899,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="345" top="9386" width="5095" height="5005">
    </BOUNDS>
-   <BOUNDS type="Window" left="6180" top="2595" width="17205" height="11430">
+   <BOUNDS type="Window" left="1125" top="3810" width="17205" height="11430">
    </BOUNDS>
    <PIN pinname="Name" visible="1" slicecount="11" values="|Max Radius|,|Period o No|,ThresoldNo,|Period2 Never|,ThresoldNever,SwitchWords,|Text Rendering Mode|,Enabled,Bang,,Color">
    </PIN>
@@ -971,19 +971,19 @@
    <LINK srcnodeid="89" srcpinname="LayerDX11" dstnodeid="197" dstpinname="Layer 4">
    </LINK>
    <LINK srcnodeid="89" srcpinname="All_IoBoxesTransforms" dstnodeid="87" dstpinname="AllIoboxes">
-   <LINKPOINT x="2300" y="12770">
+   <LINKPOINT x="2260" y="12765">
    </LINKPOINT>
-   <LINKPOINT x="3580" y="7135">
+   <LINKPOINT x="3500" y="7125">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="89" srcpinname="Output Bin Size" dstnodeid="87" dstpinname="IOboxBinSizes">
-   <LINKPOINT x="1698" y="12732">
+   <LINKPOINT x="1674" y="12729">
    </LINKPOINT>
-   <LINKPOINT x="75" y="11304">
+   <LINKPOINT x="27" y="11298">
    </LINKPOINT>
-   <LINKPOINT x="2499" y="8211">
+   <LINKPOINT x="2427" y="8202">
    </LINKPOINT>
-   <LINKPOINT x="4677" y="8238">
+   <LINKPOINT x="4581" y="8226">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="290" srcpinname="Output" dstnodeid="89" dstpinname="Values(Sliders)">
@@ -1131,14 +1131,14 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9229" top="9483" width="4710" height="7510">
    </BOUNDS>
-   <BOUNDS type="Window" left="17955" top="4725" width="9945" height="8370">
+   <BOUNDS type="Window" left="6705" top="465" width="9945" height="8370">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="IsColour" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="106" srcpinname="Output" dstnodeid="284" dstpinname="Input - Spread">
-   </LINK>
-   <LINK srcnodeid="284" srcpinname="Output" dstnodeid="297" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="284" srcpinname="Output" dstnodeid="340" dstpinname="Input 2">
    </LINK>
@@ -1217,7 +1217,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6885" top="1215" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="11025" top="0" width="17775" height="12045">
+   <BOUNDS type="Window" left="-825" top="5055" width="17775" height="12045">
    </BOUNDS>
    <PIN pinname="ParsedPinInfo" visible="1">
    </PIN>
@@ -1307,5 +1307,23 @@
    <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="89" dstpinname="ISenum - IsButton">
    </LINK>
    <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="89" dstpinname="IsButton">
+   </LINK>
+   <NODE systemname="SetDefaults" filename="SetDefaults.v4p" componentmode="Hidden" id="397" nodename="SetDefaults.v4p">
+   <BOUNDS type="Node" left="10875" top="14535" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10875" top="14535" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5055" top="735" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Spread" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="284" srcpinname="Output" dstnodeid="397" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="397" srcpinname="Output" dstnodeid="297" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="284" dstpinname="IsColour">
    </LINK>
    </PATCH>

@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1110" top="4245" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="17835" height="11685">
+   <BOUNDS type="Window" left="0" top="0" width="11265" height="7155">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -37,7 +37,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Layer 3" visible="1">
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layers">
@@ -123,17 +123,17 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="510" top="0" width="15270" height="8280">
+   <BOUNDS type="Window" left="-795" top="6855" width="15270" height="8280">
    </BOUNDS>
    <PIN pinname="Mode" slicecount="1" values="Disabled">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3540" top="840" width="2610" height="270">
+   <BOUNDS type="Node" left="3630" top="840" width="2610" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3540" top="840" width="2610" height="270">
+   <BOUNDS type="Box" left="3630" top="840" width="3045" height="735">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;- The patches need unique names|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;- The patches need unique names&cr;&lf;This includes inside subpatches if used as kontrols|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -158,18 +158,6 @@
    </NODE>
    <LINK srcnodeid="12" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 1">
    </LINK>
-   <NODE systemname="PerfMeter (DX11.Debug)" filename="%VVVV%\packs\dx11\nodes\modules\PerfMeter (DX11.Debug).v4p" nodename="PerfMeter (DX11.Debug)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="3165" top="2550" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 3">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4845" top="2535" width="480" height="480">
    </BOUNDS>
@@ -185,25 +173,23 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Enabled">
-   </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="3150" top="2160" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="1.53">
+   <PIN pinname="TranslateX" slicecount="1" values="1.37">
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" values="-0.19">
    </PIN>
    </NODE>
-   <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="15" dstpinname="Transform">
-   </LINK>
    <NODE systemname="Patch2" filename="Subs\Patch2.v4p" nodename="Subs\Patch2.v4p" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="1845" top="1335" width="1650" height="270">
+   <BOUNDS type="Node" left="1845" top="1665" width="1650" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="295" top="300" width="3100" height="3100">
+   <BOUNDS type="Box" left="295" top="630" width="3100" height="3100">
    </BOUNDS>
    <BOUNDS type="Window" left="405" top="0" width="15705" height="7170">
    </BOUNDS>
@@ -247,13 +233,15 @@
    <NODE systemname="Kontrol_Client" filename="..\Kontrol_Client.v4p" nodename="..\Kontrol_Client.v4p" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="6210" top="3780" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="-5340" top="720" width="20310" height="15030">
+   <BOUNDS type="Window" left="0" top="1260" width="16095" height="14775">
    </BOUNDS>
    <PIN pinname="Dx11 Texture" visible="1">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="DualScreen" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Mainloop" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="21" systemname="IOBox (String)">
@@ -277,9 +265,9 @@
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="23" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="7425" top="2400" width="3930" height="270">
+   <BOUNDS type="Node" left="7845" top="1860" width="3930" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="7425" top="2400" width="3855" height="1125">
+   <BOUNDS type="Box" left="7845" top="1860" width="3855" height="1125">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|You can have the GUI in the output render or if you want, to run the GUI in a separate renderer with a preview of this patches renderer in it, then you must enable this button (GUI performance is sluggish with 1 output)|">
    </PIN>
@@ -309,5 +297,73 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="20" dstpinname="DualScreen">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="24" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7005" top="3315" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7005" top="3315" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="300">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="fps">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Mainloop">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Mainloop">
+   </LINK>
+   <NODE id="25" systemname="PerfMeter2 (DX11.Debug)" filename="Subs\PerfMeter2 (DX11.Debug).v4p" nodename="PerfMeter2 (DX11.Debug)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="3075" top="2670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Box" left="1320" top="0" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="3060" top="6690" width="11760" height="8685">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Inverse ViewProjection" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Screen Size" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="framebuffer" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="RefreshRenderContext" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Clear Unlocked" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Clear Cache" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="PipeLineStatistics Query Source" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="PipeLineStatistics" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="fps" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Query" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="25" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Enabled">
    </LINK>
    </PATCH>

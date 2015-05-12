@@ -279,17 +279,15 @@
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="101">
    <BOUNDS type="Node" left="4185" top="8970" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input 1" visible="1" slicecount="26" values="10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="26" values="10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="13" values="1,1,1,1,1,0,0,0,0,0,0,1,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="100" srcpinname="Output" dstnodeid="101" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="101" srcpinname="Output" dstnodeid="53" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="102" systemname="IOBox (Value Advanced)">
@@ -390,8 +388,10 @@
    </LINK>
    <LINK srcnodeid="90" srcpinname="Output" dstnodeid="100" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="101" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="103" srcpinname="Output" dstnodeid="90" dstpinname="Click">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="101" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output" dstnodeid="101" dstpinname="Input 1">
    </LINK>
    </PATCH>

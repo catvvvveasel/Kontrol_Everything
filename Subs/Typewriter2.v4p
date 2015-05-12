@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Typewriter2.v4p" systemname="Typewriter2" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1\Subs\Typewriter2.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
-   <BOUNDS type="Window" left="13800" top="2370" width="19590" height="15600">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Typewriter2.v4p" systemname="Typewriter2" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1\Subs\Typewriter2.v4p" scrollx="0" scrolly="5400" bgcolor="11442563">
+   <BOUNDS type="Window" left="7935" top="1950" width="19590" height="15600">
    </BOUNDS>
    <NODE systemname="TYPEWRITER (STRING)" filename="%VVVV%\addonpack\lib\nodes\plugins\TypeWriter.dll" nodename="Typewriter (String)" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="8580" top="10740" width="100" height="100">
@@ -699,7 +699,7 @@
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="196">
    <BOUNDS type="Node" left="2370" top="14775" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="100" values="0,3.12,-52.63,0,3,-28,63.1,0,0,10,0,0,0,0,0,0.33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,-100,-27,0,0,0,0,0,0,0.82,1,0.18,0.34,0.86,1,0.56,1,0.6961,1,-0.1061,39.8003,4.8718,5.1735,0,0,29,0,0,1,0.004,8,-0.0071,0.33,0,1,0,1,1,15,0.4386,0,1,0.0967,0.33,0,1,0,11,1,1,1,0,0.33,0,1,1,7,1,0,0,-0.0319,0.33,0,1,1">
+   <PIN pinname="Input" visible="1" slicecount="26" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1250,8 +1250,6 @@
    </NODE>
    <LINK srcnodeid="80" srcpinname="Output" dstnodeid="275" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="275" srcpinname="Output" dstnodeid="196" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="277" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3390" top="14130" width="480" height="480">
    </BOUNDS>
@@ -1303,5 +1301,43 @@
    <LINK srcnodeid="179" srcpinname="Y Output Value" dstnodeid="178" dstpinname="MinMax">
    </LINK>
    <LINK srcnodeid="178" srcpinname="Output" dstnodeid="275" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="278">
+   <BOUNDS type="Node" left="4875" top="14970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="EditFades">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="279">
+   <BOUNDS type="Node" left="3690" top="15705" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="278" srcpinname="Input Value" dstnodeid="279" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="280">
+   <BOUNDS type="Node" left="4860" top="15540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="275" srcpinname="Output" dstnodeid="280" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="280" srcpinname="Output" dstnodeid="279" dstpinname="Input 2" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="275" srcpinname="Output" dstnodeid="279" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="279" srcpinname="Output" dstnodeid="196" dstpinname="Input">
    </LINK>
    </PATCH>

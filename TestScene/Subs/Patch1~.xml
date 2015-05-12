@@ -5,7 +5,7 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Color" visible="1">
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,0.83000,0.83000,1.00000|">
    </PIN>
    <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
@@ -24,7 +24,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="1" dstpinname="Input Node">
    </LINK>
-   <BOUNDS type="Window" left="510" top="0" width="15270" height="8280">
+   <BOUNDS type="Window" left="-795" top="6855" width="15270" height="8280">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -33,13 +33,13 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2775" top="4425" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00570,0.00590,0.01000,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.64000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color">
    </PIN>
+   <PIN pinname="Chooser Style" slicecount="1" values="HSVAField">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Color Output" dstnodeid="0" dstpinname="Color">
-   </LINK>
    <NODE systemname="Transform (Transform 3d Vector)" nodename="Transform (Transform 3d Vector)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="2115" top="3240" width="100" height="100">
    </BOUNDS>
@@ -63,7 +63,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2490" top="705" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,2.614,3.9006">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.789,3.2137,1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -123,7 +123,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2865" top="1935" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.33,2,2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -179,7 +179,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8130" top="2730" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="7">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -247,7 +247,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8220" top="3450" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="181">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -287,7 +287,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5550" top="1590" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.8082">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -331,7 +331,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7995" top="1710" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.9479">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -351,7 +351,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6795" top="1590" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="73.0987">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -373,7 +373,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7260" top="3420" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="135.1205">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -414,12 +414,40 @@
    </NODE>
    <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Translate XYZ">
    </LINK>
-   <NODE systemname="Silly" filename="Silly.v4p" componentmode="InAWindow" id="24" nodename="Silly.v4p">
+   <NODE systemname="Silly" filename="Silly.v4p" componentmode="Hidden" id="24" nodename="Silly.v4p">
    <BOUNDS type="Node" left="9210" top="5340" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="9210" top="5340" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="5850" top="8910" width="9000" height="6000">
    </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="26" systemname="IOBox (Color)" exposed="1">
+   <BOUNDS type="Box" left="3840" top="5760" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3840" top="5760" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.83920,1.00000,1.00000,0.36470|">
+   </PIN>
+   <PIN pinname="Chooser Style" slicecount="1" values="RGBASlider">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|RGB color|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Color Output" dstnodeid="0" dstpinname="Color">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="27" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6390" top="5775" width="7305" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6390" top="5775" width="4185" height="1080">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|RGB color io are converted to 0-255 values in the GUI and converted back to 0-1 to send to the patch, basically as the only time I use RGB I need photoshop colors&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
    </NODE>
    </PATCH>

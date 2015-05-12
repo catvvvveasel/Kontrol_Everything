@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="0" scrolly="840" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="0" scrolly="13770" bgcolor="11442563">
    <NODE id="12" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -20,7 +20,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="6180" top="2595" width="17205" height="11430">
+   <BOUNDS type="Window" left="1125" top="3810" width="17205" height="11430">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="20">
    <BOUNDS type="Node" left="12180" top="2175" width="100" height="100">
@@ -132,6 +132,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Source Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Mapping" slicecount="1" values="Clamp">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="125" systemname="IOBox (Value Advanced)">
@@ -749,7 +751,7 @@
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Frames" slicecount="1" values="6">
+   <PIN pinname="Frames" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -871,7 +873,7 @@
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="363">
    <BOUNDS type="Node" left="18570" top="12780" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="ControlKey">
+   <PIN pinname="Receive String" slicecount="1" values="EditFades">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -1183,9 +1185,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="386" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10890" top="16620" width="480" height="480">
+   <BOUNDS type="Box" left="11070" top="16515" width="345" height="510">
    </BOUNDS>
-   <BOUNDS type="Node" left="10890" top="16620" width="0" height="0">
+   <BOUNDS type="Node" left="11070" top="16515" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -1481,7 +1483,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3660" top="14475" width="12510" height="11775">
    </BOUNDS>
-   <BOUNDS type="Window" left="465" top="4830" width="19245" height="12645">
+   <BOUNDS type="Window" left="11955" top="2850" width="19245" height="12645">
    </BOUNDS>
    <PIN pinname="Evaluate" slicecount="1" visible="1" pintype="Input" values="0">
    </PIN>
@@ -1850,10 +1852,6 @@
    </LINK>
    <LINK srcnodeid="434" srcpinname="Output" dstnodeid="306" dstpinname="Isbutton">
    </LINK>
-   <LINK srcnodeid="347" srcpinname="Output" dstnodeid="385" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="346" srcpinname="Output" dstnodeid="386" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="420" srcpinname="Xscale" dstnodeid="284" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="420" srcpinname="YScale" dstnodeid="283" dstpinname="Input 2">
@@ -1867,7 +1865,7 @@
    <NODE systemname="Text_SpriteSheets" filename="Text_SpriteSheets.v4p" nodename="Text_SpriteSheets.v4p" componentmode="Hidden" id="126">
    <BOUNDS type="Node" left="9315" top="18435" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="630" top="3255" width="17310" height="12840">
+   <BOUNDS type="Window" left="-180" top="12645" width="17310" height="12840">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -1895,5 +1893,9 @@
    <LINK srcnodeid="306" srcpinname="Output" dstnodeid="126" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="126" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="347" srcpinname="Output" dstnodeid="385" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="347" srcpinname="Output" dstnodeid="386" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

@@ -541,6 +541,8 @@
    </PIN>
    <PIN pinname="OverSlider" visible="1">
    </PIN>
+   <PIN pinname="RNames" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Output 3" dstnodeid="21" dstpinname="LeftMouseButton">
    </LINK>
@@ -567,5 +569,15 @@
    <LINK srcnodeid="21" srcpinname="LPresets" dstnodeid="94" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="21" srcpinname="RPresets" dstnodeid="108" dstpinname="Input">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="116">
+   <BOUNDS type="Node" left="7155" top="6090" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="RightClickNames">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="RNames" dstnodeid="116" dstpinname="Input Value">
    </LINK>
    </PATCH>

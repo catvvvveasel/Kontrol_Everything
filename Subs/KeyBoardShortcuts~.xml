@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="1260" top="4440" width="21375" height="10695">
+   <BOUNDS type="Window" left="1215" top="4020" width="21375" height="10695">
    </BOUNDS>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="5370" top="180" width="6450" height="270">
@@ -337,15 +337,13 @@
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="96" dstpinname="Input Value">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="98">
-   <BOUNDS type="Node" left="7920" top="705" width="100" height="100">
+   <BOUNDS type="Node" left="7740" top="1620" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Send String" slicecount="1" values="ControlKey">
+   <PIN pinname="Send String" slicecount="1" values="EditFades">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="ControlKey" dstnodeid="98" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="99">
    <BOUNDS type="Node" left="9210" top="6000" width="3015" height="270">
    </BOUNDS>
@@ -447,7 +445,7 @@
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="116">
    <BOUNDS type="Node" left="6345" top="1380" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -515,8 +513,6 @@
    <LINK srcnodeid="118" srcpinname="Output" dstnodeid="120" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="1" srcpinname="Menu" dstnodeid="116" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="ControlKey" dstnodeid="116" dstpinname="Input 1">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="121">
    <BOUNDS type="Node" left="10215" top="1230" width="100" height="100">
@@ -939,5 +935,39 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="166" srcpinname="Input Value" dstnodeid="165" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="167">
+   <BOUNDS type="Node" left="4845" top="930" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="Alt">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Menu" dstnodeid="167" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="168">
+   <BOUNDS type="Node" left="7710" top="795" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Toggle (Animation)" nodename="Toggle (Animation)" componentmode="Hidden" id="169">
+   <BOUNDS type="Node" left="7710" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="168" srcpinname="Up Edge" dstnodeid="169" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="ControlKey" dstnodeid="168" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="169" srcpinname="Output" dstnodeid="98" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="169" srcpinname="Output" dstnodeid="116" dstpinname="Input 1">
    </LINK>
    </PATCH>

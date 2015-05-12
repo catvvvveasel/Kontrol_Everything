@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\GetPatchNamesClient.v4p" systemname="GetPatchNamesClient" filename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" scrollx="30" scrolly="0">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\GetPatchNamesClient.v4p" systemname="GetPatchNamesClient" filename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" scrollx="30" scrolly="360">
    <NODE id="2" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="0" top="5955" width="22710" height="9030">
+   <BOUNDS type="Window" left="1320" top="945" width="22710" height="9030">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -207,5 +207,21 @@
    <LINK srcnodeid="20" srcpinname="Node Name" dstnodeid="24" dstpinname="Input 14">
    </LINK>
    <LINK srcnodeid="8" srcpinname="Change" dstnodeid="20" dstpinname="Update">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="27" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="13200" top="6540" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13200" top="6540" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Values">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="27" dstpinname="Input String">
    </LINK>
    </PATCH>

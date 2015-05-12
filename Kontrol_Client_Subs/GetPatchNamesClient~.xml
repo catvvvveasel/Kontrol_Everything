@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" systemname="GetPatchNamesClient" filename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" scrollx="30" scrolly="0">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\GetPatchNamesClient.v4p" systemname="GetPatchNamesClient" filename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" scrollx="30" scrolly="360">
    <NODE id="2" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="-3135" top="0" width="22710" height="9030">
+   <BOUNDS type="Window" left="1320" top="945" width="22710" height="9030">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -38,58 +38,16 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <NODE systemname="PinInfo (VVVV)" filename="..\Subs\VVVVPinInfoAdvanced\VVVVPinInfoAdvanced.csproj" nodename="PinInfo (VVVV)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="5670" top="2040" width="4530" height="270">
-   </BOUNDS>
-   <PIN pinname="Update" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Node Label" visible="1">
-   </PIN>
-   <PIN pinname="Node Tag" visible="1">
-   </PIN>
-   <PIN pinname="Type" visible="1">
-   </PIN>
-   <PIN pinname="Bounds" visible="-1" pintype="Output">
-   </PIN>
-   <PIN pinname="Pin ID" visible="-1" pintype="Output">
-   </PIN>
-   <PIN pinname="Subtype" visible="1">
-   </PIN>
-   <PIN pinname="ValueType" visible="1">
-   </PIN>
-   <PIN pinname="SliderBehavior" visible="1">
-   </PIN>
-   <PIN pinname="Value Minimum" visible="1">
-   </PIN>
-   <PIN pinname="Value Maximum" visible="1">
-   </PIN>
-   <PIN pinname="Behavior" visible="1">
-   </PIN>
-   <PIN pinname="Enum Entries" visible="1">
-   </PIN>
-   <PIN pinname="Enum Entry Count" visible="1">
-   </PIN>
-   <PIN pinname="Values" visible="1">
-   </PIN>
-   <PIN pinname="Node Name" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="20" dstpinname="Input">
-   </LINK>
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="9060" top="3555" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="SubType" slicecount="1" values="|Integer (MinInt .. MaxInt)|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Enum Entry Count" dstnodeid="22" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="23" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4035" top="5355" width="795" height="240">
    </BOUNDS>
@@ -103,9 +61,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Node Label|">
    </PIN>
+   <PIN pinname="Input String">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Node Label" dstnodeid="23" dstpinname="Input String">
-   </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="5310" top="5025" width="5160" height="270">
    </BOUNDS>
@@ -146,29 +104,7 @@
    </NODE>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="24" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Node Label" dstnodeid="24" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Node Tag" dstnodeid="24" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Type" dstnodeid="24" dstpinname="Input 4">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Subtype" dstnodeid="24" dstpinname="Input 5">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="ValueType" dstnodeid="24" dstpinname="Input 6">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="SliderBehavior" dstnodeid="24" dstpinname="Input 7">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Value Minimum" dstnodeid="24" dstpinname="Input 8">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Value Maximum" dstnodeid="24" dstpinname="Input 9">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Behavior" dstnodeid="24" dstpinname="Input 10">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Enum Entries" dstnodeid="24" dstpinname="Input 11">
-   </LINK>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="24" dstpinname="Input 12">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="24" dstpinname="Input 13">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6525" top="6105" width="795" height="240">
@@ -200,10 +136,92 @@
    <PIN pinname="Rows" slicecount="1" values="14">
    </PIN>
    </NODE>
+   <NODE systemname="PinInfo2 (VVVV)" filename="plugins\VVVVPinInfoAdvanced\VVVVPinInfoAdvanced.csproj" nodename="PinInfo2 (VVVV)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="5670" top="2040" width="4530" height="270">
+   </BOUNDS>
+   <PIN pinname="Update" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Node Label" visible="1">
+   </PIN>
+   <PIN pinname="Node Tag" visible="1">
+   </PIN>
+   <PIN pinname="Type" visible="1">
+   </PIN>
+   <PIN pinname="Bounds" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Pin ID" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Subtype" visible="1">
+   </PIN>
+   <PIN pinname="ValueType" visible="1">
+   </PIN>
+   <PIN pinname="SliderBehavior" visible="1">
+   </PIN>
+   <PIN pinname="Value Minimum" visible="1">
+   </PIN>
+   <PIN pinname="Value Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Behavior" visible="1">
+   </PIN>
+   <PIN pinname="Enum Entries" visible="1">
+   </PIN>
+   <PIN pinname="Enum Entry Count" visible="1">
+   </PIN>
+   <PIN pinname="Values" visible="1">
+   </PIN>
+   <PIN pinname="Node Name" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="20" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Enum Entry Count" dstnodeid="22" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Node Label" dstnodeid="23" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Node Label" dstnodeid="24" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Node Tag" dstnodeid="24" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Type" dstnodeid="24" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Subtype" dstnodeid="24" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="ValueType" dstnodeid="24" dstpinname="Input 6">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="SliderBehavior" dstnodeid="24" dstpinname="Input 7">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Value Minimum" dstnodeid="24" dstpinname="Input 8">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Value Maximum" dstnodeid="24" dstpinname="Input 9">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Behavior" dstnodeid="24" dstpinname="Input 10">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Enum Entries" dstnodeid="24" dstpinname="Input 11">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="24" dstpinname="Input 13">
+   </LINK>
    <LINK srcnodeid="20" srcpinname="Node Name" dstnodeid="26" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Node Name" dstnodeid="24" dstpinname="Input 14">
    </LINK>
    <LINK srcnodeid="8" srcpinname="Change" dstnodeid="20" dstpinname="Update">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="27" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="13200" top="6540" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13200" top="6540" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Values">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="27" dstpinname="Input String">
    </LINK>
    </PATCH>

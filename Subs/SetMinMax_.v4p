@@ -1,7 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SetMinMax_.v4p" systemname="SetMinMax_" filename="D:\Copy\Projects\CatGui0.5\Subs\SetMinMax_.v4p" bgcolor="11442563">
    <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1530" top="4680" width="100" height="100">
+   <BOUNDS type="Node" left="1545" top="5400" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="18" values="0,0,0,0,0,0,-20,-99999999,-99999999,-20,-20,-20,-20,-20,-20,-20,-20,0">
    </PIN>
@@ -27,9 +27,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="1800" top="4185" width="100" height="100">
+   <BOUNDS type="Node" left="1815" top="4905" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="13" values="1,10,1,10,1,50,20,99999999,99999999,20,20,20,0.5">
+   <PIN pinname="Input" visible="1" slicecount="13" values="500,500,4,4,1,1,120,200,20,4,4,2,2">
    </PIN>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -51,7 +51,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="11" values="1,10,1,10,1,50,20,99999999,99999999,20,20">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="11" values="0,0,0,0,0,0,0,0,0,0,1">
+   <PIN pinname="Switch" visible="1" slicecount="26" values="0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -73,9 +73,9 @@
    <NODE id="7" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="IsColor">
    </PIN>
-   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   <BOUNDS type="Box" left="675" top="200" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   <BOUNDS type="Node" left="675" top="200" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -89,9 +89,9 @@
    <NODE id="8" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
-   <BOUNDS type="Box" left="1530" top="5280" width="750" height="240">
+   <BOUNDS type="Box" left="1545" top="6000" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1530" top="5280" width="750" height="240">
+   <BOUNDS type="Node" left="1545" top="6000" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
@@ -118,11 +118,7 @@
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Select">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="3" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Select">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
    </LINK>
@@ -136,14 +132,14 @@
    </NODE>
    <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="1" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="5220" top="8250" width="6690" height="6270">
+   <BOUNDS type="Window" left="4710" top="0" width="11670" height="8295">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="1500" top="1005" width="540" height="270">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="22" values="1,1,-4,-4,0,0,0.5,1,0,0,-2,1,1,-5,-99999999,-99999999,-5,-5,-99999999,0,0,-2">
+   <PIN pinname="Input" visible="1" slicecount="13" values="0,0,0,0,1,0,0,0,0,1,0,0,0">
    </PIN>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -152,8 +148,56 @@
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Select">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="12" srcpinname="Output" dstnodeid="6" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="1020" top="675" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="12" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="540" top="1860" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output 1" dstnodeid="5" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="1815" top="4320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="11" values="1,10,1,10,1,50,20,99999999,99999999,20,20">
+   </PIN>
+   <PIN pinname="Switch" visible="1" slicecount="26" values="0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="255">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output 2" dstnodeid="15" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="15" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="3" dstpinname="Input">
    </LINK>
    </PATCH>

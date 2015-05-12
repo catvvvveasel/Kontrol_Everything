@@ -1,9 +1,9 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SharedTextureIN.v4p" systemname="SharedTextureIN" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\SharedTextureIN.v4p" scrollx="0" scrolly="120" bgcolor="11442563">
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2820" top="3990" width="100" height="100">
+   <BOUNDS type="Node" left="2025" top="6060" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
@@ -18,18 +18,8 @@
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="795" top="3015" width="300" height="270">
-   </BOUNDS>
-   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Send String" slicecount="1" values="TextureDX11">
-   </PIN>
-   <PIN pinname="Display Channel" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="2985" top="3435" width="100" height="100">
+   <BOUNDS type="Node" left="2745" top="4605" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -49,50 +39,36 @@
    </PIN>
    </NODE>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="3135" top="2985" width="100" height="100">
+   <BOUNDS type="Node" left="2895" top="4155" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    <PIN pinname="XYZ" slicecount="3" values="2,2,2">
    </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="1500" top="3255" width="1260" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1500" top="3255" width="1260" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|For Thumbnails|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="FromSharedTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FromSharedTexture (DX11.Texture 2d)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="3315" top="2610" width="100" height="100">
+   <BOUNDS type="Node" left="3060" top="2280" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
    <PIN pinname="Pointer" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 1">
-   </LINK>
    <NODE id="8" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
    </PIN>
-   <BOUNDS type="Box" left="2820" top="4590" width="750" height="240">
+   <BOUNDS type="Box" left="2025" top="6660" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2820" top="4590" width="750" height="240">
+   <BOUNDS type="Node" left="2025" top="6660" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="8" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="2" dstpinname="Transform">
    </LINK>
-   <BOUNDS type="Window" left="3360" top="4095" width="7530" height="7065">
+   <BOUNDS type="Window" left="10695" top="1515" width="8655" height="9480">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -107,7 +83,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="4695" top="3975" width="100" height="100">
+   <BOUNDS type="Node" left="4950" top="4965" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -127,7 +103,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="4845" top="3525" width="100" height="100">
+   <BOUNDS type="Node" left="5100" top="4515" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -139,7 +115,7 @@
    <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="16" dstpinname="Transform">
    </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="5580" top="3345" width="100" height="100">
+   <BOUNDS type="Node" left="5835" top="4335" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -161,7 +137,7 @@
    <NODE id="17" systemname="FromSharedTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FromSharedTexture (DX11.Texture 2d)" componentmode="Hidden">
    <PIN pinname="Pointer" visible="1" slicecount="1" values="1073745026">
    </PIN>
-   <BOUNDS type="Node" left="4980" top="2730" width="100" height="100">
+   <BOUNDS type="Node" left="5280" top="2835" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -180,22 +156,6 @@
    </NODE>
    <LINK srcnodeid="19" srcpinname="Input Value" dstnodeid="13" dstpinname="Input">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1920" top="1635" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1920" top="1635" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   </NODE>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="4785" top="840" width="100" height="100">
    </BOUNDS>
@@ -225,5 +185,47 @@
    <LINK srcnodeid="23" srcpinname="Output 2" dstnodeid="16" dstpinname="Enabled">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="Info (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Info (DX11.Texture 2d)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="3150" top="2895" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Width" visible="1">
+   </PIN>
+   <PIN pinname="Height" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Texture" dstnodeid="24" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="2910" top="3435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Alignment" slicecount="1" values="FitHeight">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Width" dstnodeid="26" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Height" dstnodeid="26" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Transform Out" dstnodeid="3" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="2175" top="5160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="28" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Layer Out" dstnodeid="0" dstpinname="Layer 1">
    </LINK>
    </PATCH>
