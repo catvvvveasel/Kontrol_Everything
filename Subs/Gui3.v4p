@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="0" scrolly="4680" bgcolor="11442563">
-   <BOUNDS type="Window" left="-570" top="4230" width="19155" height="12645">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="345" scrolly="3030" bgcolor="11442563">
+   <BOUNDS type="Window" left="7470" top="3450" width="19155" height="12645">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="915" top="3765" width="100" height="100">
@@ -379,7 +379,7 @@
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="310">
    <BOUNDS type="Node" left="13875" top="15780" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1" slicecount="12" values="S,0.0000,S,0.0000,S,15.0000,S,0,S,0,S,0">
+   <PIN pinname="Input Value" visible="1" slicecount="20" values="|2,2|,0,|2,2|,0,|2,2|,0,|2,2|,0,|2,2|,0,|2,2|,0,|2,2|,6.90,|2,2|,6.56,|2,2|,6.78,|2,2|,0.00">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="FadesGUI">
    </PIN>
@@ -489,7 +489,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="359">
-   <BOUNDS type="Node" left="14235" top="11385" width="100" height="100">
+   <BOUNDS type="Node" left="15165" top="11580" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -499,7 +499,7 @@
    <LINK srcnodeid="305" srcpinname="Output 2" dstnodeid="359" dstpinname="Input">
    </LINK>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="360">
-   <BOUNDS type="Node" left="14235" top="11970" width="100" height="100">
+   <BOUNDS type="Node" left="15165" top="12165" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -549,8 +549,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="308" srcpinname="Output" dstnodeid="366" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="310" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="305" srcpinname="Output 2" dstnodeid="340" dstpinname="Input 1">
    </LINK>
@@ -1321,5 +1319,7 @@
    <LINK srcnodeid="397" srcpinname="Output" dstnodeid="297" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="284" dstpinname="IsColour">
+   </LINK>
+   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="310" dstpinname="Input Value">
    </LINK>
    </PATCH>
