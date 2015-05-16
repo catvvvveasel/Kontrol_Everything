@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\PerfMeter2 (DX11.Debug).v4p" systemname="PerfMeter2 (DX11.Debug)" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PerfMeter2 (DX11.Debug).v4p" scrollx="45" scrolly="1125" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\PerfMeter2 (DX11.Debug).v4p" systemname="PerfMeter2 (DX11.Debug)" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PerfMeter2 (DX11.Debug).v4p" scrollx="0" scrolly="1095" bgcolor="11442563">
    <BOUNDS type="Window" left="3060" top="6690" width="11760" height="8685">
    </BOUNDS>
    <NODE componentmode="InABox" id="39" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -725,7 +725,7 @@
    <LINK srcnodeid="51" srcpinname="Transform Out" dstnodeid="48" dstpinname="Transform In">
    </LINK>
    <NODE systemname="Bounds (Spectral)" nodename="Bounds (Spectral)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="7815" top="4275" width="100" height="100">
+   <BOUNDS type="Node" left="7455" top="4770" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -751,7 +751,7 @@
    <LINK srcnodeid="36" srcpinname="Output" dstnodeid="53" dstpinname="Input 1">
    </LINK>
    <NODE id="54" nodename="FormatValue (String)" systemname="FormatValue (String)">
-   <BOUNDS height="0" left="8250" top="4650" type="Node" width="0">
+   <BOUNDS height="0" left="7725" top="5160" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -775,15 +775,13 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="Source Maximum" slicecount="1" values="170" visible="1">
+   <PIN pinname="Source Maximum" slicecount="1" values="200">
    </PIN>
    <PIN pinname="Destination Minimum" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Destination Maximum" slicecount="1" values="24.15">
+   <PIN pinname="Destination Maximum" slicecount="1" values="60">
    </PIN>
    <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Mapping" slicecount="1" values="Float">
    </PIN>
    </NODE>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="55" dstpinname="Input">
@@ -838,18 +836,4 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="59">
-   <BOUNDS type="Node" left="8400" top="5145" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Go To Position" visible="1">
-   </PIN>
-   <PIN pinname="Position Out" visible="1">
-   </PIN>
-   <PIN pinname="FilterTime" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="52" srcpinname="Minimum" dstnodeid="59" dstpinname="Go To Position">
-   </LINK>
-   <LINK srcnodeid="59" srcpinname="Position Out" dstnodeid="55" dstpinname="Source Maximum">
-   </LINK>
    </PATCH>

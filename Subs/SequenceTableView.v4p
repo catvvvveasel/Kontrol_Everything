@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="15" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="-111" bgcolor="11442563">
    <BOUNDS type="Window" left="8550" top="-165" width="17355" height="16200">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -1172,14 +1172,6 @@
    </NODE>
    <LINK srcnodeid="296" srcpinname="DeleteTable" dstnodeid="318" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="319">
-   <BOUNDS type="Node" left="11310" top="4440" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="320">
    <BOUNDS type="Node" left="11325" top="3975" width="100" height="100">
    </BOUNDS>
@@ -1194,14 +1186,6 @@
    </NODE>
    <LINK srcnodeid="296" srcpinname="DeleteTable" dstnodeid="320" dstpinname="Set">
    </LINK>
-   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="321">
-   <BOUNDS type="Node" left="11325" top="4800" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Down Edge" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="322" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="12765" top="5325" width="480" height="480">
    </BOUNDS>
@@ -1217,24 +1201,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="320" srcpinname="Inverse Output" dstnodeid="322" dstpinname="Y Input Value">
-   </LINK>
-   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="323">
-   <BOUNDS type="Node" left="11415" top="5400" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Set" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Inverse Output" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Time" slicecount="1" values="0.2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="321" srcpinname="Down Edge" dstnodeid="323" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="320" srcpinname="Output" dstnodeid="319" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="319" srcpinname="Output 1" dstnodeid="321" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="324" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2730" top="4950" width="480" height="480">
@@ -1381,8 +1347,10 @@
    </BOUNDS>
    <PIN pinname="Table" visible="1" slicecount="1" values="||">
    </PIN>
-   <BOUNDS type="Window" left="0" top="0" width="15885" height="7890">
+   <BOUNDS type="Window" left="0" top="0" width="14625" height="3405">
    </BOUNDS>
+   <PIN pinname="Table Index" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="255" srcpinname="Up Edge" dstnodeid="277" dstpinname="Changed">
    <LINKPOINT x="4162" y="8906">
