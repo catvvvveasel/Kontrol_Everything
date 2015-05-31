@@ -49,9 +49,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="23" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4035" top="5355" width="795" height="240">
+   <BOUNDS type="Box" left="4110" top="5385" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4035" top="5355" width="0" height="0">
+   <BOUNDS type="Node" left="4110" top="5385" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -61,7 +61,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Node Label|">
    </PIN>
-   <PIN pinname="Input String">
+   <PIN pinname="Input String" visible="1" slicecount="79" values="Dir1,File1,Play,Reverse,Seek,InPoint,OutPoint,|Scrub (0-1)|,SeekTime,Speed,RandomFile1,Jump1,Dir2,File2,Play2,Reverse2,Seek2,InPoint2,OutPoint2,|Scrub3 (0-1)|,SeekTime2,Speed,RandomFile2,Jump2,Dir3,File3,RandomFile3,Jump3,Play3,Reverse3,Seek3,InPoint3,OutPoint3,|Scrub3 (0-1)|,SeekTime3,Speed,Dir4,File4,RandomFile4,Jump4,Play4,Reverse4,Seek4,InPoint4,OutPoint4,|Scrub4 (0-1)|,SeekTime4,Speed,TransformFX,|Spread CountX|,WidthX,|Spread CountY|,WidthY,|Spread CountZ|,WidthZ,ScaleX,ScaleY,Period,LumaKey,Intesity,Switch,Threshold,Period,RGB,Intensity,Attack,Decay,RGB1,Master1,Macro1,RGB2,Master2,Macro2,RGB3,Master3,Macro3,RGB4,Master4,Macro4">
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="24">
@@ -178,8 +178,6 @@
    </LINK>
    <LINK srcnodeid="20" srcpinname="Enum Entry Count" dstnodeid="22" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Node Label" dstnodeid="23" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="20" srcpinname="Node Label" dstnodeid="24" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Node Tag" dstnodeid="24" dstpinname="Input 3">
@@ -223,5 +221,273 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Values" dstnodeid="27" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="2865" top="2475" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Node Label" dstnodeid="28" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Node Tag" dstnodeid="23" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="2700" top="3615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="79" values="D:\Hap_Movs,movie:File,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,D:\Hap_Movs,movie:File,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,D:\Hap_Movs,movie:File,,,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,D:\Hap_Movs,movie:File,,,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="D:\Hap_Movs" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Node Tag" dstnodeid="29" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="3735" top="3705" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="79" values="D:\Hap_Movs,movie:File,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,D:\Hap_Movs,movie:File,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,D:\Hap_Movs,movie:File,,,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,D:\Hap_Movs,movie:File,,,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="movie:File">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Node Tag" dstnodeid="30" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="2520" top="4140" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="31" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="31" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="32" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1470" top="3015" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1470" top="3015" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="D:\Hap_Movs">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="29" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="2280" top="4830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="D:\Hap_Movs">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="4" values="Adem,16mm,16mm,16mm">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="DosPath">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="4" values="Devil^Razor^ALL2-AIC.mov,16mm1.mov,16mm1.mov,16mm1.mov">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="3510" top="4335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1" slicecount="79" values="1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="34" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="34" dstpinname="Select">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="2445" top="7410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="4" values="Adem\Devil^Razor^ALL2-AIC.mov,16mm\16mm1.mov,16mm\16mm1.mov,16mm\16mm1.mov">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="FIles">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="33" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="33" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="37">
+   <BOUNDS type="Node" left="2475" top="6720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1" slicecount="4" values="0,1,1,1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="37" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="38" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3660" top="4830" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3660" top="4830" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Set">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output" dstnodeid="36" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="840" top="5265" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="change">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3600" top="6765" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3600" top="6765" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Input Value" dstnodeid="40" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="930" top="6300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Input Value" dstnodeid="41" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="42" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="4335" top="7680" width="7350" height="360">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4335" top="7680" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output" dstnodeid="42" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="900" top="7110" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Up Edge" dstnodeid="44" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5415" top="7230" width="3735" height="330">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5415" top="7230" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="45" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="FlipFlop (Animation)" nodename="FlipFlop (Animation)" componentmode="Hidden" id="46">
+   <BOUNDS type="Node" left="1005" top="7545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="2685" top="5565" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="4" values="Adem\Devil^Razor^ALL2-AIC.mov,16mm\16mm1.mov,16mm\16mm1.mov,16mm\16mm1.mov">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="OnChange" dstnodeid="46" dstpinname="Reset">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1080" top="8235" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1080" top="8235" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Output" dstnodeid="48" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Inverse Output" dstnodeid="37" dstpinname="Set">
+   </LINK>
+   <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="1365" top="4590" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="49" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="OnChange" dstnodeid="46" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="47" dstpinname="Input">
    </LINK>
    </PATCH>

@@ -13,9 +13,9 @@
    <NODE id="1" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Value(Formated)">
    </PIN>
-   <BOUNDS type="Box" left="9510" top="2285" width="750" height="240">
+   <BOUNDS type="Box" left="9390" top="1610" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9510" top="2285" width="750" height="240">
+   <BOUNDS type="Node" left="9390" top="1610" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -81,7 +81,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="13" values="2.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.0000,0.6500,0.3510,0.0000,0.0000,1.0000,0.0000">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="18" values="Capsule,Kitty^osize-AIC.mov,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,16mm,16mm1.mov,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -101,7 +101,7 @@
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="6885" top="3570" width="100" height="100">
+   <BOUNDS type="Node" left="6720" top="3390" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="EditFades">
    </PIN>
@@ -113,7 +113,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="18" values="Capsule,Kitty^osize-AIC.mov,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,16mm,16mm1.mov,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000">
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -288,10 +288,6 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="14" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="14" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="9" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="33" srcpinname="Output" dstnodeid="18" dstpinname="Select">
    </LINK>
    <NODE id="35" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -304,7 +300,7 @@
    </NODE>
    <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="33" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="11955" top="2850" width="19245" height="12645">
+   <BOUNDS type="Window" left="4320" top="1710" width="19245" height="12645">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -607,7 +603,7 @@
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="20" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Pad (String)" nodename="Pad (String)" componentmode="Hidden" id="68">
-   <BOUNDS type="Node" left="6225" top="4380" width="100" height="100">
+   <BOUNDS type="Node" left="5940" top="4470" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="100" values="0.0000,3.1200,-52.6300,0.0000,3.0000,-28.0000,63.1,| FitIn|,,| 10|,0,0.0000,0.0000,0.0000,0.0000,0.33,0.00,0.00,0.00,0,0.0000,0.0000,0.0000,0.0000,0.0,0.0000,0.0000,0.0000,0,0.0,0.0000,0.0000,0.0000,11,0.0,0.0000,2.0500,-27.0000,0,0.0,0.0000,0.0000,0.0000,0,0.82,1.00,0.18,0.34,0.86,1.00,0.56,1.00,0.6961,0.0100,-0.1061,0.0000,4.8718,5.1735,0,0,0,0.0000,0.0000,0,0.0000,0,0.0000,0.33,0.00,1.00,0.00,0,0,15,1.0000,0,1,0.0000,0.33,0.00,1.00,0.00,11,1.0000,1,1,0.0000,0.33,0.00,1.00,1.00,7,1.0000,0,1,-0.0319,0.33,0.00,1.00,1.00">
    </PIN>
@@ -915,5 +911,23 @@
    <LINK srcnodeid="53" srcpinname="Input Value" dstnodeid="100" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="100" srcpinname="Output" dstnodeid="67" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="9360" top="2205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="^">
+   </PIN>
+   <PIN pinname="To" slicecount="1" values="| |">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="101" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="9" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
    </LINK>
    </PATCH>

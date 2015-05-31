@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" systemname="ParsePinsForGUI" filename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" scrollx="210" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="-825" top="5055" width="17775" height="12045">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" systemname="ParsePinsForGUI" filename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" scrollx="0" scrolly="1080" bgcolor="11442563">
+   <BOUNDS type="Window" left="1995" top="1455" width="17775" height="12045">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2235" top="450" width="795" height="240">
@@ -139,9 +139,9 @@
    <LINK srcnodeid="15" srcpinname="Output 4" dstnodeid="12" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="11985" top="2580" width="675" height="240">
+   <BOUNDS type="Box" left="12015" top="2385" width="675" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="11985" top="2580" width="0" height="0">
+   <BOUNDS type="Node" left="12015" top="2385" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -312,6 +312,8 @@
    <PIN pinname="Intersperse" slicecount="1" values="Comma">
    </PIN>
    <PIN pinname="Former Index" visible="1">
+   </PIN>
+   <PIN pinname="Ignore between" slicecount="1" values="None">
    </PIN>
    </NODE>
    <NODE systemname="Occurrence (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (Value)" componentmode="Hidden" id="28">
@@ -697,8 +699,12 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7918" top="2777" width="3340" height="4450">
    </BOUNDS>
-   <BOUNDS type="Window" left="1605" top="3780" width="7425" height="4440">
+   <BOUNDS type="Window" left="1605" top="3780" width="7425" height="8475">
    </BOUNDS>
+   <PIN pinname="EnumLists" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="87" dstpinname="Input 1 1">
    </LINK>
@@ -714,6 +720,8 @@
    <BOUNDS type="Window" left="4710" top="0" width="11670" height="8295">
    </BOUNDS>
    <PIN pinname="IsColor" visible="1" slicecount="13" values="0,0,0,0,1,0,0,0,0,1,0,0,0">
+   </PIN>
+   <PIN pinname="IsButton" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="67" dstpinname="Input 1">
@@ -913,5 +921,9 @@
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="56" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="74" srcpinname="Inverse Output" dstnodeid="101" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="87" dstpinname="EnumLists">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="89" dstpinname="IsButton">
    </LINK>
    </PATCH>

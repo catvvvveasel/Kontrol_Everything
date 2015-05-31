@@ -1,31 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="3330" bgcolor="11442563">
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
-   <BOUNDS type="Node" left="9120" top="8910" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9120" top="8910" width="795" height="1350">
-   </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="7">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="3" values="12,24,4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="PatchIDs">
-   </PIN>
-   <PIN pinname="Pin Visibility" slicecount="1" values="False">
-   </PIN>
-   </NODE>
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="4905" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -36,7 +10,7 @@
    <PIN pinname="Input String" visible="1" slicecount="2" values="ColorSilly,ScaleXSilly">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="7560" top="765" width="22530" height="12660">
+   <BOUNDS type="Window" left="-1125" top="10860" width="22530" height="12660">
    </BOUNDS>
    <NODE id="26" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="SubType">
@@ -1035,7 +1009,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Label">
+   <PIN pinname="Descriptive Name" slicecount="1" values="LabelAll">
    </PIN>
    </NODE>
    <LINK srcnodeid="212" srcpinname="Output 2" dstnodeid="226" dstpinname="Input String">
@@ -1255,22 +1229,22 @@
    <LINK srcnodeid="70" srcpinname="Output" dstnodeid="71" dstpinname="Input String">
    </LINK>
    <NODE systemname="GroupAndSelectPatches" filename="GroupAndSelectPatches.v4p" nodename="GroupAndSelectPatches.v4p" componentmode="Hidden" id="266">
-   <BOUNDS type="Node" left="5980" top="4764" width="0" height="0">
+   <BOUNDS type="Node" left="6160" top="4749" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="3915" top="987" width="5440" height="7555">
+   <BOUNDS type="Box" left="4095" top="972" width="5440" height="7555">
    </BOUNDS>
-   <BOUNDS type="Window" left="1290" top="1185" width="13350" height="12480">
+   <BOUNDS type="Window" left="5610" top="5340" width="13350" height="12480">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="First Occurrence" visible="1">
    </PIN>
+   <PIN pinname="PatchNames" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="212" srcpinname="Output 1" dstnodeid="266" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="266" srcpinname="Output" dstnodeid="37" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="266" srcpinname="Unique" dstnodeid="19" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="266" srcpinname="Output" dstnodeid="70" dstpinname="Select">
    </LINK>
@@ -1309,5 +1283,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="267" srcpinname="Output" dstnodeid="268" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="266" dstpinname="PatchNames">
    </LINK>
    </PATCH>

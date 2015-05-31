@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" systemname="Kontrol-FadeTimes2" filename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" scrollx="0" scrolly="1785" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" systemname="Kontrol-FadeTimes2" filename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" scrollx="30" scrolly="0" bgcolor="11442563">
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2985" top="7020" width="100" height="100">
    </BOUNDS>
@@ -35,7 +35,7 @@
    <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="3000" top="8925" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Spread" visible="1" slicecount="60" values="0,0,0.0000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0000,0.0000,0.0000,0,0,3.1000,0,0,0,0,3.1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Spread" visible="1" slicecount="78" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -248,7 +248,7 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="9405" top="1050" width="19395" height="14940">
+   <BOUNDS type="Window" left="3750" top="1020" width="19395" height="14940">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -349,9 +349,9 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="2">
+   <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="63" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname="Hits" dstnodeid="44" dstpinname="Input 1">
@@ -739,7 +739,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Intersperse String" slicecount="1" values="~" visible="1">
+   <PIN pinname="Intersperse String" slicecount="1" visible="1" values="~">
    </PIN>
    </NODE>
    <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="105">
@@ -1009,8 +1009,6 @@
    <LINK srcnodeid="110" srcpinname="Output String" dstnodeid="109" dstpinname="Input 2" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="88" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Spread">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="147" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7290" top="9135" width="840" height="1230">
@@ -1879,5 +1877,49 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="223" srcpinname="Output String" dstnodeid="107" dstpinname="Intersperse String">
+   </LINK>
+   <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="225">
+   <BOUNDS type="Node" left="1560" top="4245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="EnumsALL">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="226">
+   <BOUNDS type="Node" left="1545" top="4605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="225" srcpinname="Input Value" dstnodeid="226" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="227">
+   <BOUNDS type="Node" left="1950" top="5055" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="226" srcpinname="Output 2" dstnodeid="227" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="227" srcpinname="Inverse Output" dstnodeid="44" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="Select (String)" filename="" nodename="Select (String)" componentmode="Hidden" id="228">
+   <BOUNDS type="Node" left="3405" top="8190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="119" srcpinname="Count" dstnodeid="228" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="228" srcpinname="Output" dstnodeid="3" dstpinname="Spread">
    </LINK>
    </PATCH>

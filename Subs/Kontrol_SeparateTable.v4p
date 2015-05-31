@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" systemname="Kontrol_SeparateTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" scrollx="0" scrolly="2880" bgcolor="11442563">
-   <BOUNDS type="Window" left="9720" top="570" width="15495" height="13575">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" systemname="Kontrol_SeparateTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" scrollx="0" scrolly="10605" bgcolor="11442563">
+   <BOUNDS type="Window" left="-7695" top="0" width="15495" height="13575">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="244" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11250" top="3330" width="795" height="240">
@@ -507,6 +507,8 @@
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="77" values="Play,Reverse,Seek,InPoint,OutPoint,|Scrub (0-1)|,SeekTime,Speed,RandomFile1,Jump1,Dir2,File2,Play2,Reverse2,Seek2,InPoint2,OutPoint2,|Scrub3 (0-1)|,SeekTime2,Speed,RandomFile2,Jump2,Dir3,File3,RandomFile3,Jump3,Play3,Reverse3,Seek3,InPoint3,OutPoint3,|Scrub3 (0-1)|,SeekTime3,Speed,Dir4,File4,RandomFile4,Jump4,Play4,Reverse4,Seek4,InPoint4,OutPoint4,|Scrub4 (0-1)|,SeekTime4,Speed,TransformFX,|Spread CountX|,WidthX,|Spread CountY|,WidthY,|Spread CountZ|,WidthZ,ScaleX,ScaleY,Period,LumaKey,Intesity,Switch,Threshold,Period,RGB,Intensity,Attack,Decay,RGB1,Master1,Macro1,RGB2,Master2,Macro2,RGB3,Master3,Macro3,RGB4,Master4,Macro4">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="882" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8175" top="2085" width="480" height="480">
@@ -687,7 +689,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1452" top="1635" width="7045" height="7360">
    </BOUNDS>
-   <BOUNDS type="Window" left="7560" top="765" width="22530" height="12660">
+   <BOUNDS type="Window" left="-1125" top="10860" width="22530" height="12660">
    </BOUNDS>
    <PIN pinname="SubType" visible="1">
    </PIN>
@@ -736,11 +738,9 @@
    </LINK>
    <LINK srcnodeid="189" srcpinname="Former Slice" dstnodeid="367" dstpinname="Index" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="189" srcpinname="Label" dstnodeid="422" dstpinname="Input String">
+   <LINK srcnodeid="189" srcpinname="LabelAll" dstnodeid="422" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="189" srcpinname="Defaults" dstnodeid="360" dstpinname="Input 2" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="189" srcpinname="Label" dstnodeid="881" dstpinname="Input String" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="882" srcpinname="Y Output Value" dstnodeid="189" dstpinname="Evaluate">
    </LINK>
@@ -1001,7 +1001,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2295" top="8489" width="6690" height="10380">
    </BOUNDS>
-   <BOUNDS type="Window" left="9405" top="1050" width="19395" height="14940">
+   <BOUNDS type="Window" left="3750" top="1020" width="19395" height="14940">
    </BOUNDS>
    <PIN pinname="FromFile" visible="1">
    </PIN>
@@ -1285,7 +1285,7 @@
    <LINK srcnodeid="913" srcpinname="Output" dstnodeid="912" dstpinname="Set">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="949" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3900" top="19800" width="3915" height="2055">
+   <BOUNDS type="Box" left="3900" top="19800" width="3720" height="4620">
    </BOUNDS>
    <BOUNDS type="Node" left="3900" top="19800" width="0" height="0">
    </BOUNDS>
@@ -1307,7 +1307,7 @@
    </PIN>
    <PIN pinname="Remote Host" visible="1">
    </PIN>
-   <PIN pinname="Remote Port" slicecount="1" values="1998" visible="1">
+   <PIN pinname="Remote Port" slicecount="1" visible="1" values="1998">
    </PIN>
    </NODE>
    <LINK srcnodeid="912" srcpinname="Output" dstnodeid="952" dstpinname="Input">
@@ -1357,5 +1357,23 @@
    <LINK srcnodeid="955" srcpinname="Y Output Value" dstnodeid="952" dstpinname="Remote Port">
    </LINK>
    <LINK srcnodeid="189" srcpinname="AllExposedPins" dstnodeid="566" dstpinname="Exposed Pins">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="956" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2445" top="4245" width="570" height="6375">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2445" top="4245" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="18">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="VectorSizeALL" dstnodeid="956" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="Label" dstnodeid="881" dstpinname="Input String">
    </LINK>
    </PATCH>

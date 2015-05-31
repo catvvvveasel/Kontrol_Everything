@@ -1,13 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="60" scrolly="45" bgcolor="11442563">
-   <BOUNDS type="Window" left="13485" top="105" width="15315" height="15645">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="4440" bgcolor="11442563">
+   <BOUNDS type="Window" left="11175" top="6960" width="10170" height="8145">
    </BOUNDS>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="108">
    <BOUNDS type="Node" left="7515" top="10320" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7515" top="10320" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="6330" top="13335" width="19500" height="2415">
+   <BOUNDS type="Window" left="15615" top="14460" width="10215" height="1290">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="TTY">
    </PIN>
@@ -88,20 +88,6 @@
    </LINK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="242" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3405" top="3660" width="4905" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3405" top="3660" width="4665" height="810">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;-- This selects how deep we go to get the patch ID&apos;s for kontroleur, I&apos;m guessing theres a smarter way of doing this, a herarcy tree would be good for subgrouping controls|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="255" systemname="IOBox (String)">
    <BOUNDS type="Node" left="4260" top="14790" width="4080" height="270">
    </BOUNDS>
@@ -271,7 +257,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9390" top="3360" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="LakeScene3">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="Layout1">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -280,42 +266,6 @@
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="ProjectName">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="368" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5145" top="2715" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5145" top="2715" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Update">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="369" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5910" top="2700" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5910" top="2700" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="NextFreeSlot">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="373" systemname="IOBox (Value Advanced)">
@@ -438,34 +388,6 @@
    </LINK>
    <LINK srcnodeid="400" srcpinname="Output" dstnodeid="384" dstpinname="Input String">
    </LINK>
-   <NODE id="155" componentmode="InAWindow" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" border="1">
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   <BOUNDS type="Window" left="28800" top="495" width="28590" height="15705">
-   </BOUNDS>
-   <BOUNDS type="Node" left="825" top="8415" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="825" top="8415" width="6000" height="4500">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="GUI">
-   </PIN>
-   <PIN pinname="Clear" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="ID" visible="1" pintype="Output">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1920.0000 x 1080.0000|">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="-6" srcpinname="Current Frame" dstnodeid="282" dstpinname="Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="421" systemname="IOBox (Value Advanced)">
@@ -493,7 +415,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7560" top="1470" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="..\Dubai2\vvvv\_LakePrevis.v4p">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="..\HapVJPlayer\_MainPatch.v4p">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -513,7 +435,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8430" top="2100" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -525,13 +447,11 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="AutoStart">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="167" srcpinname="Layer Out" dstnodeid="155" dstpinname="Layers">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="435" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="705" top="15" width="300" height="360">
    </BOUNDS>
@@ -641,9 +561,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="446" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="285" top="10635" width="1605" height="270">
+   <BOUNDS type="Node" left="15" top="11745" width="1605" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="285" top="10635" width="10170" height="3225">
+   <BOUNDS type="Box" left="15" top="11745" width="10170" height="3225">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Your free to use this patch commercially ( as long as you have a vvvv licence ;) CC BY-SA&cr;&lf;Please note it requires DataTable (ElliotWoods,Woei,Tonfilm, Included) dx11 (Vux) packs&cr;&lf;PinInfoAdvanced and a couple of other helper plugins, are included and by Elektromeier, Tweener by Westbam, and probably other patches and snippets not mentioned!&cr;&lf;If you do use it, then please report bugs, and if you fix them or add any features make them available for other users so this patch can progress for different usages, I want real time after effects meets multiscreen show control, nothing too elaborate ;)&cr;&lf;Flag issues/wishes/suggestions in the forums&cr;&lf;I have conflicting ideas of how to go on from this regarding multiple playlists, ideally you should be able to sequence playlists with in and out points like a track in after effects/logic/cubase etc&cr;&lf;Also currently fades are per preset not per keyframe, (presets are keyframes, I think I need to override times per keyframe...)&cr;&lf;HSVA colour io&apos;s get converted to RGB for kontroleur, and so there is some oddness when using them :( Workaround is to separtate them tovalues in the patch and loose the colour box.&cr;&lf;To do:- Tags should be used for custom gui elements, like movie player,  XY, colours from values for better colour control&cr;&lf; etc |">
    </PIN>
@@ -691,7 +611,7 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="451" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="225" top="5100" width="795" height="240">
+   <BOUNDS type="Box" left="225" top="5100" width="795" height="255">
    </BOUNDS>
    <BOUNDS type="Node" left="225" top="5100" width="0" height="0">
    </BOUNDS>
@@ -733,9 +653,9 @@
    </PIN>
    </NODE>
    <NODE systemname="SharedTextureIN" filename="Subs\SharedTextureIN.v4p" nodename="Subs\SharedTextureIN.v4p" componentmode="Hidden" id="357">
-   <BOUNDS type="Node" left="1117" top="6240" width="0" height="0">
+   <BOUNDS type="Node" left="1132" top="6300" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="195" top="4305" width="4915" height="5590">
+   <BOUNDS type="Box" left="210" top="4365" width="4915" height="5590">
    </BOUNDS>
    <BOUNDS type="Window" left="10695" top="1515" width="8655" height="9480">
    </BOUNDS>
@@ -747,7 +667,7 @@
    <LINK srcnodeid="357" srcpinname="Layer Out" dstnodeid="167" dstpinname="Layer 1">
    </LINK>
    <NODE id="78" systemname="Kontrol_SeparateTable" filename="Subs\Kontrol_SeparateTable.v4p" nodename="Subs\Kontrol_SeparateTable.v4p" componentmode="Hidden" stayontop="0">
-   <BOUNDS type="Window" left="9720" top="570" width="15495" height="13575">
+   <BOUNDS type="Window" left="-7695" top="0" width="15495" height="13575">
    </BOUNDS>
    <BOUNDS type="Node" left="1680" top="4785" width="100" height="100">
    </BOUNDS>
@@ -789,7 +709,7 @@
    </PIN>
    <PIN pinname="RecordSequence" visible="1">
    </PIN>
-   <PIN pinname="NextFreeSlot" visible="1">
+   <PIN pinname="NextFreeSlot" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Clear" slicecount="1" values="0">
    </PIN>
@@ -808,26 +728,10 @@
    </NODE>
    <LINK srcnodeid="78" srcpinname="Layer" dstnodeid="167" dstpinname="Layer 4">
    </LINK>
-   <LINK srcnodeid="368" srcpinname="Y Output Value" dstnodeid="78" dstpinname="Update">
-   </LINK>
-   <LINK srcnodeid="369" srcpinname="Y Output Value" dstnodeid="78" dstpinname="NextFreeSlot">
-   </LINK>
    <LINK srcnodeid="448" srcpinname="Y Output Value" dstnodeid="78" dstpinname="Port">
    </LINK>
    <LINK srcnodeid="449" srcpinname="Output String" dstnodeid="78" dstpinname="Client" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="TodoMap" filename="Subs\TodoMap.v4p" componentmode="Hidden" id="151" nodename="Subs\TodoMap.v4p">
-   <BOUNDS type="Node" left="4410" top="5445" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4410" top="5445" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="7710" top="1320" width="14295" height="12735">
-   </BOUNDS>
-   <PIN pinname="ValuesOnly" visible="1" slicecount="11" values="0,0,0,0,0,0,0,0,0,0,0">
-   </PIN>
-   <PIN pinname="MidiSliders" visible="1">
-   </PIN>
-   </NODE>
    <NODE id="159" systemname="PerfMeter2 (DX11.Debug)" filename="Subs\PerfMeter2 (DX11.Debug).v4p" nodename="PerfMeter2 (DX11.Debug)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="2085" top="7125" width="100" height="100">
    </BOUNDS>
@@ -883,7 +787,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="6623" width="9555" height="6490">
    </BOUNDS>
-   <BOUNDS type="Window" left="12885" top="795" width="15480" height="12045">
+   <BOUNDS type="Window" left="1950" top="5820" width="15480" height="12045">
    </BOUNDS>
    <PIN pinname="Texture SizeXY" visible="1" slicecount="2" values="1920,1080">
    </PIN>
@@ -1043,7 +947,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="360" top="2354" width="4510" height="6910">
    </BOUNDS>
-   <BOUNDS type="Window" left="7470" top="3450" width="19155" height="12645">
+   <BOUNDS type="Window" left="5700" top="2505" width="12600" height="12645">
    </BOUNDS>
    <PIN pinname="SubType" visible="1" slicecount="4" values="|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 1, 1, 0.001, 160, 0.01, , 1|,|Endless, 3, 0, -100, 100, 0.01, , 4|">
    </PIN>
@@ -1063,7 +967,7 @@
    </PIN>
    <PIN pinname="ValuesOnly" visible="1">
    </PIN>
-   <PIN pinname="MidiValues" visible="1">
+   <PIN pinname="MidiValues" visible="1" slicecount="49" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="LayerDX11" visible="1">
    </PIN>
@@ -1104,18 +1008,6 @@
    </LINK>
    <LINK srcnodeid="78" srcpinname="ParsedPinInfo" dstnodeid="96" dstpinname="ParsedPinInfo">
    </LINK>
-   <LINK srcnodeid="151" srcpinname="MidiSliders" dstnodeid="96" dstpinname="MidiValues">
-   <LINKPOINT x="4270" y="6250">
-   </LINKPOINT>
-   <LINKPOINT x="3050" y="5165">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="96" srcpinname="MidiLoopback" dstnodeid="151" dstpinname="ValuesOnly">
-   <LINKPOINT x="3155" y="6500">
-   </LINKPOINT>
-   <LINKPOINT x="4405" y="5365">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="454" systemname="IOBox (String)">
    <BOUNDS type="Node" left="7845" top="7470" width="5355" height="270">
    </BOUNDS>
@@ -1135,7 +1027,7 @@
    </BOUNDS>
    <BOUNDS type="Window" left="630" top="5070" width="17775" height="9375">
    </BOUNDS>
-   <PIN pinname="ID" visible="1">
+   <PIN pinname="ID" visible="1" slicecount="1" values="155">
    </PIN>
    <PIN pinname="WindowMode" slicecount="1" visible="1" values="0">
    </PIN>
@@ -1154,8 +1046,6 @@
    <PIN pinname="FullScreenRes" visible="1" slicecount="2" values="1920,1080">
    </PIN>
    </NODE>
-   <LINK srcnodeid="155" srcpinname="ID" dstnodeid="455" dstpinname="ID">
-   </LINK>
    <LINK srcnodeid="439" srcpinname="ShowGUI" dstnodeid="455" dstpinname="WindowMode">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="457" systemname="IOBox (String)">
@@ -1215,7 +1105,7 @@
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="462">
    <BOUNDS type="Node" left="2265" top="9435" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="2" values="1867,1041">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1224,8 +1114,6 @@
    <PIN pinname="Switch" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="155" srcpinname="Actual BackBuffer SizeXY" dstnodeid="462" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="442" srcpinname="Y Output Value" dstnodeid="462" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="462" srcpinname="Output" dstnodeid="455" dstpinname="FullScreenRes">
@@ -1305,5 +1193,63 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="468" srcpinname="Y Output Value" dstnodeid="159" dstpinname="Enabled">
+   </LINK>
+   <NODE id="155" componentmode="InAWindow" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" border="1">
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <BOUNDS type="Window" left="12750" top="0" width="15885" height="15990">
+   </BOUNDS>
+   <BOUNDS type="Node" left="825" top="8415" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="825" top="8415" width="6000" height="4500">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="GUI">
+   </PIN>
+   <PIN pinname="Clear" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ID" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1867.0000 x 1041.0000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Actual BackBuffer SizeXY" dstnodeid="462" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="155" srcpinname="ID" dstnodeid="455" dstpinname="ID">
+   </LINK>
+   <LINK srcnodeid="167" srcpinname="Layer Out" dstnodeid="155" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="TodoMap" filename="Subs\TodoMap.v4p" componentmode="Hidden" id="151" nodename="Subs\TodoMap.v4p">
+   <BOUNDS type="Node" left="4410" top="5445" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4410" top="5445" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7710" top="1320" width="14295" height="12735">
+   </BOUNDS>
+   <PIN pinname="ValuesOnly" visible="1" slicecount="11" values="0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="MidiSliders" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="MidiSliders" dstnodeid="96" dstpinname="MidiValues">
+   <LINKPOINT x="4270" y="6250">
+   </LINKPOINT>
+   <LINKPOINT x="3050" y="5165">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="MidiLoopback" dstnodeid="151" dstpinname="ValuesOnly">
+   <LINKPOINT x="3155" y="6500">
+   </LINKPOINT>
+   <LINKPOINT x="4405" y="5365">
+   </LINKPOINT>
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ScaleMidiCC.v4p" systemname="ScaleMidiCC" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\ScaleMidiCC.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ScaleMidiCC.v4p" systemname="ScaleMidiCC" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\ScaleMidiCC.v4p" scrollx="0" scrolly="2160" bgcolor="11442563">
    <NODE systemname="AsValue (String)" nodename="AsValue (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1635" top="1500" width="100" height="100">
    </BOUNDS>
@@ -163,11 +163,11 @@
    <NODE id="13" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Values Through|">
    </PIN>
-   <BOUNDS type="Box" left="3600" top="9675" width="750" height="240">
+   <BOUNDS type="Box" left="4395" top="9900" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3600" top="9675" width="750" height="240">
+   <BOUNDS type="Node" left="4395" top="9900" width="750" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="12" values="16,0,0.6616,0,0,0,0.7764,0.3961,0.1208,0.6464,0,0">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="8" dstpinname="Input" hiddenwhenlocked="1">
@@ -194,7 +194,7 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="3" dstpinname="XY">
    </LINK>
-   <BOUNDS type="Window" left="7005" top="990" width="9495" height="9525">
+   <BOUNDS type="Window" left="7575" top="300" width="9495" height="9525">
    </BOUNDS>
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="2850" top="1380" width="100" height="100">
@@ -210,10 +210,6 @@
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="13" dstpinname="Y Input Value">
-   <LINKPOINT x="3592" y="9862">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="2865" top="870" width="100" height="100">
    </BOUNDS>
@@ -239,5 +235,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="13" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

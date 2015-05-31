@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" systemname="Kontrol_SeparateTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" scrollx="0" scrolly="2880" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" systemname="Kontrol_SeparateTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" scrollx="0" scrolly="8385" bgcolor="11442563">
    <BOUNDS type="Window" left="9720" top="570" width="15495" height="13575">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="244" systemname="IOBox (Value Advanced)">
@@ -895,7 +895,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4980" top="9750" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="4605" top="3420" width="19515" height="16380">
+   <BOUNDS type="Window" left="0" top="3360" width="19515" height="16380">
    </BOUNDS>
    <PIN pinname="Insert" visible="1" slicecount="54" values="|/73/4/12/Y Input Value|,|Spread Count|,,|Endless, 1, 1, 1, 500, 1, , 4|,223,S,0,0,0,|/73/4/14/Y Input Value|,|Spread Count2|,,|Endless, 1, 1, 1, 500, 1, , 4|,11,S,0,0,0,|/73/4/2/Color Input|,Color,,|HSVAField, r=100% g=100% b=100% a=100% , HasAlpha|,|0.0000,0.2486,1.1300,0.9400|,S,0,0,0,|/73/4/4/Y Input Value|,|Scale XYZ|,,|Endless, 3, 1, 0, 4, 0.01, , 4|,|0.0495,3.0844,0.3080|,S,0,0,0,|/73/4/7/Input Enum|,Mode,,|PullDown, DX11.BlendPresets, Disabled|,Add,S,0,0,0,|/73/4/8/Y Input Value|,|Center XYZ|,,|Slider, 3, 0, -2, 2, 0.01, , 4|,|4.0167,-0.3170,1.7586|,S,0,0,0">
    </PIN>
@@ -1001,7 +1001,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2295" top="8489" width="6690" height="10380">
    </BOUNDS>
-   <BOUNDS type="Window" left="9405" top="1050" width="19395" height="14940">
+   <BOUNDS type="Window" left="3750" top="1020" width="19395" height="14940">
    </BOUNDS>
    <PIN pinname="FromFile" visible="1">
    </PIN>
@@ -1285,7 +1285,7 @@
    <LINK srcnodeid="913" srcpinname="Output" dstnodeid="912" dstpinname="Set">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="949" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3900" top="19800" width="3915" height="2055">
+   <BOUNDS type="Box" left="3900" top="19800" width="3720" height="4620">
    </BOUNDS>
    <BOUNDS type="Node" left="3900" top="19800" width="0" height="0">
    </BOUNDS>
@@ -1307,7 +1307,7 @@
    </PIN>
    <PIN pinname="Remote Host" visible="1">
    </PIN>
-   <PIN pinname="Remote Port" slicecount="1" values="1998" visible="1">
+   <PIN pinname="Remote Port" slicecount="1" visible="1" values="1998">
    </PIN>
    </NODE>
    <LINK srcnodeid="912" srcpinname="Output" dstnodeid="952" dstpinname="Input">
@@ -1357,5 +1357,21 @@
    <LINK srcnodeid="955" srcpinname="Y Output Value" dstnodeid="952" dstpinname="Remote Port">
    </LINK>
    <LINK srcnodeid="189" srcpinname="AllExposedPins" dstnodeid="566" dstpinname="Exposed Pins">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="956" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2445" top="4245" width="570" height="6375">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2445" top="4245" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="18">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="VectorSizeALL" dstnodeid="956" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

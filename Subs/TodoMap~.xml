@@ -3,7 +3,7 @@
    <BOUNDS type="Window" left="7710" top="1320" width="14295" height="12735">
    </BOUNDS>
    <NODE systemname="TodoListVariables (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoListVariables (TodoMap)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="3285" top="1155" width="100" height="100">
+   <BOUNDS type="Node" left="3285" top="1275" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Engine" visible="1" slicecount="1" values="||">
    </PIN>
@@ -187,7 +187,7 @@
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="4665" top="1650" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="7" values="|-- All --|,|-- All --|,|-- All --|,|-- All --|,|-- All --|,|-- All --|,|-- All --|">
    </PIN>
    <PIN pinname="Comparison" slicecount="1" values="Contains">
    </PIN>
@@ -209,8 +209,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="16" dstpinname="Filter">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Category" dstnodeid="16" dstpinname="Input">
    </LINK>
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="4185" top="2760" width="100" height="100">
@@ -378,10 +376,10 @@
    </NODE>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE id="15" componentmode="Hidden" systemname="TodoMap (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoMap (TodoMap)">
+   <NODE id="15" componentmode="InAWindow" systemname="TodoMap (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoMap (TodoMap)">
    <BOUNDS type="Node" left="3015" top="705" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="2895" top="8400" width="18885" height="12270">
+   <BOUNDS type="Window" left="5865" top="690" width="18885" height="12270">
    </BOUNDS>
    <PIN pinname="Engine" visible="1">
    </PIN>
@@ -410,4 +408,16 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
+   <NODE systemname="TodoExposedController (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoExposedController (TodoMap)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="9285" top="2160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Engine" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Engine" dstnodeid="29" dstpinname="Engine">
+   <LINKPOINT x="2880" y="983">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Variable Name" dstnodeid="16" dstpinname="Input">
+   </LINK>
    </PATCH>

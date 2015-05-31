@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="0" bgcolor="11442563" locked="1">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="0" bgcolor="11442563" locked="0">
    <BOUNDS type="Window" left="1215" top="4020" width="21375" height="10695">
    </BOUNDS>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="1">
@@ -955,11 +955,13 @@
    </PIN>
    </NODE>
    <NODE systemname="Toggle (Animation)" nodename="Toggle (Animation)" componentmode="Hidden" id="169">
-   <BOUNDS type="Node" left="7710" top="1200" width="100" height="100">
+   <BOUNDS type="Node" left="7725" top="1170" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="168" srcpinname="Up Edge" dstnodeid="169" dstpinname="Input">
@@ -1001,5 +1003,35 @@
    <LINK srcnodeid="170" srcpinname="Output" dstnodeid="171" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="171" srcpinname="Output" dstnodeid="142" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="172">
+   <BOUNDS type="Node" left="15495" top="165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="PatchIndexButtons">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="173">
+   <BOUNDS type="Node" left="15465" top="660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="172" srcpinname="Input Value" dstnodeid="173" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="175">
+   <BOUNDS type="Node" left="15495" top="1110" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="173" srcpinname="OnChange" dstnodeid="175" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="175" srcpinname="Output 1" dstnodeid="169" dstpinname="Reset">
    </LINK>
    </PATCH>
