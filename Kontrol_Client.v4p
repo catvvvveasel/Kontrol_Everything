@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" systemname="Kontrol_Client" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" systemname="Kontrol_Client" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" scrollx="0" scrolly="7725">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1575" top="3120" width="795" height="240">
    </BOUNDS>
@@ -1073,7 +1073,7 @@
    </BOUNDS>
    <PIN pinname="AllFadesString" visible="1" slicecount="25" pintype="Input" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
-   <PIN pinname="Spread" visible="1" pintype="Input" slicecount="25" values="| 1|,| 1|,| 1|,| 1|,|1.0000,1.0000,1.0000,1.0000|,| 0|,1.0000,| 1|,| 0, 0, 0|,|1.0000,1.0000,1.0000,0.1700|,1.0000,|1.0000,2.6140,3.9006|,Disabled,| 0, 0, 0|,120.0000,|0.0000,0.0000,0.0000,0.0000|,| 0, 0, 0|,| 0|,| 0|,5.0000,-1.4561,| 0|,|1.0000,4.0000,4.0000|,Add,|0.0000,3.4152,0.0000|">
+   <PIN pinname="Spread" visible="1" pintype="Input" slicecount="93" values="33579999.6642,-99999999,-25959999.7404,| 0|,| 1|,| 0|,| 0|,| 1|,0.0000,0,D:\Hap_Movs\CasioFire\CIMG1161_enhanced.mov,D:\Hap_Movs\ASSORTED\7^Comp^1-AIC.mov,16mm,16mm1.mov,0,0,| 0|,1,| 0|,0,1,1,0,0,16mm,16mm1.mov,0,0,| 0|,| 0|,| 0|,1,| 0|,0,1,| 0|,16mm,16mm1.mov,0,0,| 0|,| 0|,| 0|,1,| 0|,0,1,1,0,Fade,GridArray,1,1,| 1|,| 1|,| 1|,2,2,1,0.5,| 1|,0,Disabled,| 0|,1,|1,1,1|,| 1|,0,0,|0,0,0|,| 0|,0,|0,0,0|,| 0|,0,|0,0,0|,| 0|,0,|0,0,0|,| 0|,0,| 0|,| 0|,0.899999976158142,|1,1|,0,1,1,0.5,| 1|,0,| 1|,| 0|">
    </PIN>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -1560,8 +1560,6 @@
    </LINK>
    <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="AllFadesString">
    </LINK>
-   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="125" dstpinname="Spread">
-   </LINK>
    <LINK srcnodeid="124" srcpinname="Output 3" dstnodeid="125" dstpinname="FadeType">
    </LINK>
    <NODE systemname="Reader (Raw SharedMemory)" nodename="Reader (Raw SharedMemory)" componentmode="Hidden" id="318">
@@ -1949,5 +1947,21 @@
    <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="0" dstpinname="Feedback Target IP">
    </LINK>
    <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Listening UDP Port">
+   </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="360">
+   <BOUNDS type="Node" left="1965" top="14025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="^">
+   </PIN>
+   <PIN pinname="To" slicecount="1" values="| |">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="360" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="360" srcpinname="Output" dstnodeid="125" dstpinname="Spread">
    </LINK>
    </PATCH>

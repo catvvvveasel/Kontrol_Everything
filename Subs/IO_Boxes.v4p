@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="330" scrolly="-75" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="30" scrolly="1200" bgcolor="11442563">
    <NODE id="12" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -847,7 +847,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4140" top="2715" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -857,7 +857,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="381" srcpinname="Y Output Value" dstnodeid="341" dstpinname="Input 4">
@@ -1389,7 +1389,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6011" top="3337" width="6705" height="5260">
    </BOUNDS>
-   <BOUNDS type="Window" left="2310" top="2055" width="11550" height="7545">
+   <BOUNDS type="Window" left="3465" top="210" width="11550" height="7545">
    </BOUNDS>
    <PIN pinname="YScale" visible="1">
    </PIN>
@@ -1402,6 +1402,8 @@
    <PIN pinname="XScaleText" visible="1">
    </PIN>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="IsFileBrowser" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="268" dstpinname="BinSize">
@@ -1583,5 +1585,21 @@
    <LINK srcnodeid="421" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="425" srcpinname="Output" dstnodeid="421" dstpinname="Evaluate">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="444" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="16380" top="4605" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="16380" top="4605" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="IsFileBrowser">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="444" srcpinname="Y Output Value" dstnodeid="268" dstpinname="IsFileBrowser">
    </LINK>
    </PATCH>

@@ -97,7 +97,7 @@
    </PIN>
    <PIN pinname="Input 12" visible="1" slicecount="1" values="text">
    </PIN>
-   <PIN pinname="Input 13" visible="1" slicecount="1" values="text">
+   <PIN pinname="Input 13" visible="1" slicecount="93" values="33579999.6642,-99999999,-25959999.7404,0,1,0,0,1,0,0,D:\Hap_Movs\CasioFire\CIMG1161_enhanced.mov,D:\Hap_Movs\ASSORTED\7^Comp^1-AIC.mov,16mm,16mm1.mov,0,0,0,1,0,0,1,1,0,0,16mm,16mm1.mov,0,0,0,0,0,1,0,0,1,0,16mm,16mm1.mov,0,0,0,0,0,1,0,0,1,1,0,Fade,GridArray,1,1,1,1,1,2,2,1,0.5,1,0,Disabled,0,1,|1,1,1|,1,0,0,|0,0,0|,0,0,|0,0,0|,0,0,|0,0,0|,0,0,|0,0,0|,0,0,0,0,0.899999976158142,|1,1|,0,1,1,0.5,1,0,1,0">
    </PIN>
    <PIN pinname="Input 14" visible="1" slicecount="13" values="|IOBox (Value Advanced) -- Max Radius|,|IOBox (Value Advanced) -- Period o No|,|IOBox (Value Advanced) -- ThresoldNo|,|IOBox (Value Advanced) -- Period2 Never|,|IOBox (Value Advanced) -- ThresoldNever|,|IOBox (Value Advanced) -- SwitchWords|,|IOBox (Enumerations) -- Text Rendering Mode|,|IOBox (Value Advanced) -- Enabled|,|IOBox (Value Advanced) -- Bang|,|IOBox (String) -- text|,|IOBox (Color) -- Color|,|IOBox (Value Advanced) -- Position|,|IOBox (Value Advanced) -- FOV|">
    </PIN>
@@ -198,8 +198,6 @@
    </LINK>
    <LINK srcnodeid="20" srcpinname="Enum Entries" dstnodeid="24" dstpinname="Input 11">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="24" dstpinname="Input 13">
-   </LINK>
    <LINK srcnodeid="20" srcpinname="Node Name" dstnodeid="26" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Node Name" dstnodeid="24" dstpinname="Input 14">
@@ -237,7 +235,7 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="79" values="D:\Hap_Movs,movie:File,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,D:\Hap_Movs,movie:File,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,D:\Hap_Movs,movie:File,,,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,D:\Hap_Movs,movie:File,,,movie:Seek,movie:reverse,movie:play,,,movie:scrub,movie:seektime,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="D:\Hap_Movs" visible="1">
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="D:\Hap_Movs">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -489,5 +487,21 @@
    <LINK srcnodeid="49" srcpinname="OnChange" dstnodeid="46" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="34" srcpinname="Output" dstnodeid="47" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="9360" top="4050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="| |">
+   </PIN>
+   <PIN pinname="To" slicecount="1" values="^">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="50" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="24" dstpinname="Input 13">
    </LINK>
    </PATCH>

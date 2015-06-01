@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" systemname="ParsePinsForGUI" filename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" scrollx="0" scrolly="1080" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" systemname="ParsePinsForGUI" filename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" scrollx="0" scrolly="1800" bgcolor="11442563">
    <BOUNDS type="Window" left="1995" top="1455" width="17775" height="12045">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
@@ -305,7 +305,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="27">
-   <BOUNDS type="Node" left="12000" top="3060" width="100" height="100">
+   <BOUNDS type="Node" left="12210" top="3060" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="13" values="0.2101,1,0,1,0,0,SingleLine,1,0.3333,1.0000,|||0.00660,0.33000,0.00000,0.21000|||,|0,0,0|,0.2068">
    </PIN>
@@ -339,7 +339,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="VectorSize">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="14" values="1,1,1,1,1,1,1,1,1,1,1,1,2,2">
+   <PIN pinname="Y Input Value" visible="1" slicecount="14" values="1,1,1,1,1,1,1,1,1,1,1,1,1,2">
    </PIN>
    </NODE>
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="30">
@@ -449,7 +449,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="13" values="1,1,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Y Input Value" visible="1" slicecount="14" values="1,1,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="ISenum">
    </PIN>
@@ -937,20 +937,16 @@
    <LINK srcnodeid="15" srcpinname="Output 5" dstnodeid="104" dstpinname="Input">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="105">
-   <BOUNDS type="Node" left="12750" top="8310" width="100" height="100">
+   <BOUNDS type="Node" left="13005" top="8250" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="104" srcpinname="Hits" dstnodeid="105" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="53" srcpinname="Inverse Output" dstnodeid="105" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="105" srcpinname="Output" dstnodeid="52" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="106">
    <BOUNDS type="Node" left="16140" top="8640" width="100" height="100">
@@ -959,7 +955,7 @@
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="2">
+   <PIN pinname="Input 2" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -967,8 +963,6 @@
    <LINK srcnodeid="36" srcpinname="Output" dstnodeid="106" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="104" srcpinname="Hits" dstnodeid="106" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="29" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="107" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="14325" top="9480" width="795" height="240">
@@ -983,7 +977,15 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="FileBrowser">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="104" srcpinname="Hits" dstnodeid="107" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Inverse Output" dstnodeid="52" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="106" srcpinname="Output" dstnodeid="29" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

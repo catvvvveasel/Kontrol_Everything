@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\TogBangButtons.v4p" systemname="TogBangButtons" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TogBangButtons.v4p" scrollx="150" scrolly="3600" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\TogBangButtons.v4p" systemname="TogBangButtons" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TogBangButtons.v4p" scrollx="735" scrolly="2160" bgcolor="11442563">
    <BOUNDS type="Window" left="4665" top="5940" width="13470" height="10980">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -362,8 +362,6 @@
    <LINKPOINT x="7046" y="5767">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="71" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="71" srcpinname="Output" dstnodeid="67" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="71" srcpinname="Output" dstnodeid="59" dstpinname="Spread">
@@ -455,15 +453,17 @@
    <LINK srcnodeid="60" srcpinname="Output" dstnodeid="59" dstpinname="Index">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="79" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9735" top="8280" width="795" height="240">
+   <BOUNDS type="Box" left="10080" top="7980" width="780" height="600">
    </BOUNDS>
-   <BOUNDS type="Node" left="9735" top="8280" width="0" height="0">
+   <BOUNDS type="Node" left="10080" top="7980" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="77" srcpinname="Former Slice" dstnodeid="79" dstpinname="Y Input Value">
@@ -523,7 +523,7 @@
    <LINK srcnodeid="83" srcpinname="Output" dstnodeid="75" dstpinname="Input 3">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="84">
-   <BOUNDS type="Node" left="11205" top="5010" width="100" height="100">
+   <BOUNDS type="Node" left="12555" top="2670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="MouseValues">
    </PIN>
@@ -531,7 +531,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="85">
-   <BOUNDS type="Node" left="11160" top="5700" width="100" height="100">
+   <BOUNDS type="Node" left="12510" top="3360" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -543,7 +543,7 @@
    <LINK srcnodeid="84" srcpinname="Input Value" dstnodeid="85" dstpinname="Input">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="86">
-   <BOUNDS type="Node" left="10710" top="6615" width="100" height="100">
+   <BOUNDS type="Node" left="12630" top="3750" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -567,9 +567,9 @@
    <LINK srcnodeid="86" srcpinname="Up Edge" dstnodeid="87" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="88" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11940" top="7005" width="480" height="480">
+   <BOUNDS type="Box" left="12780" top="6825" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="11940" top="7005" width="0" height="0">
+   <BOUNDS type="Node" left="12780" top="6825" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -795,5 +795,21 @@
    <LINK srcnodeid="104" srcpinname="Output" dstnodeid="91" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="97" srcpinname="Output" dstnodeid="95" dstpinname="Set">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="107">
+   <BOUNDS type="Node" left="4890" top="5925" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4890" top="5925" width="795" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="71" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="108">
+   <BOUNDS type="Node" left="11310" top="7080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="108" dstpinname="Input">
    </LINK>
    </PATCH>

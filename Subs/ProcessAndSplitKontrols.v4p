@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="4905" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="60" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Input String" visible="1" slicecount="2" values="ColorSilly,ScaleXSilly">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="-1125" top="10860" width="22530" height="12660">
+   <BOUNDS type="Window" left="3735" top="4410" width="22530" height="12660">
    </BOUNDS>
    <NODE id="26" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="SubType">
@@ -867,9 +867,9 @@
    <LINK srcnodeid="212" srcpinname="Output 4" dstnodeid="215" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="216" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="13080" top="1575" width="795" height="240">
+   <BOUNDS type="Box" left="15450" top="2355" width="990" height="390">
    </BOUNDS>
-   <BOUNDS type="Node" left="13080" top="1575" width="0" height="0">
+   <BOUNDS type="Node" left="15450" top="2355" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -879,11 +879,11 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Value">
    </PIN>
-   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   <PIN pinname="Pin Visibility" slicecount="1" values="True">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="93" values="0,0,0,0,0,0,0,0,0,0,0.0000,D:\Hap_Movs\Butoh\Dance,16mm,16mm1.mov,0,0,0,1,0,0,1,1,0,0,16mm,16mm1.mov,0,0,0,0,0,1,0,0,1,0,16mm,16mm1.mov,0,0,0,0,0,1,0,0,1,1,0,Fade,GridArray,1,1,1,1,1,2,2,1,0.5,1,0,Disabled,0,1,|1,1,1|,1,0,0,|0,0,0|,0,0,|0,0,0|,0,0,|0,0,0|,0,0,|0,0,0|,0,0,0,0,0.899999976158142,|1,1|,0,1,1,0.5,1,0,1,0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="212" srcpinname="Output 13" dstnodeid="216" dstpinname="Input String">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="217" systemname="IOBox (String)">
    <BOUNDS type="Box" left="12045" top="1500" width="585" height="240">
    </BOUNDS>
@@ -1285,5 +1285,21 @@
    <LINK srcnodeid="267" srcpinname="Output" dstnodeid="268" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="266" dstpinname="PatchNames">
+   </LINK>
+   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="269">
+   <BOUNDS type="Node" left="15450" top="1740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" values="||||">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="212" srcpinname="Output 13" dstnodeid="269" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 13" dstnodeid="216" dstpinname="Input String">
    </LINK>
    </PATCH>

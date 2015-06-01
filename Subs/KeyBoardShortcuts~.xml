@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="0" bgcolor="11442563" locked="0">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="-360" bgcolor="11442563" locked="0">
    <BOUNDS type="Window" left="1215" top="4020" width="21375" height="10695">
    </BOUNDS>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="1">
@@ -68,6 +68,8 @@
    <PIN pinname="Key Code Bin Size" visible="1">
    </PIN>
    <PIN pinname="Key Code" visible="1">
+   </PIN>
+   <PIN pinname="Key" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="S (VALUE)" nodename="S (Value)" componentmode="Hidden" id="8">
@@ -1034,4 +1036,12 @@
    </LINK>
    <LINK srcnodeid="175" srcpinname="Output 1" dstnodeid="169" dstpinname="Reset">
    </LINK>
+   <NODE systemname="RadioSliceSpectral (Value)" nodename="RadioSliceSpectral (Value)" componentmode="Hidden" id="176" filename="plugins\ValueRadioSliceSpectral\ValueRadioSliceSpectral.csproj">
+   <BOUNDS type="Node" left="3000" top="9630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Key Match" slicecount="1" values="|z,x|">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="7" values="0,0,0,0,1,0,0">
+   </PIN>
+   </NODE>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="3240" scrolly="5250" bgcolor="11442563">
-   <BOUNDS type="Window" left="5700" top="2505" width="12600" height="12645">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="105" scrolly="6480" bgcolor="11442563">
+   <BOUNDS type="Window" left="8445" top="1035" width="18990" height="12645">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="915" top="3765" width="100" height="100">
@@ -955,6 +955,8 @@
    </PIN>
    <PIN pinname="IsButton" visible="1">
    </PIN>
+   <PIN pinname="IsFileBrowser" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="306" srcpinname="Output" dstnodeid="89" dstpinname="FadeTimes">
    </LINK>
@@ -1091,7 +1093,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10875" top="12240" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="315" top="315" width="17025" height="14070">
+   <BOUNDS type="Window" left="5655" top="885" width="21975" height="14070">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1110,6 +1112,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Tags" visible="1">
+   </PIN>
+   <PIN pinname="FileBrowser" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="346" srcpinname="Output" dstnodeid="106" dstpinname="Input">
@@ -1247,6 +1251,8 @@
    </PIN>
    <PIN pinname="Tag" visible="1">
    </PIN>
+   <PIN pinname="FileBrowser" visible="1" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="386" srcpinname="Output String" dstnodeid="387" dstpinname="ParsedPinInfo">
    </LINK>
@@ -1305,19 +1311,17 @@
    <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="89" dstpinname="IsButton">
    </LINK>
    <NODE systemname="SetDefaults" filename="SetDefaults.v4p" componentmode="Hidden" id="397" nodename="SetDefaults.v4p">
-   <BOUNDS type="Node" left="10875" top="14535" width="100" height="100">
+   <BOUNDS type="Node" left="11325" top="14865" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10875" top="14535" width="4800" height="3600">
+   <BOUNDS type="Box" left="11325" top="14865" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="5055" top="735" width="9000" height="6000">
    </BOUNDS>
-   <PIN pinname="Spread" visible="1">
+   <PIN pinname="Spread" visible="1" slicecount="14" values="0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="284" srcpinname="Output" dstnodeid="397" dstpinname="Spread">
-   </LINK>
    <LINK srcnodeid="397" srcpinname="Output" dstnodeid="297" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="284" dstpinname="IsColour">
@@ -1367,5 +1371,45 @@
    <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="382" dstpinname="IsButton">
    </LINK>
    <LINK srcnodeid="387" srcpinname="Tag" dstnodeid="346" dstpinname="Tags">
+   </LINK>
+   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="346" dstpinname="FileBrowser">
+   </LINK>
+   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="89" dstpinname="IsFileBrowser">
+   </LINK>
+   <NODE systemname="FileNameEnum" filename="FileNameEnum.v4p" componentmode="Hidden" id="400" nodename="FileNameEnum.v4p">
+   <BOUNDS type="Node" left="11025" top="14160" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11025" top="14160" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7920" top="1020" width="19530" height="12855">
+   </BOUNDS>
+   <PIN pinname="IsFileName" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="IoBin" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="2" values="|D:\Hap_Movs\CatArt2\Speed BurnDL Comp 1-AIC.mov|,D:\Hap_Movs\ASSORTED\weather2crop-AIC.mov">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="400" dstpinname="IsFileName">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="All_IoBoxesTransforms" dstnodeid="400" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="400" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 12">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Output Bin Size" dstnodeid="400" dstpinname="IoBin">
+   <LINKPOINT x="100" y="15425">
+   </LINKPOINT>
+   <LINKPOINT x="12395" y="12295">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="284" srcpinname="Output" dstnodeid="400" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="400" srcpinname="Output" dstnodeid="397" dstpinname="Spread">
    </LINK>
    </PATCH>
