@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" systemname="TopMenuBar" filename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" systemname="TopMenuBar" filename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" scrollx="0" scrolly="2160" bgcolor="11442563">
    <BOUNDS type="Window" left="7155" top="2250" width="22350" height="14385">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -31,7 +31,7 @@
    </PIN>
    <PIN pinname="Input 4" slicecount="1" values="\">
    </PIN>
-   <PIN pinname="Input 5" visible="1">
+   <PIN pinname="Input 5" visible="1" slicecount="7" values="Playlists,Thumbs,Presets,Audio,Video,Models,Playlists\Bu">
    </PIN>
    <PIN pinname="Input 6" slicecount="1" values="\">
    </PIN>
@@ -65,7 +65,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="5565" top="5220" width="100" height="100">
+   <BOUNDS type="Node" left="5160" top="5160" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -108,8 +108,6 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="2" dstpinname="Input 5">
-   </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="10">
    <BOUNDS type="Node" left="2460" top="8805" width="100" height="100">
    </BOUNDS>
@@ -293,11 +291,11 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="5400" top="5700" width="100" height="100">
+   <BOUNDS type="Node" left="5055" top="5625" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="D:\App\Tracks\Azerbaijan\">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="7" values="Playlists,Thumbs,Presets,Audio,Video,Models,Playlists\Bu">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -306,8 +304,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="49" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="49" srcpinname="Output" dstnodeid="1" dstpinname="Directory">
    </LINK>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="54">
@@ -545,7 +541,7 @@
    <LINK srcnodeid="126" srcpinname="Output 1" dstnodeid="54" dstpinname="Operand 1">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="132">
-   <BOUNDS type="Node" left="12030" top="12690" width="100" height="100">
+   <BOUNDS type="Node" left="11640" top="13965" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="TAB">
    </PIN>
@@ -605,7 +601,7 @@
    <LINK srcnodeid="186" srcpinname="Output String" dstnodeid="7" dstpinname="Input 6">
    </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="187">
-   <BOUNDS type="Node" left="14400" top="10995" width="100" height="100">
+   <BOUNDS type="Node" left="14400" top="10725" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -615,7 +611,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="188">
-   <BOUNDS type="Node" left="14415" top="11415" width="100" height="100">
+   <BOUNDS type="Node" left="14415" top="11145" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -833,7 +829,7 @@
    <LINK srcnodeid="251" srcpinname="Output String" dstnodeid="7" dstpinname="Input 7">
    </LINK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="252">
-   <BOUNDS type="Node" left="14415" top="11850" width="100" height="100">
+   <BOUNDS type="Node" left="14415" top="11580" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1065,9 +1061,9 @@
    <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="122" dstpinname="Operand 2 - Directory">
    </LINK>
    <LINK srcnodeid="49" srcpinname="Output" dstnodeid="122" dstpinname="Input">
-   <LINKPOINT x="6540" y="6465">
+   <LINKPOINT x="6310" y="6415">
    </LINKPOINT>
-   <LINKPOINT x="12195" y="5415">
+   <LINKPOINT x="12080" y="5390">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="122" srcpinname="Output" dstnodeid="123" dstpinname="Input">
@@ -1469,5 +1465,71 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="289" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="293" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="7665" top="705" width="1830" height="2025">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7665" top="705" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="7" visible="1" values="Playlists,Thumbs,Presets,Audio,Video,Models,Playlists\Bu">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="293" srcpinname="Output String" dstnodeid="2" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="293" srcpinname="Output String" dstnodeid="49" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="294">
+   <BOUNDS type="Node" left="11760" top="11535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Output" dstnodeid="294" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="295">
+   <BOUNDS type="Node" left="11760" top="12075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="|Clear All Keyframes|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="294" srcpinname="Output" dstnodeid="295" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="296">
+   <BOUNDS type="Node" left="11760" top="12480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="296" dstpinname="Input">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="297">
+   <BOUNDS type="Node" left="11745" top="13050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="ClearAllKeyframes">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="296" srcpinname="Up Edge" dstnodeid="297" dstpinname="Input Value">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="-111" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
    <BOUNDS type="Window" left="8550" top="-165" width="17355" height="16200">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -1253,15 +1253,13 @@
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="327">
    <BOUNDS type="Node" left="4185" top="5955" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="327" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="296" srcpinname="DeleteTable" dstnodeid="327" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="327" srcpinname="Output" dstnodeid="26" dstpinname="Clear">
@@ -1361,5 +1359,15 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="277" srcpinname="Output" dstnodeid="255" dstpinname="Undo">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="336">
+   <BOUNDS type="Node" left="1755" top="5550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="ClearAllKeyframes">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="336" srcpinname="Input Value" dstnodeid="327" dstpinname="Input 1">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="105" scrolly="6480" bgcolor="11442563">
-   <BOUNDS type="Window" left="8445" top="1035" width="18990" height="12645">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="0" scrolly="5040" bgcolor="11442563">
+   <BOUNDS type="Window" left="9810" top="1665" width="18990" height="12645">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="915" top="3765" width="100" height="100">
@@ -49,9 +49,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="98" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="11580" top="16335" width="795" height="240">
+   <BOUNDS type="Box" left="11625" top="16470" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="11580" top="16335" width="0" height="0">
+   <BOUNDS type="Node" left="11625" top="16470" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -305,15 +305,13 @@
    </BOUNDS>
    <PIN pinname="Set" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="15" values="1,| 1|,1,1,|||0.33000,0.33000,0.33000,0.00000|||,| 0|,5,1,|0,0,0|,|||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000|||,1,|||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000|||,|1,1,1|,Disabled,|0,0,0|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="295" dstpinname="Input">
-   </LINK>
    <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="297">
-   <BOUNDS type="Node" left="11580" top="15660" width="100" height="100">
+   <BOUNDS type="Node" left="11640" top="15870" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
@@ -764,8 +762,6 @@
    <PIN pinname="Switch" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="101" srcpinname="ConvertedValues" dstnodeid="102" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="298" srcpinname="Output" dstnodeid="101" dstpinname="CurrentValues">
    </LINK>
    <LINK srcnodeid="330" srcpinname="Input Value" dstnodeid="101" dstpinname="Switch">
@@ -773,9 +769,9 @@
    <LINK srcnodeid="101" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="ScaleMidiCC" filename="ScaleMidiCC.v4p" nodename="ScaleMidiCC.v4p" componentmode="Hidden" id="235">
-   <BOUNDS type="Node" left="4698" top="7121" width="1170" height="270">
+   <BOUNDS type="Node" left="4803" top="6971" width="1170" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="1798" top="2361" width="5800" height="9520">
+   <BOUNDS type="Box" left="1903" top="2211" width="5800" height="9520">
    </BOUNDS>
    <BOUNDS type="Window" left="7575" top="300" width="9495" height="9525">
    </BOUNDS>
@@ -821,7 +817,7 @@
    </PIN>
    <PIN pinname="Alpha" visible="1">
    </PIN>
-   <PIN pinname="CurrentValue" visible="1">
+   <PIN pinname="CurrentValue" visible="1" slicecount="30" values="1,1,1,1,0,255,255,1,0,5,1,0,0,0,0.3333,0,1,1,1,255,255,0.9945,0.9945,1,1,1,0,0,0,0">
    </PIN>
    <PIN pinname="BinSize" visible="1">
    </PIN>
@@ -864,8 +860,6 @@
    <LINKPOINT x="3790" y="5300">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="235" srcpinname="Values Through" dstnodeid="87" dstpinname="CurrentValue">
-   </LINK>
    <NODE systemname="TogBangButtons" filename="TogBangButtons.v4p" componentmode="Hidden" id="290" nodename="TogBangButtons.v4p">
    <BOUNDS type="Node" left="4965" top="9285" width="100" height="100">
    </BOUNDS>
@@ -881,14 +875,12 @@
    </PIN>
    <PIN pinname="VectorSize" visible="1" slicecount="11" values="1,1,1,1,1,1,1,1,1,3,1">
    </PIN>
-   <PIN pinname="ValueIn" visible="1">
+   <PIN pinname="ValueIn" visible="1" slicecount="30" values="1,1,1,1,0,255,255,1,0,5,1,0,0,0,0.3333,0,1,1,1,255,255,0.9945,0.9945,1,1,1,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="290" srcpinname="Layer" dstnodeid="197" dstpinname="Layer 9">
-   </LINK>
-   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="290" dstpinname="ValueIn">
    </LINK>
    <LINK srcnodeid="87" srcpinname="SliderPositionsOnly" dstnodeid="290" dstpinname="Transform">
    </LINK>
@@ -897,7 +889,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="345" top="9386" width="5095" height="5005">
    </BOUNDS>
-   <BOUNDS type="Window" left="1125" top="3810" width="17205" height="11430">
+   <BOUNDS type="Window" left="6855" top="3075" width="17205" height="11430">
    </BOUNDS>
    <PIN pinname="Name" visible="1" slicecount="11" values="|Max Radius|,|Period o No|,ThresoldNo,|Period2 Never|,ThresoldNever,SwitchWords,|Text Rendering Mode|,Enabled,Bang,,Color">
    </PIN>
@@ -939,7 +931,7 @@
    </PIN>
    <PIN pinname="Output Bin Size" visible="1">
    </PIN>
-   <PIN pinname="Value(Formated)" visible="1" slicecount="36" values="0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0,0,0.00,0.00,0.00,0.00,0.00,0.00,0.00">
+   <PIN pinname="Value(Formated)" visible="1" slicecount="30" values="1,1,1.0000,255.0000,0.33,1.00,1.00,1.00,0.0000,2.0000,2.0000,2.0000,2.0000,2.0000,0.33,1.00,1.00,1.00,0.0000,255,255,255,255,255.0000,255.0000,510.0000,|||1.00000,1.00000,1.00000,1.00000|||,2.0000,2.0000,1.0000">
    </PIN>
    <PIN pinname="Render State" visible="1">
    </PIN>
@@ -1029,9 +1021,9 @@
    </PIN>
    <PIN pinname="Precision" visible="1" slicecount="18" values="4,4,4,4,4,0,4,0,0,0,2,2,2,2,4,4,4,4">
    </PIN>
+   <PIN pinname="Values As String" visible="1" slicecount="30" values="1,1,1,1,0.0000,255.0000,255.0000,1.0000,0,5,1,0,0,0,0.3333,0.0000,1.0000,1.0000,1,255.0000,255.0000,0.9945,0.9945,1,1,1,Disabled,0,0,0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="102" srcpinname="Output" dstnodeid="237" dstpinname="Values As String">
-   </LINK>
    <LINK srcnodeid="290" srcpinname="Output" dstnodeid="237" dstpinname="FromTog">
    </LINK>
    <NODE systemname="KeyBoardEdit" filename="KeyBoardEdit.v4p" nodename="KeyBoardEdit.v4p" componentmode="Hidden" id="182">
@@ -1089,11 +1081,11 @@
    <LINK srcnodeid="237" srcpinname="Output 1" dstnodeid="182" dstpinname="IsString">
    </LINK>
    <NODE systemname="Enums" filename="Enums.v4p" componentmode="Hidden" id="346" nodename="Enums.v4p">
-   <BOUNDS type="Node" left="10875" top="12240" width="780" height="270">
+   <BOUNDS type="Node" left="10260" top="12075" width="780" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="10875" top="12240" width="4800" height="3600">
+   <BOUNDS type="Box" left="10260" top="12075" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="5655" top="885" width="21975" height="14070">
+   <BOUNDS type="Window" left="-120" top="-120" width="29040" height="16380">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1217,7 +1209,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6885" top="1215" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="1995" top="1455" width="17775" height="12045">
+   <BOUNDS type="Window" left="7215" top="1830" width="17775" height="12045">
    </BOUNDS>
    <PIN pinname="ParsedPinInfo" visible="1">
    </PIN>
@@ -1252,6 +1244,8 @@
    <PIN pinname="Tag" visible="1">
    </PIN>
    <PIN pinname="FileBrowser" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="StringNoBin" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="386" srcpinname="Output String" dstnodeid="387" dstpinname="ParsedPinInfo">
@@ -1311,9 +1305,9 @@
    <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="89" dstpinname="IsButton">
    </LINK>
    <NODE systemname="SetDefaults" filename="SetDefaults.v4p" componentmode="Hidden" id="397" nodename="SetDefaults.v4p">
-   <BOUNDS type="Node" left="11325" top="14865" width="100" height="100">
+   <BOUNDS type="Node" left="11655" top="15060" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="11325" top="14865" width="4800" height="3600">
+   <BOUNDS type="Box" left="11655" top="15060" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="5055" top="735" width="9000" height="6000">
    </BOUNDS>
@@ -1347,24 +1341,18 @@
    <LINK srcnodeid="382" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 10">
    </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="399">
-   <BOUNDS type="Node" left="3135" top="10725" width="100" height="100">
+   <BOUNDS type="Node" left="3000" top="10860" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="15" values="| 1|,| 1|,| 1|,| 1|,|||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000||,||0.00000,1.00000,0.00000,1.00000|||,0,5,1,|0,0,0|,|||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000|||,1,|||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000||,||1.00000,1.00000,1.00000,1.00000|||,|1,1,1|,Disabled,|0,0,0|">
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="30" values="1,1,1.0000,1.0000,0.33,0.00,0.99,0.99,0.9900,0.0000,0.3333,0.0000,0.9900,0.9900,0.33,0.00,0.99,0.99,0.9945,0,1,1,0,0.9900,0.9900,0.0000,Disabled,0.9900,0.9900,0.9900">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="399" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="399" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="237" srcpinname="Output" dstnodeid="399" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="399" srcpinname="Output" dstnodeid="89" dstpinname="Value(Formated)">
    </LINK>
    <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="382" dstpinname="IsEnum">
    </LINK>
@@ -1381,7 +1369,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="11025" top="14160" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="7920" top="1020" width="19530" height="12855">
+   <BOUNDS type="Window" left="1260" top="0" width="23940" height="15000">
    </BOUNDS>
    <PIN pinname="IsFileName" visible="1">
    </PIN>
@@ -1411,5 +1399,97 @@
    <LINK srcnodeid="284" srcpinname="Output" dstnodeid="400" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="400" srcpinname="Output" dstnodeid="397" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="295" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output" dstnodeid="237" dstpinname="Values As String">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="290" dstpinname="ValueIn">
+   </LINK>
+   <LINK srcnodeid="235" srcpinname="Values Through" dstnodeid="87" dstpinname="CurrentValue">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="ConvertedValues" dstnodeid="102" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="237" srcpinname="Output" dstnodeid="399" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="401">
+   <BOUNDS type="Node" left="5715" top="2730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="15" values="| 1|,| 1|,| 1|,| 1|,|0.9900,0.9900,0.9900,0.9900|,0.9900,0,0.3333,|0.0000,0.9900,0.9900|,|0.9900,0.0099,0.0687,0.9900|,0.9945,|0.0000,0.0039,0.0039,0.0000|,|0.9900,0.9900,0.0000|,Disabled,|0.9900,0.9900,0.9900|">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Comma">
+   </PIN>
+   <PIN pinname="Ignore between" slicecount="1" values="Pipe">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="402">
+   <BOUNDS type="Node" left="5715" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="402" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="387" srcpinname="StringNoBin" dstnodeid="402" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="403">
+   <BOUNDS type="Node" left="6465" top="1965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="{">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values="}">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="403" srcpinname="Output" dstnodeid="402" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="403" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="402" srcpinname="Output" dstnodeid="401" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="404">
+   <BOUNDS type="Node" left="5730" top="3180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1" slicecount="185" values="| 1|,| 1|,| 1|,| 1|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,|0.00000,1.00000,0.00000,1.00000|,0,5,1,0,0,0,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,1,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,1,1,1,Disabled,0,0,0">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" values="{">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="405">
+   <BOUNDS type="Node" left="5730" top="3570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" values="}">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="404" srcpinname="Result" dstnodeid="405" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="404" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="399" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="237" srcpinname="Output" dstnodeid="89" dstpinname="Value(Formated)">
    </LINK>
    </PATCH>

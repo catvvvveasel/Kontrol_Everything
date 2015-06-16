@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" systemname="Kontrol-Client_Osc" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" scrollx="270" scrolly="405">
-   <BOUNDS type="Window" left="9885" top="1005" width="15750" height="13800">
+   <BOUNDS type="Window" left="-15105" top="4980" width="15750" height="13800">
    </BOUNDS>
    <NODE systemname="OSCEncoder (Network)" nodename="OSCEncoder (Network)" componentmode="Hidden" id="73">
    <BOUNDS type="Node" left="2550" top="6510" width="100" height="100">
@@ -49,7 +49,7 @@
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="69">
    <BOUNDS type="Node" left="3630" top="4560" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="15" values="|||1|||,|||1|||,|||84.0000|||,|||255.0000|||,|||-0.1377,0.5100,0.4323,1.0000|||,|||-0.0000|||,|||0.0000|||,|||-0.0000|||,|||0.0000,0.0000,0.0000|||,|||1.0000,1.0000,-0.3137,1.0000|||,|||0,0,0.0000|||,|||Disabled|||,|||0.0000,0.0000,0.0000|||,|||-29699469.3553,-23099587.2764|||,|||0|||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -85,7 +85,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="65">
-   <BOUNDS type="Node" left="3525" top="2580" width="100" height="100">
+   <BOUNDS type="Node" left="1500" top="2280" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -99,7 +99,7 @@
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="64">
    <BOUNDS type="Node" left="3540" top="3645" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Switch" visible="1">
+   <PIN pinname="Switch" visible="1" slicecount="15" values="0,0,0,0,1,0,0,0,0,1,0,0,0,0,0">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -113,7 +113,7 @@
    </BOUNDS>
    <PIN pinname="Quote Mode" slicecount="1" values="Pipe">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="13" values="1,1,84.0000,255.0000,|||-0.1377,0.5100,0.4323,1.0000|||,-0.0000,0.0000,-0.0000,|0.0000,0.0000,0.0000|,|||1.0000,1.0000,-0.3137,1.0000|||,|0,0,0.0000|,Disabled,|0.0000,0.0000,0.0000|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -161,6 +161,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2565" top="1145" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="72" dstpinname="Input">
    </LINK>
@@ -192,13 +194,9 @@
    </LINK>
    <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="65" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="65" srcpinname="Hits" dstnodeid="64" dstpinname="Switch">
-   </LINK>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="64" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="63" srcpinname="Output" dstnodeid="64" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="69" dstpinname="Input">
    </LINK>
    <NODE id="57" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Input String|">
@@ -211,8 +209,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="57" srcpinname="Output String" dstnodeid="62" dstpinname="Input String">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="63" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="68" dstpinname="Input">
    </LINK>
@@ -481,7 +477,7 @@
    <LINK srcnodeid="73" srcpinname="OSCMessage" dstnodeid="86" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="87" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="5700" top="8175" width="7440" height="1470">
+   <BOUNDS type="Box" left="5700" top="8175" width="9375" height="2085">
    </BOUNDS>
    <BOUNDS type="Node" left="5700" top="8175" width="0" height="0">
    </BOUNDS>
@@ -493,11 +489,75 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="87" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="56" srcpinname="Output" dstnodeid="85" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="66" srcpinname="Output 1" dstnodeid="70" dstpinname="Do Send">
+   </LINK>
+   <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="4980" top="8325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="88" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="88" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="87" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="4020" top="2685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" values="||||">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="89" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Result" dstnodeid="63" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="69" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="2310" top="2280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="String">
+   </PIN>
+   <PIN pinname="Comparison" slicecount="1" values="Contains">
+   </PIN>
+   <PIN pinname="Hits" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="90" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="1740" top="2850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Hits" dstnodeid="91" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Hits" dstnodeid="91" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Output" dstnodeid="64" dstpinname="Switch">
    </LINK>
    </PATCH>

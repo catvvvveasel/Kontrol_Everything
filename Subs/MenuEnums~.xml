@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\MenuEnums.v4p" systemname="MenuEnums" filename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" scrollx="1185" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="10515" top="-150" width="15885" height="15060">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\MenuEnums.v4p" systemname="MenuEnums" filename="D:\App\EuroVision\CatGui0.5\Subs\MenuEnums.v4p" scrollx="1185" scrolly="1440" bgcolor="11442563">
+   <BOUNDS type="Window" left="10455" top="-150" width="15945" height="15060">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="68" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4515" top="1200" width="1365" height="240">
@@ -1665,5 +1665,29 @@
    <LINK srcnodeid="127" srcpinname="Layer" dstnodeid="55" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="188" srcpinname="Output" dstnodeid="30" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="193" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8235" top="14520" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8235" top="14520" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Offset">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="138" srcpinname="Output" dstnodeid="193" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="194" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="6690" top="14565" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6690" top="14565" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="134" srcpinname="Transform Out" dstnodeid="194" dstpinname="Input Node">
    </LINK>
    </PATCH>

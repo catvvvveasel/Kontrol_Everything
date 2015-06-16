@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="30" scrolly="1200" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="0" scrolly="11235" bgcolor="11442563">
    <NODE id="12" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -20,7 +20,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="1125" top="3810" width="17205" height="11430">
+   <BOUNDS type="Window" left="6855" top="3075" width="17205" height="11430">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="20">
    <BOUNDS type="Node" left="12180" top="2175" width="100" height="100">
@@ -47,9 +47,9 @@
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="65">
-   <BOUNDS type="Node" left="10095" top="17115" width="100" height="100">
+   <BOUNDS type="Node" left="10215" top="16965" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10095" top="17115" width="795" height="240">
+   <BOUNDS type="Box" left="10215" top="16965" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Is Color|">
    </PIN>
@@ -895,13 +895,11 @@
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="388">
    <BOUNDS type="Node" left="5850" top="2190" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="Patch1">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="387" srcpinname="Input Value" dstnodeid="388" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="388" srcpinname="Count" dstnodeid="288" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="389" systemname="IOBox (String)">
@@ -1131,7 +1129,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3585" top="15015" width="12510" height="11775">
    </BOUNDS>
-   <BOUNDS type="Window" left="4320" top="1710" width="19245" height="12645">
+   <BOUNDS type="Window" left="8160" top="930" width="19245" height="12645">
    </BOUNDS>
    <PIN pinname="Evaluate" slicecount="1" visible="1" pintype="Input" values="0">
    </PIN>
@@ -1152,7 +1150,7 @@
    </LINK>
    <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="306" dstpinname="Is Color">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="306" dstpinname="Input">
+   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="306" dstpinname="BinSize">
    </LINK>
    <NODE systemname="AddPageButtons" filename="AddPageButtons.v4p" nodename="AddPageButtons.v4p" componentmode="Hidden" id="420">
    <BOUNDS type="Node" left="4237" top="7560" width="0" height="0">
@@ -1601,5 +1599,15 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="444" srcpinname="Y Output Value" dstnodeid="268" dstpinname="IsFileBrowser">
+   </LINK>
+   <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="445">
+   <BOUNDS type="Node" left="6705" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="PatchNames">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="445" srcpinname="Input Value" dstnodeid="388" dstpinname="Input">
    </LINK>
    </PATCH>

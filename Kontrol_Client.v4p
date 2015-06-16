@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" systemname="Kontrol_Client" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" scrollx="0" scrolly="7725">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" systemname="Kontrol_Client" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" scrollx="0" scrolly="0">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1575" top="3120" width="795" height="240">
    </BOUNDS>
@@ -52,24 +52,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Feedback Target UDP Port|">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6375" top="4380" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6375" top="4380" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="300">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="fps">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Mainloop">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="26" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="8940" top="3195" width="795" height="240">
    </BOUNDS>
@@ -82,7 +64,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="165" top="3255" width="19800" height="10695">
+   <BOUNDS type="Window" left="5625" top="1995" width="16095" height="14775">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -159,7 +141,7 @@
    <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="97">
-   <BOUNDS type="Node" left="3315" top="11160" width="100" height="100">
+   <BOUNDS type="Node" left="2910" top="10920" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" encoded="1" values="||">
    </PIN>
@@ -169,11 +151,13 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Ignore between" slicecount="1" values="None">
+   <PIN pinname="Ignore between" slicecount="1" values="Pipe">
+   </PIN>
+   <PIN pinname="Keep Quotes" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="102">
-   <BOUNDS type="Node" left="3300" top="11580" width="100" height="100">
+   <BOUNDS type="Node" left="2895" top="11340" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -229,7 +213,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="3180" top="13140" width="100" height="100">
+   <BOUNDS type="Node" left="2925" top="12585" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="13" values="0~,|201.8,2.4,0.6~|,|2,2~|,0~,|-1649.3,1377.0,1823.5~|,|2,2~|,0~,5.00~,|2,2~|,0~,1.0~,|2,2|,|&cr;|">
    </PIN>
@@ -242,26 +226,6 @@
    <PIN pinname="Output 3" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="128">
-   <BOUNDS type="Node" left="2340" top="11400" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="878783">
-   </PIN>
-   <PIN pinname="Input 1" slicecount="1" visible="1" values="40">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="127">
-   <BOUNDS type="Node" left="2355" top="11880" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Up Edge" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="128" srcpinname="Output" dstnodeid="127" dstpinname="Input">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="138">
    <BOUNDS type="Node" left="3255" top="15585" width="100" height="100">
    </BOUNDS>
@@ -469,9 +433,9 @@
    <LINK srcnodeid="199" srcpinname="Output" dstnodeid="142" dstpinname="Pointer">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="202" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4230" top="10665" width="795" height="240">
+   <BOUNDS type="Box" left="3105" top="10050" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4230" top="10665" width="0" height="0">
+   <BOUNDS type="Node" left="3105" top="10050" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="¬¬¬¬¬¬">
    </PIN>
@@ -605,7 +569,7 @@
    <LINK srcnodeid="210" srcpinname="Layer" dstnodeid="214" dstpinname="Input Node">
    </LINK>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="223">
-   <BOUNDS type="Node" left="3285" top="5745" width="100" height="100">
+   <BOUNDS type="Node" left="3240" top="5760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="60" values="|/73/896/12/0/Y Input Value&cr;&lf;CameraPos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;TakeCamera-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/12/1/Y Input Value&cr;&lf;CameraTarget&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;TakeCamera-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/12/2/Y Input Value&cr;&lf;FOV&cr;&lf;&cr;&lf;Endless, 1, 1, 0.001, 160, 0.01, , 1&cr;&lf;TakeCamera-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0.001&cr;&lf;160&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/16/0/Y Input Value&cr;&lf;Fx Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 10, 1, , 4&cr;&lf;Specials-Kontrols&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/16/1/Y Input Value&cr;&lf;Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Specials-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/16/2/Y Input Value&cr;&lf;TIme&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 60, 0.01, , 4&cr;&lf;Specials-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;60&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/16/3/Color Input&cr;&lf;Colour&cr;&lf;&cr;&lf;HSVAField, r=100% g=100% b=100% a=100% , HasAlpha&cr;&lf;Specials-Kontrols&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/19/0/Y Input Value&cr;&lf;PropsIndex&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Props-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/19/1/Y Input Value&cr;&lf;Props Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -99999999, 99999999, 0.01, , 4&cr;&lf;Props-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/19/2/Y Input Value&cr;&lf;Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -99999999, 99999999, 0.01, , 4&cr;&lf;Props-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/10/Y Input Value&cr;&lf;Artist3 Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -360, 360, 0.01, , 1&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-360&cr;&lf;360&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/11/Y Input Value&cr;&lf;Artist3 Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/12/Y Input Value&cr;&lf;Artist2 Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/13/Y Input Value&cr;&lf;Artist2 Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -360, 360, 0.01, , 1&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-360&cr;&lf;360&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/14/Y Input Value&cr;&lf;Artist2 Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/15/Y Input Value&cr;&lf;Artist1 Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/16/Y Input Value&cr;&lf;Artist1 Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -360, 360, 0.01, , 1&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-360&cr;&lf;360&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/17/Y Input Value&cr;&lf;Artist1 Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/6/Y Input Value&cr;&lf;Artist4 Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/7/Y Input Value&cr;&lf;Artist4 Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -360, 360, 0.01, , 1&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-360&cr;&lf;360&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/8/Y Input Value&cr;&lf;Artist4 Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/22/9/Y Input Value&cr;&lf;Artist3 Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/0/Color Input&cr;&lf;MovingLights&cr;&lf;&cr;&lf;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&cr;&lf;Lights-Kontrols&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/1/Color Input&cr;&lf;LEDs&cr;&lf;&cr;&lf;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&cr;&lf;Lights-Kontrols&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/10/Y Input Value&cr;&lf;Zoom&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/2/Y Input Value&cr;&lf;Width&cr;&lf;&cr;&lf;Endless, 1, 0, -1, 1, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-1&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/3/Y Input Value&cr;&lf;Height&cr;&lf;&cr;&lf;Endless, 1, 0, -1, 1, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-1&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/4/Y Input Value&cr;&lf;Period&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 60, 0.01, s, 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;60&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/5/Y Input Value&cr;&lf;Length&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 10, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/6/Y Input Value&cr;&lf;LengthFront&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 10, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/7/Y Input Value&cr;&lf;Fx&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 30, 1, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;30&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/27/9/Y Input Value&cr;&lf;ColFx&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 30, 1, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;30&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/0/Y Input Value&cr;&lf;Proj File Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 50, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/1/Y Input Value&cr;&lf;Proj Alpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/10/Y Input Value&cr;&lf;ProjSyncOffset&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 500, 0.01, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;500&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/11/Y Input Value&cr;&lf;ProjPlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/12/Y Input Value&cr;&lf;MaskAlpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/13/Y Input Value&cr;&lf;MaskFile&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/14/Y Input Value&cr;&lf;Offset&cr;&lf;&cr;&lf;Endless, 1, 0, -2, 2, 0.01, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/15/Color Input&cr;&lf;ProjCol&cr;&lf;&cr;&lf;HSVAField, r=  0% g=  0% b=  0% , HasNoAlpha&cr;&lf;ProjVideoControls&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/2/Y Input Value&cr;&lf;Proj Sync&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/4/9/Y Input Value&cr;&lf;MaskPlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/5/0/Y Input Value&cr;&lf;CubeFile Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 50, 1, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/5/1/Y Input Value&cr;&lf;CubeAlpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/5/2/Y Input Value&cr;&lf;CubeSync&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/5/5/Y Input Value&cr;&lf;CubePlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/5/6/Y Input Value&cr;&lf;Offset&cr;&lf;&cr;&lf;Endless, 1, 0, -2, 2, 0.01, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/5/7/Color Input&cr;&lf;CubeCol&cr;&lf;&cr;&lf;HSVAField, r=  0% g=  0% b=  0% , HasNoAlpha&cr;&lf;CubeVideoControls&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/6/0/Y Input Value&cr;&lf;Floor File Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 50, 1, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/6/1/Y Input Value&cr;&lf;Floor Alpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/6/2/Y Input Value&cr;&lf;Floor Sync&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/6/5/Y Input Value&cr;&lf;FloorPlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/6/6/Y Input Value&cr;&lf;Offset&cr;&lf;&cr;&lf;Endless, 1, 0, -2, 2, 0.01, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/6/7/Color Input&cr;&lf;FloorCol&cr;&lf;&cr;&lf;HSVAField, r=100% g=100% b=100% a=100% , HasAlpha&cr;&lf;FloorVideoControls&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/7/0/Y Input Value&cr;&lf;Rear File Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 50, 1, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/7/1/Y Input Value&cr;&lf;Rear Alpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/7/2/Y Input Value&cr;&lf;Rear Sync&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/7/6/Y Input Value&cr;&lf;RearPlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/7/7/Y Input Value&cr;&lf;Offset&cr;&lf;&cr;&lf;Endless, 1, 0, -2, 2, 0.01, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|,|/73/896/7/8/Color Input&cr;&lf;RearCol&cr;&lf;&cr;&lf;HSVAField, r=100% g=100% b=100% a=100% , HasAlpha&cr;&lf;RearVideoControls&cr;&lf;Color&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;¬¬¬¬¬¬|">
    </PIN>
@@ -721,7 +685,7 @@
    <LINK srcnodeid="221" srcpinname="Output" dstnodeid="235" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="239">
-   <BOUNDS type="Node" left="3315" top="10650" width="100" height="100">
+   <BOUNDS type="Node" left="2910" top="10410" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Operand 1" visible="1" slicecount="1" encoded="1" values="||">
    </PIN>
@@ -995,7 +959,7 @@
    <LINK srcnodeid="81" srcpinname="Output" dstnodeid="265" dstpinname="Input">
    </LINK>
    <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="266">
-   <BOUNDS type="Node" left="8355" top="7380" width="100" height="100">
+   <BOUNDS type="Node" left="8355" top="7875" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1003,9 +967,11 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="263" srcpinname="Output" dstnodeid="266" dstpinname="Input 1">
@@ -1013,7 +979,7 @@
    <LINK srcnodeid="264" srcpinname="Output" dstnodeid="266" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="267">
-   <BOUNDS type="Node" left="8355" top="7890" width="100" height="100">
+   <BOUNDS type="Node" left="8370" top="8670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1025,9 +991,9 @@
    <LINK srcnodeid="266" srcpinname="Output" dstnodeid="267" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="268" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="8880" top="7515" width="285" height="240">
+   <BOUNDS type="Box" left="8895" top="8295" width="285" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8880" top="7515" width="0" height="0">
+   <BOUNDS type="Node" left="8895" top="8295" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="~">
    </PIN>
@@ -1041,7 +1007,7 @@
    <LINK srcnodeid="268" srcpinname="Output String" dstnodeid="267" dstpinname="Intersperse String">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="269">
-   <BOUNDS type="Node" left="8340" top="8295" width="100" height="100">
+   <BOUNDS type="Node" left="8355" top="9075" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="60" values="|/73/896/12/0/Y Input Value&cr;&lf;CameraPos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;TakeCamera-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/12/1/Y Input Value&cr;&lf;CameraTarget&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;TakeCamera-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/12/2/Y Input Value&cr;&lf;FOV&cr;&lf;&cr;&lf;Endless, 1, 1, 0.001, 160, 0.01, , 1&cr;&lf;TakeCamera-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0.001&cr;&lf;160&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/16/0/Y Input Value&cr;&lf;Fx Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 10, 1, , 4&cr;&lf;Specials-Kontrols&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/16/1/Y Input Value&cr;&lf;Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Specials-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/16/2/Y Input Value&cr;&lf;TIme&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 60, 0.01, , 4&cr;&lf;Specials-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;60&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/16/3/Color Input&cr;&lf;Colour&cr;&lf;&cr;&lf;HSVAField, r=100% g=100% b=100% a=100% , HasAlpha&cr;&lf;Specials-Kontrols&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0|,|/73/896/19/0/Y Input Value&cr;&lf;PropsIndex&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Props-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/19/1/Y Input Value&cr;&lf;Props Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -99999999, 99999999, 0.01, , 4&cr;&lf;Props-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/19/2/Y Input Value&cr;&lf;Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -99999999, 99999999, 0.01, , 4&cr;&lf;Props-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/10/Y Input Value&cr;&lf;Artist3 Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -360, 360, 0.01, , 1&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-360&cr;&lf;360&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/11/Y Input Value&cr;&lf;Artist3 Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/12/Y Input Value&cr;&lf;Artist2 Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/13/Y Input Value&cr;&lf;Artist2 Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -360, 360, 0.01, , 1&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-360&cr;&lf;360&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/14/Y Input Value&cr;&lf;Artist2 Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/15/Y Input Value&cr;&lf;Artist1 Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/16/Y Input Value&cr;&lf;Artist1 Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -360, 360, 0.01, , 1&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-360&cr;&lf;360&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/17/Y Input Value&cr;&lf;Artist1 Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/6/Y Input Value&cr;&lf;Artist4 Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/7/Y Input Value&cr;&lf;Artist4 Rot&cr;&lf;&cr;&lf;Endless, 1, 0, -360, 360, 0.01, , 1&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-360&cr;&lf;360&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/8/Y Input Value&cr;&lf;Artist4 Pos&cr;&lf;&cr;&lf;Endless, 3, 0, -100, 100, 0.01, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-100&cr;&lf;100&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/22/9/Y Input Value&cr;&lf;Artist3 Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;Performers-Kontrol&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/27/0/Color Input&cr;&lf;MovingLights&cr;&lf;&cr;&lf;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&cr;&lf;Lights-Kontrols&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0|,|/73/896/27/1/Color Input&cr;&lf;LEDs&cr;&lf;&cr;&lf;HSVAField, r=  0% g=100% b=  0% a=100% , HasAlpha&cr;&lf;Lights-Kontrols&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0|,|/73/896/27/10/Y Input Value&cr;&lf;Zoom&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/27/2/Y Input Value&cr;&lf;Width&cr;&lf;&cr;&lf;Endless, 1, 0, -1, 1, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-1&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/27/3/Y Input Value&cr;&lf;Height&cr;&lf;&cr;&lf;Endless, 1, 0, -1, 1, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-1&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/27/4/Y Input Value&cr;&lf;Period&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 60, 0.01, s, 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;60&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/27/5/Y Input Value&cr;&lf;Length&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 10, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/27/6/Y Input Value&cr;&lf;LengthFront&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 10, 0.01, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/27/7/Y Input Value&cr;&lf;Fx&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 30, 1, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;30&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/27/9/Y Input Value&cr;&lf;ColFx&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 30, 1, , 4&cr;&lf;Lights-Kontrols&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;30&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/0/Y Input Value&cr;&lf;Proj File Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 50, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/1/Y Input Value&cr;&lf;Proj Alpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/10/Y Input Value&cr;&lf;ProjSyncOffset&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 500, 0.01, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;500&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/11/Y Input Value&cr;&lf;ProjPlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/12/Y Input Value&cr;&lf;MaskAlpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/13/Y Input Value&cr;&lf;MaskFile&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 20, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/14/Y Input Value&cr;&lf;Offset&cr;&lf;&cr;&lf;Endless, 1, 0, -2, 2, 0.01, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/15/Color Input&cr;&lf;ProjCol&cr;&lf;&cr;&lf;HSVAField, r=  0% g=  0% b=  0% , HasNoAlpha&cr;&lf;ProjVideoControls&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0|,|/73/896/4/2/Y Input Value&cr;&lf;Proj Sync&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/4/9/Y Input Value&cr;&lf;MaskPlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;ProjVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/5/0/Y Input Value&cr;&lf;CubeFile Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 50, 1, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/5/1/Y Input Value&cr;&lf;CubeAlpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/5/2/Y Input Value&cr;&lf;CubeSync&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/5/5/Y Input Value&cr;&lf;CubePlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/5/6/Y Input Value&cr;&lf;Offset&cr;&lf;&cr;&lf;Endless, 1, 0, -2, 2, 0.01, , 4&cr;&lf;CubeVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/5/7/Color Input&cr;&lf;CubeCol&cr;&lf;&cr;&lf;HSVAField, r=  0% g=  0% b=  0% , HasNoAlpha&cr;&lf;CubeVideoControls&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0|,|/73/896/6/0/Y Input Value&cr;&lf;Floor File Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 50, 1, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/6/1/Y Input Value&cr;&lf;Floor Alpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/6/2/Y Input Value&cr;&lf;Floor Sync&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/6/5/Y Input Value&cr;&lf;FloorPlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/6/6/Y Input Value&cr;&lf;Offset&cr;&lf;&cr;&lf;Endless, 1, 0, -2, 2, 0.01, , 4&cr;&lf;FloorVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/6/7/Color Input&cr;&lf;FloorCol&cr;&lf;&cr;&lf;HSVAField, r=100% g=100% b=100% a=100% , HasAlpha&cr;&lf;FloorVideoControls&cr;&lf;Color&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0|,|/73/896/7/0/Y Input Value&cr;&lf;Rear File Index&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 50, 1, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Integer&cr;&lf;Endless&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/7/1/Y Input Value&cr;&lf;Rear Alpha&cr;&lf;&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/7/2/Y Input Value&cr;&lf;Rear Sync&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/7/6/Y Input Value&cr;&lf;RearPlay&cr;&lf;&cr;&lf;Toggle, 1, 0, 0, 1, 1, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/7/7/Y Input Value&cr;&lf;Offset&cr;&lf;&cr;&lf;Endless, 1, 0, -2, 2, 0.01, , 4&cr;&lf;RearVideoControls&cr;&lf;Value&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|,|/73/896/7/8/Color Input&cr;&lf;RearCol&cr;&lf;&cr;&lf;HSVAField, r=100% g=100% b=100% a=100% , HasAlpha&cr;&lf;RearVideoControls&cr;&lf;Color&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-2&cr;&lf;2&cr;&lf;Toggle&cr;&lf;&cr;&lf;0|">
    </PIN>
@@ -1069,21 +1035,21 @@
    </PIN>
    </NODE>
    <NODE id="125" systemname="Kontrol-DoFades_Client" filename="Kontrol_Client_Subs\Kontrol-DoFades_Client.v4p" nodename="Kontrol_Client_Subs\Kontrol-DoFades_Client.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="1965" top="14820" width="100" height="100">
+   <BOUNDS type="Node" left="1965" top="15150" width="100" height="100">
    </BOUNDS>
    <PIN pinname="AllFadesString" visible="1" slicecount="25" pintype="Input" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
-   <PIN pinname="Spread" visible="1" pintype="Input" slicecount="93" values="33579999.6642,-99999999,-25959999.7404,| 0|,| 1|,| 0|,| 0|,| 1|,0.0000,0,D:\Hap_Movs\CasioFire\CIMG1161_enhanced.mov,D:\Hap_Movs\ASSORTED\7^Comp^1-AIC.mov,16mm,16mm1.mov,0,0,| 0|,1,| 0|,0,1,1,0,0,16mm,16mm1.mov,0,0,| 0|,| 0|,| 0|,1,| 0|,0,1,| 0|,16mm,16mm1.mov,0,0,| 0|,| 0|,| 0|,1,| 0|,0,1,1,0,Fade,GridArray,1,1,| 1|,| 1|,| 1|,2,2,1,0.5,| 1|,0,Disabled,| 0|,1,|1,1,1|,| 1|,0,0,|0,0,0|,| 0|,0,|0,0,0|,| 0|,0,|0,0,0|,| 0|,0,|0,0,0|,| 0|,0,| 0|,| 0|,0.899999976158142,|1,1|,0,1,1,0.5,| 1|,0,| 1|,| 0|">
+   <PIN pinname="Spread" visible="1" pintype="Input" slicecount="15" values="1,1,84.0000,255.0000,|||-0.1377,0.5100,0.4323,1.0000|||,-0.0000,0.0000,-0.0000,|0.0000,0.0000,0.0000|,|||1.0000,1.0000,-0.3137,1.0000|||,|0,0,0.0000|,Disabled,|0.0000,0.0000,0.0000|,|0,0|,|&lt;-- These menus control &cr;&lf;1 The Scene currently lod these are sdecific to your datch &cr;&lf;so you could for examdle have a VJ datchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â» with different &cr;&lf;scenes for different venues/acts but using the same datches.|">
    </PIN>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
    <PIN pinname="ChangeSeq" visible="1" slicecount="1" pintype="Input" values="0">
    </PIN>
-   <PIN pinname="Index" visible="1" pintype="Input">
+   <PIN pinname="Index" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
    <BOUNDS type="Window" left="7005" top="0" width="20910" height="15750">
    </BOUNDS>
-   <BOUNDS type="Box" left="15" top="2145" width="4800" height="3600">
+   <BOUNDS type="Box" left="15" top="2475" width="4800" height="3600">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -1098,14 +1064,12 @@
    <PIN pinname="FadeType" visible="1" slicecount="25" values="|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="127" srcpinname="Up Edge" dstnodeid="125" dstpinname="Index">
-   </LINK>
    <NODE id="126" systemname="Kontrol-Client_Osc" filename="Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" componentmode="Hidden" nodename="Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="1455" top="16695" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1455" top="16695" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="9885" top="1005" width="15750" height="13800">
+   <BOUNDS type="Window" left="-15105" top="4980" width="15750" height="13800">
    </BOUNDS>
    <PIN pinname="Port" visible="1" pintype="Input">
    </PIN>
@@ -1147,7 +1111,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="45" top="2865" width="7440" height="3945">
    </BOUNDS>
-   <BOUNDS type="Window" left="1320" top="945" width="22710" height="9030">
+   <BOUNDS type="Window" left="3900" top="10455" width="22710" height="9030">
    </BOUNDS>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
@@ -1195,7 +1159,7 @@
    <LINK srcnodeid="235" srcpinname="Output" dstnodeid="228" dstpinname="Strings">
    </LINK>
    <NODE systemname="NetSendTCP_" filename="Kontrol_Client_Subs\NetSendTCP_.v4p" nodename="Kontrol_Client_Subs\NetSendTCP_.v4p" componentmode="Hidden" id="271">
-   <BOUNDS type="Node" left="8340" top="8985" width="100" height="100">
+   <BOUNDS type="Node" left="8340" top="9510" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Strings" visible="1" slicecount="1" values="|0.1485,-0.9892,0.0000,0.0000,0.0000,0.0000,0.0000~2147495362.0000,0.0000~0&cr;&lf;¬¬¬¬¬¬|">
    </PIN>
@@ -1415,7 +1379,7 @@
    <LINK srcnodeid="249" srcpinname="Output String" dstnodeid="298" dstpinname="Operand 2">
    </LINK>
    <NODE systemname="SizeToThumb (DX11.TextureFX)" filename="texture11\SizeToThumb.tfx" nodename="SizeToThumb (DX11.TextureFX)" componentmode="Hidden" id="300">
-   <BOUNDS type="Node" left="17160" top="10125" width="100" height="100">
+   <BOUNDS type="Node" left="19950" top="10365" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1600,46 +1564,8 @@
    </NODE>
    <LINK srcnodeid="318" srcpinname="Output" dstnodeid="323" dstpinname="Input">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="324" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="7140" top="13695" width="3120" height="4485">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7140" top="13695" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Input String" visible="1" encoded="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="326" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="5160" top="12660" width="855" height="795">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5160" top="12660" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|~&cr;&lf;|">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="327">
-   <BOUNDS type="Node" left="3315" top="11955" width="100" height="100">
+   <BOUNDS type="Node" left="2910" top="11715" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Operand 1" visible="1" slicecount="12" values="0.00~,|201.8,2.4,0.6~|,|2,2~|,0.00~,|-167.1,1377.0,1823.5~|,|2,2~|,0.00~,6.27~,|2,2~|,0.00~,8.0~,|2,2|">
    </PIN>
@@ -1649,7 +1575,7 @@
    </PIN>
    </NODE>
    <NODE systemname="CDR (String)" nodename="CDR (String)" componentmode="Hidden" id="328">
-   <BOUNDS type="Node" left="3180" top="12660" width="100" height="100">
+   <BOUNDS type="Node" left="2910" top="12105" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1717,7 +1643,7 @@
    <LINK srcnodeid="332" srcpinname="Output" dstnodeid="331" dstpinname="Count">
    </LINK>
    <NODE systemname="UDP (Network Server String)" nodename="UDP (Network Server String)" componentmode="Hidden" id="333" filename="%VVVV%\lib\nodes\modules\Network\UDP (Network Server String).v4p">
-   <BOUNDS type="Node" left="5565" top="14280" width="100" height="100">
+   <BOUNDS type="Node" left="5145" top="9345" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Local Port" slicecount="1" visible="1" values="2001">
    </PIN>
@@ -1725,7 +1651,7 @@
    </PIN>
    </NODE>
    <NODE id="341" nodename="Tokenizer (String)" systemname="Tokenizer (String)">
-   <BOUNDS height="0" left="5565" top="15330" type="Node" width="0">
+   <BOUNDS height="0" left="5130" top="10125" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Separator" slicecount="1" visible="1" values="¬¬¬¬¬¬">
    </PIN>
@@ -1737,7 +1663,7 @@
    </PIN>
    </NODE>
    <NODE id="340" nodename="S+H (String)" systemname="S+H (String)">
-   <BOUNDS height="0" left="5565" top="16080" type="Node" width="0">
+   <BOUNDS height="0" left="5130" top="10875" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1749,7 +1675,7 @@
    <LINK dstnodeid="340" dstpinname="Input" srcnodeid="341" srcpinname="Output">
    </LINK>
    <NODE id="339" nodename="EQ (String)" systemname="EQ (String)">
-   <BOUNDS height="0" left="5685" top="15675" type="Node" width="0">
+   <BOUNDS height="0" left="5250" top="10470" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1761,9 +1687,9 @@
    <LINK dstnodeid="340" dstpinname="Set" srcnodeid="339" srcpinname="Inverse Output">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="338" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="5775" top="14925" width="795" height="240">
+   <BOUNDS type="Box" left="5340" top="9720" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5775" top="14925" width="0" height="0">
+   <BOUNDS type="Node" left="5340" top="9720" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="¬¬¬¬¬¬">
    </PIN>
@@ -1789,7 +1715,7 @@
    <LINK srcnodeid="340" srcpinname="Output" dstnodeid="239" dstpinname="Operand 1">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="343">
-   <BOUNDS type="Node" left="5745" top="13755" width="100" height="100">
+   <BOUNDS type="Node" left="5325" top="8820" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1817,7 +1743,7 @@
    <LINK srcnodeid="344" srcpinname="Output" dstnodeid="246" dstpinname="Port">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="345">
-   <BOUNDS type="Node" left="9135" top="8580" width="100" height="100">
+   <BOUNDS type="Node" left="9135" top="9105" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
@@ -1843,8 +1769,6 @@
    <LINK srcnodeid="230" srcpinname="Y Output Value" dstnodeid="346" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="346" srcpinname="Output" dstnodeid="294" dstpinname="Local Port">
-   </LINK>
-   <LINK srcnodeid="328" srcpinname="Remainder" dstnodeid="324" dstpinname="Input String">
    </LINK>
    <NODE systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden" id="353">
    <BOUNDS type="Node" left="18720" top="9795" width="100" height="100">
@@ -1949,7 +1873,7 @@
    <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Listening UDP Port">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="360">
-   <BOUNDS type="Node" left="1965" top="14025" width="100" height="100">
+   <BOUNDS type="Node" left="1965" top="13155" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1962,6 +1886,144 @@
    </NODE>
    <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="360" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="360" srcpinname="Output" dstnodeid="125" dstpinname="Spread">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="361" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="9555" top="7380" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9555" top="7380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\..\Hap_Movs">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="361" srcpinname="Output String" dstnodeid="266" dstpinname="Input 4">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="362" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3705" top="18210" width="9090" height="10695">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3705" top="18210" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="340" srcpinname="Output" dstnodeid="362" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="365">
+   <BOUNDS type="Node" left="1965" top="13725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="¶">
+   </PIN>
+   <PIN pinname="To" slicecount="1" visible="1" values="|&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="360" srcpinname="Output" dstnodeid="365" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="366">
+   <BOUNDS type="Node" left="1965" top="14250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="15" values="1,1,84,255,|||-0.13770,0.51000,0.43230,1.00000|||,-0,0,-0,|0,0,0|,|||1.00000,1.00000,-0.31370,1.00000|||,|0,0,0|,Disabled,|0,0,0|,|0,0|,|||&lt;--^These^menus^control^&cr;&lf;1^The^Scene^currently^lod^these^are^specific^to^your^patch^&cr;&lf;so^you^could^for^example^have^a^VJ^patch,^with^different^&cr;&lf;scenes^for^different^venues/acts^but^using^the^same^patches.|||">
+   </PIN>
+   <PIN pinname="From" slicecount="1" visible="1" values="»">
+   </PIN>
+   <PIN pinname="To" slicecount="1" visible="1" pintype="Input" values="|,|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="365" srcpinname="Output" dstnodeid="366" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="366" srcpinname="Output" dstnodeid="125" dstpinname="Spread">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="369" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2925" top="13125" width="540" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2925" top="13125" width="540" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="space">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="370" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2910" top="13650" width="1260" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2910" top="13650" width="1260" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|carridge return|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="371" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2910" top="14175" width="735" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2910" top="14175" width="735" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="commas">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="8" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4770" top="4095" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4770" top="4095" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="300">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="fps">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Mainloop">
+   </PIN>
+   </NODE>
+   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
+   <BOUNDS type="Node" left="4965" top="4860" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Maximum forground fps" visible="1">
+   </PIN>
+   <PIN pinname="Maximum background fpsS" visible="1">
+   </PIN>
+   <PIN pinname="Current Frame" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum forground fps">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum background fpsS">
+   </LINK>
+   <LINK srcnodeid="-6" srcpinname="Current Frame" dstnodeid="163" dstpinname="Input 2">
    </LINK>
    </PATCH>

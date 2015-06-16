@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="60" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="2355" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Input String" visible="1" slicecount="2" values="ColorSilly,ScaleXSilly">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="3735" top="4410" width="22530" height="12660">
+   <BOUNDS type="Window" left="4635" top="3630" width="22530" height="12660">
    </BOUNDS>
    <NODE id="26" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="SubType">
@@ -313,9 +313,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="133" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="15330" top="13170" width="795" height="240">
+   <BOUNDS type="Box" left="16515" top="13560" width="405" height="255">
    </BOUNDS>
-   <BOUNDS type="Node" left="15330" top="13170" width="0" height="0">
+   <BOUNDS type="Node" left="16515" top="13560" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -325,7 +325,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Defaults">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="3" values="|0,0,0,0|,| 1, 1, 1|,| Disabled|">
+   <PIN pinname="Input String" visible="1" slicecount="92" values="| 0|,| 0|,| 0|,| 0|,| 1|,| 0|,| 0|,| 1|,| 1|,| 0|,| *.mov|,| 0|,| 0|,| 0|,| 0|,| 1|,| 0|,| 0|,| 1|,| 1|,| 0|,| |,,16mm,16mm1.mov,,| |,| |,| |,,,,,,,16mm,16mm1.mov,,| |,| |,| |,,,,,,,,Fade,GridArray,,| |,,| |,,,,,,,,Disabled,,,,,,,,,,,,,,,,,,,,,,| |,,,| |,,| |,,,| 0|">
    </PIN>
    </NODE>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="134">
@@ -579,7 +579,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="|1,1,1,1|">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="|||1,1,1,1|||">
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="8" values="0,0,0,0,0,0,0,0">
    </PIN>
@@ -587,8 +587,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="175" srcpinname="Output" dstnodeid="179" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="179" srcpinname="Output" dstnodeid="133" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="184" systemname="IOBox (String)">
    <BOUNDS type="Box" left="3885" top="15435" width="2235" height="2355">
@@ -627,7 +625,7 @@
    <LINK srcnodeid="159" srcpinname="Output 1" dstnodeid="155" dstpinname="Input 6">
    </LINK>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="187">
-   <BOUNDS type="Node" left="14250" top="14010" width="100" height="100">
+   <BOUNDS type="Node" left="14265" top="15030" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1133,11 +1131,11 @@
    <LINK srcnodeid="173" srcpinname="Output" dstnodeid="170" dstpinname="Input 1">
    </LINK>
    <NODE id="186" systemname="Select (String)" nodename="Select (String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="14265" top="13155" width="100" height="100">
+   <BOUNDS type="Node" left="14250" top="14370" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" visible="1" slicecount="25" values="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="20" values="|Endless, 1, 1, 1, 500, 1, , 4|,|Endless, 1, 1, 1, 500, 1, , 4|,|Endless, 1, 1, -4, 4, 0.01, , 4|,|Endless, 1, 1, -4, 4, 0.01, , 4|,|HSVAField, r=100% g=100% b=100% a=100% , HasAlpha|,|Endless, 1, 0, 0, 1, 0.01, , 4|,|Endless, 1, 5, 0.5, 120, 0.01, s, 4|,|Endless, 1, 1, 1, 200, 0.01, s, 4|,|Endless, 3, 1, 0, 4, 0.01, , 4|,|PullDown, DX11.BlendPresets, Disabled|,|Slider, 3, 0, -2, 2, 0.01, , 4|,|Endless, 1, 1, 1, 500, 1, , 4|,|Endless, 1, 1, 1, 500, 1, , 4|,|Endless, 1, 10, 1, 120, 0.01, s, 4|,|Endless, 1, 30, 1, 120, 0.01, s, 4|,|HSVAField, r=100% g=100% b=100% a=100% , HasAlpha|,|Endless, 3, 0, -5, 5, 0.01, , 4|,|Endless, 3, 1, 0, 4, 0.01, , 4|,|PullDown, DX11.BlendPresets, Disabled|,|Slider, 3, 0, -2, 2, 0.01, , 4|">
+   <PIN pinname="Input" visible="1" slicecount="92" values="| 0|,| 0|,| 0|,| 0|,| 1|,| 0|,| 0|,| 1|,| 1|,| 0|,| *.mov|,| 0|,| 0|,| 0|,| 0|,| 1|,| 0|,| 0|,| 1|,| 1|,| 0|,| |,,16mm,16mm1.mov,,| |,| |,| |,,,,,,,16mm,16mm1.mov,,| |,| |,| |,,,,,,,,Fade,GridArray,,| |,,| |,,,,,,,,Disabled,,,,,,,,,,,,,,,,,,,,,,| |,,,| |,,| |,,,| 0|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1145,8 +1143,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="186" srcpinname="Output" dstnodeid="187" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="179" srcpinname="Output" dstnodeid="186" dstpinname="Input">
    </LINK>
    <NODE id="61" systemname="Select (String)" nodename="Select (String)" componentmode="Hidden">
    <BOUNDS type="Node" left="5205" top="9330" width="100" height="100">
@@ -1233,7 +1229,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4095" top="972" width="5440" height="7555">
    </BOUNDS>
-   <BOUNDS type="Window" left="5610" top="5340" width="13350" height="12480">
+   <BOUNDS type="Window" left="7200" top="1815" width="13350" height="12480">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1301,5 +1297,31 @@
    <LINK srcnodeid="212" srcpinname="Output 13" dstnodeid="269" dstpinname="Operand 1">
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 13" dstnodeid="216" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="GetDefaultsFilename" filename="GetDefaultsFilename.v4p" componentmode="Hidden" id="270" nodename="GetDefaultsFilename.v4p">
+   <BOUNDS type="Node" left="14250" top="13320" width="600" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14250" top="13320" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="735" top="1440" width="14250" height="8565">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="12" values="| 0|,| 0|,| 0|,| 0|,| 1|,| 0|,| 0|,| 1|,| 1|,| 0|,| *.mov|,| 0|">
+   </PIN>
+   <PIN pinname="SubTypes" visible="1">
+   </PIN>
+   <PIN pinname="Tag" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="179" srcpinname="Output" dstnodeid="270" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 5" dstnodeid="270" dstpinname="SubTypes">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 3" dstnodeid="270" dstpinname="Tag">
+   </LINK>
+   <LINK srcnodeid="270" srcpinname="Output" dstnodeid="133" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="270" srcpinname="Output" dstnodeid="186" dstpinname="Input">
    </LINK>
    </PATCH>
