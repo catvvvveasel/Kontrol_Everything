@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <BOUNDS type="Window" left="12930" top="75" width="15870" height="15675">
    </BOUNDS>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="108">
@@ -949,7 +949,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="360" top="2354" width="4510" height="6910">
    </BOUNDS>
-   <BOUNDS type="Window" left="9810" top="1665" width="18990" height="12645">
+   <BOUNDS type="Window" left="9810" top="0" width="18990" height="15750">
    </BOUNDS>
    <PIN pinname="SubType" visible="1" slicecount="4" values="|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 1, 1, 0.001, 160, 0.01, , 1|,|Endless, 3, 0, -100, 100, 0.01, , 4|">
    </PIN>
@@ -1201,7 +1201,7 @@
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
-   <BOUNDS type="Window" left="5460" top="210" width="23085" height="15540">
+   <BOUNDS type="Window" left="585" top="210" width="23085" height="15540">
    </BOUNDS>
    <BOUNDS type="Node" left="825" top="8415" width="100" height="100">
    </BOUNDS>
@@ -1290,4 +1290,64 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="471">
+   <BOUNDS type="Node" left="4800" top="675" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4800" top="675" width="1665" height="285">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="MediaFolder(fileIoBox">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="D:\Hap_Movs">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="472">
+   <BOUNDS type="Node" left="4830" top="2355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="C:\Users\chris\Desktop\vvvv_45beta33.7_x64\lib\assets\images\">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="MediaPath">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="473" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4350" top="2655" width="5865" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4350" top="2655" width="2385" height="1005">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|this should be replaced by Videos folder in project, or a path specified in the Tag&cr;&lf;Currently broken DO NOT use!|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="476">
+   <BOUNDS type="Node" left="5130" top="1215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Path" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="384" srcpinname="Output String" dstnodeid="476" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="477">
+   <BOUNDS type="Node" left="5130" top="1740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="lib\assets">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="476" srcpinname="Path" dstnodeid="477" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="477" srcpinname="Output" dstnodeid="472" dstpinname="Input Value">
+   </LINK>
    </PATCH>

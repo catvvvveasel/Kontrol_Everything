@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="0" scrolly="2880" bgcolor="11442563">
-   <BOUNDS type="Window" left="9810" top="1665" width="18990" height="12645">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="0" scrolly="5760" bgcolor="11442563">
+   <BOUNDS type="Window" left="9810" top="0" width="18990" height="15750">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
    <BOUNDS type="Node" left="915" top="3765" width="100" height="100">
@@ -1067,6 +1067,10 @@
    </PIN>
    <PIN pinname="IsEndless" visible="1" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="IsEnum" visible="1">
+   </PIN>
+   <PIN pinname="BinSize" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="39" srcpinname="Y Output Value" dstnodeid="182" dstpinname="Size">
    </LINK>
@@ -1369,7 +1373,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="11025" top="14160" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="1260" top="0" width="23940" height="15000">
+   <BOUNDS type="Window" left="1545" top="1335" width="23940" height="15000">
    </BOUNDS>
    <PIN pinname="IsFileName" visible="1">
    </PIN>
@@ -1382,6 +1386,8 @@
    <PIN pinname="Input" visible="1" slicecount="2" values="|D:\Hap_Movs\CatArt2\Speed BurnDL Comp 1-AIC.mov|,D:\Hap_Movs\ASSORTED\weather2crop-AIC.mov">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="BinSize" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="400" dstpinname="IsFileName">
@@ -1565,5 +1571,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="407" srcpinname="Output" dstnodeid="411" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="387" srcpinname="VectorSize" dstnodeid="400" dstpinname="BinSize">
+   </LINK>
+   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="182" dstpinname="IsEnum">
+   </LINK>
+   <LINK srcnodeid="387" srcpinname="VectorSize" dstnodeid="182" dstpinname="BinSize">
    </LINK>
    </PATCH>
