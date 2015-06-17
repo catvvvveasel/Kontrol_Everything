@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SliderS-Finetune.v4p" systemname="SliderS-Finetune" filename="D:\App\EuroVision\CatGui0.5\Subs\SliderS-Finetune.v4p" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SliderS-Finetune.v4p" systemname="SliderS-Finetune" filename="D:\App\EuroVision\CatGui0.5\Subs\SliderS-Finetune.v4p" bgcolor="11442563">
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1905" top="2145" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Set" visible="1">
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -16,14 +16,6 @@
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="2235" top="1755" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -119,7 +111,7 @@
    </PIN>
    </NODE>
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="4425" top="3690" width="100" height="100">
+   <BOUNDS type="Node" left="4440" top="4545" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -194,8 +186,6 @@
    </LINK>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="0" dstpinname="Set">
-   </LINK>
    <NODE id="19" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Click">
    </PIN>
@@ -203,9 +193,9 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2925" top="515" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="4" dstpinname="Input 1">
    </LINK>
    <NODE id="20" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -238,8 +228,6 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="11" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input">
-   </LINK>
    <NODE id="23" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="RightMouseActive">
    </PIN>
@@ -249,8 +237,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Output" dstnodeid="23" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input">
    </LINK>
    <BOUNDS type="Window" left="16380" top="6120" width="10005" height="8640">
    </BOUNDS>
@@ -299,5 +285,41 @@
    <LINK srcnodeid="9" srcpinname="Former Slice" dstnodeid="26" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="26" srcpinname="Output 1" dstnodeid="6" dstpinname="Index">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="2970" top="1095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="2" systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Node" left="2235" top="1755" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="0" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation Framebased)" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="29" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll">
+   <BOUNDS type="Node" left="4725" top="3870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Frames" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="29" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input">
    </LINK>
    </PATCH>

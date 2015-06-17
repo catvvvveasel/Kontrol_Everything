@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Waveform.v4p" systemname="Waveform" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Waveform.v4p" scrollx="3540" scrolly="4095" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Waveform.v4p" systemname="Waveform" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Waveform.v4p" scrollx="2415" scrolly="1245" bgcolor="11442563">
    <BOUNDS type="Window" left="13635" top="4575" width="12225" height="10980">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -567,7 +567,7 @@
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="46" dstpinname="Input">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="70">
-   <BOUNDS type="Node" left="9210" top="3465" width="100" height="100">
+   <BOUNDS type="Node" left="9210" top="3510" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -681,11 +681,11 @@
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="83" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="83" srcpinname="Output 1" dstnodeid="70" dstpinname="Input 7">
-   <LINKPOINT x="7234" y="6300">
+   <LINKPOINT x="7234" y="6312">
    </LINKPOINT>
-   <LINKPOINT x="11228" y="4410">
+   <LINKPOINT x="11228" y="4434">
    </LINKPOINT>
-   <LINKPOINT x="10556" y="3555">
+   <LINKPOINT x="10556" y="3588">
    </LINKPOINT>
    </LINK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="84">
@@ -703,11 +703,11 @@
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="54" dstpinname="Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="87" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8025" top="3900" width="480" height="480">
+   <BOUNDS type="Box" left="8025" top="3915" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="8025" top="3900" width="0" height="0">
+   <BOUNDS type="Node" left="8025" top="3915" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -853,12 +853,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Time" slicecount="1" values="5">
+   <PIN pinname="Time" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="79" srcpinname="Output" dstnodeid="80" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="87" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="44" srcpinname="Output" dstnodeid="88" dstpinname="Input">
    </LINK>
@@ -893,5 +891,7 @@
    <LINK srcnodeid="69" srcpinname="Output" dstnodeid="81" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="69" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="87" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

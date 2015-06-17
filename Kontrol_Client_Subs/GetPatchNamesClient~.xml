@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\GetPatchNamesClient.v4p" systemname="GetPatchNamesClient" filename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" scrollx="0" scrolly="4770">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Kontrol_Client_Subs\GetPatchNamesClient.v4p" systemname="GetPatchNamesClient" filename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" scrollx="0" scrolly="0">
    <NODE id="2" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="3900" top="10455" width="22710" height="9030">
+   <BOUNDS type="Window" left="465" top="990" width="22710" height="9030">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -451,7 +451,7 @@
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="50">
    <BOUNDS type="Node" left="9735" top="3135" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="15" values="22,65,0.5573,1,|||0.45000,0.05000,-0.12150,1.00000|||,-0.0165,60,65,|0,0,0|,|||1.00000,0.13330,0.01570,0.03240|||,|1.122,0.7637,0|,AlphaAdd,|0,9.5038,0|,|-0.6081,0.3613|,|||Double Right click on the label to enable record &cr;&lf;Only enabled channels will be then recorded into the preset &cr;&lf;You can only set the fade time after the preset is recorded.|||">
    </PIN>
    <PIN pinname="From" slicecount="1" values="| |">
    </PIN>
@@ -460,8 +460,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="50" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="51" systemname="IOBox (String)">
    <BOUNDS type="Box" left="12420" top="750" width="795" height="240">
    </BOUNDS>
@@ -583,5 +581,39 @@
    <LINK srcnodeid="53" srcpinname="Output" dstnodeid="59" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="60" srcpinname="Output" dstnodeid="24" dstpinname="Input 13">
+   </LINK>
+   <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="10905" top="2460" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="15" values="336.6206,88.8635,1.0914,-0.9988,|||0.45000,0.05000,-0.12150,1.00000|||,-0.0165,60,65,|0,0,0|,|||1.00000,0.12940,0.01570,0.16860|||,|0.3112,19.2339,0|,AlphaAdd,|0,0.3414,0|,|-0.6081,0.3613|,0.0000">
+   </PIN>
+   <PIN pinname="Set" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="62">
+   <BOUNDS type="Node" left="11550" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="DampedValueChange">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="12060" top="2010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Input Value" dstnodeid="63" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="61" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="50" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Values" dstnodeid="61" dstpinname="Input">
    </LINK>
    </PATCH>
