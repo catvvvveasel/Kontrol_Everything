@@ -49,13 +49,15 @@
    </PIN>
    <PIN pinname="Horizontal Align" slicecount="1" values="Left">
    </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)" exposed="1">
    <BOUNDS type="Box" left="5385" top="2145" width="5925" height="2595">
    </BOUNDS>
    <BOUNDS type="Node" left="5385" top="2145" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|&lt;-- These menus control &cr;&lf;1 The Scene currently loaded, these are specific to your patch, &cr;&lf;so you could for example have a VJ patch, with different &cr;&lf;scenes for different venues/acts but using the same patches.|">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|Double Right click on the label to enable record &cr;&lf;Only enabled channels will be then recorded into the preset &cr;&lf;You can only set the fade time after the preset is recorded.|">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="DX11">
    </PIN>
@@ -73,13 +75,11 @@
    <NODE systemname="WithinProjection (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="WithinProjection (DX11.Layer)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="3600" top="6825" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Layer In" visible="1">
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="5" dstpinname="Layer In">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Layer Out" dstnodeid="2" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="6">
@@ -88,6 +88,8 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    <PIN pinname="TranslateXY" visible="1">
+   </PIN>
+   <PIN pinname="ScaleXY" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Transform Out" dstnodeid="3" dstpinname="Transform In">
@@ -99,6 +101,10 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4110" top="2355" width="0" height="0">
    </BOUNDS>
+   <PIN pinname="Minimum" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="6" dstpinname="TranslateXY">
    </LINK>
@@ -130,4 +136,58 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6780" top="7770" width="4755" height="1260">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6780" top="7770" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="DX11">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|Now press the control key &cr;&lf;You can set the fade time, and interpolation here, you MUST have triggered &cr;&lf;a preset for this to work correctly, and you must record it afterwards|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output String" dstnodeid="13" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="4770" top="5565" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="3" dstpinname="Color">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4290" top="2955" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4290" top="2955" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="6" dstpinname="ScaleXY">
+   </LINK>
+   <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="3615" top="6480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="16" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Layer Out" dstnodeid="5" dstpinname="Layer In">
+   </LINK>
    </PATCH>

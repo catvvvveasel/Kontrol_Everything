@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
    <BOUNDS type="Window" left="12930" top="75" width="15870" height="15675">
    </BOUNDS>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="108">
@@ -109,7 +109,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4575" top="5805" width="3000" height="915">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Midi is basic at the moment and only controls the current active patch, I&apos;ve had no need of it yet!&cr;&lf;Please present your solutions!|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Midi is basic (BROKEN) at the moment and only controls the current active patch, I&apos;ve had no need of it yet!&cr;&lf;Please present your solutions!|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -241,9 +241,9 @@
    <NODE nodename="IOBox (String)" componentmode="InABox" id="363" systemname="IOBox (String)">
    <BOUNDS type="Node" left="11055" top="5025" width="1470" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="11055" top="5025" width="3930" height="8220">
+   <BOUNDS type="Box" left="11055" top="5025" width="3930" height="8610">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Time line&cr;&lf;left click move&cr;&lf;single right click also makes the preset active so you can see the values stored&cr;&lf;double right click -&gt;delete keyframe&cr;&lf;alt+z undo,  shft+alt+z redo&cr;&lf;shift + drag copy key frame (key is left where you hit shift, so if you drag before hitting shift, the keyframe will move from its original position)]#&cr;&lf;+/- zoom in and out timeline &cr;&lf;Shift+ +/- zoom all the way in/out&cr;&lf;&cr;&lf;Keys&cr;&lf;left arrow back 5secs&cr;&lf;right arrow for 5secs&cr;&lf;up Loop&cr;&lf;Down Play&cr;&lf;Home goto start&cr;&lf;scroll up previous key&cr;&lf;scroll down next key&cr;&lf;&cr;&lf;Sliders&cr;&lf;Left click to change value, right click to fine tune&cr;&lf;double right click to type entry&cr;&lf;to do, middle set to default value&cr;&lf;Right Click name to set to Default Value&cr;&lf;Double click the name to enable selective record, it will show red on active channels&cr;&lf;The box will be blue if the channel is in the active preset&cr;&lf;&cr;&lf;Presets&cr;&lf;Left Click Bank button to scroll 1 line&cr;&lf;right click to scroll 1 page&cr;&lf;Left click to play preset&cr;&lf;Right click to record into preset&cr;&lf;Keys 1-8, q-i, a-k, z-, play preset&cr;&lf;|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Time line&cr;&lf;left click move&cr;&lf;single right click also makes the preset active so you can see the values stored&cr;&lf;double right click -&gt;delete keyframe&cr;&lf;alt+z undo,  shft+alt+z redo&cr;&lf;shift + drag copy key frame (key is left where you hit shift, so if you drag before hitting shift, the keyframe will move from its original position)]#&cr;&lf;+/- zoom in and out timeline &cr;&lf;Shift+ +/- zoom all the way in/out&cr;&lf;&cr;&lf;Keys&cr;&lf;left arrow back 5secs&cr;&lf;right arrow for 5secs&cr;&lf;up Loop&cr;&lf;Down Play&cr;&lf;Home goto start&cr;&lf;scroll up previous key&cr;&lf;scroll down next key&cr;&lf;&cr;&lf;Sliders&cr;&lf;Left click to change value, right click to fine tune&cr;&lf;double right click to type entry&cr;&lf;to do, middle set to default value&cr;&lf;Right Click name to set to Default Value&cr;&lf;Double click the name to enable selective record, it will show red on active channels&cr;&lf;The box will be blue if the channel is in the active preset&cr;&lf;Tab Hide Gui&cr;&lf;CapsLock Edit Fade times&cr;&lf;&cr;&lf;Presets&cr;&lf;Left Click Bank button to scroll 1 line&cr;&lf;right click to scroll 1 page&cr;&lf;Left click to play preset&cr;&lf;Right click to record into preset&cr;&lf;Keys 1-8, q-i, a-k, z-, play preset&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -499,11 +499,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="438" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="9315" top="4455" width="2640" height="270">
+   <BOUNDS type="Node" left="9285" top="4320" width="2640" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="9315" top="4455" width="1635" height="465">
+   <BOUNDS type="Box" left="9285" top="4320" width="1665" height="870">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|FPS is a &apos;snap&apos; setting for keyframes|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|FPS is a &apos;snap&apos; setting for keyframes&cr;&lf;This could be used for BPM?|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -643,13 +643,15 @@
    <NODE systemname="KeyBoardShortcuts" filename="Subs\KeyBoardShortcuts.v4p" nodename="Subs\KeyBoardShortcuts.v4p" componentmode="Hidden" id="113">
    <BOUNDS type="Node" left="1725" top="2625" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="1215" top="4020" width="21375" height="10695">
+   <BOUNDS type="Window" left="8970" top="3705" width="21375" height="10695">
    </BOUNDS>
    <PIN pinname="Tab" visible="1">
    </PIN>
    <PIN pinname="Menu" visible="1">
    </PIN>
    <PIN pinname="Enable v4 Shortcuts" visible="1">
+   </PIN>
+   <PIN pinname="WindowedKeyBoard" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="SharedTextureIN" filename="Subs\SharedTextureIN.v4p" nodename="Subs\SharedTextureIN.v4p" componentmode="Hidden" id="357">
@@ -1252,4 +1254,40 @@
    <LINKPOINT x="4405" y="5365">
    </LINKPOINT>
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="469" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1725" top="1860" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1725" top="1860" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="WindowedKeyBoard">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="469" srcpinname="Y Output Value" dstnodeid="113" dstpinname="WindowedKeyBoard">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="470" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2310" top="1875" width="795" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2310" top="1875" width="795" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|or global|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

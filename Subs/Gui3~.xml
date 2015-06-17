@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="0" scrolly="5040" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="3075" scrolly="7110" bgcolor="11442563">
    <BOUNDS type="Window" left="9810" top="1665" width="18990" height="12645">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
@@ -72,6 +72,8 @@
    <PIN pinname="Intersperse" slicecount="1" values="Comma">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Ignore between" slicecount="1" values="Pipe">
    </PIN>
    </NODE>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="106">
@@ -151,9 +153,9 @@
    <LINK srcnodeid="197" srcpinname="Layer Out" dstnodeid="198" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="210" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4710" top="7710" width="795" height="240">
+   <BOUNDS type="Box" left="7530" top="7530" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4710" top="7710" width="0" height="0">
+   <BOUNDS type="Node" left="7530" top="7530" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -165,9 +167,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="215">
-   <BOUNDS type="Node" left="5550" top="6405" width="100" height="100">
+   <BOUNDS type="Node" left="7650" top="6405" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5550" top="6405" width="795" height="240">
+   <BOUNDS type="Box" left="7650" top="6405" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="MidiValues">
    </PIN>
@@ -375,9 +377,9 @@
    </PIN>
    </NODE>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="310">
-   <BOUNDS type="Node" left="13875" top="15780" width="100" height="100">
+   <BOUNDS type="Node" left="13845" top="16455" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1" slicecount="20" values="|2,2|,0,|2,2|,0,|2,2|,0,|2,2|,0,|2,2|,0,|2,2|,0,|2,2|,6.90,|2,2|,6.56,|2,2|,6.78,|2,2|,0.00">
+   <PIN pinname="Input Value" visible="1" slicecount="26" values="|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0.00,|2,2|,0,|7,2|,0.00">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="FadesGUI">
    </PIN>
@@ -539,7 +541,7 @@
    <LINK srcnodeid="256" srcpinname="Output" dstnodeid="363" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="FrameDelay (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (String)" componentmode="Hidden" id="366">
-   <BOUNDS type="Node" left="14115" top="15225" width="100" height="100">
+   <BOUNDS type="Node" left="17370" top="17310" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1209,7 +1211,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6885" top="1215" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="7215" top="1830" width="17775" height="12045">
+   <BOUNDS type="Window" left="8925" top="4170" width="17775" height="12045">
    </BOUNDS>
    <PIN pinname="ParsedPinInfo" visible="1">
    </PIN>
@@ -1319,8 +1321,6 @@
    <LINK srcnodeid="397" srcpinname="Output" dstnodeid="297" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="284" dstpinname="IsColour">
-   </LINK>
-   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="310" dstpinname="Input Value">
    </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="398">
    <BOUNDS type="Node" left="1665" top="7800" width="100" height="100">
@@ -1491,5 +1491,79 @@
    <LINK srcnodeid="295" srcpinname="Output" dstnodeid="399" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="237" srcpinname="Output" dstnodeid="89" dstpinname="Value(Formated)">
+   </LINK>
+   <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="410">
+   <BOUNDS type="Node" left="13860" top="15615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="409">
+   <BOUNDS type="Node" left="16470" top="13650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="MouseValues">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="408">
+   <BOUNDS type="Node" left="16455" top="14085" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="409" srcpinname="Input Value" dstnodeid="408" dstpinname="Input">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="407">
+   <BOUNDS type="Node" left="16425" top="15000" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="407" srcpinname="Output" dstnodeid="410" dstpinname="Set">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="406">
+   <BOUNDS type="Node" left="16440" top="14520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Frames" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="408" srcpinname="Output" dstnodeid="406" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="406" srcpinname="Output" dstnodeid="407" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="410" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="410" srcpinname="Output" dstnodeid="310" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="411" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="16425" top="15615" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="16425" top="15615" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="407" srcpinname="Output" dstnodeid="411" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

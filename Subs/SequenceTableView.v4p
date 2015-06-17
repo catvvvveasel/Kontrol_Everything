@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="2520" bgcolor="11442563">
    <BOUNDS type="Window" left="8550" top="-165" width="17355" height="16200">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -557,7 +557,7 @@
    <LINK srcnodeid="159" srcpinname="OnChange" dstnodeid="160" dstpinname="Input 1">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="162">
-   <BOUNDS type="Node" left="8505" top="10965" width="100" height="100">
+   <BOUNDS type="Node" left="8535" top="10830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
@@ -741,8 +741,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="280" srcpinname="Input Value" dstnodeid="160" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="162" srcpinname="Output" dstnodeid="0" dstpinname="Insert">
    </LINK>
    <NODE systemname="Table (DataTable)" filename="%VVVV%\packs\Emeshe-FeatureFlags\nodes\plugins\Table.dll" nodename="Table (DataTable)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="3795" top="6675" width="5055" height="270">
@@ -969,9 +967,9 @@
    <NODE id="163" systemname="SequenceTracksByType" filename="SequenceTracksByType.v4p" componentmode="Hidden" nodename="SequenceTracksByType.v4p" hiddenwhenlocked="0" managers="">
    <PIN pinname="PatchNames" visible="1">
    </PIN>
-   <BOUNDS type="Node" left="3030" top="15870" width="100" height="100">
+   <BOUNDS type="Node" left="3315" top="15615" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3030" top="15870" width="4800" height="3600">
+   <BOUNDS type="Box" left="3315" top="15615" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="7995" top="4230" width="17730" height="12930">
    </BOUNDS>
@@ -1369,5 +1367,45 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="336" srcpinname="Input Value" dstnodeid="327" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="337">
+   <BOUNDS type="Node" left="6210" top="9645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Output String" dstnodeid="337" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="338">
+   <BOUNDS type="Node" left="6345" top="10080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="337" srcpinname="Output" dstnodeid="338" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="PatchNames" dstnodeid="338" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="339">
+   <BOUNDS type="Node" left="8580" top="11235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="162" srcpinname="Output" dstnodeid="339" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="339" srcpinname="Output" dstnodeid="0" dstpinname="Insert">
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="Inverse Output" dstnodeid="339" dstpinname="Input 1">
    </LINK>
    </PATCH>

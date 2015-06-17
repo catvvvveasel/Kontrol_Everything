@@ -13,7 +13,7 @@
    <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="1680" top="6465" width="660" height="270">
    </BOUNDS>
-   <PIN pinname="Spread" visible="1" slicecount="13" values="2,2,2.0000,2.0000,|2.0000,-2.0000,-2.0000,1.0000|,0.3333,1.0000,1.0000,|1.0000,2.0000,2.0000|,|0.0078,0.0078,0.0078,0.0078|,|2.0000,2.0000,255.0000|,Disabled,|2.0000,255.0000,2.0000|">
+   <PIN pinname="Spread" visible="1" slicecount="15" values="22,65,0.6040,1.0000,|0.4500,0.0500,-0.1215,1.0000|,-0.0165,60.0000,65.0000,|0.0000,0.0000,0.0000|,|1.0000,0.1333,0.0157,0.5020|,|1.1220,0.7637,0.0000|,AlphaAdd,|0.0000,9.5038,0.0000|,|0.0000,0.0000|,255">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -111,9 +111,9 @@
    <NODE id="14" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="FormerSlice">
    </PIN>
-   <BOUNDS type="Box" left="2925" top="3035" width="750" height="240">
+   <BOUNDS type="Box" left="2955" top="4205" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2925" top="3035" width="750" height="240">
+   <BOUNDS type="Node" left="2955" top="4205" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input">
@@ -149,7 +149,7 @@
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="2715" top="1020" width="100" height="100">
+   <BOUNDS type="Node" left="2580" top="930" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="10" values=",,,,,,,,,">
    </PIN>
@@ -157,7 +157,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="1455" top="2400" width="100" height="100">
+   <BOUNDS type="Node" left="1470" top="3090" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -184,6 +184,10 @@
    <PIN pinname="Input 2" visible="1" slicecount="12" values="0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Inverse Output" dstnodeid="16" dstpinname="Input 1">
@@ -281,7 +285,7 @@
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="21" dstpinname="Input">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="2850" top="1740" width="100" height="100">
+   <BOUNDS type="Node" left="2610" top="1410" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
@@ -309,7 +313,7 @@
    <LINK srcnodeid="51" srcpinname="Inverse Output" dstnodeid="50" dstpinname="Input 2">
    </LINK>
    <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="1320" top="4425" width="660" height="270">
+   <BOUNDS type="Node" left="540" top="5055" width="660" height="270">
    </BOUNDS>
    <PIN pinname="Spread" visible="1" slicecount="1" values="text">
    </PIN>
@@ -324,12 +328,42 @@
    </LINK>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="52" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="1" dstpinname="Spread">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="1" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="1" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="18" srcpinname="Former Slice" dstnodeid="52" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="1" dstpinname="Spread">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="53">
+   <BOUNDS type="Node" left="2880" top="2205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="FadeInProgress">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="54">
+   <BOUNDS type="Node" left="2910" top="2685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="53" srcpinname="Input Value" dstnodeid="54" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="55">
+   <BOUNDS type="Node" left="2910" top="3015" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="55" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Output 1" dstnodeid="16" dstpinname="Input 3">
    </LINK>
    </PATCH>
