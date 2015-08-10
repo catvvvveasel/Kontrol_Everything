@@ -1,7 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.9.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Time-Timecode.v4p" systemname="Time-Timecode" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\EuroVisionPreViz\AudioWaveform\Subs\Time-Timecode.v4p" bgcolor="11442563">
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1095" top="2125" width="100" height="100">
+   <BOUNDS type="Node" left="1095" top="1810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -13,7 +13,7 @@
    <NODE id="1" systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Node" left="1095" top="2465" width="1815" height="270">
+   <BOUNDS type="Node" left="1095" top="2465" width="1875" height="270">
    </BOUNDS>
    <PIN pinname="Whole Part" visible="1" pintype="Output">
    </PIN>
@@ -27,7 +27,7 @@
    <NODE id="2" systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input 1" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Node" left="2850" top="3295" width="100" height="100">
+   <BOUNDS type="Node" left="2925" top="2830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -65,7 +65,7 @@
    </PIN>
    </NODE>
    <NODE id="4" systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Input" visible="1" pintype="Input">
+   <PIN pinname="Input" visible="1" pintype="Input" slicecount="1" values="48.64">
    </PIN>
    <BOUNDS type="Node" left="2910" top="5725" width="100" height="100">
    </BOUNDS>
@@ -91,7 +91,7 @@
    <NODE id="5" systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Node" left="2865" top="3640" width="990" height="270">
+   <BOUNDS type="Node" left="3255" top="3220" width="990" height="270">
    </BOUNDS>
    <PIN pinname="Whole Part" visible="1" pintype="Output">
    </PIN>
@@ -105,9 +105,9 @@
    <NODE id="6" systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input 2" visible="1" pintype="Input">
    </PIN>
-   <PIN pinname="Input 1" visible="1" pintype="Input">
+   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="1" values="0.839999999999975">
    </PIN>
-   <BOUNDS type="Node" left="3810" top="3985" width="100" height="100">
+   <BOUNDS type="Node" left="4500" top="3715" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -123,7 +123,7 @@
    <NODE id="7" systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Node" left="3810" top="4330" width="100" height="100">
+   <BOUNDS type="Node" left="4500" top="4060" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Whole Part" visible="1" pintype="Output">
    </PIN>
@@ -135,9 +135,9 @@
    </PIN>
    </NODE>
    <NODE id="8" systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Input" visible="1" pintype="Input">
+   <PIN pinname="Input" visible="1" pintype="Input" slicecount="1" values="25">
    </PIN>
-   <BOUNDS type="Node" left="3795" top="5320" width="100" height="100">
+   <BOUNDS type="Node" left="4125" top="5665" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -165,7 +165,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1095" top="1125" width="750" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="343.84">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -173,10 +173,12 @@
    <NODE id="10" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="FPS">
    </PIN>
-   <BOUNDS type="Box" left="3975" top="1500" width="750" height="240">
+   <BOUNDS type="Box" left="4800" top="1575" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3975" top="1500" width="750" height="240">
+   <BOUNDS type="Node" left="4800" top="1575" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="1140" top="6535" width="3585" height="270">
@@ -214,19 +216,15 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input String">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Whole Part" dstnodeid="4" dstpinname="Input" linkstyle="PolyLine">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Real Part" dstnodeid="2" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="5" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Real Part" dstnodeid="6" dstpinname="Input 1" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Input 2" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="22335" top="1455" width="6225" height="10410">
+   <BOUNDS type="Window" left="19455" top="5040" width="6225" height="10410">
    </BOUNDS>
    <NODE id="15" systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input" visible="1" pintype="Input" slicecount="1" values="0">
@@ -304,10 +302,10 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input">
    </LINK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="33.10.0">
    </PACK>
    <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="4560" top="4545" width="100" height="100">
+   <BOUNDS type="Node" left="4635" top="4500" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -319,19 +317,79 @@
    <LINK srcnodeid="7" srcpinname="Real Part" dstnodeid="19" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="3585" top="4710" width="100" height="100">
+   <BOUNDS type="Node" left="3180" top="5055" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="24">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Whole Part" dstnodeid="20" dstpinname="Input 1">
+   <NODE systemname="Mod (Value)" nodename="Mod (Value)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="4860" top="2805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Real Part" dstnodeid="21" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Whole Part" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Whole Part" dstnodeid="20" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="19" srcpinname="Output" dstnodeid="20" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="8" dstpinname="Input">
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="4665" top="5040" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Sign (Value)" nodename="Sign (Value)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="3180" top="3645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Whole Part" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1920" top="2085" width="1335" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1920" top="2085" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="26" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="4140" top="1815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Real Part" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="27" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Real Part" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4035" top="1020" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4035" top="1020" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Real Part" dstnodeid="28" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

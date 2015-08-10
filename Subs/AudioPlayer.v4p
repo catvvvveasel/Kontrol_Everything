@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\AudioPlayer.v4p" systemname="AudioPlayer" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\AudioPlayer.v4p" scrollx="0" scrolly="3195" bgcolor="11442563">
-   <BOUNDS type="Window" left="3120" top="1395" width="13635" height="9090">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\AudioPlayer.v4p" systemname="AudioPlayer" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\AudioPlayer.v4p" scrollx="0" scrolly="2040" bgcolor="11442563">
+   <BOUNDS type="Window" left="11040" top="1050" width="13635" height="9090">
    </BOUNDS>
    <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2370" top="4680" width="100" height="100">
@@ -32,6 +32,8 @@
    <PIN pinname="Audio" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Volume" visible="1">
+   </PIN>
+   <PIN pinname="Driver" slicecount="1" values="|Speakers (Realtek High Definition Audio)|">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
@@ -381,11 +383,13 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="4">
+   <PIN pinname="Input Count" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
    <PIN pinname="Input 4" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="Output" dstnodeid="81" dstpinname="Input">
@@ -567,7 +571,7 @@
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
    <NODE systemname="SetSlice (Spreads)" nodename="SetSlice (Spreads)" componentmode="Hidden" id="122">
-   <BOUNDS type="Node" left="1065" top="5880" width="100" height="100">
+   <BOUNDS type="Node" left="720" top="5955" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread" visible="1">
    </PIN>
@@ -779,5 +783,7 @@
    <LINK srcnodeid="112" srcpinname="In" dstnodeid="12" dstpinname="Start Time">
    </LINK>
    <LINK srcnodeid="112" srcpinname="Out" dstnodeid="12" dstpinname="End Time">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="Loop" dstnodeid="87" dstpinname="Input 5">
    </LINK>
    </PATCH>

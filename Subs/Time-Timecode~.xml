@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Subs\Time-Timecode.v4p" systemname="Time-Timecode" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\EuroVisionPreViz\AudioWaveform\Subs\Time-Timecode.v4p" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha33.9.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Time-Timecode.v4p" systemname="Time-Timecode" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\EuroVisionPreViz\AudioWaveform\Subs\Time-Timecode.v4p" bgcolor="11442563">
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1095" top="2125" width="100" height="100">
    </BOUNDS>
@@ -27,7 +27,7 @@
    <NODE id="2" systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input 1" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Node" left="2850" top="3295" width="100" height="100">
+   <BOUNDS type="Node" left="2865" top="2860" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -91,7 +91,7 @@
    <NODE id="5" systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Node" left="2865" top="3640" width="990" height="270">
+   <BOUNDS type="Node" left="2865" top="3265" width="990" height="270">
    </BOUNDS>
    <PIN pinname="Whole Part" visible="1" pintype="Output">
    </PIN>
@@ -105,7 +105,7 @@
    <NODE id="6" systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input 2" visible="1" pintype="Input">
    </PIN>
-   <PIN pinname="Input 1" visible="1" pintype="Input">
+   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
    <BOUNDS type="Node" left="3810" top="3985" width="100" height="100">
    </BOUNDS>
@@ -165,7 +165,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1095" top="1125" width="750" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="439">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -220,13 +220,11 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="5" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Real Part" dstnodeid="6" dstpinname="Input 1" linkstyle="PolyLine">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Input 2" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="22335" top="1455" width="6225" height="10410">
+   <BOUNDS type="Window" left="17730" top="2640" width="6225" height="10410">
    </BOUNDS>
    <NODE id="15" systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Input" visible="1" pintype="Input" slicecount="1" values="0">
@@ -304,7 +302,7 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input">
    </LINK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="33.10.0">
    </PACK>
    <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="4560" top="4545" width="100" height="100">
@@ -319,7 +317,7 @@
    <LINK srcnodeid="7" srcpinname="Real Part" dstnodeid="19" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="3585" top="4710" width="100" height="100">
+   <BOUNDS type="Node" left="3810" top="4800" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -333,5 +331,17 @@
    <LINK srcnodeid="19" srcpinname="Output" dstnodeid="20" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Output" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Mod (Value)" nodename="Mod (Value)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="3795" top="3630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Real Part" dstnodeid="21" dstpinname="Input 1">
    </LINK>
    </PATCH>
