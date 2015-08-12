@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="270" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="3765" scrolly="1320" bgcolor="11442563">
    <BOUNDS type="Window" left="2670" top="630" width="18990" height="15750">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
@@ -962,8 +962,6 @@
    </LINK>
    <LINK srcnodeid="345" srcpinname="Transform Out" dstnodeid="89" dstpinname="Transform In">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="LayerDX11" dstnodeid="197" dstpinname="Layer 4">
-   </LINK>
    <LINK srcnodeid="89" srcpinname="All_IoBoxesTransforms" dstnodeid="87" dstpinname="AllIoboxes">
    <LINKPOINT x="2400" y="12780">
    </LINKPOINT>
@@ -1032,7 +1030,7 @@
    </NODE>
    <LINK srcnodeid="290" srcpinname="Output" dstnodeid="237" dstpinname="FromTog">
    </LINK>
-   <NODE systemname="KeyBoardEdit" filename="KeyBoardEdit.v4p" nodename="KeyBoardEdit.v4p" componentmode="InAWindow" id="182">
+   <NODE systemname="KeyBoardEdit" filename="KeyBoardEdit.v4p" nodename="KeyBoardEdit.v4p" componentmode="Hidden" id="182">
    <BOUNDS type="Node" left="9407" top="11321" width="1785" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="5800" top="7259" width="7215" height="8125">
@@ -1369,7 +1367,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10590" top="14100" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="7920" top="5040" width="23940" height="15000">
+   <BOUNDS type="Window" left="7920" top="2625" width="23955" height="15075">
    </BOUNDS>
    <PIN pinname="IsFileName" visible="1">
    </PIN>
@@ -1389,8 +1387,6 @@
    <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="400" dstpinname="IsFileName">
    </LINK>
    <LINK srcnodeid="89" srcpinname="All_IoBoxesTransforms" dstnodeid="400" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="400" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 12">
    </LINK>
    <LINK srcnodeid="89" srcpinname="Output Bin Size" dstnodeid="400" dstpinname="IoBin">
    <LINKPOINT x="630" y="15015">
@@ -1623,9 +1619,9 @@
    <LINK srcnodeid="400" srcpinname="Output" dstnodeid="397" dstpinname="Spread">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="415" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="16395" top="10680" width="4500" height="1950">
+   <BOUNDS type="Box" left="18090" top="10155" width="4740" height="5580">
    </BOUNDS>
-   <BOUNDS type="Node" left="16395" top="10680" width="0" height="0">
+   <BOUNDS type="Node" left="18090" top="10155" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -1635,7 +1631,7 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="7">
+   <PIN pinname="Rows" slicecount="1" values="32">
    </PIN>
    <PIN pinname="Input String" visible="1" slicecount="4" values="4.5794,1.3627,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\GBR_Floor_verse_Test1_v1.avi,0.0000">
    </PIN>
@@ -1655,5 +1651,9 @@
    <LINK srcnodeid="414" srcpinname="Output" dstnodeid="182" dstpinname="BinSize">
    <LINKPOINT x="10785" y="11325">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="LayerDX11" dstnodeid="197" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="400" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 12">
    </LINK>
    </PATCH>

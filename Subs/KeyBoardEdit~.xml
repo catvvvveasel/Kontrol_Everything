@@ -84,7 +84,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="4380" top="4335" width="13620" height="15540">
+   <BOUNDS type="Window" left="20880" top="2790" width="13620" height="15540">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2910" top="5670" width="555" height="240">
@@ -114,22 +114,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Font">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4875" top="6285" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4875" top="6285" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="VectorSize">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Quad (DX11.Layer)" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="51" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll">
@@ -609,9 +593,9 @@
    </PIN>
    <PIN pinname="LayerDX9" visible="1">
    </PIN>
+   <PIN pinname="VectorSize" visible="1" slicecount="17" values="1,1,1,1,4,1,1,1,3,4,1,3,1,3,2,1,1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="48" dstpinname="VectorSize">
-   </LINK>
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Size">
    </LINK>
    <LINK srcnodeid="23" srcpinname="Output Enum" dstnodeid="48" dstpinname="Font">
@@ -811,5 +795,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Active" dstnodeid="101" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Y Output Value" dstnodeid="48" dstpinname="VectorSize">
    </LINK>
    </PATCH>

@@ -22,7 +22,7 @@
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="1530" top="6555" width="13260" height="10365">
+   <BOUNDS type="Window" left="540" top="11100" width="13260" height="10365">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -57,7 +57,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5385" top="2145" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|Now press the CapsLock&cr;&lf;You can set the fade time, and interpolation here, you MUST have triggered &cr;&lf;a preset for this to work correctly, and you must record it afterwards. &cr;&lf;The Thin Orange bars represent fade times|">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="54354325">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="DX11">
    </PIN>
@@ -97,13 +97,23 @@
    <LINK srcnodeid="4" srcpinname="Output String" dstnodeid="3" dstpinname="String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)" exposed="1">
-   <BOUNDS type="Box" left="4110" top="2355" width="795" height="480">
+   <BOUNDS type="Box" left="4095" top="1605" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4110" top="2355" width="0" height="0">
+   <BOUNDS type="Node" left="4095" top="1605" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Minimum" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values=".123">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="xy">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" values="-0.3018,0.9004">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="6" dstpinname="TranslateXY">
@@ -123,9 +133,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="12" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6885" top="450" width="4590" height="900">
+   <BOUNDS type="Node" left="7305" top="480" width="4590" height="900">
    </BOUNDS>
-   <BOUNDS type="Box" left="6885" top="450" width="4590" height="1455">
+   <BOUNDS type="Box" left="7305" top="480" width="4590" height="1455">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Now press the CapsLock&cr;&lf;You can set the fade time, and interpolation here, you MUST have triggered &cr;&lf;a preset for this to work correctly, and you must record it afterwards. &cr;&lf;The Thin Orange bars represent fade times|">
    </PIN>
@@ -175,6 +185,10 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
+   <PIN pinname="Default" slicecount="1" values="33">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Endless">
+   </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="6" dstpinname="ScaleXY">
    </LINK>
@@ -190,4 +204,34 @@
    </LINK>
    <LINK srcnodeid="16" srcpinname="Layer Out" dstnodeid="5" dstpinname="Layer In">
    </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="17" exposed="1">
+   <BOUNDS type="Node" left="1710" top="75" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1710" top="75" width="6645" height="300">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Name">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="file__">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="*.avi">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="..\..\..\..\Nicoline\LoL_App\Projects\Paris\Video\GBR_Cube_Projection_UnknownSection_v5.avi">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="18" exposed="0">
+   <BOUNDS type="Node" left="1230" top="870" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1230" top="870" width="5775" height="330">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Name2">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="*.*">
+   </PIN>
+   <PIN pinname="Tag" slicecount="1" values="D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris">
+   </PIN>
+   </NODE>
    </PATCH>
