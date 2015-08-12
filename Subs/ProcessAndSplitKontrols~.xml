@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="555" scrolly="4485" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -313,9 +313,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="133" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="16515" top="13560" width="405" height="255">
+   <BOUNDS type="Box" left="16710" top="14610" width="405" height="255">
    </BOUNDS>
-   <BOUNDS type="Node" left="16515" top="13560" width="0" height="0">
+   <BOUNDS type="Node" left="16710" top="14610" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -1063,7 +1063,7 @@
    <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="210" dstpinname="Input - Input 1 1">
    </LINK>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="228">
-   <BOUNDS type="Node" left="17910" top="7650" width="100" height="100">
+   <BOUNDS type="Node" left="18570" top="14235" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -1296,12 +1296,12 @@
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 13" dstnodeid="216" dstpinname="Input String">
    </LINK>
-   <NODE systemname="GetDefaultsFilename" filename="GetDefaultsFilename.v4p" componentmode="Hidden" id="270" nodename="GetDefaultsFilename.v4p">
+   <NODE systemname="GetDefaultsFilename" filename="GetDefaultsFilename.v4p" componentmode="InAWindow" id="270" nodename="GetDefaultsFilename.v4p">
    <BOUNDS type="Node" left="14250" top="13320" width="600" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="14250" top="13320" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="735" top="1440" width="14250" height="8565">
+   <BOUNDS type="Window" left="3585" top="975" width="26520" height="13305">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="12" values="| 0|,| 0|,| 0|,| 0|,| 1|,| 0|,| 0|,| 1|,| 1|,| 0|,| *.mov|,| 0|">
    </PIN>
@@ -1365,5 +1365,13 @@
    <LINK srcnodeid="273" srcpinname="Input Value" dstnodeid="271" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="160" srcpinname="Input Value" dstnodeid="158" dstpinname="Input">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="275">
+   <BOUNDS type="Node" left="17145" top="13560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="270" srcpinname="Output" dstnodeid="275" dstpinname="Input">
    </LINK>
    </PATCH>

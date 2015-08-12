@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="8280" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="555" scrolly="4500" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -313,9 +313,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="133" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="16515" top="13560" width="405" height="255">
+   <BOUNDS type="Box" left="16710" top="14610" width="405" height="255">
    </BOUNDS>
-   <BOUNDS type="Node" left="16515" top="13560" width="0" height="0">
+   <BOUNDS type="Node" left="16710" top="14610" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -329,7 +329,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="134">
-   <BOUNDS type="Node" left="15810" top="10395" width="100" height="100">
+   <BOUNDS type="Node" left="15765" top="9870" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -341,7 +341,7 @@
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="134" dstpinname="Select">
    </LINK>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="135">
-   <BOUNDS type="Node" left="15810" top="11025" width="100" height="100">
+   <BOUNDS type="Node" left="16800" top="11055" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -513,7 +513,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="166">
-   <BOUNDS type="Node" left="15840" top="9870" width="100" height="100">
+   <BOUNDS type="Node" left="15795" top="9345" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -549,7 +549,7 @@
    <LINK srcnodeid="170" srcpinname="Output" dstnodeid="171" dstpinname="Input Value">
    </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="175">
-   <BOUNDS type="Node" left="15540" top="12180" width="100" height="100">
+   <BOUNDS type="Node" left="16530" top="12210" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -575,7 +575,7 @@
    <LINK srcnodeid="176" srcpinname="Inverse Output" dstnodeid="175" dstpinname="Switch">
    </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="179">
-   <BOUNDS type="Node" left="15315" top="12705" width="100" height="100">
+   <BOUNDS type="Node" left="16305" top="12735" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
    </PIN>
@@ -717,7 +717,7 @@
    <LINK srcnodeid="202" srcpinname="Output" dstnodeid="196" dstpinname="Index">
    </LINK>
    <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="203">
-   <BOUNDS type="Node" left="16035" top="11535" width="100" height="100">
+   <BOUNDS type="Node" left="17025" top="11565" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread" visible="1">
    </PIN>
@@ -1063,15 +1063,13 @@
    <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="210" dstpinname="Input - Input 1 1">
    </LINK>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="228">
-   <BOUNDS type="Node" left="17910" top="7650" width="100" height="100">
+   <BOUNDS type="Node" left="18570" top="14235" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="Disabled">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="DefaultEnums">
    </PIN>
    </NODE>
-   <LINK srcnodeid="196" srcpinname="Output" dstnodeid="228" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="Zip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (String)" componentmode="Hidden" id="230">
    <BOUNDS type="Node" left="10830" top="4050" width="100" height="100">
    </BOUNDS>
@@ -1296,14 +1294,14 @@
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 13" dstnodeid="216" dstpinname="Input String">
    </LINK>
-   <NODE systemname="GetDefaultsFilename" filename="GetDefaultsFilename.v4p" componentmode="Hidden" id="270" nodename="GetDefaultsFilename.v4p">
+   <NODE systemname="GetDefaultsAll" filename="GetDefaultsAll.v4p" componentmode="Hidden" id="270" nodename="GetDefaultsAll.v4p">
    <BOUNDS type="Node" left="14250" top="13320" width="600" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="14250" top="13320" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="735" top="1440" width="14250" height="8565">
+   <BOUNDS type="Window" left="3585" top="975" width="26520" height="13305">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="12" values="| 0|,| 0|,| 0|,| 0|,| 1|,| 0|,| 0|,| 1|,| 1|,| 0|,| *.mov|,| 0|">
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
    </PIN>
    <PIN pinname="SubTypes" visible="1">
    </PIN>
@@ -1312,8 +1310,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="179" srcpinname="Output" dstnodeid="270" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="212" srcpinname="Output 5" dstnodeid="270" dstpinname="SubTypes">
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 3" dstnodeid="270" dstpinname="Tag">
@@ -1365,5 +1361,21 @@
    <LINK srcnodeid="273" srcpinname="Input Value" dstnodeid="271" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="160" srcpinname="Input Value" dstnodeid="158" dstpinname="Input">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="275">
+   <BOUNDS type="Node" left="18585" top="13560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="270" srcpinname="Output" dstnodeid="275" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="202" srcpinname="Output" dstnodeid="275" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="275" srcpinname="Output" dstnodeid="228" dstpinname="Input Value">
    </LINK>
    </PATCH>

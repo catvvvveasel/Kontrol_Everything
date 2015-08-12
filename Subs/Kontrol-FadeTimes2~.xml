@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-FadeTimes2.v4p" systemname="Kontrol-FadeTimes2" filename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-FadeTimes2.v4p" systemname="Kontrol-FadeTimes2" filename="D:\App\EuroVision\CatGui0.5\Subs\Kontrol-FadeTimes2.v4p" scrollx="1110" scrolly="150" bgcolor="11442563">
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2985" top="7020" width="100" height="100">
    </BOUNDS>
@@ -248,7 +248,7 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="7125" top="2460" width="19395" height="14940">
+   <BOUNDS type="Window" left="1110" top="1065" width="19395" height="14940">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -271,15 +271,13 @@
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="37">
    <BOUNDS type="Node" left="9840" top="10695" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Index" visible="1" slicecount="1" values="0">
+   <PIN pinname="Index" visible="1" slicecount="5" values="4,3,2,1,0">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="15" values="3.55,2.99,3.55,2.99,3.55,2.99,3.55,2.99,3.55,2.99,3.55,0,3.55,2.99,3.55">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Index">
-   </LINK>
    <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="38">
    <BOUNDS type="Node" left="9645" top="14100" width="100" height="100">
    </BOUNDS>
@@ -699,7 +697,7 @@
    <LINK srcnodeid="119" srcpinname="Count" dstnodeid="98" dstpinname="Select">
    </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="9345" top="11355" width="100" height="100">
+   <BOUNDS type="Node" left="9315" top="11610" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="15" values="3.55,2.99,3.55,2.99,3.55,2.99,3.55,2.99,3.55,2.99,3.55,0,3.55,2.99,3.55">
    </PIN>
@@ -765,7 +763,7 @@
    </PIN>
    </NODE>
    <NODE systemname="FrameDelay (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (String)" componentmode="Hidden" id="153">
-   <BOUNDS type="Node" left="13455" top="9960" width="100" height="100">
+   <BOUNDS type="Node" left="13530" top="10035" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="19" values="2,0,0.0000,0.0000,0.00,0.0000,0.0000,0.0000,0.0000,0,0.0000,0,0,0.0000,0.0000,0.00,0.0000,0,0.0000">
    </PIN>
@@ -797,9 +795,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="153" srcpinname="Output 1" dstnodeid="154" dstpinname="Input 1">
-   <LINKPOINT x="12700" y="10595">
+   <LINKPOINT x="12750" y="10645">
    </LINKPOINT>
-   <LINKPOINT x="12695" y="6880">
+   <LINKPOINT x="12720" y="6905">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="154" dstpinname="Switch">
@@ -901,15 +899,13 @@
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="165">
    <BOUNDS type="Node" left="11400" top="11865" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Index" visible="1" slicecount="1" values="0">
+   <PIN pinname="Index" visible="1" slicecount="5" values="8,9,10,11,12">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="19" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="165" dstpinname="Index">
-   </LINK>
    <LINK srcnodeid="153" srcpinname="Output 1" dstnodeid="165" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="165" srcpinname="Output" dstnodeid="39" dstpinname="Input 1">
@@ -927,7 +923,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="20">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="15" values="|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|">
+   <PIN pinname="Input String" visible="1" slicecount="5" values="|2,2|,|2,2|,|7,2|,|8,2|,|2,2|">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
@@ -973,7 +969,7 @@
    </PIN>
    <PIN pinname="Former Slice" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="13" values="0,1,2,3,4,5,6,7,8,9,10,11,12">
+   <PIN pinname="Input" visible="1" slicecount="5" values="8,9,10,11,12">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1554,8 +1550,6 @@
    </LINK>
    <LINK srcnodeid="234" srcpinname="Output String" dstnodeid="168" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="158" srcpinname="Y Output Value" dstnodeid="173" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="154" srcpinname="Output" dstnodeid="152" dstpinname="Input">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="242">
@@ -1573,7 +1567,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Frames" slicecount="1" values="5">
+   <PIN pinname="Frames" slicecount="1" values="32">
    </PIN>
    </NODE>
    <LINK srcnodeid="168" srcpinname="OnChange" dstnodeid="241" dstpinname="Set">
@@ -1599,8 +1593,6 @@
    <LINK srcnodeid="187" srcpinname="Up Edge" dstnodeid="243" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="184" srcpinname="Output String" dstnodeid="243" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="184" srcpinname="Output String" dstnodeid="167" dstpinname="Input String">
    </LINK>
    <NODE systemname="Select (String)" filename="" nodename="Select (String)" componentmode="Hidden" id="244">
    <BOUNDS type="Node" left="16680" top="7620" width="100" height="100">
@@ -1766,4 +1758,42 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output 1" dstnodeid="124" dstpinname="Input 1">
    </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="255">
+   <BOUNDS type="Node" left="15555" top="10695" width="300" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="153" srcpinname="Output 1" dstnodeid="255" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Y Output Value" dstnodeid="255" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="165" srcpinname="Output" dstnodeid="167" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Y Output Value" dstnodeid="165" dstpinname="Index">
+   <LINKPOINT x="12000" y="11835">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Y Output Value" dstnodeid="173" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="256" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="12360" top="12780" width="6180" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12360" top="12780" width="6180" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|the issue seems to be to do with chanel? You ahev toreload a preset to see the update|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

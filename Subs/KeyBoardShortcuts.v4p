@@ -563,9 +563,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="142" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1695" top="7305" width="315" height="405">
+   <BOUNDS type="Box" left="1695" top="7560" width="315" height="405">
    </BOUNDS>
-   <BOUNDS type="Node" left="1695" top="7305" width="0" height="0">
+   <BOUNDS type="Node" left="1695" top="7560" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -858,8 +858,6 @@
    </NODE>
    <LINK srcnodeid="170" srcpinname="Output" dstnodeid="171" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="171" srcpinname="Output" dstnodeid="142" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="172">
    <BOUNDS type="Node" left="16785" top="5940" width="100" height="100">
    </BOUNDS>
@@ -1125,5 +1123,39 @@
    <LINK srcnodeid="181" srcpinname="Device" dstnodeid="184" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="184" srcpinname="Output" dstnodeid="180" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="185">
+   <BOUNDS type="Node" left="2595" top="6360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="KeyBoardEditActive">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="186">
+   <BOUNDS type="Node" left="1680" top="7185" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="171" srcpinname="Output" dstnodeid="186" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="187">
+   <BOUNDS type="Node" left="2625" top="6840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="185" srcpinname="Input Value" dstnodeid="187" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output 1" dstnodeid="186" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="186" srcpinname="Output" dstnodeid="142" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

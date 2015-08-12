@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" systemname="Kontrol-Client_Osc" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" scrollx="270" scrolly="405">
-   <BOUNDS type="Window" left="-15105" top="4980" width="15750" height="13800">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" systemname="Kontrol-Client_Osc" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client_Subs\Kontrol-Client_Osc.v4p" scrollx="255" scrolly="420">
+   <BOUNDS type="Window" left="-18915" top="2850" width="22185" height="19620">
    </BOUNDS>
    <NODE systemname="OSCEncoder (Network)" nodename="OSCEncoder (Network)" componentmode="Hidden" id="73">
    <BOUNDS type="Node" left="2550" top="6510" width="100" height="100">
@@ -399,6 +399,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="77" srcpinname="Output" dstnodeid="78" dstpinname="Set">
    </LINK>
@@ -414,6 +416,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="79" dstpinname="Y Input Value">
@@ -477,7 +481,7 @@
    <LINK srcnodeid="73" srcpinname="OSCMessage" dstnodeid="86" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="87" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="5700" top="8175" width="9375" height="2085">
+   <BOUNDS type="Box" left="5700" top="8175" width="15990" height="7170">
    </BOUNDS>
    <BOUNDS type="Node" left="5700" top="8175" width="0" height="0">
    </BOUNDS>
@@ -494,22 +498,16 @@
    </NODE>
    <LINK srcnodeid="56" srcpinname="Output" dstnodeid="85" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="66" srcpinname="Output 1" dstnodeid="70" dstpinname="Do Send">
-   </LINK>
    <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="88">
    <BOUNDS type="Node" left="4980" top="8325" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="88" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="88" dstpinname="Set">
-   </LINK>
    <LINK srcnodeid="88" srcpinname="Output" dstnodeid="87" dstpinname="Input String">
    </LINK>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="89">
@@ -559,5 +557,29 @@
    <LINK srcnodeid="90" srcpinname="Hits" dstnodeid="91" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="91" srcpinname="Output" dstnodeid="64" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Output 1" dstnodeid="70" dstpinname="Do Send">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="88" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="92" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6975" top="7125" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6975" top="7125" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="88" dstpinname="Set">
    </LINK>
    </PATCH>
