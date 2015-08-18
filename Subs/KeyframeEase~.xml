@@ -266,12 +266,12 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="7" dstpinname="ScaleXY">
    </LINK>
-   <BOUNDS type="Window" left="2700" top="2100" width="14640" height="12645">
+   <BOUNDS type="Window" left="4230" top="1155" width="14640" height="12645">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="FrameDelay (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (String)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="810" top="6480" width="100" height="100">
+   <BOUNDS type="Node" left="990" top="6390" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -605,7 +605,7 @@
    <LINK srcnodeid="45" srcpinname="Output" dstnodeid="48" dstpinname="Input">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="9300" top="2355" width="100" height="100">
+   <BOUNDS type="Node" left="10185" top="3735" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -655,9 +655,9 @@
    <LINK srcnodeid="54" srcpinname="Output String" dstnodeid="0" dstpinname="EnumList">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10035" top="2025" width="795" height="240">
+   <BOUNDS type="Box" left="7110" top="630" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10035" top="2025" width="0" height="0">
+   <BOUNDS type="Node" left="7110" top="630" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -985,15 +985,17 @@
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Frames" slicecount="1" values="2">
+   <PIN pinname="Frames" slicecount="1" values="6">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Retriggerable" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="63" dstpinname="Switch">
    </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="94">
-   <BOUNDS type="Node" left="6840" top="10395" width="100" height="100">
+   <BOUNDS type="Node" left="6750" top="13590" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Bin Size" slicecount="1" values="2">
    </PIN>
@@ -1025,13 +1027,13 @@
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="95" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="94" srcpinname="Output" dstnodeid="0" dstpinname="ValuesIn">
-   <LINKPOINT x="4080" y="11700">
+   <LINKPOINT x="4008" y="14256">
    </LINKPOINT>
-   <LINKPOINT x="1200" y="11790">
+   <LINKPOINT x="1146" y="13707">
    </LINKPOINT>
-   <LINKPOINT x="765" y="5205">
+   <LINKPOINT x="729" y="6483">
    </LINKPOINT>
-   <LINKPOINT x="1155" y="4725">
+   <LINKPOINT x="1137" y="5364">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 2">
@@ -1229,5 +1231,19 @@
    <LINK srcnodeid="111" srcpinname="Output" dstnodeid="112" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="112" srcpinname="Output" dstnodeid="107" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="113" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="10035" top="6930" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10035" top="6930" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Output" dstnodeid="113" dstpinname="Input String">
    </LINK>
    </PATCH>

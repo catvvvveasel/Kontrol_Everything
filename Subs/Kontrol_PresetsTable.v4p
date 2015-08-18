@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="990" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
-   <BOUNDS type="Window" left="3915" top="780" width="19515" height="16380">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="1740" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
+   <BOUNDS type="Window" left="11580" top="2250" width="19515" height="16380">
    </BOUNDS>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="80">
    <BOUNDS type="Node" left="7260" top="5040" width="855" height="270">
@@ -123,7 +123,7 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="64" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1500" top="14910" width="795" height="240">
+   <BOUNDS type="Box" left="1500" top="14910" width="2640" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="1500" top="14910" width="0" height="0">
    </BOUNDS>
@@ -985,14 +985,16 @@
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="148" dstpinname="Input">
    </LINK>
    <NODE systemname="TableView (DataTable)" filename="%VVVV%\packs\Emeshe-FeatureFlags\nodes\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="Hidden" id="233">
-   <BOUNDS type="Node" left="1125" top="8460" width="100" height="100">
+   <BOUNDS type="Node" left="1005" top="8415" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Table" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Table Index" visible="1" slicecount="1" values="1">
+   <PIN pinname="Table Index" visible="1" slicecount="1" values="0">
    </PIN>
    <BOUNDS type="Window" left="0" top="0" width="15855" height="6990">
    </BOUNDS>
+   <PIN pinname="Down" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="GetTable (DataTable String)" filename="%VVVV%\packs\Emeshe-FeatureFlags\nodes\plugins\Table.dll" nodename="GetTable (DataTable String)" componentmode="Hidden" id="65">
    <BOUNDS type="Node" left="1530" top="11970" width="100" height="100">
@@ -1007,8 +1009,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="65" srcpinname="Output" dstnodeid="213" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="148" srcpinname="Output" dstnodeid="233" dstpinname="Table Index">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="239" systemname="IOBox (String)">
    <BOUNDS type="Node" left="390" top="8835" width="7470" height="270">
@@ -1511,5 +1511,7 @@
    <LINK srcnodeid="251" srcpinname="Inverse Output" dstnodeid="213" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="170" srcpinname="Output" dstnodeid="174" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="148" srcpinname="Output" dstnodeid="233" dstpinname="Table Index">
    </LINK>
    </PATCH>

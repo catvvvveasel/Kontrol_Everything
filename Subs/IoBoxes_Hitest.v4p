@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="3150" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="255" bgcolor="11442563">
    <BOUNDS type="Window" left="12795" top="2415" width="14880" height="12585">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -34,16 +34,6 @@
    <PIN pinname="Rows" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="HitTest (2d Quad)" filename="%VVVV%\addonpack\lib\nodes\plugins\HitTest2dNodes.dll" nodename="HitTest (2d Quad)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="3345" top="3405" width="615" height="270">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="PointsXY" visible="1">
-   </PIN>
-   <PIN pinname="Object Hit" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="4">
@@ -86,8 +76,6 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output 2" dstnodeid="6" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="2" dstpinname="PointsXY">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="9570" top="30" width="795" height="240">
    </BOUNDS>
@@ -125,8 +113,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="43" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform In">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="67">
    <BOUNDS type="Node" left="3540" top="8535" width="100" height="100">
@@ -205,7 +191,7 @@
    </BOUNDS>
    <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
+   <PIN pinname="Input 1" visible="1" slicecount="62" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -220,22 +206,18 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Object Hit" dstnodeid="78" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="69" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="81">
    <BOUNDS type="Node" left="3855" top="3900" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="62" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Object Hit" dstnodeid="81" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="81" srcpinname="Output" dstnodeid="78" dstpinname="Input 2">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="86">
@@ -743,5 +725,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="131" srcpinname="Output" dstnodeid="132" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="2" systemname="HitTest (2d Quad)" filename="%VVVV%\addonpack\lib\nodes\plugins\HitTest2dNodes.dll" nodename="HitTest (2d Quad)" componentmode="Hidden">
+   <BOUNDS type="Node" left="3345" top="3405" width="615" height="270">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="PointsXY" visible="1">
+   </PIN>
+   <PIN pinname="Object Hit" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="2" dstpinname="PointsXY">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Object Hit" dstnodeid="78" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Object Hit" dstnodeid="81" dstpinname="Input 1">
    </LINK>
    </PATCH>

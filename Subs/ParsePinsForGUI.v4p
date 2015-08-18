@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ParsePinsForGUI.v4p" systemname="ParsePinsForGUI" filename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" scrollx="300" scrolly="1425" bgcolor="11442563">
-   <BOUNDS type="Window" left="6900" top="10335" width="21315" height="12045">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ParsePinsForGUI.v4p" systemname="ParsePinsForGUI" filename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <BOUNDS type="Window" left="10275" top="6225" width="21315" height="12045">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2235" top="450" width="795" height="240">
@@ -19,7 +19,7 @@
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="3840" top="240" width="100" height="100">
+   <BOUNDS type="Node" left="3450" top="240" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="SelectPatchChannels">
    </PIN>
@@ -316,16 +316,6 @@
    <PIN pinname="Ignore between" slicecount="1" values="None">
    </PIN>
    </NODE>
-   <NODE systemname="Occurrence (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (Value)" componentmode="Hidden" id="28">
-   <BOUNDS type="Node" left="13695" top="3375" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Count" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="27" srcpinname="Former Index" dstnodeid="28" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="16080" top="10170" width="795" height="240">
    </BOUNDS>
@@ -675,6 +665,8 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output 4" dstnodeid="78" dstpinname="PinType">
    </LINK>
@@ -694,6 +686,8 @@
    <PIN pinname="EnumLists" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="87" dstpinname="Input 1 1">
@@ -715,6 +709,8 @@
    </PIN>
    <PIN pinname="BinSize" visible="1" slicecount="14" values="1,1,1,1,4,1,1,1,3,4,0,3,0,3">
    </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="67" dstpinname="Input 1">
    </LINK>
@@ -732,6 +728,8 @@
    <PIN pinname="IsColor" visible="1" slicecount="13" values="0,0,0,0,1,0,0,0,0,1,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="86" dstpinname="ValueType">
@@ -980,34 +978,10 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output 5" dstnodeid="108" dstpinname="Input Value">
    </LINK>
-   <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="110">
-   <BOUNDS type="Node" left="8820" top="895" width="1200" height="270">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="64" values="Endless,| 1|,| 1|,| 0|,| 1|,| 0.01|,| |,| 4|,Endless,| 1|,| 1|,| 0.01|,| 10|,| 0.01|,| s|,| 4|,Endless,| 1|,| 0|,| 0|,| 1|,| 0.01|,| |,| 4|,Endless,| 1|,| 1|,| 0.01|,| 10|,| 0.01|,| s|,| 4|,Endless,| 1|,| 0|,| 0|,| 1|,| 0.01|,| |,| 4|,Endless,| 1|,| 0|,| 0|,| 50|,| 1|,| |,| 4|,Endless,| 3|,| 0|,| -20|,| 20|,| 0.01|,| |,| 4|,Rotary,| 1|,| 0.25|,| 0|,| 0.5|,| 0.01|,| |,| 4|">
-   </PIN>
-   <PIN pinname="Output Count" slicecount="1" values="8">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 6" visible="1">
-   </PIN>
-   <PIN pinname="Output 2" visible="1">
-   </PIN>
-   <PIN pinname="Output 3" visible="1">
-   </PIN>
-   <PIN pinname="Output 4" visible="1">
-   </PIN>
-   <PIN pinname="Output 5" visible="1">
-   </PIN>
-   <PIN pinname="Output 7" visible="1">
-   </PIN>
-   <PIN pinname="Output 8" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="PadTypes" filename="PadTypes.v4p" nodename="PadTypes.v4p" componentmode="Hidden" id="109">
-   <BOUNDS type="Node" left="8822" top="465" width="0" height="0">
+   <BOUNDS type="Node" left="8417" top="195" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="4810" top="0" width="8025" height="5775">
+   <BOUNDS type="Box" left="4405" top="120" width="8025" height="5775">
    </BOUNDS>
    <BOUNDS type="Window" left="1650" top="5745" width="9945" height="7560">
    </BOUNDS>
@@ -1017,29 +991,31 @@
    </PIN>
    <PIN pinname="Input - Input 1 1" visible="1" slicecount="9" values="NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,ManualCam,ManualCam">
    </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="109" srcpinname="Output" dstnodeid="110" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="15" srcpinname="Output 5" dstnodeid="109" dstpinname="Input - Input 1">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output 14" dstnodeid="109" dstpinname="Input - Input 1 1">
    </LINK>
    <NODE systemname="AsValue (String)" nodename="AsValue (String)" componentmode="Hidden" id="111">
-   <BOUNDS type="Node" left="8970" top="1320" width="100" height="100">
+   <BOUNDS type="Node" left="9345" top="645" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="7" values="| 1|,| 1|,| 1|,| 3|,| 1|,| 1|,| 1|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="110" srcpinname="Output 2" dstnodeid="111" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="111" srcpinname="Output" dstnodeid="97" dstpinname="Input 1">
    </LINK>
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="114">
    <BOUNDS type="Node" left="13245" top="825" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input 1" visible="1" slicecount="7" values="Toggle,Endless,Endless,Slider,Slider,Slider,Slider">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="HSVAField">
    </PIN>
@@ -1053,7 +1029,7 @@
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="113">
    <BOUNDS type="Node" left="13560" top="1200" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input 1" visible="1" slicecount="7" values="Toggle,Endless,Endless,Slider,Slider,Slider,Slider">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="RGBASlider">
    </PIN>
@@ -1077,10 +1053,6 @@
    <LINK srcnodeid="114" srcpinname="Output" dstnodeid="112" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="113" srcpinname="Output" dstnodeid="112" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="Output 1" dstnodeid="114" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="Output 1" dstnodeid="113" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="115">
    <BOUNDS type="Node" left="13485" top="7695" width="100" height="100">
@@ -1182,20 +1154,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="122" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="19635" top="3525" width="855" height="6765">
-   </BOUNDS>
-   <BOUNDS type="Node" left="19635" top="3525" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="25">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="14" values="0,0,0,0,0,0,0,0,0,0,1,0,0,0">
-   </PIN>
-   </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="123">
    <BOUNDS type="Node" left="16110" top="8040" width="100" height="100">
    </BOUNDS>
@@ -1209,8 +1167,6 @@
    <LINK srcnodeid="104" srcpinname="Hits" dstnodeid="123" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="123" srcpinname="Output" dstnodeid="106" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="106" srcpinname="Output" dstnodeid="122" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output 12" dstnodeid="120" dstpinname="Input 1">
    </LINK>
@@ -1244,22 +1200,6 @@
    </LINK>
    <LINK srcnodeid="106" srcpinname="Output" dstnodeid="29" dstpinname="Y Input Value">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="126" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="20595" top="3510" width="1800" height="5370">
-   </BOUNDS>
-   <BOUNDS type="Node" left="20595" top="3510" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="20">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="15" srcpinname="Output 2" dstnodeid="126" dstpinname="Input String">
-   </LINK>
    <NODE systemname="Add (Value Spectral Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" nodename="Add (Value Spectral Vector)" componentmode="Hidden" id="127">
    <BOUNDS type="Node" left="18480" top="8835" width="100" height="100">
    </BOUNDS>
@@ -1277,5 +1217,53 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output 3" dstnodeid="128" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="129">
+   <BOUNDS type="Node" left="5805" top="240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1218" values="|/73/303/10/32/Y Input Value|,Play,movie:Seek,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,1,Player1,|/73/303/10/33/Y Input Value|,Reverse,movie:reverse,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,0,Player1,|/73/303/10/34/Y Input Value|,Seek,movie:play,Value,|Bang, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Bang,,0,0,Player1,|/73/303/10/36/Y Input Value|,InPoint,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player1,|/73/303/10/37/Y Input Value|,OutPoint,,Value,|Slider, 1, 1, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,1,Player1,|/73/303/10/38/Y Input Value|,|Scrub (0-1)|,movie:scrub,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player1,|/73/303/10/39/Y Input Value|,SeekTime,movie:seektime,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player1,|/73/303/10/40/Y Input Value|,Speed,,Value,|Endless, 1, 1, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,1,Player1,|/73/303/10/41/Y Input Value|,RandomFile1,,Value,|Endless, 1, 0, 0, 10, 0.01, s, 4|,Real,Endless,0,10,Toggle,,0,0,Player1,|/73/303/10/42/Y Input Value|,Jump1,,Value,|Slider, 1, 0, 0, 1, 0.01, s, 4|,Real,Slider,0,1,Toggle,,0,0,Player1,|/73/303/10/43/Input String|,Filename1,D:\Hap,String,|Filename, test, *.mov, -1|,,,,,,,0,|||^test|||,Player1,|/73/303/11/28/Y Input Value|,Play2,movie:Seek,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,0,Player2,|/73/303/11/29/Y Input Value|,Reverse2,movie:reverse,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,0,Player2,|/73/303/11/30/Y Input Value|,Seek2,movie:play,Value,|Bang, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Bang,,0,0,Player2,|/73/303/11/33/Y Input Value|,InPoint2,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player2,|/73/303/11/34/Y Input Value|,OutPoint2,,Value,|Slider, 1, 1, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,1,Player2,|/73/303/11/35/Y Input Value|,|Scrub3 (0-1)|,movie:scrub,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player2,|/73/303/11/36/Y Input Value|,SeekTime2,movie:seektime,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player2,|/73/303/11/37/Y Input Value|,Speed,,Value,|Endless, 1, 1, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,1,Player2,|/73/303/11/38/Y Input Value|,RandomFile2,,Value,|Slider, 1, 0, 0, 10, 0.01, s, 4|,Real,Slider,0,10,Toggle,,0,0,Player2,|/73/303/11/40/Y Input Value|,Jump2,,Value,|Endless, 1, 0, 0, 1, 0.01, s, 4|,Real,Endless,0,1,Toggle,,0,0,Player2,|/73/303/11/42/Input String|,Filename2,,String,|Filename, , , -1|,,,,,,,0,|||^|||,Player2,|/73/303/13/11/Y Input Value|,RandomFile3,,Value,|Slider, 1, 0, 0, 10, 0.01, s, 4|,Real,Slider,0,10,Toggle,,0,0,Player3,|/73/303/13/12/Y Input Value|,Jump3,,Value,|Slider, 1, 0, 0, 1, 0.01, s, 4|,Real,Slider,0,1,Toggle,,0,0,Player3,|/73/303/13/2/Y Input Value|,Play3,movie:Seek,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,0,Player3,|/73/303/13/3/Y Input Value|,Reverse3,movie:reverse,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,0,Player3,|/73/303/13/4/Y Input Value|,Seek3,movie:play,Value,|Bang, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Bang,,0,0,Player3,|/73/303/13/5/Y Input Value|,InPoint3,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player3,|/73/303/13/6/Y Input Value|,OutPoint3,,Value,|Slider, 1, 1, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,1,Player3,|/73/303/13/7/Y Input Value|,|Scrub3 (0-1)|,movie:scrub,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player3,|/73/303/13/8/Y Input Value|,SeekTime3,movie:seektime,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player3,|/73/303/13/9/Y Input Value|,Speed,,Value,|Endless, 1, 1, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,1,Player3,|/73/303/14/10/Y Input Value|,RandomFile4,,Value,|Slider, 1, 0, 0, 10, 0.01, s, 4|,Real,Slider,0,10,Toggle,,0,0,Player4,|/73/303/14/12/Y Input Value|,Jump4,,Value,|Slider, 1, 0, 0, 1, 0.01, s, 4|,Real,Slider,0,1,Toggle,,0,0,Player4,|/73/303/14/2/Y Input Value|,Play4,movie:Seek,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,0,Player4,|/73/303/14/3/Y Input Value|,Reverse4,movie:reverse,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,0,Player4,|/73/303/14/4/Y Input Value|,Seek4,movie:play,Value,|Bang, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Bang,,0,0,Player4,|/73/303/14/5/Y Input Value|,InPoint4,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player4,|/73/303/14/6/Y Input Value|,OutPoint4,,Value,|Slider, 1, 1, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,1,Player4,|/73/303/14/7/Y Input Value|,|Scrub4 (0-1)|,movie:scrub,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player4,|/73/303/14/8/Y Input Value|,SeekTime4,movie:seektime,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Player4,|/73/303/14/9/Y Input Value|,Speed,,Value,|Endless, 1, 1, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,1,Player4,|/73/303/42/Y Input Value|,Xfade,,Value,|Slider, 1, 1, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,1,HapPlayer4Layers,|/73/303/43/Input Enum|,Technique,,Enumeration,|PullDown, c931e233-2f93-4570-99c9-93b6189501b7, Fade|,,,,,,|Fade, Add, Sub, Mul, Max, Min, Blend|,7,Fade,HapPlayer4Layers,|/73/304/14/37/Input Enum|,TransformFX,,Enumeration,|PullDown, AllFileEnumerators9, GridArray|,,,,,,|GridArray, RandomArray, , #2, #3, #4, #5|,7,GridArray,Transforms,|/73/304/14/48/Y Input Value|,|Spread CountX|,,Value,|Endless, 1, 1, 1, 100, 1, , 4|,Integer,Endless,1,100,Toggle,,0,1,Transforms,|/73/304/14/49/Y Input Value|,WidthX,,Value,|Endless, 1, 1, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,1,Transforms,|/73/304/14/50/Y Input Value|,|Spread CountY|,,Value,|Endless, 1, 1, 1, 100, 1, , 4|,Integer,Endless,1,100,Toggle,,0,1,Transforms,|/73/304/14/51/Y Input Value|,WidthY,,Value,|Endless, 1, 1, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,1,Transforms,|/73/304/14/52/Y Input Value|,|Spread CountZ|,,Value,|Endless, 1, 1, 1, 100, 1, , 4|,Integer,Endless,1,100,Toggle,,0,1,Transforms,|/73/304/14/53/Y Input Value|,WidthZ,,Value,|Endless, 1, 1, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,1,Transforms,|/73/304/14/54/Y Input Value|,ScaleX,,Value,|Endless, 1, 2, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,2,Transforms,|/73/304/14/57/Y Input Value|,ScaleY,,Value,|Endless, 1, 2, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,2,Transforms,|/73/304/14/58/Y Input Value|,Period,,Value,|Slider, 1, 1, 0.01, 4, 0.01, s, 4|,Real,Slider,-4,4,Toggle,,0,1,Transforms,|/73/304/14/63/Y Input Value|,LumaKey,,Value,|Slider, 1, 0.5, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0.5,Transforms,|/73/304/14/67/Y Input Value|,Intesity,,Value,|Endless, 1, 1, 0, 1, 0.01, , 4|,Real,Endless,0,1,Toggle,,0,1,Transforms,|/73/304/15/Input Enum|,Blend,,Enumeration,|PullDown, DX11.BlendPresets, Disabled|,,,,,,|Disabled, Add, Blend, Multiply, AlphaAdd, TextDefault|,6,Disabled,Layer1,|/73/344/83/Y Input Value|,Switch,,Value,|Toggle, 1, 0, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,0,LEDs,|/73/344/84/Y Input Value|,Threshold,,Value,|Endless, 1, 0, 0, 1, 0.01, , 4|,Real,Endless,0,1,Toggle,,0,0,LEDs,|/73/344/85/Y Input Value|,Period,,Value,|Endless, 1, 1, 0.01, 2, 0.01, s, 4|,Real,Endless,0,2,Toggle,,0,1,LEDs,|/73/344/87/Y Input Value|,RGB,,Value,|Slider, 3, 1, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,|1,1,0.9|,LEDs,|/73/344/91/Y Input Value|,Intensity,,Value,|Slider, 1, 1, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,LEDs,|/73/344/94/Y Input Value|,Attack,,Value,|Slider, 1, 0, 0, 1, 0.01, s, 4|,Real,Slider,0,1,Toggle,,0,0,LEDs,|/73/344/95/Y Input Value|,Decay,,Value,|Slider, 1, 0, 0, 1, 0.01, s, 4|,Real,Slider,0,1,Toggle,,0,0,LEDs,|/73/347/44/Y Input Value|,RGB1,,Value,|Slider, 3, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,|0,0,0|,Parcans,|/73/347/45/Y Input Value|,Master1,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Parcans,|/73/347/46/Y Input Value|,Macro1,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0.9,Parcans,|/73/347/47/Y Input Value|,RGB2,,Value,|Slider, 3, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,|1,0,0|,Parcans,|/73/347/48/Y Input Value|,Master2,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Parcans,|/73/347/49/Y Input Value|,Macro2,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0.5,Parcans,|/73/347/50/Y Input Value|,RGB3,,Value,|Slider, 3, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,|0,0,0|,Parcans,|/73/347/51/Y Input Value|,Master3,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,1,Parcans,|/73/347/52/Y Input Value|,Macro3,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,0,Parcans,|/73/347/53/Y Input Value|,RGB4,,Value,|Slider, 3, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,|0,1,1|,Parcans,|/73/347/54/Y Input Value|,Master4,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,1,Parcans,|/73/347/55/Y Input Value|,Macro4,,Value,|Slider, 1, 0, 0, 1, 0.01, , 4|,Real,Slider,0,1,Toggle,,0,1,Parcans,|/73/369/10/Y Input Value|,Contrast,,Value,|Endless, 1, 0, 0, 1, 0.01, , 4|,Real,Endless,0,1,Toggle,,0,1,PostEffects,|/73/369/11/Y Input Value|,Brightness,,Value,|Endless, 1, 0, 0, 1, 0.01, , 4|,Real,Endless,0,1,Toggle,,0,0,PostEffects,|/73/369/13/Y Input Value|,|Dist Amount|,,Value,|Endless, 1, 0.899999976158142, 0, 1, 0.01, , 4|,Real,Endless,0,1,Toggle,,0,1,PostEffects,|/73/369/15/Y Input Value|,|p XY|,,Value,|Slider, 2, 1, 1, 20, 1, , 4|,Integer,Slider,1,20,Toggle,,0,|1,1|,PostEffects,|/73/369/16/Y Input Value|,logbase,,Value,|Endless, 1, 0, -2, 2, 0.01, , 4|,Real,Endless,-2,2,Toggle,,0,1,PostEffects,|/73/369/17/Y Input Value|,LFO,,Value,|Endless, 1, 1, 0.01, 10, 0.01, s, 4|,Real,Endless,0,10,Toggle,,0,1,PostEffects,|/73/369/23/Y Input Value|,|Droste Enabled|,,Value,|Toggle, 1, 1, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,1,PostEffects,|/73/369/6/Y Input Value|,BlurWidth,,Value,|Endless, 1, 0.5, 0, 0.5, 0.01, , 4|,Real,Endless,0,0.5,Toggle,,0,1,PostEffects,|/73/369/7/Y Input Value|,|Blur Enabled|,,Value,|Toggle, 1, 1, 0, 1, 1, , 4|,Boolean,Endless,-99999999,99999999,Toggle,,0,1,PostEffects,|/73/369/8/Y Input Value|,Hue,,Value,|Endless, 1, 0, -1, 1, 0.01, , 4|,Real,Endless,-1,1,Toggle,,0,1,PostEffects,|/73/369/9/Y Input Value|,Saturation,,Value,|Endless, 1, 1, 0, 1, 0.01, , 4|,Real,Endless,0,1,Toggle,,0,0,PostEffects">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="129" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="130">
+   <BOUNDS type="Node" left="5805" top="600" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="129" srcpinname="OnChange" dstnodeid="130" dstpinname="Input">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="131">
+   <BOUNDS type="Node" left="5805" top="1005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="130" srcpinname="Output" dstnodeid="131" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="86" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="78" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="87" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="89" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="109" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Output 2" dstnodeid="111" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Output 1" dstnodeid="114" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Output 1" dstnodeid="113" dstpinname="Input 1">
    </LINK>
    </PATCH>

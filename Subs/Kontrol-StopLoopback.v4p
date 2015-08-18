@@ -83,7 +83,7 @@
    <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="8">
    <BOUNDS type="Node" left="4410" top="2340" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="-1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="6">
    </PIN>
@@ -201,13 +201,33 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3087" top="675" width="5845" height="9525">
    </BOUNDS>
-   <BOUNDS type="Window" left="6315" top="600" width="8430" height="9525">
+   <BOUNDS type="Window" left="24270" top="390" width="8430" height="9525">
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
    <PIN pinname="Select" visible="1" slicecount="10" values="0,0,0,0,0,0,0,0,0,0">
    </PIN>
+   <PIN pinname="HoldOnChange" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="17" srcpinname="Index" dstnodeid="8" dstpinname="Input 1">
+   <LINK srcnodeid="17" srcpinname="OnChange" dstnodeid="8" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3165" top="2715" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3165" top="2715" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="OnChange" dstnodeid="18" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

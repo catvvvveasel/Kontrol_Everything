@@ -1,0 +1,169 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SortIntoLayers.v4p" systemname="SortIntoLayers" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SortIntoLayers.v4p" bgcolor="11442563">
+   <NODE systemname="Occurrence (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (Value)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1755" top="2160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="34" values="8,0,9,9,9,7,7,6,6,8,8,7,7,7,2,2,8,2,7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Unique" visible="1">
+   </PIN>
+   <PIN pinname="Former Index Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Former Index" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sort (Spreads)" nodename="Sort (Spreads)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1755" top="1605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Former Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1500" top="2715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Offset" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sort (Spreads Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.SortAdvanced.dll" nodename="Sort (Spreads Advanced)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1500" top="3195" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   <PIN pinname="Former Slice Bin Size" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2385" top="1500" width="1200" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2385" top="1500" width="1200" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|sort into types|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3165" top="2190" width="780" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3165" top="2190" width="780" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|bin them|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="6" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2235" top="3195" width="1785" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2235" top="3195" width="1785" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|sort the times by types|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="7" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Former Index" dstnodeid="2" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Count" dstnodeid="3" dstpinname="Input Bin Size">
+   </LINK>
+   <NODE id="8" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="3965" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="3965" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="9" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Former Slice|">
+   </PIN>
+   <BOUNDS type="Box" left="2400" top="3965" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2400" top="3965" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Former Slice" dstnodeid="9" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <NODE id="10" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 1|">
+   </PIN>
+   <BOUNDS type="Box" left="2400" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2400" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <NODE id="11" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Output 1|">
+   </PIN>
+   <BOUNDS type="Box" left="3300" top="3965" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3300" top="3965" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="11" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="12" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Former Index|">
+   </PIN>
+   <BOUNDS type="Box" left="4200" top="3965" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4200" top="3965" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Former Index" dstnodeid="12" dstpinname="Y Input Value">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="5520" height="4965">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   </PATCH>

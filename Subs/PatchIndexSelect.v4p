@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PatchIndexSelect.v4p" systemname="PatchIndexSelect" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PatchIndexSelect.v4p" bgcolor="11442563" scrollx="0" scrolly="-360">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PatchIndexSelect.v4p" systemname="PatchIndexSelect" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PatchIndexSelect.v4p" bgcolor="11442563" scrollx="0" scrolly="1800">
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="0" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" left="2190" top="1500" width="100" height="100">
    </BOUNDS>
@@ -108,7 +108,7 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="6315" top="600" width="8430" height="11010">
+   <BOUNDS type="Window" left="24270" top="390" width="8430" height="9525">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -475,5 +475,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="53" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="54" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3060" top="9015" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3060" top="9015" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="OnChange">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="50" srcpinname="OnChange" dstnodeid="54" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

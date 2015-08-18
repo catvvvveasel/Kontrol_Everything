@@ -1,17 +1,17 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SetDefaults.v4p" systemname="SetDefaults" filename="D:\Copy\Projects\CatGui0.5\Subs\SetDefaults.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="5055" top="735" width="9000" height="6000">
+   <BOUNDS type="Window" left="6480" top="1335" width="11010" height="9825">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2235" top="3630" width="100" height="100">
+   <BOUNDS type="Node" left="2235" top="4965" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Spread" visible="1">
+   <PIN pinname="Spread" visible="1" slicecount="3" values="|0.1230,0.1230|,^file__,^DX11">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="12" values="| 1|,| 1|,| 1|,| 1|,|0,0,1,1|,| 0|,| 5|,| 1|,| 0, 0, 0|,| 1, 1, 1|,Disabled,| 0, 0, 0|">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -31,13 +31,13 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Spread">
    </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="0" dstpinname="Spread">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="2205" top="4425" width="795" height="240">
+   <BOUNDS type="Box" left="2235" top="5745" width="4155" height="1695">
    </BOUNDS>
-   <BOUNDS type="Node" left="2205" top="4425" width="0" height="0">
+   <BOUNDS type="Node" left="2235" top="5745" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -49,11 +49,13 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
+   <PIN pinname="Rows" slicecount="1" values="5">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="2" dstpinname="Input String">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="4425" top="1365" width="100" height="100">
+   <BOUNDS type="Node" left="5205" top="1110" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="RightClickNames">
    </PIN>
@@ -61,7 +63,7 @@
    </PIN>
    </NODE>
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="3975" top="585" width="100" height="100">
+   <BOUNDS type="Node" left="7410" top="1005" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="DefaultsSelected">
    </PIN>
@@ -69,7 +71,7 @@
    </PIN>
    </NODE>
    <NODE systemname="TimerFlop (Animation)" filename="%VVVV%\addonpack\lib\nodes\plugins\TimerFlop.dll" nodename="TimerFlop (Animation)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="4440" top="2070" width="100" height="100">
+   <BOUNDS type="Node" left="5220" top="1815" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1">
    </PIN>
@@ -81,7 +83,7 @@
    <LINK srcnodeid="3" srcpinname="Input Value" dstnodeid="7" dstpinname="Set">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="4950" top="2610" width="100" height="100">
+   <BOUNDS type="Node" left="5220" top="2250" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -91,39 +93,77 @@
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Input">
    </LINK>
    <NODE systemname="Select (String)" filename="" nodename="Select (String)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="3975" top="2940" width="100" height="100">
+   <BOUNDS type="Node" left="4755" top="2685" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Select" visible="1" slicecount="12" values="0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Select" visible="1" slicecount="3" values="1,0,0">
    </PIN>
    <PIN pinname="Former Slice" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Former Slice" dstnodeid="0" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="9" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="0" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="10" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3990" top="3975" width="1905" height="480">
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="7875" top="1680" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Node" left="3990" top="3975" width="0" height="0">
+   <BOUNDS type="Box" left="7875" top="1680" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||">
+   <PIN pinname="Descriptive Name" slicecount="1" values="BinSize">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="10" dstpinname="Input String">
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="7410" top="2325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Input Value" dstnodeid="13" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="9" dstpinname="Select">
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Select">
+   </LINK>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="7410" top="2970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Comma">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Bin Size">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="4635" top="3975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="0" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Up Edge" dstnodeid="9" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Former Slice" dstnodeid="15" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Former Slice" dstnodeid="0" dstpinname="Index">
    </LINK>
    </PATCH>
