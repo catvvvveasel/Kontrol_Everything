@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Send_GUI_ToClient.v4p" systemname="Send_GUI_ToClient" filename="D:\Copy\Projects\CatGui0.5\Subs\Send_GUI_ToClient.v4p" scrollx="0" scrolly="1080" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Send_GUI_ToClient.v4p" systemname="Send_GUI_ToClient" filename="D:\Copy\Projects\CatGui0.5\Subs\Send_GUI_ToClient.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="5790" top="4440" width="100" height="100">
    </BOUNDS>
@@ -66,30 +66,12 @@
    <PIN pinname="Send String" slicecount="1" values="Resolution">
    </PIN>
    </NODE>
-   <NODE id="9" systemname="AsSharedTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AsSharedTexture (DX11.Texture 2d)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Texture In" visible="1" slicecount="1" pintype="Input" values="||">
-   </PIN>
-   <PIN pinname="Pointer" visible="1" pintype="Output">
-   </PIN>
-   <BOUNDS type="Node" left="2880" top="6630" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1725" top="3480" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Window Handle" pintype="Output">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="6315" top="4545" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="7" values="-0.997915581031787,0.171102661596958,0,0,0,0,0">
+   <PIN pinname="Input 2" visible="1" slicecount="7" values="-0.999,0.0777,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -230,7 +212,7 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Output" dstnodeid="15" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="1950" top="5820" width="15480" height="12045">
+   <BOUNDS type="Window" left="6300" top="7710" width="15480" height="12045">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -250,18 +232,14 @@
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="14" dstpinname="Texture SizeXY">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Buffers" dstnodeid="9" dstpinname="Texture In">
-   </LINK>
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="29">
    <BOUNDS type="Node" left="2865" top="7305" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="3221232514">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Pointer" dstnodeid="29" dstpinname="Input">
-   </LINK>
    <NODE systemname="Cons (String)" nodename="Cons (String)" componentmode="Hidden" id="28" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" left="2865" top="7965" width="7455" height="270">
    </BOUNDS>
@@ -698,8 +676,6 @@
    </NODE>
    <LINK srcnodeid="58" srcpinname="Output" dstnodeid="59" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="12" dstpinname="Input 2">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="60" systemname="IOBox (String)">
    <BOUNDS type="Node" left="2730" top="1110" width="2310" height="270">
    </BOUNDS>
@@ -795,5 +771,23 @@
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="65" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="65" srcpinname="Output" dstnodeid="63" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="Send_GUI_ToClient-1" filename="Send_GUI_ToClient-1.v4p" nodename="Send_GUI_ToClient-1.v4p" componentmode="Hidden" id="68">
+   <BOUNDS type="Node" left="2805" top="6495" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1255" top="4945" width="3100" height="3100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="3100" height="3100">
+   </BOUNDS>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Buffers" dstnodeid="68" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Pointer" dstnodeid="29" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="12" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="68" dstpinname="Evaluate">
    </LINK>
    </PATCH>

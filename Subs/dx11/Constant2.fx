@@ -16,7 +16,7 @@ cbuffer cbPerObj : register( b1 )
 {
 	float4x4 tW : WORLD;
 	float Alpha <float uimin=0.0; float uimax=1.0;> = 1; 
- float4 cA21mb <bool color=true;string uiname="Color";> =1;
+ float4 cAmb <bool color=true;string uiname="Color";> =1;
 };
 
 struct VS_IN

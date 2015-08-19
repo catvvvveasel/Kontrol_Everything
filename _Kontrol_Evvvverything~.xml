@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="22050" top="5235" width="15870" height="15675">
+   <BOUNDS type="Window" left="20955" top="4905" width="15870" height="15675">
    </BOUNDS>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="108">
    <BOUNDS type="Node" left="7515" top="10320" width="100" height="100">
@@ -12,14 +12,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="TTY">
    </PIN>
    <PIN pinname="Log Messages" slicecount="1" visible="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="160">
-   <BOUNDS type="Node" left="2085" top="6705" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="TranslateX" visible="1" slicecount="1" values="1.75">
    </PIN>
    </NODE>
    <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
@@ -136,6 +128,8 @@
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="13">
    </PIN>
    </NODE>
    <NODE systemname="SetProcessAffinityMask (Windows)" nodename="SetProcessAffinityMask (Windows)" componentmode="Hidden" id="348">
@@ -353,7 +347,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8415" top="9690" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -363,7 +357,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="398" srcpinname="Y Output Value" dstnodeid="108" dstpinname="Log Messages">
@@ -415,7 +409,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7560" top="1470" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\HapVJPlayer\_MainPatch.v4p">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="..\..\Nicoline\LoL_App\_Main_V2.v4p">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -643,7 +637,7 @@
    <NODE systemname="KeyBoardShortcuts" filename="Subs\KeyBoardShortcuts.v4p" nodename="Subs\KeyBoardShortcuts.v4p" componentmode="Hidden" id="113">
    <BOUNDS type="Node" left="1725" top="2625" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="8970" top="3705" width="21375" height="10695">
+   <BOUNDS type="Window" left="585" top="3735" width="21375" height="16695">
    </BOUNDS>
    <PIN pinname="Tab" visible="1">
    </PIN>
@@ -652,6 +646,8 @@
    <PIN pinname="Enable v4 Shortcuts" visible="1">
    </PIN>
    <PIN pinname="WindowedKeyBoard" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="SharedTextureIN" filename="Subs\SharedTextureIN.v4p" nodename="Subs\SharedTextureIN.v4p" componentmode="Hidden" id="357">
@@ -665,13 +661,15 @@
    </PIN>
    <PIN pinname="Read" visible="1" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Evaluate" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="357" srcpinname="Layer Out" dstnodeid="167" dstpinname="Layer 1">
    </LINK>
    <NODE id="78" systemname="Kontrol_SeparateTable" filename="Subs\Kontrol_SeparateTable.v4p" nodename="Subs\Kontrol_SeparateTable.v4p" componentmode="Hidden" stayontop="0">
-   <BOUNDS type="Window" left="9090" top="5130" width="18855" height="15090">
+   <BOUNDS type="Window" left="18570" top="11865" width="18840" height="15090">
    </BOUNDS>
-   <BOUNDS type="Node" left="1680" top="4785" width="100" height="100">
+   <BOUNDS type="Node" left="1605" top="4830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Patch IDs" visible="1">
    </PIN>
@@ -727,6 +725,10 @@
    </PIN>
    <PIN pinname="Client" visible="1">
    </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   <PIN pinname="ClearKeyFrames" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="78" srcpinname="Layer" dstnodeid="167" dstpinname="Layer 4">
    </LINK>
@@ -734,62 +736,12 @@
    </LINK>
    <LINK srcnodeid="449" srcpinname="Output String" dstnodeid="78" dstpinname="Client" hiddenwhenlocked="1">
    </LINK>
-   <NODE id="159" systemname="PerfMeter2 (DX11.Debug)" filename="Subs\PerfMeter2 (DX11.Debug).v4p" nodename="PerfMeter2 (DX11.Debug)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="2085" top="7125" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1" pintype="Output">
-   </PIN>
-   <BOUNDS type="Box" left="330" top="1065" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="3060" top="6690" width="11760" height="8685">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transform" pintype="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Inverse ViewProjection" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Screen Size" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="framebuffer" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="RefreshRenderContext" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Clear Unlocked" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Clear Cache" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="PipeLineStatistics Query Source" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="PipeLineStatistics" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Window Handle" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="Patch" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="fps" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Query" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="160" srcpinname="Transform Out" dstnodeid="159" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="159" srcpinname="fps" dstnodeid="292" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="159" srcpinname="Layer" dstnodeid="167" dstpinname="Layer 7">
-   </LINK>
    <NODE systemname="Send_GUI_ToClient" filename="Subs\Send_GUI_ToClient.v4p" nodename="Subs\Send_GUI_ToClient.v4p" componentmode="Hidden" id="439">
    <BOUNDS type="Node" left="1590" top="9868" width="1590" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="6623" width="9555" height="6490">
    </BOUNDS>
-   <BOUNDS type="Window" left="1950" top="5820" width="15480" height="12045">
+   <BOUNDS type="Window" left="20280" top="4410" width="15480" height="12045">
    </BOUNDS>
    <PIN pinname="Texture SizeXY" visible="1" slicecount="2" values="1920,1080">
    </PIN>
@@ -807,6 +759,8 @@
    </PIN>
    <PIN pinname="ShowGUI" visible="1">
    </PIN>
+   <PIN pinname="Evaluate" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="167" srcpinname="Layer Out" dstnodeid="439" dstpinname="Layer">
    </LINK>
@@ -821,7 +775,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6600" top="7665" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="11040" top="1050" width="13635" height="9090">
+   <BOUNDS type="Window" left="18780" top="1095" width="13635" height="12990">
    </BOUNDS>
    <PIN pinname="Filename" visible="1">
    </PIN>
@@ -893,6 +847,8 @@
    </PIN>
    <PIN pinname="FilePaths" visible="1">
    </PIN>
+   <PIN pinname="ClearKeyFrames" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="364" srcpinname="Output String" dstnodeid="361" dstpinname="ProjectName">
    </LINK>
@@ -949,7 +905,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="360" top="2354" width="4510" height="6910">
    </BOUNDS>
-   <BOUNDS type="Window" left="14850" top="1485" width="18990" height="15750">
+   <BOUNDS type="Window" left="11130" top="1935" width="18990" height="15750">
    </BOUNDS>
    <PIN pinname="SubType" visible="1" slicecount="4" values="|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 1, 1, 0.001, 160, 0.01, , 1|,|Endless, 3, 0, -100, 100, 0.01, , 4|">
    </PIN>
@@ -1001,9 +957,9 @@
    <LINK srcnodeid="113" srcpinname="Tab" dstnodeid="96" dstpinname="Enabled" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="96" srcpinname="ValuesOUT" dstnodeid="78" dstpinname="GUI" hiddenwhenlocked="1">
-   <LINKPOINT x="3210" y="6360">
+   <LINKPOINT x="3185" y="6375">
    </LINKPOINT>
-   <LINKPOINT x="3030" y="4410">
+   <LINKPOINT x="2980" y="4440">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="78" srcpinname="ToGui" dstnodeid="96" dstpinname="ValuesIN">
@@ -1174,34 +1130,12 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="468" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3315" top="7080" width="285" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3315" top="7080" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="468" srcpinname="Y Output Value" dstnodeid="159" dstpinname="Enabled">
-   </LINK>
-   <NODE id="155" componentmode="InAWindow" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" border="1">
+   <NODE id="155" componentmode="Hidden" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" border="1">
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
-   <BOUNDS type="Window" left="38400" top="165" width="29220" height="16440">
+   <BOUNDS type="Window" left="38400" top="0" width="29010" height="16440">
    </BOUNDS>
    <BOUNDS type="Node" left="825" top="8415" width="100" height="100">
    </BOUNDS>
@@ -1327,5 +1261,69 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="471" srcpinname="Output String" dstnodeid="472" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="474">
+   <BOUNDS type="Node" left="180" top="1725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Total Runnning Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Total Clock Filter Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Reset Cache Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Debug Output Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Network Sync Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Present Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Render Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Prepare Graph Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Update View Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Timer Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Windows Time" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="frames per second" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="475" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="150" top="2295" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="150" top="2295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="474" srcpinname="frames per second" dstnodeid="475" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="OnChange" dstnodeid="113" dstpinname="Input">
+   <LINKPOINT x="3525" y="5325">
+   </LINKPOINT>
+   <LINKPOINT x="3360" y="2385">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="PerfMeter2 (DX11.Debug)" filename="Subs\PerfMeter2 (DX11.Debug).v4p" nodename="PerfMeter2 (DX11.Debug)" componentmode="Hidden" id="476">
+   <BOUNDS type="Node" left="2040" top="7035" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="fps" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="476" srcpinname="Layer" dstnodeid="167" dstpinname="Layer 7">
+   </LINK>
+   <LINK srcnodeid="476" srcpinname="fps" dstnodeid="292" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="361" srcpinname="ClearKeyFrames" dstnodeid="78" dstpinname="ClearKeyFrames">
    </LINK>
    </PATCH>

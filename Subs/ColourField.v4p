@@ -203,13 +203,13 @@
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="6750" top="6495" width="100" height="100">
+   <BOUNDS type="Node" left="6795" top="6720" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread" visible="1">
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="42" values="|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,1.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|,|0.3333,0.0000,1.0000,1.0000|">
+   <PIN pinname="Input" visible="1" slicecount="7" values="|0.0000,1.0000,1.0000,0.0000|,|0.8300,1.0000,1.0000,1.0000|,|0.1667,0.0000,0.0000,1.0000|,|0.6700,1.0000,1.0000,1.0000|,|0.0000,0.0000,1.0000,0.0000|,|0.2194,1.0000,0.9800,1.0000|,|0.1667,1.0000,1.0000,0.0000|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -557,9 +557,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="69" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="8205" top="5310" width="6825" height="270">
+   <BOUNDS type="Node" left="8460" top="5040" width="6825" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="8205" top="5310" width="2250" height="1455">
+   <BOUNDS type="Box" left="8460" top="5040" width="2250" height="1455">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|covert RGB colours as sent via konroleur to HSV for the gui, we have to reconvert back again afterwards too|">
    </PIN>
@@ -700,8 +700,6 @@
    </LINK>
    <LINK srcnodeid="76" srcpinname="Output" dstnodeid="74" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="39" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="25" dstpinname="Input">
    </LINK>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="80">
@@ -719,5 +717,19 @@
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="80" dstpinname="Operand 1">
    </LINK>
    <LINK srcnodeid="80" srcpinname="Result" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Quote (String)" nodename="Quote (String)" componentmode="Hidden" id="81">
+   <BOUNDS type="Node" left="7500" top="6000" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Quote Mode" slicecount="1" values="Pipe">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="81" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="81" srcpinname="Output" dstnodeid="39" dstpinname="Input">
    </LINK>
    </PATCH>

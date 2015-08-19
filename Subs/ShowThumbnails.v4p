@@ -5,27 +5,11 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Transform" visible="1">
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="1500" top="4755" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="0.92">
-   </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="1.97">
-   </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="8.94">
-   </PIN>
-   <PIN pinname="TranslateY" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="GetSpread (String)" nodename="GetSpread (String)" componentmode="Hidden" id="15">
@@ -62,8 +46,6 @@
    <BOUNDS type="Node" left="1845" top="3770" width="750" height="240">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="2" dstpinname="TranslateY">
-   </LINK>
    <NODE id="20" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Input Node|">
    </PIN>
@@ -74,8 +56,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
-   </LINK>
    <LINK srcnodeid="16" srcpinname="Texture Out" dstnodeid="1" dstpinname="Texture">
    </LINK>
    <NODE id="24" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
@@ -411,8 +391,6 @@
    <LINK srcnodeid="59" srcpinname="Former Slice" dstnodeid="74" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="16" dstpinname="Filename">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform In">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="96" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3315" top="750" width="480" height="480">
@@ -919,5 +897,37 @@
    <LINK srcnodeid="67" srcpinname="Output String" dstnodeid="134" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="134" srcpinname="Output" dstnodeid="129" dstpinname="Input">
+   </LINK>
+   <NODE id="2" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="1500" top="4755" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1" slicecount="1" pintype="Input" values="||">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" pintype="Input" visible="1" values="0.92">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" pintype="Input" visible="1" values="1.97">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" pintype="Input" visible="1" values="8.94">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Rotate" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="CenterX" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="CenterY" pintype="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="2" dstpinname="TranslateY">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PatchIndexSelect.v4p" systemname="PatchIndexSelect" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PatchIndexSelect.v4p" bgcolor="11442563" scrollx="0" scrolly="1800">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PatchIndexSelect.v4p" systemname="PatchIndexSelect" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PatchIndexSelect.v4p" bgcolor="11442563" scrollx="0" scrolly="480">
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="0" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" left="2190" top="1500" width="100" height="100">
    </BOUNDS>
@@ -34,16 +34,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="4860" top="1460" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" visible="1" values="PlaylistPatchNo">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Display Channel" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="LTP (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\LTPNode.dll" nodename="LTP (Value)" componentmode="Hidden" id="9">
@@ -108,7 +98,7 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="24270" top="390" width="8430" height="9525">
+   <BOUNDS type="Window" left="6315" top="600" width="8430" height="11010">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -173,7 +163,7 @@
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="9" dstpinname="Input 3">
    </LINK>
    <NODE id="24" systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="2685" top="8055" width="100" height="100">
+   <BOUNDS type="Node" left="1365" top="9120" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
@@ -203,15 +193,13 @@
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="4890" top="1995" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="1000">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="26" dstpinname="Input">
-   </LINK>
    <NODE systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" id="27">
    <BOUNDS type="Node" left="4890" top="2580" width="100" height="100">
    </BOUNDS>
@@ -251,18 +239,6 @@
    <LINK srcnodeid="27" srcpinname="Whole Part" dstnodeid="29" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="11" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6105" top="2460" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6105" top="2460" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="30" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="AvoidNIL2" filename="AvoidNIL2.v4p" nodename="AvoidNIL2.v4p" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2685" top="3090" width="100" height="100">
@@ -394,8 +370,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="24" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="FormatValue (String)" filename="" nodename="FormatValue (String)" componentmode="Hidden" id="48">
    <BOUNDS type="Node" left="2655" top="6975" width="100" height="100">
    </BOUNDS>
@@ -477,9 +451,9 @@
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="53" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="54" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3060" top="9015" width="480" height="480">
+   <BOUNDS type="Box" left="3615" top="9315" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3060" top="9015" width="0" height="0">
+   <BOUNDS type="Node" left="3615" top="9315" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -493,5 +467,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="50" srcpinname="OnChange" dstnodeid="54" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="24" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5010" top="1290" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5010" top="1290" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="PlayListPatchNumber">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Input">
    </LINK>
    </PATCH>
