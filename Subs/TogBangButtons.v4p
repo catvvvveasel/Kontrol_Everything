@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\TogBangButtons.v4p" systemname="TogBangButtons" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TogBangButtons.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\TogBangButtons.v4p" systemname="TogBangButtons" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\TogBangButtons.v4p" scrollx="0" scrolly="-720" bgcolor="11442563">
    <BOUNDS type="Window" left="4665" top="2115" width="13470" height="14805">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="1095" top="12660" width="795" height="240">
@@ -291,11 +291,11 @@
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Input">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="71">
-   <BOUNDS type="Node" left="7155" top="5475" width="100" height="100">
+   <BOUNDS type="Node" left="7215" top="5055" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="18" values="1,1,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1">
+   <PIN pinname="Switch" visible="1" slicecount="14" values="1,1,1,1,1,0,0,1,1,1,0,1,1,1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -303,11 +303,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Output 1" dstnodeid="71" dstpinname="Input 1">
-   <LINKPOINT x="6184" y="10463">
+   <LINKPOINT x="6195" y="10365">
    </LINKPOINT>
-   <LINKPOINT x="6172" y="7214">
+   <LINKPOINT x="6195" y="7005">
    </LINKPOINT>
-   <LINKPOINT x="7046" y="5767">
+   <LINKPOINT x="7170" y="4620">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="71" srcpinname="Output" dstnodeid="67" dstpinname="Input">
@@ -335,7 +335,7 @@
    <LINK srcnodeid="73" srcpinname="Count" dstnodeid="74" dstpinname="Input">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="6525" top="3690" width="360" height="270">
+   <BOUNDS type="Node" left="6120" top="3615" width="360" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -429,7 +429,7 @@
    <LINK srcnodeid="43" srcpinname="Up Edge" dstnodeid="80" dstpinname="Set">
    </LINK>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="5850" top="1005" width="100" height="100">
+   <BOUNDS type="Node" left="5925" top="765" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -545,7 +545,7 @@
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="60" dstpinname="Select">
    </LINK>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="7215" top="4485" width="100" height="100">
+   <BOUNDS type="Node" left="6435" top="4065" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -553,8 +553,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="75" srcpinname="Output" dstnodeid="90" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="71" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="38" srcpinname="Former Slice" dstnodeid="77" dstpinname="Input">
    </LINK>
@@ -691,6 +689,8 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3630" top="4155" width="795" height="240">
    </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="71" dstpinname="Input 2">
    </LINK>
@@ -815,5 +815,9 @@
    <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="111" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="111" srcpinname="Output" dstnodeid="116" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="107" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="71" dstpinname="Switch">
    </LINK>
    </PATCH>

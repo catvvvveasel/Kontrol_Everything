@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\FileNameText.v4p" systemname="FileNameText" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\FileNameText.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1875" top="5895" width="100" height="100">
@@ -135,7 +135,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="2" values="135^spiral2.mov,135^spiral2.mov">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="1" values="1">
+   <PIN pinname="Switch" visible="1" slicecount="2" values="1,0">
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="4" values="D:\Hap,D:\Hap\Stroke\,D:\Hap\Surfaces\,D:\Hap\TV_selection\">
    </PIN>
@@ -196,8 +196,6 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="15" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="10" dstpinname="Switch">
-   </LINK>
    <NODE id="16" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Menu">
    </PIN>
@@ -252,7 +250,7 @@
    </LINK>
    <BOUNDS type="Window" left="6030" top="10185" width="7095" height="7005">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="4920" top="1515" width="100" height="100">
@@ -285,5 +283,33 @@
    <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="20" dstpinname="Operand 1">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Result" dstnodeid="19" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="22">
+   <BOUNDS type="Node" left="5445" top="2850" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5445" top="2850" width="795" height="960">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0,0,0,1">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="22" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="1965" top="2580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="23" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="10" dstpinname="Switch">
    </LINK>
    </PATCH>

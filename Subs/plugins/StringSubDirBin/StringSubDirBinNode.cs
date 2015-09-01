@@ -32,12 +32,12 @@ namespace VVVV.Nodes
 		public void Evaluate(int SpreadMax)
 		{
 			FOutput.SliceCount = SpreadMax;
-
+	int directoryCount ;
 			for (int i = 0; i < SpreadMax; i++)
-			
-		FOutput[i] = 	Directory.GetDirectories(FInput[i], "*", SearchOption.AllDirectories);
-       //  where Directory.GetDirectories(subdirectory).Length == 0
-			
+			{
+			directoryCount = System.IO.Directory.GetDirectories(FInput[i]).Length;
+				FOutput[i] = directoryCount.ToString() ;//FInput[i].Replace("directoryCount", "vvvv");
+			}
 			
 		//		FOutput[i] = FInput[i].Replace("c#", "vvvv");
 

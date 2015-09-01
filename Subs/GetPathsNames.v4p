@@ -1,23 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\GetPathsNames.v4p" systemname="GetPathsNames" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\GetPathsNames.v4p" scrollx="0" scrolly="360" bgcolor="11442563">
-   <BOUNDS type="Window" left="9090" top="930" width="18195" height="13305">
+   <BOUNDS type="Window" left="14595" top="3660" width="18195" height="13305">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
-   <NODE systemname="SubDir (File)" nodename="SubDir (File)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="4095" top="3375" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Directory" slicecount="1" visible="1" values="..\..\..\Nicoline\LoL_App\Projects\Paris\Video\">
-   </PIN>
-   <PIN pinname="Subdirectories" visible="1">
-   </PIN>
-   <PIN pinname="Update" slicecount="1" visible="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="3660" top="5145" width="100" height="100">
+   <BOUNDS type="Node" left="3585" top="6120" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" visible="1" slicecount="1" values="..\..\..\Nicoline\LoL_App\Projects\Paris\Video">
+   <PIN pinname="Filename" visible="1" slicecount="10" values="..\..\..\Nicoline\LoL_App\Projects\Paris\Video,..\..\..\Nicoline\LoL_App\Projects\Paris\Video,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\CatwalkTextures,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\ens,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\Rear,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\relay,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\CatwalkTextures,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\ens,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\Rear,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\relay">
    </PIN>
    <PIN pinname="Shortname" visible="1">
    </PIN>
@@ -30,6 +20,8 @@
    <PIN pinname="Intersperse" slicecount="1" values="Comma">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1" slicecount="2" values="4,4">
    </PIN>
    </NODE>
    <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="21">
@@ -47,7 +39,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="5265" top="8565" width="765" height="270">
+   <BOUNDS type="Node" left="5250" top="8475" width="765" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="27" values="2julia.mov,3julia.mov,4julia.mov,5julia.mov,6julia.mov,8julia.mov,|Blue Streaks.mov|,|Final Comp 2.mov|,fractal1.mov,julia.mov,|Dance of Darkness(Butoh) 10-AIC.mov|,|Dance of Darkness(Butoh) 11-AIC.mov|,|Dance of Darkness(Butoh) 12-AIC.mov|,|Dance of Darkness(Butoh) 13-AIC.mov|,|Dance of Darkness(Butoh) 14-AIC.mov|,|Dance of Darkness(Butoh) 16-AIC.mov|,|Dance of Darkness(Butoh) 17-AIC.mov|,|Dance of Darkness(Butoh) 18-AIC.mov|,|Dance of Darkness(Butoh) 19-AIC.mov|,|Dance of Darkness(Butoh) 2-AIC.mov|,|Dance of Darkness(Butoh) 3-AIC.mov|,|Dance of Darkness(Butoh) 4-AIC.mov|,|Dance of Darkness(Butoh) 5-AIC.mov|,|Dance of Darkness(Butoh) 6-AIC.mov|,|Dance of Darkness(Butoh) 7-AIC.mov|,|Dance of Darkness(Butoh) 8-AIC.mov|,|Dance of Darkness(Butoh)-AIC.mov|">
    </PIN>
@@ -59,31 +51,27 @@
    </PIN>
    </NODE>
    <NODE systemname="Zip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (String)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="4005" top="9015" width="705" height="270">
+   <BOUNDS type="Node" left="3990" top="9210" width="705" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="46" values="16mm,4dJuliaSets,Adem,ASSORTED,Butoh,Capsule,CasioFire,CatArt2,CatArt3,CatArt4,CatArt5,City,Darwin,DimiEdit,Fierce,FlashMasked,ForRoss,Glitch,Haxan,HongKong,Japan,Jumps,LA,Liquids2014_Hap,Mybridge,NATURE,NZ,OddsEnds,oldVHS,Omnia,People,Perlin,Pilgim,Platform9_,Psyche,statues,Stroke,Surfaces,Terror,TV_selection,VertOldVVVV,VHS2,Vodaphone,Wallpaper,Waps,Weller">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="28" values="16mm1.mov,16mm11.mov,16mm2.mov,16mm20.mov,16mm20_2.mov,16mm21.mov,16mm3.mov,16mm31.mov,16mm31_circle.mov,|16mm31_cross hatch.mov|,16mm31_diaganal.mov,16mm31_lines.mov,16mm31_rings.mov,16mm31_strobe.mov,16mm31_wave.mov,16mm4.mov,16mm5.mov,16mm6.mov,16mm6b.mov,16mmBlue.mov,16mmEye.mov,16mmGreen.mov,|16mmLines 2.mov|,16mmLines.mov,16mmOrange.mov,16mmRed.mov,16mmStrobe.mov,16mmStrobe2.mov">
+   <PIN pinname="Input 2" visible="1" slicecount="2" values="Shiny-silver2.png,">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="19" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="19" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="5625" top="9855" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="2" values="1,0">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="4,4">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="21" srcpinname="File Count" dstnodeid="18" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="5640" top="9375" width="100" height="100">
    </BOUNDS>
@@ -93,8 +81,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="23" srcpinname="Shortname" dstnodeid="17" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="17" srcpinname="Count" dstnodeid="18" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="6705" top="4245" width="100" height="100">
@@ -145,9 +131,9 @@
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="20" dstpinname="Input">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="4005" top="7665" width="100" height="100">
+   <BOUNDS type="Node" left="3930" top="7035" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="2" values="D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\Rear\">
+   <PIN pinname="Input" visible="1" slicecount="10" values="D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\CatwalkTextures,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\ens,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\Rear,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\relay,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\CatwalkTextures,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\ens,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\Rear,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\relay">
    </PIN>
    <PIN pinname="To" slicecount="1" values="^">
    </PIN>
@@ -247,13 +233,11 @@
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="5250" top="4545" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="8" values=",,,,,,,">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="24" srcpinname="Subdirectories" dstnodeid="4" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="4" srcpinname="Count" dstnodeid="10" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="3">
@@ -271,8 +255,6 @@
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="3" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="21" dstpinname="Directory">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="OnChange" dstnodeid="24" dstpinname="Update">
    </LINK>
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="6000" top="4725" width="100" height="100">
@@ -435,7 +417,7 @@
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="30" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="31" systemname="IOBox (String)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Box" left="9030" top="8880" width="795" height="240">
+   <BOUNDS type="Box" left="9030" top="8880" width="8250" height="255">
    </BOUNDS>
    <BOUNDS type="Node" left="9030" top="8880" width="0" height="0">
    </BOUNDS>
@@ -534,28 +516,8 @@
    </NODE>
    <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="14" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="33">
-   <BOUNDS type="Node" left="3660" top="4575" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\Rear\">
-   </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="Video">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Output Bin Size" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="27" srcpinname="Output String" dstnodeid="24" dstpinname="Directory">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="Output String" dstnodeid="33" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="23" dstpinname="Filename">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Shortname" dstnodeid="12" dstpinname="Input">
-   </LINK>
    <NODE id="34" systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="4095" top="4230" width="100" height="100">
+   <BOUNDS type="Node" left="3525" top="3615" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Operand 1" visible="1" slicecount="2" values="D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\Rear\">
    </PIN>
@@ -566,10 +528,6 @@
    <PIN pinname="Result" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="24" srcpinname="Subdirectories" dstnodeid="34" dstpinname="Operand 1">
-   </LINK>
-   <LINK srcnodeid="34" srcpinname="Result" dstnodeid="33" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="27" srcpinname="Output String" dstnodeid="15" dstpinname="Input 1">
    </LINK>
    <NODE id="35" systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
@@ -610,26 +568,10 @@
    </NODE>
    <LINK srcnodeid="35" srcpinname="Shortname" dstnodeid="36" dstpinname="Input String">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="37" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1740" top="5955" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1740" top="5955" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="AllDirs">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="37" dstpinname="Input String">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="38" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2055" top="7290" width="795" height="960">
+   <BOUNDS type="Box" left="10770" top="3540" width="795" height="960">
    </BOUNDS>
-   <BOUNDS type="Node" left="2055" top="7290" width="0" height="0">
+   <BOUNDS type="Node" left="10770" top="3540" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -639,15 +581,13 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="0,,,">
+   <PIN pinname="Y Input Value" slicecount="2" values="2,8">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="33" srcpinname="Output Bin Size" dstnodeid="38" dstpinname="Y Input Value">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="39" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1320" top="11295" width="7845" height="1470">
    </BOUNDS>
@@ -685,5 +625,143 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="27" srcpinname="Output String" dstnodeid="40" dstpinname="Input String">
+   </LINK>
+   <NODE id="24" systemname="SubDir (File)" nodename="SubDir (File)" componentmode="Hidden">
+   <BOUNDS type="Node" left="3525" top="3075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Directory" slicecount="1" visible="1" values="..\..\..\Nicoline\LoL_App\Projects\Paris\Video\">
+   </PIN>
+   <PIN pinname="Subdirectories" visible="1">
+   </PIN>
+   <PIN pinname="Update" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Subdirectories" dstnodeid="34" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output String" dstnodeid="24" dstpinname="Directory">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="OnChange" dstnodeid="24" dstpinname="Update">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Subdirectories" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <NODE systemname="SubDirBin (String)" filename="plugins\StringSubDirBin\StringSubDirBin.csproj" nodename="SubDirBin (String)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="960" top="2685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output String" dstnodeid="41" dstpinname="Input">
+   </LINK>
+   <NODE systemname="AsValue (String)" nodename="AsValue (String)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="990" top="3180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Output" dstnodeid="42" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="6585" top="8610" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="File Count" dstnodeid="43" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="4620" top="8805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="44" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="44" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="19" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="45">
+   <BOUNDS type="Node" left="6570" top="9300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="File Count" dstnodeid="45" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="45" srcpinname="Output" dstnodeid="18" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Integral (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Integral (Spreads)" componentmode="Hidden" id="46">
+   <BOUNDS type="Node" left="990" top="3885" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="46" dstpinname="Input">
+   </LINK>
+   <NODE systemname="CDR (Spreads)" nodename="CDR (Spreads)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="975" top="4530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Remainder" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Output" dstnodeid="47" dstpinname="Input">
+   </LINK>
+   <NODE systemname="InsertSlice (String)" nodename="InsertSlice (String)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="3585" top="5415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Spread" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output String" dstnodeid="48" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Remainder" dstnodeid="48" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Result" dstnodeid="48" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Shortname" dstnodeid="12" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="23" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="3000" top="7260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="49" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Output" dstnodeid="22" dstpinname="Bin Size">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Output" dstnodeid="18" dstpinname="Input 1">
    </LINK>
    </PATCH>

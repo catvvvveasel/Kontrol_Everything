@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol_SeparateTable.v4p" systemname="Kontrol_SeparateTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_SeparateTable.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="7275" top="1860" width="18840" height="15090">
+   <BOUNDS type="Window" left="7680" top="4410" width="18840" height="15090">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="245" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6420" top="4380" width="825" height="240">
@@ -102,7 +102,7 @@
    <PIN pinname="Input String" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <INFO author="Catweasel" description="Kontroleur GUI" tags="GUI">
    </INFO>
@@ -187,7 +187,7 @@
    <NODE id="428" systemname="R (Value)" nodename="R (Value)" componentmode="Hidden">
    <PIN pinname="Display Channel" slicecount="1" values="1">
    </PIN>
-   <BOUNDS type="Node" left="9240" top="1365" width="100" height="100">
+   <BOUNDS type="Node" left="9240" top="1095" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
@@ -195,7 +195,7 @@
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="574">
-   <BOUNDS type="Node" left="8985" top="975" width="100" height="100">
+   <BOUNDS type="Node" left="8985" top="705" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="Initialise">
    </PIN>
@@ -673,6 +673,8 @@
    </PIN>
    <PIN pinname="Port" visible="1">
    </PIN>
+   <PIN pinname="Loaded" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="SubType" dstnodeid="245" dstpinname="Input String">
    </LINK>
@@ -817,7 +819,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5010" top="9675" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="4995" top="2310" width="19515" height="16380">
+   <BOUNDS type="Window" left="15510" top="2190" width="19515" height="16380">
    </BOUNDS>
    <PIN pinname="Insert" visible="1" slicecount="54" values="|/73/4/12/Y Input Value|,|Spread Count|,,|Endless, 1, 1, 1, 500, 1, , 4|,223,S,0,0,0,|/73/4/14/Y Input Value|,|Spread Count2|,,|Endless, 1, 1, 1, 500, 1, , 4|,11,S,0,0,0,|/73/4/2/Color Input|,Color,,|HSVAField, r=100% g=100% b=100% a=100% , HasAlpha|,|0.0000,0.2486,1.1300,0.9400|,S,0,0,0,|/73/4/4/Y Input Value|,|Scale XYZ|,,|Endless, 3, 1, 0, 4, 0.01, , 4|,|0.0495,3.0844,0.3080|,S,0,0,0,|/73/4/7/Input Enum|,Mode,,|PullDown, DX11.BlendPresets, Disabled|,Add,S,0,0,0,|/73/4/8/Y Input Value|,|Center XYZ|,,|Slider, 3, 0, -2, 2, 0.01, , 4|,|4.0167,-0.3170,1.7586|,S,0,0,0">
    </PIN>
@@ -1405,5 +1407,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="974" srcpinname="Y Output Value" dstnodeid="189" dstpinname="Port">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="975">
+   <BOUNDS type="Node" left="10830" top="1440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Loaded" dstnodeid="975" dstpinname="Input">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="976">
+   <BOUNDS type="Node" left="10815" top="1785" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="975" srcpinname="Up Edge" dstnodeid="976" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="976" srcpinname="Output" dstnodeid="575" dstpinname="Input 3">
    </LINK>
    </PATCH>

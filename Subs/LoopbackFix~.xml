@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\LoopbackFix.v4p" systemname="LoopbackFix" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\LoopbackFix.v4p" bgcolor="11442563">
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1515" top="3195" width="100" height="100">
@@ -51,7 +51,7 @@
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="1500" top="2655" width="100" height="100">
+   <BOUNDS type="Node" left="720" top="2265" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -67,16 +67,20 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="1" dstpinname="Input 1">
    </LINK>
    <NODE id="7" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2|">
    </PIN>
-   <BOUNDS type="Box" left="2400" top="500" width="750" height="240">
+   <BOUNDS type="Box" left="3195" top="395" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2400" top="500" width="750" height="240">
+   <BOUNDS type="Node" left="3195" top="395" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="1" dstpinname="Input 2">
    </LINK>
@@ -106,10 +110,28 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="-1" top="-1" width="3715" height="4795">
+   <BOUNDS type="Window" left="20490" top="495" width="10020" height="5925">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="0" dstpinname="Switch">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="9" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="4170" top="1020" width="3165" height="1890">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4170" top="1020" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="2" values="Video,Video">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="9" dstpinname="Input String">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\InitFileName.v4p" systemname="InitFileName" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\InitFileName.v4p" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\InitFileName.v4p" systemname="InitFileName" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\InitFileName.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
    <NODE systemname="FrameDelay (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2685" top="2220" width="100" height="100">
    </BOUNDS>
@@ -237,6 +237,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1530" top="500" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="6" dstpinname="Input 1">
    </LINK>
@@ -261,9 +263,9 @@
    <NODE id="22" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
-   <BOUNDS type="Box" left="2670" top="5640" width="750" height="240">
+   <BOUNDS type="Box" left="3105" top="5205" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2670" top="5640" width="750" height="240">
+   <BOUNDS type="Node" left="3105" top="5205" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="22" dstpinname="Y Input Value">
@@ -289,10 +291,12 @@
    <NODE id="24" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="CurrentName">
    </PIN>
-   <BOUNDS type="Box" left="4635" top="5595" width="3870" height="270">
+   <BOUNDS type="Box" left="4635" top="5595" width="8835" height="1395">
    </BOUNDS>
    <BOUNDS type="Node" left="4635" top="5595" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="5">
+   </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Output" dstnodeid="24" dstpinname="Input String">
    </LINK>
@@ -310,8 +314,24 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="Extension" dstnodeid="14" dstpinname="Input 2">
    </LINK>
-   <BOUNDS type="Window" left="6270" top="3900" width="9765" height="8490">
+   <BOUNDS type="Window" left="585" top="2880" width="19665" height="11535">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6930" top="1260" width="5325" height="3105">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6930" top="1260" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="25" dstpinname="Input String">
+   </LINK>
    </PATCH>
