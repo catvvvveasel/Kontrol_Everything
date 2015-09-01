@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="1800" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SequenceTableView.v4p" systemname="SequenceTableView" filename="D:\App\EuroVision\CatGui0.4\Subs\SequenceTableView.v4p" scrollx="0" scrolly="4905" bgcolor="11442563">
    <BOUNDS type="Window" left="8550" top="-165" width="17355" height="16200">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -287,9 +287,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="69" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6435" top="17775" width="6915" height="1215">
+   <BOUNDS type="Box" left="6480" top="18060" width="6915" height="1215">
    </BOUNDS>
-   <BOUNDS type="Node" left="6435" top="17775" width="0" height="0">
+   <BOUNDS type="Node" left="6480" top="18060" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -841,6 +841,10 @@
    </PIN>
    <PIN pinname="Exists" visible="1">
    </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   <PIN pinname="DisableAutoSave" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="296" srcpinname="DisableAutoSave" dstnodeid="148" dstpinname="Input 1">
    </LINK>
@@ -979,7 +983,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3315" top="15615" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="11475" top="8220" width="17730" height="12930">
+   <BOUNDS type="Window" left="17250" top="8565" width="17730" height="12930">
    </BOUNDS>
    <PIN pinname="Type" visible="1">
    </PIN>
@@ -996,6 +1000,8 @@
    <PIN pinname="Patch" pintype="Output" visible="-1">
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Change" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="163" dstpinname="Type">
@@ -1537,5 +1543,41 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="351" srcpinname="Y Output Value" dstnodeid="327" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="296" srcpinname="DisableAutoSave" dstnodeid="163" dstpinname="Change">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="352" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11625" top="2295" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11625" top="2295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="296" srcpinname="DisableAutoSave" dstnodeid="352" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="353" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10845" top="14325" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10845" top="14325" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Change">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="297" srcpinname="Output" dstnodeid="353" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

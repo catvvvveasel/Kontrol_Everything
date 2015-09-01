@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="3825" scrolly="480" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
-   <BOUNDS type="Window" left="11580" top="2250" width="19515" height="16380">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="690" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
+   <BOUNDS type="Window" left="4995" top="2310" width="19515" height="16380">
    </BOUNDS>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="80">
    <BOUNDS type="Node" left="7260" top="5040" width="855" height="270">
@@ -183,9 +183,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="52" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4755" top="8520" width="840" height="240">
+   <BOUNDS type="Box" left="4395" top="8880" width="840" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4755" top="8520" width="0" height="0">
+   <BOUNDS type="Node" left="4395" top="8880" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="54" visible="1" values="|/73/4/12/Y Input Value|,|Spread Count|,,|Endless, 1, 1, 1, 500, 1, , 4|,223,S,0,0,0,|/73/4/14/Y Input Value|,|Spread Count2|,,|Endless, 1, 1, 1, 500, 1, , 4|,11,S,0,0,0,|/73/4/2/Color Input|,Color,,|HSVAField, r=100% g=100% b=100% a=100% , HasAlpha|,|0.0000,0.2486,1.1300,0.9400|,S,0,0,0,|/73/4/4/Y Input Value|,|Scale XYZ|,,|Endless, 3, 1, 0, 4, 0.01, , 4|,|0.0495,3.0844,0.3080|,S,0,0,0,|/73/4/7/Input Enum|,Mode,,|PullDown, DX11.BlendPresets, Disabled|,Add,S,0,0,0,|/73/4/8/Y Input Value|,|Center XYZ|,,|Slider, 3, 0, -2, 2, 0.01, , 4|,|4.0167,-0.3170,1.7586|,S,0,0,0">
    </PIN>
@@ -761,7 +761,7 @@
    <LINK srcnodeid="60" srcpinname="Output 7" dstnodeid="169" dstpinname="Input String">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="170">
-   <BOUNDS type="Node" left="16950" top="10485" width="100" height="100">
+   <BOUNDS type="Node" left="17100" top="10590" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
@@ -789,9 +789,9 @@
    <LINK srcnodeid="155" srcpinname="Output" dstnodeid="173" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="174" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="16950" top="11070" width="480" height="480">
+   <BOUNDS type="Box" left="17145" top="11760" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="16950" top="11070" width="0" height="0">
+   <BOUNDS type="Node" left="17145" top="11760" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -803,7 +803,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Read">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
@@ -929,19 +929,15 @@
    </PIN>
    </NODE>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="215">
-   <BOUNDS type="Node" left="17100" top="8565" width="100" height="100">
+   <BOUNDS type="Node" left="17145" top="11205" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="91" srcpinname="Y Output Value" dstnodeid="215" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="215" srcpinname="Output" dstnodeid="170" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="224">
    <BOUNDS type="Node" left="10710" top="10380" width="100" height="100">
    </BOUNDS>
@@ -1177,17 +1173,17 @@
    </BOUNDS>
    <PIN pinname="PresetName" visible="1">
    </PIN>
+   <PIN pinname="OnChange Mouse" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="269" srcpinname="OnChangeKeys" dstnodeid="170" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="164" srcpinname="Output 1" dstnodeid="269" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="269" srcpinname="OnChange Mouse" dstnodeid="215" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="GetTableIndexPreset" filename="GetTableIndexPreset.v4p" nodename="GetTableIndexPreset.v4p" componentmode="Hidden" id="270">
-   <BOUNDS type="Node" left="8955" top="8385" width="0" height="0">
+   <BOUNDS type="Node" left="9795" top="8115" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="7278" top="5853" width="3355" height="5065">
+   <BOUNDS type="Box" left="8118" top="5583" width="3355" height="5065">
    </BOUNDS>
    <BOUNDS type="Window" left="2070" top="6315" width="8490" height="8400">
    </BOUNDS>
@@ -1211,15 +1207,15 @@
    <LINK srcnodeid="270" srcpinname="Input Index" dstnodeid="149" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="79" srcpinname="Table" dstnodeid="270" dstpinname="Table">
-   <LINKPOINT x="4890" y="8085">
+   <LINKPOINT x="5170" y="7995">
    </LINKPOINT>
-   <LINKPOINT x="8970" y="8145">
+   <LINKPOINT x="9530" y="7965">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="270" srcpinname="Output" dstnodeid="120" dstpinname="Switch" hiddenwhenlocked="1">
-   <LINKPOINT x="8760" y="9015">
+   <LINKPOINT x="9320" y="8835">
    </LINKPOINT>
-   <LINKPOINT x="8550" y="4305">
+   <LINKPOINT x="8830" y="4215">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="270" srcpinname="ChangedDelayed" dstnodeid="147" dstpinname="Input 1">
@@ -1353,9 +1349,9 @@
    <LINK srcnodeid="281" srcpinname="Count" dstnodeid="282" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="283" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6795" top="8670" width="795" height="240">
+   <BOUNDS type="Box" left="7815" top="8685" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6795" top="8670" width="0" height="0">
+   <BOUNDS type="Node" left="7815" top="8685" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="9">
    </PIN>
@@ -1510,8 +1506,24 @@
    </LINK>
    <LINK srcnodeid="251" srcpinname="Inverse Output" dstnodeid="213" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="170" srcpinname="Output" dstnodeid="174" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="148" srcpinname="Output" dstnodeid="233" dstpinname="Table Index">
+   </LINK>
+   <LINK srcnodeid="269" srcpinname="OnChange Mouse" dstnodeid="170" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="170" srcpinname="Output" dstnodeid="215" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="215" srcpinname="Output" dstnodeid="174" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="295">
+   <BOUNDS type="Node" left="20325" top="8850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Y Output Value" dstnodeid="295" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="215" dstpinname="Input 2">
    </LINK>
    </PATCH>

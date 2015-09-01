@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-Playlist-Text.v4p" systemname="Kontrol-Playlist-Text" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-Playlist-Text.v4p" scrollx="45" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-Playlist-Text.v4p" systemname="Kontrol-Playlist-Text" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-Playlist-Text.v4p" scrollx="180" scrolly="0" bgcolor="11442563">
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="7380" top="15" width="100" height="100">
    </BOUNDS>
@@ -324,26 +324,6 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7890" top="9180" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7890" top="9180" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="UpdatePos">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="44" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6000" top="375" width="795" height="240">
    </BOUNDS>
@@ -358,26 +338,6 @@
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5835" top="10725" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5835" top="10725" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE id="33" systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden">
@@ -409,7 +369,7 @@
    </BOUNDS>
    <PIN pinname="Left/Centre/Right Justify" visible="1">
    </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="0">
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="32" dstpinname="Left/Centre/Right Justify">
@@ -417,54 +377,6 @@
    <LINK srcnodeid="25" srcpinname="Output" dstnodeid="32" dstpinname="Color">
    </LINK>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="32" dstpinname="Transform In">
-   </LINK>
-   <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="47">
-   <BOUNDS type="Node" left="5685" top="9465" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="39" values="AllControls,Player1,Player2,Player3,Player4,HapPlayer4Layers,Transforms,Layer1,LEDs,Parcans,PostEffects,001,000,000,000,000,000,001,001,001,000,009,009,008,008,002,002,001,002,002,001,002,002,001,001,002,009,002,000">
-   </PIN>
-   <PIN pinname="OnChange" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="5610" top="9765" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="47" srcpinname="OnChange" dstnodeid="48" dstpinname="Input">
-   </LINK>
-   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="6795" top="9915" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="49" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="49" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="6750" top="10635" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Set" visible="1">
-   </PIN>
-   <PIN pinname="Time" slicecount="1" values="0.1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="49" srcpinname="Output" dstnodeid="50" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="15" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="32" dstpinname="Evaluate">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="51" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5595" top="11505" width="480" height="480">
@@ -662,14 +574,12 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="45" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="Kontrol-Playlist-Text-1" filename="Kontrol-Playlist-Text-1.v4p" nodename="Kontrol-Playlist-Text-1.v4p" componentmode="Hidden" id="66">
-   <BOUNDS type="Node" left="6057" top="2775" width="0" height="0">
+   <BOUNDS type="Node" left="5652" top="3270" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="3675" top="355" width="4765" height="4840">
+   <BOUNDS type="Box" left="3270" top="850" width="4765" height="4840">
    </BOUNDS>
-   <BOUNDS type="Window" left="-1" top="-1" width="4765" height="4840">
+   <BOUNDS type="Window" left="14250" top="765" width="8655" height="6555">
    </BOUNDS>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
@@ -682,14 +592,12 @@
    </LINK>
    <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="66" dstpinname="Operand 1">
    </LINK>
-   <LINK srcnodeid="66" srcpinname="Output" dstnodeid="47" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="66" srcpinname="Output" dstnodeid="32" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="66" srcpinname="Output Bin Size" dstnodeid="29" dstpinname="Select">
    </LINK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="67">
-   <BOUNDS type="Node" left="8925" top="1200" width="100" height="100">
+   <BOUNDS type="Node" left="8580" top="1230" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -725,9 +633,9 @@
    <LINK srcnodeid="44" srcpinname="Output String" dstnodeid="70" dstpinname="Input">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="72">
-   <BOUNDS type="Node" left="7410" top="1695" width="100" height="100">
+   <BOUNDS type="Node" left="7875" top="2325" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -737,13 +645,45 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="70" srcpinname="OnChange" dstnodeid="72" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="68" srcpinname="OnChange" dstnodeid="72" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="67" srcpinname="OnChange" dstnodeid="72" dstpinname="Input 3">
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="8565" top="1665" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="67" srcpinname="OnChange" dstnodeid="73" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="72" srcpinname="Output" dstnodeid="66" dstpinname="Evaluate">
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="72" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="15" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="74" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10560" top="1530" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10560" top="1530" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Update">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="74" srcpinname="Y Output Value" dstnodeid="72" dstpinname="Input 4">
    </LINK>
    </PATCH>

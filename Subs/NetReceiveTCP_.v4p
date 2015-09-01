@@ -32,18 +32,6 @@
    <PIN pinname="Input String" visible="1" slicecount="1" values="text">
    </PIN>
    </NODE>
-   <NODE id="8" nodename="TCP (Network Server)" systemname="TCP (Network Server String)" filename="%VVVV%\lib\nodes\modules\Network\TCP (Network Server String).v4p">
-   <BOUNDS height="0" left="525" top="2610" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Enable" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Local Port" visible="1">
-   </PIN>
-   <PIN pinname="Remote Host" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE id="6" nodename="Count (String)" systemname="Count (String)">
    <BOUNDS height="0" left="1860" top="4875" type="Node" width="0">
    </BOUNDS>
@@ -52,10 +40,6 @@
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="6" dstpinname="Input" srcnodeid="8" srcpinname="Remote Host">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Local Port" srcnodeid="13" srcpinname="Y Output Value">
-   </LINK>
    <NODE id="4" nodename="Tokenizer (String)" systemname="Tokenizer (String)">
    <BOUNDS height="0" left="510" top="3570" type="Node" width="0">
    </BOUNDS>
@@ -128,10 +112,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Enable">
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="4" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="20" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2010" top="2805" width="795" height="240">
    </BOUNDS>
@@ -181,5 +161,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Output Enum" dstnodeid="4" dstpinname="Queue Mode">
+   </LINK>
+   <NODE id="8" nodename="TCP (Network Server)" systemname="TCP (Network Server String)" filename="%VVVV%\lib\nodes\modules\Network\TCP (Network Server String).v4p" componentmode="Hidden">
+   <BOUNDS type="Node" height="0" left="525" top="2610" width="0">
+   </BOUNDS>
+   <PIN pinname="Enable" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Local Port" visible="1">
+   </PIN>
+   <PIN pinname="Remote Host" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Enable">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Local Port">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Remote Host" dstnodeid="6" dstpinname="Input">
    </LINK>
    </PATCH>
