@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.100.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SliderS.v4p" systemname="SliderS" filename="C:\Users\cat\Desktop\expo\Subs\SliderS.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
    <NODE id="16" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
@@ -86,7 +86,7 @@
    </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="34.1.0">
+   <PACK Name="addonpack" Version="34.100.0">
    </PACK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="52">
    <BOUNDS type="Node" left="4365" top="5790" width="100" height="100">
@@ -159,7 +159,7 @@
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="52" dstpinname="Input">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="5460" top="1665" width="100" height="100">
+   <BOUNDS type="Node" left="5520" top="1185" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="MenuOpen">
    </PIN>
@@ -174,8 +174,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="91" srcpinname="Input Value" dstnodeid="92" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6855" top="4380" width="795" height="240">
    </BOUNDS>
@@ -393,5 +391,37 @@
    <LINK srcnodeid="100" srcpinname="Output" dstnodeid="101" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="102" srcpinname="Y Output Value" dstnodeid="101" dstpinname="Switch">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="106" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7515" top="7305" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7515" top="7305" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" values="0,,,">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="106" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="107">
+   <BOUNDS type="Node" left="5520" top="1635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Input Value" dstnodeid="107" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="107" srcpinname="Output" dstnodeid="92" dstpinname="Input">
    </LINK>
    </PATCH>

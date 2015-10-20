@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Lol_Paris_Test_2\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="4320" scrolly="0" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.100.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Input String" visible="1" slicecount="2" values="ColorSilly,ScaleXSilly">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="5310" top="3705" width="22530" height="11655">
+   <BOUNDS type="Window" left="21045" top="16995" width="22530" height="11655">
    </BOUNDS>
    <NODE id="26" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="SubType">
@@ -56,7 +56,7 @@
    <PIN pinname="Y Input Value" visible="1" slicecount="25" values="0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.100.0">
    </PACK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -939,7 +939,7 @@
    </PIN>
    <PIN pinname="Input - Input 1 1" visible="1" slicecount="9" values="NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,NodesAndWords,ManualCam,ManualCam">
    </PIN>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="210" srcpinname="Output" dstnodeid="92" dstpinname="Input">
@@ -1305,8 +1305,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="277" srcpinname="Output" dstnodeid="278" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="278" srcpinname="Output" dstnodeid="210" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 5" dstnodeid="276" dstpinname="Input">
    </LINK>
@@ -1684,7 +1682,7 @@
    </LINK>
    <LINK srcnodeid="304" srcpinname="Former Slice" dstnodeid="275" dstpinname="Index">
    </LINK>
-   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="191">
+   <NODE systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden" id="191">
    <BOUNDS type="Node" left="17370" top="6345" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="9" values=",,,,,,|SingleLine, MultiLine, MultiLineWordWrap|,,">
@@ -1717,5 +1715,7 @@
    <LINK srcnodeid="305" srcpinname="Input Value" dstnodeid="296" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="288" srcpinname="Output" dstnodeid="301" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="278" srcpinname="Output" dstnodeid="210" dstpinname="Evaluate">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Lol_Paris_Test\LoL_App\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="3825" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="5910" bgcolor="11442563">
    <BOUNDS type="Window" left="2280" top="1965" width="14880" height="12585">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -199,7 +199,7 @@
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="79">
-   <BOUNDS type="Node" left="1830" top="1290" width="1140" height="270">
+   <BOUNDS type="Node" left="915" top="885" width="1140" height="270">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="MenuOpen">
    </PIN>
@@ -239,11 +239,9 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Input 3" visible="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="79" srcpinname="Input Value" dstnodeid="87" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="87" srcpinname="Output" dstnodeid="78" dstpinname="Switch">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="89">
@@ -722,15 +720,17 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Object Hit" dstnodeid="81" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="134">
-   <BOUNDS type="Node" left="2265" top="660" width="1140" height="270">
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="135">
+   <BOUNDS type="Node" left="1770" top="1530" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="PrefsOpen2">
+   <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="134" srcpinname="Input Value" dstnodeid="87" dstpinname="Input 3">
+   <LINK srcnodeid="79" srcpinname="Input Value" dstnodeid="135" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="135" srcpinname="Output" dstnodeid="87" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="96">
    <BOUNDS type="Node" left="2055" top="12225" width="100" height="100">

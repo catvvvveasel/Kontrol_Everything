@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.100.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SharedTextureIN.v4p" systemname="SharedTextureIN" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\SharedTextureIN.v4p" scrollx="0" scrolly="120" bgcolor="11442563">
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2025" top="6060" width="100" height="100">
@@ -30,7 +30,7 @@
    </LINK>
    <BOUNDS type="Window" left="10695" top="1515" width="8655" height="9480">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.100.0">
    </PACK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -66,12 +66,12 @@
    </NODE>
    <LINK srcnodeid="22" srcpinname="Inverse Output" dstnodeid="23" dstpinname="Input">
    </LINK>
-   <NODE systemname="SharedTextureIN-Sub" filename="SharedTextureIN-Sub.v4p" nodename="SharedTextureIN-Sub.v4p" componentmode="Hidden" id="29">
+   <NODE systemname="SharedTextureIN-Sub" filename="SharedTextureIN-Sub.v4p" nodename="SharedTextureIN-Sub.v4p" componentmode="InAWindow" id="29">
    <BOUNDS type="Node" left="2183" top="3785" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="555" width="6760" height="6460">
    </BOUNDS>
-   <BOUNDS type="Window" left="-1" top="-1" width="6760" height="6460">
+   <BOUNDS type="Window" left="18660" top="3450" width="6750" height="6450">
    </BOUNDS>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
@@ -89,15 +89,15 @@
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="5520" top="2355" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Output 2" dstnodeid="30" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="30" srcpinname="Output" dstnodeid="29" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Output" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Inverse Output" dstnodeid="30" dstpinname="Input">
    </LINK>
    </PATCH>
