@@ -64,11 +64,11 @@ namespace VVVV.Nodes
 		[Output("Enum Entry Count")]
 		ISpread<int> FEnumEntryCount;
 		
-		[Output("Bounds")]
-		ISpread<int> FBounds;
-		
-		[Output("Pin ID")]
-		ISpread<int> FId;
+//		[Output("Bounds")]
+//		ISpread<int> FBounds;
+//		
+//		[Output("Pin ID")]
+//		ISpread<int> FId;
 		
 		[Output("Values")]
 		ISpread<string> FValues;
@@ -89,10 +89,10 @@ namespace VVVV.Nodes
 				FLabel.SliceCount = SpreadMax;
 				FTag.SliceCount = SpreadMax;
 				FSubtype.SliceCount = SpreadMax;
-				FBounds.SliceCount = SpreadMax;
+//				FBounds.SliceCount = SpreadMax;
 				FType.SliceCount = SpreadMax;
 				FValues.SliceCount = SpreadMax;
-				FId.SliceCount = SpreadMax;
+//				FId.SliceCount = SpreadMax;
 				FEnumEntries.SliceCount = SpreadMax;
 				FEnumEntryCount.SliceCount = SpreadMax;
 				FValueType.SliceCount = SpreadMax;
@@ -116,9 +116,9 @@ namespace VVVV.Nodes
 					{
 						if (node != null)
 						{
-							//Rectangle
-							Rectangle rectangle1 = node.GetBounds(0);
-							FBounds[i] = rectangle1.Left;
+//							//Rectangle
+//							Rectangle rectangle1 = node.GetBounds(0);
+//							FBounds[i] = rectangle1.Left;
 							string nodename = node2.Name;
 							FNodeName[i] = nodename;
 							
@@ -136,7 +136,7 @@ namespace VVVV.Nodes
 								FSubtype[i] = pin.SubType;
 								FType[i] = pin.Type;
 								FValues[i] = pin.Spread;
-								FId[i] = node.ID;
+//								FId[i] = node.ID;
 								
 								if (pin.Type == "Value"){
 									var valuetypepin = node.FindPin("Value Type");

@@ -1,41 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\TodoMap.v4p" systemname="TodoMap" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1\Subs\TodoMap.v4p" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Lol_Paris_Test\LoL_App\Kontrol_Everything\Subs\TodoMap.v4p" systemname="TodoMap" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1\Subs\TodoMap.v4p" bgcolor="11442563">
    <BOUNDS type="Window" left="7710" top="1320" width="14295" height="12735">
    </BOUNDS>
-   <NODE systemname="TodoListVariables (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoListVariables (TodoMap)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="3285" top="1275" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Engine" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Variable Name" visible="1">
-   </PIN>
-   <PIN pinname="Category" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE systemname="TodoGetValue (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoGetValue (TodoMap)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="4185" top="2175" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Engine" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Variable Name" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="14" srcpinname="Variable Name" dstnodeid="13" dstpinname="Variable Name">
-   </LINK>
-   <NODE id="12" systemname="TodoSetValue (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoSetValue (TodoMap)" componentmode="Hidden">
-   <PIN pinname="Engine" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Node" left="4185" top="7290" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Variable Name" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Set Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="SetSlice (Spreads)" nodename="SetSlice (Spreads)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="4860" top="6270" width="100" height="100">
    </BOUNDS>
@@ -94,8 +60,6 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="11" dstpinname="Index">
    </LINK>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input">
-   </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="5160" top="6840" width="100" height="100">
    </BOUNDS>
@@ -113,15 +77,11 @@
    </BOUNDS>
    <PIN pinname="Bin Size" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="7" values="Slider1,Slider2,Slider3,Slider4,Slider5,Slider7,Slider8">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="14" srcpinname="Variable Name" dstnodeid="5" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="12" dstpinname="Variable Name">
-   </LINK>
    <NODE systemname="Min (Value)" nodename="Min (Value)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="6285" top="3000" width="100" height="100">
    </BOUNDS>
@@ -182,12 +142,10 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="OnChange" dstnodeid="12" dstpinname="Set Value">
-   </LINK>
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="4665" top="1650" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="7" values="|-- All --|,|-- All --|,|-- All --|,|-- All --|,|-- All --|,|-- All --|,|-- All --|">
+   <PIN pinname="Input" visible="1" slicecount="7" values="Slider1,Slider2,Slider3,Slider4,Slider5,Slider7,Slider8">
    </PIN>
    <PIN pinname="Comparison" slicecount="1" values="Contains">
    </PIN>
@@ -215,14 +173,12 @@
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="7" values="0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Hits" dstnodeid="18" dstpinname="Select">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="18" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="8" dstpinname="Input">
    </LINK>
@@ -257,7 +213,7 @@
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="1560" top="2580" width="600" height="270">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
    </PIN>
    <PIN pinname="Comparison" slicecount="1" values="Contains">
    </PIN>
@@ -280,20 +236,16 @@
    </NODE>
    <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="22" dstpinname="Filter">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Category" dstnodeid="22" dstpinname="Input">
-   </LINK>
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="23">
    <BOUNDS type="Node" left="1560" top="3210" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="23" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="22" srcpinname="Hits" dstnodeid="23" dstpinname="Select">
    </LINK>
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="26">
@@ -334,10 +286,6 @@
    </NODE>
    <LINK srcnodeid="26" srcpinname="Hits" dstnodeid="24" dstpinname="Select">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Category" dstnodeid="26" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="24" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="27" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3855" top="0" width="480" height="480">
    </BOUNDS>
@@ -374,52 +322,10 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
-   <NODE id="15" componentmode="Hidden" systemname="TodoMap (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoMap (TodoMap)">
-   <BOUNDS type="Node" left="3015" top="705" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5865" top="690" width="18885" height="12270">
-   </BOUNDS>
-   <PIN pinname="Engine" visible="1">
-   </PIN>
-   <PIN pinname="Save">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Auto Load" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Save On Exit" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Clear Variables" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Clear Mappings" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Load" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Save">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Engine" dstnodeid="12" dstpinname="Engine">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Engine" dstnodeid="13" dstpinname="Engine">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Engine" dstnodeid="14" dstpinname="Engine">
-   </LINK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <NODE systemname="TodoExposedController (TodoMap)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.TodoMap.dll" nodename="TodoExposedController (TodoMap)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="9285" top="2160" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Engine" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="15" srcpinname="Engine" dstnodeid="29" dstpinname="Engine">
-   <LINKPOINT x="2880" y="983">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Variable Name" dstnodeid="16" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4815" top="0" width="480" height="480">
    </BOUNDS>
@@ -436,6 +342,4 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    </NODE>
-   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Enabled">
-   </LINK>
    </PATCH>

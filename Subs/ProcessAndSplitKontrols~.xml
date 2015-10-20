@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="2070" scrolly="5160" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\Lol_Paris_Test_2\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="4320" scrolly="0" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Input String" visible="1" slicecount="2" values="ColorSilly,ScaleXSilly">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="15660" top="2025" width="22530" height="12660">
+   <BOUNDS type="Window" left="5310" top="3705" width="22530" height="11655">
    </BOUNDS>
    <NODE id="26" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="SubType">
@@ -56,7 +56,7 @@
    <PIN pinname="Y Input Value" visible="1" slicecount="25" values="0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="34.1.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -578,30 +578,14 @@
    <PIN pinname="Send String" slicecount="1" values="DefaultsSelected">
    </PIN>
    </NODE>
-   <NODE systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden" id="191">
-   <BOUNDS type="Node" left="17370" top="6345" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="9" values=",,,,,,|SingleLine, MultiLine, MultiLineWordWrap|,,">
-   </PIN>
-   <PIN pinname="Intersperse" slicecount="1" values="Comma">
-   </PIN>
-   <PIN pinname="Former Index" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Occurrence (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (Value)" componentmode="Hidden" id="192">
    <BOUNDS type="Node" left="17520" top="7215" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Former Index Bin Size" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="191" srcpinname="Former Index" dstnodeid="192" dstpinname="Input">
-   <LINKPOINT x="17595" y="7185">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="Integral (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Integral (Spreads)" componentmode="Hidden" id="193">
    <BOUNDS type="Node" left="18360" top="7635" width="100" height="100">
    </BOUNDS>
@@ -644,8 +628,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="191" srcpinname="Output" dstnodeid="196" dstpinname="Input">
-   </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="202">
    <BOUNDS type="Node" left="18420" top="8160" width="100" height="100">
    </BOUNDS>
@@ -875,8 +857,6 @@
    <LINK srcnodeid="212" srcpinname="Output 9" dstnodeid="221" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 12" dstnodeid="176" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="212" srcpinname="Output 11" dstnodeid="191" dstpinname="Input">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="224">
    <BOUNDS type="Node" left="6540" top="13110" width="100" height="100">
@@ -1365,7 +1345,7 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="5">
+   <PIN pinname="Input 1" slicecount="1" values="10">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1549,7 +1529,7 @@
    <LINK srcnodeid="293" srcpinname="OnChange" dstnodeid="294" dstpinname="Set">
    </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="295">
-   <BOUNDS type="Node" left="13245" top="6900" width="100" height="100">
+   <BOUNDS type="Node" left="12960" top="6315" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1566,6 +1546,10 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="276" srcpinname="OnChange" dstnodeid="296" dstpinname="Input 1">
@@ -1647,9 +1631,11 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Loaded">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="288" srcpinname="Output" dstnodeid="301" dstpinname="Y Input Value">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="302" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="12255" top="12900" width="480" height="480">
    </BOUNDS>
@@ -1662,6 +1648,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="278" srcpinname="Output" dstnodeid="302" dstpinname="Y Input Value">
@@ -1681,9 +1669,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="303" srcpinname="Y Output Value" dstnodeid="270" dstpinname="Evaluate">
-   </LINK>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="304">
    <BOUNDS type="Node" left="18705" top="15075" width="100" height="100">
    </BOUNDS>
@@ -1695,5 +1683,39 @@
    <LINK srcnodeid="270" srcpinname="IsEnum" dstnodeid="304" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="304" srcpinname="Former Slice" dstnodeid="275" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="191">
+   <BOUNDS type="Node" left="17370" top="6345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="9" values=",,,,,,|SingleLine, MultiLine, MultiLineWordWrap|,,">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Comma">
+   </PIN>
+   <PIN pinname="Former Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="191" srcpinname="Former Index" dstnodeid="192" dstpinname="Input">
+   <LINKPOINT x="17595" y="7185">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Output" dstnodeid="196" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output 11" dstnodeid="191" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="302" srcpinname="Y Output Value" dstnodeid="270" dstpinname="Evaluate">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="305">
+   <BOUNDS type="Node" left="13500" top="6870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Initialise">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="305" srcpinname="Input Value" dstnodeid="296" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="288" srcpinname="Output" dstnodeid="301" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

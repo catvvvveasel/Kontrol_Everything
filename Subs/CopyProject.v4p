@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\CopyProject.v4p" systemname="CopyProject" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\App\EuroVision\Subs\AudioWaveform\Subs\CopyProject.v4p" scrollx="30" scrolly="15" bgcolor="11442563">
+   <PATCH nodename="D:\Lol_Paris_Test_2\Kontrol_Everything\Subs\CopyProject.v4p" systemname="CopyProject" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\App\EuroVision\Subs\AudioWaveform\Subs\CopyProject.v4p" scrollx="30" scrolly="15" bgcolor="11442563">
    <BOUNDS type="Window" left="8520" top="465" width="15600" height="10530">
    </BOUNDS>
    <NODE systemname="SubDir (File)" nodename="SubDir (File)" componentmode="Hidden" id="1">
@@ -233,6 +233,8 @@
    </PIN>
    <PIN pinname="Copy" visible="1" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Success" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="5370" top="1290" width="100" height="100">
@@ -249,9 +251,9 @@
    <LINK srcnodeid="20" srcpinname="Shortname" dstnodeid="6" dstpinname="To">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1245" top="6165" width="480" height="480">
+   <BOUNDS type="Box" left="2040" top="8370" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="1245" top="6165" width="0" height="0">
+   <BOUNDS type="Node" left="2040" top="8370" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -263,7 +265,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="24">
@@ -279,8 +281,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Inverse Output" dstnodeid="15" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Inverse Output" dstnodeid="23" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="630" top="4140" width="100" height="100">
@@ -489,7 +489,7 @@
    <LINK srcnodeid="38" srcpinname="Output" dstnodeid="35" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="3810" top="975" width="100" height="100">
+   <BOUNDS type="Node" left="3720" top="1050" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Operand 1" visible="1">
    </PIN>
@@ -555,5 +555,17 @@
    <LINK srcnodeid="28" srcpinname="Extension" dstnodeid="43" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="43" srcpinname="Output" dstnodeid="32" dstpinname="Input 5">
+   </LINK>
+   <NODE systemname="AND (Boolean Spectral)" nodename="AND (Boolean Spectral)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="3060" top="7665" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Success" dstnodeid="44" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="23" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

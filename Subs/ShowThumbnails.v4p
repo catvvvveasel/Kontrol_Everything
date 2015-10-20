@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ShowThumbnails.v4p" systemname="ShowThumbnails" filename="D:\Copy\Projects\CatGui0.5\Subs\ShowThumbnails.v4p" bgcolor="11442563" scrollx="405" scrolly="255">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\Lol_Paris_Test\LoL_App\Kontrol_Everything\Subs\ShowThumbnails.v4p" systemname="ShowThumbnails" filename="D:\Copy\Projects\CatGui0.5\Subs\ShowThumbnails.v4p" bgcolor="11442563" scrollx="405" scrolly="255">
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2280" top="8190" width="100" height="100">
    </BOUNDS>
@@ -94,7 +94,7 @@
    </LINK>
    <BOUNDS type="Window" left="7320" top="1080" width="27360" height="12150">
    </BOUNDS>
-   <PACK Name="addonpack" Version="34.1.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="5805" top="2700" width="100" height="100">
@@ -764,36 +764,16 @@
    <PIN pinname="Output 2" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="125">
-   <BOUNDS type="Node" left="12690" top="10245" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Down" visible="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Clamp">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="256">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="125" dstpinname="Down">
-   </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="126">
    <BOUNDS type="Node" left="12735" top="10680" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="125" srcpinname="Output" dstnodeid="126" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="126" srcpinname="Output" dstnodeid="105" dstpinname="Offset">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="127">
@@ -929,5 +909,25 @@
    <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
    </LINK>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="2" dstpinname="TranslateY">
+   </LINK>
+   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="125">
+   <BOUNDS type="Node" left="12690" top="10245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Down" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="256">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="125" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="125" srcpinname="Output" dstnodeid="126" dstpinname="Input 1">
    </LINK>
    </PATCH>

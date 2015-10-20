@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Kontrol_Client_Subs\GetPatchNamesClient.v4p" systemname="GetPatchNamesClient" filename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\Lol_Paris_Test_2\Kontrol_Everything\Kontrol_Client_Subs\GetPatchNamesClient.v4p" systemname="GetPatchNamesClient" filename="D:\Copy\Projects\CatGui0.5\Kontroleur_SharedClient-Subs\GetPatchNamesClient.v4p" scrollx="0" scrolly="0">
    <NODE id="2" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="4770" top="1020" width="22710" height="13815">
+   <BOUNDS type="Window" left="-825" top="5895" width="22710" height="13815">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -125,7 +125,7 @@
    <NODE systemname="PinInfo2 (VVVV)" filename="plugins\VVVVPinInfoAdvanced\VVVVPinInfoAdvanced.csproj" nodename="PinInfo2 (VVVV)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="5670" top="2040" width="4530" height="270">
    </BOUNDS>
-   <PIN pinname="Update" visible="1" slicecount="1" values="1">
+   <PIN pinname="Update" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -185,8 +185,6 @@
    <LINK srcnodeid="20" srcpinname="Enum Entries" dstnodeid="24" dstpinname="Input 11">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Node Name" dstnodeid="24" dstpinname="Input 14">
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Change" dstnodeid="20" dstpinname="Update">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="27" systemname="IOBox (String)">
    <BOUNDS type="Box" left="13200" top="6540" width="795" height="240">
@@ -567,11 +565,11 @@
    <LINK srcnodeid="60" srcpinname="Output" dstnodeid="24" dstpinname="Input 13">
    </LINK>
    <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="61">
-   <BOUNDS type="Node" left="10905" top="2460" width="100" height="100">
+   <BOUNDS type="Node" left="10875" top="2505" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="15" values="336.6206,88.8635,1.0914,-0.9988,|||0.45000,0.05000,-0.12150,1.00000|||,-0.0165,60,65,|0,0,0|,|||1.00000,0.12940,0.01570,0.16860|||,|0.3112,19.2339,0|,AlphaAdd,|0,0.3414,0|,|-0.6081,0.3613|,0.0000">
    </PIN>
-   <PIN pinname="Set" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -594,8 +592,6 @@
    </NODE>
    <LINK srcnodeid="62" srcpinname="Input Value" dstnodeid="63" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="61" dstpinname="Set">
-   </LINK>
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="50" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Values" dstnodeid="61" dstpinname="Input">
@@ -615,5 +611,19 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Subtype" dstnodeid="64" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="12000" top="2355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="65" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="61" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Change" dstnodeid="20" dstpinname="Update">
    </LINK>
    </PATCH>

@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="255" bgcolor="11442563">
-   <BOUNDS type="Window" left="12795" top="2415" width="14880" height="12585">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\Lol_Paris_Test\LoL_App\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="3825" bgcolor="11442563">
+   <BOUNDS type="Window" left="2280" top="1965" width="14880" height="12585">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="34.1.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="3345" top="2610" width="795" height="240">
@@ -306,22 +306,6 @@
    <PIN pinname="Output 2" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="96">
-   <BOUNDS type="Node" left="2055" top="12225" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Up" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Down" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Clamp">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="121">
-   </PIN>
-   <PIN pinname="Increment" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="97" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2040" top="13155" width="795" height="240">
    </BOUNDS>
@@ -334,8 +318,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="97" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="98">
    <BOUNDS type="Node" left="2040" top="11295" width="100" height="100">
    </BOUNDS>
@@ -345,10 +327,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="98" srcpinname="Up Edge" dstnodeid="95" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="95" srcpinname="Output 1" dstnodeid="96" dstpinname="Down">
-   </LINK>
-   <LINK srcnodeid="95" srcpinname="Output 2" dstnodeid="96" dstpinname="Up">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="101" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4260" top="6345" width="795" height="240">
@@ -392,8 +370,6 @@
    <PIN pinname="Send String" slicecount="1" values="ButtonsOffset">
    </PIN>
    </NODE>
-   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="103" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="108">
    <BOUNDS type="Node" left="3990" top="10275" width="100" height="100">
    </BOUNDS>
@@ -436,8 +412,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="110" srcpinname="Output" dstnodeid="96" dstpinname="Increment">
-   </LINK>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="111">
    <BOUNDS type="Node" left="3975" top="10935" width="100" height="100">
    </BOUNDS>
@@ -757,5 +731,31 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="134" srcpinname="Input Value" dstnodeid="87" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="96">
+   <BOUNDS type="Node" left="2055" top="12225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Down" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="121">
+   </PIN>
+   <PIN pinname="Increment" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="97" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Output 1" dstnodeid="96" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Output 2" dstnodeid="96" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="103" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="Output" dstnodeid="96" dstpinname="Increment">
    </LINK>
    </PATCH>

@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\GetPathsNames.v4p" systemname="GetPathsNames" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\GetPathsNames.v4p" scrollx="0" scrolly="360" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="D:\Lol_Paris_Test_2\Kontrol_Everything\Subs\GetPathsNames.v4p" systemname="GetPathsNames" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\GetPathsNames.v4p" scrollx="0" scrolly="360" bgcolor="11442563">
    <BOUNDS type="Window" left="14595" top="3660" width="18195" height="13305">
    </BOUNDS>
-   <PACK Name="addonpack" Version="34.1.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="23">
    <BOUNDS type="Node" left="3585" top="6120" width="100" height="100">
@@ -27,7 +27,7 @@
    <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="4935" top="7545" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Directory" visible="1" slicecount="1" values="..\..\..\Nicoline\LoL_App\Projects\Paris\Video\\">
+   <PIN pinname="Directory" visible="1" slicecount="2" values="..\..\LoL_App\Projects\Paris\Video\Look^1,..\..\LoL_App\Projects\Paris\Video\D:CopyProjectsNicolineLoL_AppSubs">
    </PIN>
    <PIN pinname="Short Filenames" visible="1">
    </PIN>
@@ -241,7 +241,7 @@
    <LINK srcnodeid="4" srcpinname="Count" dstnodeid="10" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="5115" top="7005" width="100" height="100">
+   <BOUNDS type="Node" left="5070" top="6810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -253,8 +253,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="3" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="21" dstpinname="Directory">
    </LINK>
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="6000" top="4725" width="100" height="100">
@@ -763,5 +761,21 @@
    <LINK srcnodeid="49" srcpinname="Output" dstnodeid="22" dstpinname="Bin Size">
    </LINK>
    <LINK srcnodeid="49" srcpinname="Output" dstnodeid="18" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="5070" top="7215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="^">
+   </PIN>
+   <PIN pinname="To" slicecount="1" values="| |">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="50" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="21" dstpinname="Directory">
    </LINK>
    </PATCH>
