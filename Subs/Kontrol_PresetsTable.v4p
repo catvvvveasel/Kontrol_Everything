@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="3285" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
-   <BOUNDS type="Window" left="15510" top="2190" width="19515" height="16380">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol_PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="4380" systemname="Kontrol_PresetsTable" filename="D:\Copy\Projects\CatGui0.5\Subs\Kontrol_PresetsTable.v4p">
+   <BOUNDS type="Window" left="2670" top="2310" width="19515" height="16380">
    </BOUNDS>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="80">
    <BOUNDS type="Node" left="7260" top="5040" width="855" height="270">
@@ -957,7 +957,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1305" top="7545" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="21">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -971,21 +971,19 @@
    <NODE id="148" systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden">
    <BOUNDS type="Node" left="1305" top="7995" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="7">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="148" dstpinname="Input">
-   </LINK>
-   <NODE systemname="TableView (DataTable)" filename="%VVVV%\packs\Emeshe-FeatureFlags\nodes\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="Hidden" id="233">
+   <NODE systemname="TableView (DataTable)" filename="%VVVV%\packs\Emeshe-FeatureFlags\nodes\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="InAWindow" id="233">
    <BOUNDS type="Node" left="690" top="8370" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Table" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Table Index" visible="1" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Window" left="0" top="0" width="21525" height="10650">
+   <BOUNDS type="Window" left="-225" top="5595" width="21525" height="10650">
    </BOUNDS>
    <PIN pinname="Down" slicecount="1" values="0">
    </PIN>
@@ -997,7 +995,7 @@
    </BOUNDS>
    <PIN pinname="Table" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="7">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1052,8 +1050,6 @@
    </LINK>
    <LINK srcnodeid="38" srcpinname="Output" dstnodeid="197" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="79" srcpinname="Table" dstnodeid="65" dstpinname="Table">
-   </LINK>
    <NODE systemname="MonoFlop (Animation Framebased)" filename="%VVVV%\addonpack\lib\nodes\plugins\MonoFlop.dll" nodename="MonoFlop (Animation Framebased)" componentmode="Hidden" id="251">
    <BOUNDS type="Node" left="3585" top="12555" width="100" height="100">
    </BOUNDS>
@@ -1103,15 +1099,13 @@
    <LINK srcnodeid="253" srcpinname="Output" dstnodeid="70" dstpinname="Input">
    </LINK>
    <NODE systemname="Reverse (Spreads)" nodename="Reverse (Spreads)" componentmode="Hidden" id="256">
-   <BOUNDS type="Node" left="2190" top="11595" width="100" height="100">
+   <BOUNDS type="Node" left="2295" top="11250" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="256" srcpinname="Output" dstnodeid="65" dstpinname="Index">
-   </LINK>
    <LINK srcnodeid="35" srcpinname="Output 1" dstnodeid="79" dstpinname="Load">
    </LINK>
    <LINK srcnodeid="165" srcpinname="Output" dstnodeid="161" dstpinname="Input 1">
@@ -1192,6 +1186,8 @@
    <PIN pinname="PresetName" visible="1" slicecount="1" values="AllControls_027">
    </PIN>
    <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="270" srcpinname="Input Index" dstnodeid="256" dstpinname="Input">
@@ -1439,9 +1435,9 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="23">
    </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="99" values="|/73/303/10/32/Y Input Value|,Play,movie:Seek,|Toggle, 1, 0, 0, 1, 1, , 4|,1,|2,2|,0,0,0,|/73/303/10/33/Y Input Value|,Reverse,movie:reverse,|Toggle, 1, 0, 0, 1, 1, , 4|,0,|2,2|,0,0,0,|/73/303/10/34/Y Input Value|,Seek,movie:play,|Bang, 1, 0, 0, 1, 1, , 4|,0,|2,2|,0,0,0,|/73/303/10/36/Y Input Value|,InPoint,,|Slider, 1, 0, 0, 1, 0.01, , 4|,0.0000,|2,2|,0,0,0,|/73/303/10/37/Y Input Value|,OutPoint,,|Slider, 1, 1, 0, 1, 0.01, , 4|,1.0000,|2,2|,0,0,0,|/73/303/10/38/Y Input Value|,|Scrub (0-1)|,movie:scrub,|Slider, 1, 0, 0, 1, 0.01, , 4|,| 0|,|2,2|,0,0,0,|/73/303/10/39/Y Input Value|,SeekTime,movie:seektime,|Slider, 1, 0, 0, 1, 0.01, , 4|,| 0|,|2,2|,0,0,0,|/73/303/10/40/Y Input Value|,Speed,,|Endless, 1, 1, -2, 2, 0.01, , 4|,1.0000,|2,2|,0,0,0,|/73/303/10/41/Y Input Value|,RandomFile1,,|Endless, 1, 0, 0, 10, 0.01, s, 4|,0.0000,|2,2|,0,0,0,|/73/303/10/42/Y Input Value|,Jump1,,|Slider, 1, 0, 0, 1, 0.01, s, 4|,0,|2,2|,0,0,0,|/73/303/10/43/Input String|,Filename1,G:\Hap_Movs,|Filename, test, *.mov, -1|,|||D:\Hap\137^OrangeSpiral2.mov|||,|2,2|,0,0,0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="253" srcpinname="Output" dstnodeid="289" dstpinname="Input String">
-   </LINK>
    <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="294">
    <BOUNDS type="Node" left="4350" top="15555" width="100" height="100">
    </BOUNDS>
@@ -1564,4 +1560,14 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="270" srcpinname="Input Index" dstnodeid="124" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="148" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="256" srcpinname="Output" dstnodeid="65" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Table" dstnodeid="65" dstpinname="Table">
+   </LINK>
+   <LINK srcnodeid="213" srcpinname="Output" dstnodeid="289" dstpinname="Input String">
+   </LINK>
    </PATCH>
