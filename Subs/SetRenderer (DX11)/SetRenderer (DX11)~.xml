@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SetRenderer (DX11)\SetRenderer (DX11).v4p" systemname="SetRenderer (DX11)" filename="C:\Users\Wuxi_Museum\Desktop\BoygroupMain\sub\SetRenderer (DX11).v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS height="9375" left="630" top="5070" type="Window" width="17775">
+   <BOUNDS height="12615" left="17265" top="2025" type="Window" width="17775">
    </BOUNDS>
    <NODE componentmode="Hidden" id="42" nodename="Substitute (String)" systemname="Substitute (String)">
    <BOUNDS height="0" left="855" top="8370" type="Node" width="0">
@@ -243,7 +243,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Switch" visible="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="23" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -253,7 +253,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="16125" top="8580" type="Window" width="215">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="1" values="|&lt;PATCH&gt;&cr;&lf;&cr;&lf;   &lt;NODE id=&quot;IDR&quot; border=&quot;WB&quot; componentmode=&quot;SM&quot;&gt;&lt;BOUNDS type=&quot;Window&quot; width=&quot;WR&quot; height=&quot;HR&quot; left=&quot;LR&quot; top=&quot;RR&quot;&gt;&lt;/BOUNDS&gt;&cr;&lf;&cr;&lf;   &lt;PIN pinname=&quot;Fullscreen Dimensions&quot; slicecount=&quot;1&quot; values=&quot;||FD||&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;/PATCH&gt;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="1" values="|&lt;PATCH&gt;&cr;&lf;&cr;&lf;   &lt;NODE id=&quot;IDR&quot;  componentmode=&quot;SM&quot;&gt;&lt;BOUNDS type=&quot;Window&quot; width=&quot;WR&quot; height=&quot;HR&quot; left=&quot;LR&quot; top=&quot;RR&quot;&gt;&lt;/BOUNDS&gt;&cr;&lf;&cr;&lf;   &lt;PIN pinname=&quot;Fullscreen Dimensions&quot; slicecount=&quot;1&quot; values=&quot;||FD||&quot;&gt;&cr;&lf;   &lt;/PIN&gt;&cr;&lf;   &lt;/NODE&gt;&cr;&lf;   &lt;/PATCH&gt;|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -354,8 +354,6 @@
    <PIN pinname="Fullscreen Dimensions">
    </PIN>
    </NODE>
-   <LINK dstnodeid="24" dstpinname="Switch" srcnodeid="3" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="2" nodename="IOBOX (VALUE ADVANCED)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="3645" top="8130" type="Node" width="0">
    </BOUNDS>
@@ -518,7 +516,7 @@
    </LINK>
    <LINK srcnodeid="40" srcpinname="Output" dstnodeid="42" dstpinname="To">
    </LINK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="156">
    <BOUNDS type="Node" left="3630" top="4785" width="100" height="100">
@@ -623,6 +621,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="164">
    <BOUNDS type="Node" left="5235" top="4635" width="100" height="100">
@@ -636,6 +636,36 @@
    </LINK>
    <LINK srcnodeid="163" srcpinname="Output" dstnodeid="162" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="162" srcpinname="Output" dstnodeid="157" dstpinname="Input">
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="169">
+   <BOUNDS type="Node" left="3810" top="9660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="169" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="169" srcpinname="Output" dstnodeid="24" dstpinname="Switch">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="170" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3705" top="10845" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3705" top="10845" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="169" srcpinname="Output" dstnodeid="170" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="156" srcpinname="OnChange" dstnodeid="157" dstpinname="Input">
    </LINK>
    </PATCH>

@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Waveform.v4p" systemname="Waveform" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Waveform.v4p" scrollx="945" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="3345" top="6390" width="15030" height="14085">
+   <BOUNDS type="Window" left="22110" top="3975" width="15030" height="14085">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
    <BOUNDS type="Box" left="7905" top="2235" width="795" height="240">
@@ -215,7 +215,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="3555" top="7230" width="100" height="100">
+   <BOUNDS type="Node" left="1995" top="8625" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
@@ -829,13 +829,17 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2465" top="1662" width="5910" height="5410">
    </BOUNDS>
-   <BOUNDS type="Window" left="4365" top="0" width="11220" height="15750">
+   <BOUNDS type="Window" left="9090" top="11340" width="11220" height="15750">
    </BOUNDS>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="69" dstpinname="Input 2 - Spread Count">
@@ -850,12 +854,12 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="69" dstpinname="Filename">
    </LINK>
-   <LINK srcnodeid="69" srcpinname="Layer" dstnodeid="26" dstpinname="Layer 1">
-   </LINK>
    <LINK srcnodeid="69" srcpinname="Output" dstnodeid="81" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="69" dstpinname="Evaluate">
    </LINK>
-   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="87" dstpinname="Y Input Value">
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <LINK srcnodeid="69" srcpinname="Layer" dstnodeid="26" dstpinname="Layer 1">
    </LINK>
    </PATCH>

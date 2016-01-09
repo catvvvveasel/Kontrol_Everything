@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest-Sub.v4p" systemname="IoBoxes_Hitest-Sub" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest-Sub.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <NODE systemname="Integral (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Integral (Spreads)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3045" top="1695" width="100" height="100">
@@ -222,11 +222,11 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="9" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="10620" top="525" width="14505" height="8040">
+   <BOUNDS type="Window" left="22560" top="11970" width="14505" height="8040">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="GetSpread (Spreads)" nodename="GetSpread (Spreads)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="2985" top="4095" width="100" height="100">
@@ -537,5 +537,57 @@
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="32" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="31" dstpinname="Input">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="15" top="3195" width="765" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15" top="3195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Cmd">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output 3" dstnodeid="33" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GetSpread (Spreads)" nodename="GetSpread (Spreads)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="390" top="4410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Offset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Count" visible="1" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="78" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output 2" dstnodeid="34" dstpinname="Offset">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output 2" dstnodeid="34" dstpinname="Count">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="35" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="390" top="5040" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="390" top="5040" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="OverPresets">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="35" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

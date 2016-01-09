@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\LTP_String.v4p" systemname="LTP_String" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\LTP_String.v4p" scrollx="0" scrolly="510" bgcolor="11442563">
-   <BOUNDS type="Window" left="2970" top="4440" width="14415" height="6000">
+   <BOUNDS type="Window" left="1740" top="14490" width="14415" height="6000">
    </BOUNDS>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="0">
    <BOUNDS type="Node" left="1635" top="825" width="100" height="100">
@@ -39,7 +39,7 @@
    <LINK srcnodeid="0" srcpinname="Output String" dstnodeid="2" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="855" top="1080" width="100" height="100">
+   <BOUNDS type="Node" left="510" top="615" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -82,7 +82,7 @@
    </NODE>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="6" dstpinname="Input String">
    </LINK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="9">
    <BOUNDS type="Node" left="4260" top="1335" width="100" height="100">
@@ -173,7 +173,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="2" values="D:\App\Tracks\Azerbaijan\Presets\PatchPreset_-001_0000.xml,D:\App\Tracks\Azerbaijan\Presets\PatchPreset_0005_0001.xml">
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
@@ -223,7 +223,7 @@
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="495" top="1650" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -232,11 +232,7 @@
    </NODE>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="19" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="OnChange" dstnodeid="19" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="19" srcpinname="Output" dstnodeid="5" dstpinname="Reset">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="15" dstpinname="Input String">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="3660" top="3750" width="100" height="100">
@@ -326,4 +322,20 @@
    </NODE>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Input 4">
    </LINK>
+   <LINK srcnodeid="0" srcpinname="Output String" dstnodeid="15" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="510" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="OnChange" dstnodeid="26" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="19" dstpinname="Input 1">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>

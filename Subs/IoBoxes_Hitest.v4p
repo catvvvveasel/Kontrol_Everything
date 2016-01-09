@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="5910" bgcolor="11442563">
-   <BOUNDS type="Window" left="2280" top="1965" width="14880" height="12585">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="285" bgcolor="11442563">
+   <BOUNDS type="Window" left="14685" top="8775" width="14880" height="12585">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="3345" top="2610" width="795" height="240">
@@ -151,7 +151,7 @@
    <LINK srcnodeid="73" srcpinname="Input Value" dstnodeid="69" dstpinname="Input 2">
    </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="780" top="6600" width="100" height="100">
+   <BOUNDS type="Node" left="585" top="7155" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
    </PIN>
@@ -449,7 +449,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="959" top="3751" width="5175" height="8655">
    </BOUNDS>
-   <BOUNDS type="Window" left="5640" top="3105" width="5175" height="8655">
+   <BOUNDS type="Window" left="510" top="975" width="5175" height="8655">
    </BOUNDS>
    <PIN pinname="PlayPreset" visible="1">
    </PIN>
@@ -473,7 +473,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="1983" width="7180" height="6510">
    </BOUNDS>
-   <BOUNDS type="Window" left="10620" top="525" width="14505" height="8040">
+   <BOUNDS type="Window" left="22560" top="11970" width="14505" height="8040">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
@@ -502,6 +502,14 @@
    <PIN pinname="RNames" visible="1">
    </PIN>
    <PIN pinname="LNames" visible="1">
+   </PIN>
+   <PIN pinname="LCmd" visible="1">
+   </PIN>
+   <PIN pinname="RCmd" visible="1">
+   </PIN>
+   <PIN pinname="Cmd" visible="1">
+   </PIN>
+   <PIN pinname="OverPresets" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Output 3" dstnodeid="21" dstpinname="LeftMouseButton">
@@ -732,7 +740,7 @@
    </LINK>
    <LINK srcnodeid="135" srcpinname="Output" dstnodeid="87" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="96">
+   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="96">
    <BOUNDS type="Node" left="2055" top="12225" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1" slicecount="1" values="0">
@@ -757,5 +765,65 @@
    <LINK srcnodeid="96" srcpinname="Output" dstnodeid="103" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="110" srcpinname="Output" dstnodeid="96" dstpinname="Increment">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="136">
+   <BOUNDS type="Node" left="855" top="8205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="|Cmd Click|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="137">
+   <BOUNDS type="Node" left="885" top="7635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="LCmd" dstnodeid="137" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="RCmd" dstnodeid="137" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="137" srcpinname="Output" dstnodeid="136" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="139">
+   <BOUNDS type="Node" left="885" top="5580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="139" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Cmd" dstnodeid="139" dstpinname="Index">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="140">
+   <BOUNDS type="Node" left="870" top="5970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="CmdTransform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="139" srcpinname="Output Node" dstnodeid="140" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="141">
+   <BOUNDS type="Node" left="600" top="6570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="OverPresets">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="OverPresets" dstnodeid="141" dstpinname="Input Value">
    </LINK>
    </PATCH>

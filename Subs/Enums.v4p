@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Lol_Paris_Test\LoL_App\Kontrol_Everything\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="3840" top="6885" width="20760" height="16380">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="0" scrolly="4695" bgcolor="11442563">
+   <BOUNDS type="Window" left="13320" top="4290" width="20760" height="16380">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4695" top="255" width="1365" height="240">
@@ -706,8 +706,6 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="132" srcpinname="Layer" dstnodeid="28" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="133">
    <BOUNDS type="Node" left="720" top="10515" width="100" height="100">
    </BOUNDS>
@@ -1043,8 +1041,6 @@
    <LINK srcnodeid="199" srcpinname="Output" dstnodeid="28" dstpinname="Enabled">
    </LINK>
    <LINK srcnodeid="199" srcpinname="Output" dstnodeid="112" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="28" srcpinname="Layer Out" dstnodeid="11" dstpinname="Input Node">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="234">
    <BOUNDS type="Node" left="13155" top="525" width="100" height="100">
@@ -1474,8 +1470,6 @@
    </LINK>
    <LINK srcnodeid="126" srcpinname="Inverse Output" dstnodeid="267" dstpinname="Enabled">
    </LINK>
-   <LINK srcnodeid="267" srcpinname="Layer Out" dstnodeid="28" dstpinname="Layer 4">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="268" systemname="IOBox (String)">
    <BOUNDS type="Box" left="11655" top="11985" width="4905" height="1185">
    </BOUNDS>
@@ -1554,9 +1548,7 @@
    </LINK>
    <LINK srcnodeid="23" srcpinname="Transform Out" dstnodeid="22" dstpinname="Transform In">
    </LINK>
-   <LINK srcnodeid="22" srcpinname="Layer" dstnodeid="28" dstpinname="Layer 1">
-   </LINK>
-   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="55">
+   <NODE systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden" id="55">
    <BOUNDS type="Node" left="6015" top="6990" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -1573,5 +1565,15 @@
    <LINK srcnodeid="55" srcpinname="Former Index" dstnodeid="73" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="55" srcpinname="Output" dstnodeid="130" dstpinname="Input">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <LINK srcnodeid="267" srcpinname="Layer Out" dstnodeid="28" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="132" srcpinname="Layer" dstnodeid="28" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Layer" dstnodeid="28" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Layer Out" dstnodeid="11" dstpinname="Input Node">
    </LINK>
    </PATCH>

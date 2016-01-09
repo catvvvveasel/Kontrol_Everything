@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest-1.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2175" top="3150" width="100" height="100">
@@ -69,6 +69,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2925" top="6915" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="1950" top="1965" width="100" height="100">
@@ -131,6 +133,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2835" top="500" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Input 2">
    </LINK>
@@ -148,12 +152,38 @@
    </LINK>
    <LINK srcnodeid="0" srcpinname="Output 2" dstnodeid="4" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="6" dstpinname="Y Input Value">
-   </LINK>
-   <BOUNDS type="Window" left="5640" top="3105" width="5175" height="8655">
+   <BOUNDS type="Window" left="510" top="975" width="5175" height="8655">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="3210" top="1170" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="3330" top="4320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="14" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="6" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
    </PATCH>

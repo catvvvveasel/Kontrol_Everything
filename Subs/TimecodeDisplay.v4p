@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\TimecodeDisplay.v4p" systemname="TimecodeDisplay" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\EuroVisionPreViz\AudioWaveform\Subs\TimecodeDisplay.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\TimecodeDisplay.v4p" systemname="TimecodeDisplay" filename="C:\Users\cat\Desktop\Copy\Projects\ScratchBox\EuroVisionPreViz\AudioWaveform\Subs\TimecodeDisplay.v4p" scrollx="15" scrolly="15" bgcolor="11442563">
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="1410" top="3300" width="100" height="100">
    </BOUNDS>
@@ -47,7 +47,9 @@
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" visible="1" values="-0.95">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" visible="1" values="-0.032">
+   <PIN pinname="TranslateX" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="TranslateZ" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE id="4" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
@@ -63,10 +65,12 @@
    <NODE id="5" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Duration/position">
    </PIN>
-   <BOUNDS type="Box" left="1431" top="1505" width="750" height="240">
+   <BOUNDS type="Box" left="546" top="200" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1431" top="1505" width="750" height="240">
+   <BOUNDS type="Node" left="546" top="200" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <NODE id="6" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="FPS">
@@ -78,14 +82,14 @@
    </NODE>
    <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="2" dstpinname="Transform In">
    </LINK>
-   <BOUNDS type="Window" left="10920" top="300" width="9390" height="5595">
+   <BOUNDS type="Window" left="24930" top="5700" width="9390" height="5595">
    </BOUNDS>
    <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform In">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4560" top="1695" width="795" height="240">
+   <BOUNDS type="Box" left="4170" top="630" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4560" top="1695" width="0" height="0">
+   <BOUNDS type="Node" left="4170" top="630" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.95">
    </PIN>
@@ -95,13 +99,13 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="TranslateY">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="3" dstpinname="TranslateY">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4170" top="705" width="795" height="240">
+   <BOUNDS type="Box" left="3135" top="600" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4170" top="705" width="0" height="0">
+   <BOUNDS type="Node" left="3135" top="600" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -111,10 +115,10 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="TranslateX">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="3" dstpinname="TranslateX">
-   </LINK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="10">
    <BOUNDS type="Node" left="480" top="3015" width="100" height="100">
@@ -185,11 +189,115 @@
    </BOUNDS>
    <PIN pinname="Timecode" visible="1">
    </PIN>
+   <PIN pinname="Duration/position" visible="1" slicecount="1" values="4.36">
+   </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Timecode" dstnodeid="1" dstpinname="String">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Duration/position">
-   </LINK>
    <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="0" dstpinname="FPS">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="1305" top="1290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="1935" top="510" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="StartEnd">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Input Value" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="0" dstpinname="Duration/position">
+   </LINK>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="3135" top="1050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6930" top="540" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6930" top="540" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.95,0.95">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="3" dstpinname="TranslateX">
+   </LINK>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="4485" top="1785" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="2" values="0.31,0.31">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="3" dstpinname="ScaleX">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="3" dstpinname="ScaleY">
+   </LINK>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="4155" top="1440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="2" values="-0.95,0.95">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="4605" top="1095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="2" values="-0.015,-0.015">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="20" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="3" dstpinname="TranslateY">
    </LINK>
    </PATCH>

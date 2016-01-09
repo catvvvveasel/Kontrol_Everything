@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PatchIndexSelect.v4p" systemname="PatchIndexSelect" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\PatchIndexSelect.v4p" bgcolor="11442563" scrollx="0" scrolly="480">
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="0" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" left="2190" top="1500" width="100" height="100">
@@ -9,9 +9,9 @@
    </PIN>
    </NODE>
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="2700" top="3810" width="100" height="100">
+   <BOUNDS type="Node" left="2715" top="4065" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Set" visible="1">
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -19,7 +19,7 @@
    </PIN>
    </NODE>
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="3045" top="3435" width="100" height="100">
+   <BOUNDS type="Node" left="3510" top="3375" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -55,7 +55,7 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="-1">
+   <PIN pinname="Default" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -92,8 +92,6 @@
    </LINK>
    <LINK srcnodeid="0" srcpinname="Former Slice" dstnodeid="13" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="2" dstpinname="Set">
-   </LINK>
    <LINK srcnodeid="13" srcpinname="Output 1" dstnodeid="4" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="12" dstpinname="Input">
@@ -102,7 +100,7 @@
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="2670" top="765" width="100" height="100">
@@ -245,7 +243,7 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="-1">
+   <PIN pinname="Default" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -486,4 +484,64 @@
    </NODE>
    <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Input">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1635" top="3915" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1635" top="3915" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="56" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="FrameCounter (Animation)" nodename="FrameCounter (Animation)" componentmode="Hidden" id="57">
+   <BOUNDS type="Node" left="45" top="2220" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enable" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Frame Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="58">
+   <BOUNDS type="Node" left="105" top="2715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="91">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="Frame Count" dstnodeid="58" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="59">
+   <BOUNDS type="Node" left="150" top="3210" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="59" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="3150" top="3720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Up Edge" dstnodeid="60" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="60" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="2" dstpinname="Set">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>

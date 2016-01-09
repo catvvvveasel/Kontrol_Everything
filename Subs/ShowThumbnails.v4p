@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Lol_Paris_Test\LoL_App\Kontrol_Everything\Subs\ShowThumbnails.v4p" systemname="ShowThumbnails" filename="D:\Copy\Projects\CatGui0.5\Subs\ShowThumbnails.v4p" bgcolor="11442563" scrollx="405" scrolly="255">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ShowThumbnails.v4p" systemname="ShowThumbnails" filename="D:\Copy\Projects\CatGui0.5\Subs\ShowThumbnails.v4p" bgcolor="11442563" scrollx="405" scrolly="255">
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2280" top="8190" width="100" height="100">
    </BOUNDS>
@@ -45,6 +45,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1845" top="3770" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <NODE id="20" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Input Node|">
@@ -94,7 +96,7 @@
    </LINK>
    <BOUNDS type="Window" left="7320" top="1080" width="27360" height="12150">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="5805" top="2700" width="100" height="100">
@@ -891,7 +893,7 @@
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" pintype="Input" visible="1" values="8.94">
    </PIN>
-   <PIN pinname="TranslateY" visible="1" pintype="Input">
+   <PIN pinname="TranslateY" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -904,13 +906,9 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform In">
-   </LINK>
    <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="2" dstpinname="TranslateY">
-   </LINK>
-   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="125">
+   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="125">
    <BOUNDS type="Node" left="12690" top="10245" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -930,4 +928,10 @@
    </LINK>
    <LINK srcnodeid="125" srcpinname="Output" dstnodeid="126" dstpinname="Input 1">
    </LINK>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="2" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform In">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>

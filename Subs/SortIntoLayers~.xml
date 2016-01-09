@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Lol_Paris_Test_2\Kontrol_Everything\Subs\SortIntoLayers.v4p" systemname="SortIntoLayers" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SortIntoLayers.v4p" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SortIntoLayers.v4p" systemname="SortIntoLayers" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SortIntoLayers.v4p" bgcolor="11442563">
    <NODE systemname="Occurrence (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\Occurrence.dll" nodename="Occurrence (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1815" top="1890" width="100" height="100">
    </BOUNDS>
@@ -27,7 +27,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="1500" top="2580" width="100" height="100">
+   <BOUNDS type="Node" left="1485" top="2535" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -168,9 +168,9 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Former Index" dstnodeid="12" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="9720" top="960" width="12900" height="8400">
+   <BOUNDS type="Window" left="1140" top="1050" width="14235" height="13980">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="15" systemname="IOBox (String)">
    <BOUNDS type="Box" left="5790" top="645" width="795" height="240">
@@ -207,7 +207,7 @@
    <LINK srcnodeid="15" srcpinname="Output String" dstnodeid="14" dstpinname="Input">
    </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="6060" top="2610" width="100" height="100">
+   <BOUNDS type="Node" left="5775" top="2880" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="34" values="PatchPreset_0007_0000.xml,PatchPreset_-001_0000.xml,PatchPreset_0008_0000.xml,PatchPreset_0008_0001.xml,PatchPreset_0008_0001.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0001.xml,PatchPreset_0005_0000.xml,PatchPreset_0005_0001.xml,PatchPreset_0007_0000.xml,PatchPreset_0007_0002.xml,PatchPreset_0006_0002.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0000.xml,PatchPreset_0001_0000.xml,PatchPreset_0001_0001.xml,PatchPreset_0007_0000.xml,PatchPreset_0001_0001.xml,PatchPreset_0006_0001.xml,PatchPreset_0000_0000.xml,PatchPreset_0000_0024.xml,PatchPreset_0000_0002.xml,PatchPreset_0000_0003.xml,PatchPreset_0000_0009.xml,PatchPreset_0000_0008.xml,PatchPreset_0000_0016.xml,PatchPreset_0000_0013.xml,PatchPreset_0000_0006.xml,PatchPreset_0000_0019.xml,PatchPreset_0000_0020.xml,PatchPreset_0000_0023.xml,PatchPreset_0000_0028.xml,PatchPreset_0000_0026.xml,PatchPreset_0000_0005.xml">
    </PIN>
@@ -217,12 +217,10 @@
    </PIN>
    <PIN pinname="Offset" visible="1">
    </PIN>
-   <PIN pinname="Index" visible="1" slicecount="25" values="1,2,0,3,7,4,11,5,14,12,13,15,16,17,18,19,20,6,9,8,10,23,22,21,24">
+   <PIN pinname="Index" visible="1" slicecount="15" values="0,9,8,7,12,11,10,3,2,1,6,5,4,13,14">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="13" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Former Index" dstnodeid="13" dstpinname="Index">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
    <BOUNDS type="Box" left="5790" top="3450" width="795" height="240">
@@ -237,13 +235,55 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Names">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="7" values="|TakeCamera-Kontrols||000|,|AllControls||002|,|FloorLEDs||000|,|FloorLEDs||000|,|TakeCamera-Kontrols||008|,|TakeCamera-Kontrols||000|,|AllControls||001|">
+   <PIN pinname="Input String" visible="1" slicecount="15" values="|AllControls||001|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||007|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||010|,|TakeCamera-Kontrols||009|,|TakeCamera-Kontrols||008|,|TakeCamera-Kontrols||002|,|TakeCamera-Kontrols||001|,|TakeCamera-Kontrols||000|,|TakeCamera-Kontrols||005|,|TakeCamera-Kontrols||004|,|TakeCamera-Kontrols||003|,|Lights-Kontrols||009|,|PonyLED||000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Former Index" dstnodeid="14" dstpinname="Index">
    <LINKPOINT x="6345" y="2010">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="16" dstpinname="Input String">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="24" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8670" top="3990" width="4665" height="4755">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8670" top="3990" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="18">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="15" values="|AllControls||001|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||007|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||010|,|TakeCamera-Kontrols||009|,|TakeCamera-Kontrols||008|,|TakeCamera-Kontrols||002|,|TakeCamera-Kontrols||001|,|TakeCamera-Kontrols||000|,|TakeCamera-Kontrols||005|,|TakeCamera-Kontrols||004|,|TakeCamera-Kontrols||003|,|Lights-Kontrols||009|,|PonyLED||000|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7590" top="3945" width="1065" height="4290">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7590" top="3945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="15" visible="1" values="0,58.64,52.6,44.08,77.08,71.48,64.92,16.08,9.56,0.76,36.6,30.2,23,0,0.44">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Former Slice" dstnodeid="13" dstpinname="Index">
    </LINK>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="23" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="24" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="16" dstpinname="Input String">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>

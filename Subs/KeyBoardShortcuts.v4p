@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Lol_Paris_Test_2\Kontrol_Everything\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="240" bgcolor="11442563" locked="0">
-   <BOUNDS type="Window" left="13815" top="3390" width="21375" height="16695">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\KeyBoardShortcuts.v4p" systemname="KeyBoardShortcuts" filename="C:\Users\cat\Desktop\Copy\Projects\EuroVisionPreViz\EuroVision\Subs\AudioWaveform\Subs\KeyBoardShortcuts.v4p" scrollx="0" scrolly="240" bgcolor="11442563" locked="0">
+   <BOUNDS type="Window" left="12615" top="2580" width="21375" height="16260">
    </BOUNDS>
    <NODE systemname="KeyboardState (System Split Legacy)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyboardState (System Split)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="2490" top="2595" width="100" height="100">
@@ -120,7 +120,7 @@
    </NODE>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="83">
    <BOUNDS type="Node" left="1110" top="12255" width="100" height="100">
@@ -899,7 +899,7 @@
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Key Match" slicecount="1" values="|escape,tab,Menu,next,c,v, controlkey,left,right,up,down,End,Home,PageUp,z,shiftKey,f4,oemminus,oemplus,Capital|">
+   <PIN pinname="Key Match" slicecount="1" values="|escape,tab,Menu,next,c,v, controlkey,left,right,up,down,End,Home,PageUp,z,shiftKey,f4,oemminus,oemplus,Capital,OemQuestion|">
    </PIN>
    <PIN pinname="Capital" visible="1">
    </PIN>
@@ -950,6 +950,8 @@
    <PIN pinname="OemMinus" visible="1">
    </PIN>
    <PIN pinname="Oemplus" visible="1">
+   </PIN>
+   <PIN pinname="OemQuestion" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Escape" dstnodeid="59" dstpinname="Input Value">
@@ -1202,4 +1204,64 @@
    </LINK>
    <LINK srcnodeid="190" srcpinname="Output" dstnodeid="187" dstpinname="Input 1">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="193" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2505" top="1920" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2505" top="1920" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="OemQuestion">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="194" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="15525" top="1785" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15525" top="1785" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="OemQuestion">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="195" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="16050" top="1860" width="1260" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16050" top="1860" width="1260" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|toggle schedule|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="196">
+   <BOUNDS type="Node" left="16215" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="OemQuestion" dstnodeid="196" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="196" srcpinname="Up Edge" dstnodeid="194" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>

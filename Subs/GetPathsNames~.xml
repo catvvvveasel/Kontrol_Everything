@@ -27,7 +27,7 @@
    <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="4935" top="7545" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Directory" visible="1" slicecount="1" values="..\..\..\Nicoline\LoL_App\Projects\Paris\Video\\">
+   <PIN pinname="Directory" visible="1" slicecount="2" values="..\..\LoL_App\Projects\Paris\Video\Look^1,..\..\LoL_App\Projects\Paris\Video\D:CopyProjectsNicolineLoL_AppSubs">
    </PIN>
    <PIN pinname="Short Filenames" visible="1">
    </PIN>
@@ -241,7 +241,7 @@
    <LINK srcnodeid="4" srcpinname="Count" dstnodeid="10" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="5115" top="7005" width="100" height="100">
+   <BOUNDS type="Node" left="5070" top="6810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -253,8 +253,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="3" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="21" dstpinname="Directory">
    </LINK>
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="6000" top="4725" width="100" height="100">
@@ -764,4 +762,22 @@
    </LINK>
    <LINK srcnodeid="49" srcpinname="Output" dstnodeid="18" dstpinname="Input 1">
    </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="5070" top="7215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="From" slicecount="1" values="^">
+   </PIN>
+   <PIN pinname="To" slicecount="1" values="| |">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="50" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="21" dstpinname="Directory">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>

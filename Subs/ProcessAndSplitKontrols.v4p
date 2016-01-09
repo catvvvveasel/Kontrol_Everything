@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="11535" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="7650" scrolly="0" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -10,7 +10,7 @@
    <PIN pinname="Input String" visible="1" slicecount="2" values="ColorSilly,ScaleXSilly">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="14085" top="4530" width="22530" height="11655">
+   <BOUNDS type="Window" left="11805" top="3000" width="22530" height="11655">
    </BOUNDS>
    <NODE id="26" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="SubType">
@@ -56,7 +56,7 @@
    <PIN pinname="Y Input Value" visible="1" slicecount="25" values="0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -1698,7 +1698,7 @@
    </LINK>
    <LINK srcnodeid="278" srcpinname="Output" dstnodeid="210" dstpinname="Evaluate">
    </LINK>
-   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="191">
+   <NODE systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden" id="191">
    <BOUNDS type="Node" left="17370" top="6345" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="9" values=",,,,,,|SingleLine, MultiLine, MultiLineWordWrap|,,">
@@ -1718,4 +1718,68 @@
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output 11" dstnodeid="191" dstpinname="Input">
    </LINK>
+   <NODE systemname="UDP (Network Server)" nodename="UDP (Network Server)" componentmode="Hidden" id="306">
+   <BOUNDS type="Node" left="6180" top="1485" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Local Port" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Queue Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="307" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6225" top="690" width="825" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6225" top="690" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="55556">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="307" srcpinname="Y Output Value" dstnodeid="306" dstpinname="Local Port">
+   </LINK>
+   <NODE systemname="S+H (Raw)" nodename="S+H (Raw)" componentmode="Hidden" id="308">
+   <BOUNDS type="Node" left="6150" top="1905" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="306" srcpinname="Output" dstnodeid="308" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="306" srcpinname="Queue Count" dstnodeid="308" dstpinname="Set">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="309" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7215" top="1830" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7215" top="1830" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="306" srcpinname="Queue Count" dstnodeid="309" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="310" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="5940" top="2400" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5940" top="2400" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="308" srcpinname="Output" dstnodeid="310" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>

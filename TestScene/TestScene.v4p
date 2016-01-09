@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\TestScene.v4p" systemname="TestScene" filename="D:\Copy\Projects\CatGui0.5\TestScene\TestScene.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="3255" top="12570" width="11790" height="8580">
+   <BOUNDS type="Window" left="3270" top="7305" width="12390" height="8580">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
    <BOUNDS type="Node" left="1110" top="4245" width="100" height="100">
@@ -103,7 +103,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2760" top="5280" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="1065" top="12870" width="14370" height="2880">
+   <BOUNDS type="Window" left="20130" top="18435" width="14055" height="1500">
    </BOUNDS>
    </NODE>
    <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\addonpack\lib\nodes\modules\Transform\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="10">
@@ -118,20 +118,22 @@
    </LINK>
    <LINK srcnodeid="10" srcpinname="View" dstnodeid="1" dstpinname="View">
    </LINK>
-   <NODE systemname="Patch1" filename="Subs\Patch1.v4p" nodename="Subs\Patch1.v4p" componentmode="Hidden" id="12">
+   <NODE systemname="Patch1" filename="Subs\Patch1.v4p" nodename="Subs\Patch1.v4p" componentmode="InAWindow" id="12">
    <BOUNDS type="Node" left="1665" top="855" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="720" top="12480" width="15270" height="8280">
+   <BOUNDS type="Window" left="255" top="12870" width="15270" height="8280">
    </BOUNDS>
-   <PIN pinname="Mode" slicecount="1" values="AlphaAdd">
+   <PIN pinname="Mode" slicecount="1" values="Disabled">
+   </PIN>
+   <PIN pinname="Evaluate" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3630" top="840" width="2610" height="270">
+   <BOUNDS type="Node" left="3885" top="900" width="2610" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3630" top="840" width="3045" height="735">
+   <BOUNDS type="Box" left="3885" top="900" width="3045" height="735">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;- The patches need unique names&cr;&lf;This includes inside subpatches if used as kontrols|">
    </PIN>
@@ -191,7 +193,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="295" top="630" width="3100" height="3100">
    </BOUNDS>
-   <BOUNDS type="Window" left="540" top="11100" width="13260" height="10365">
+   <BOUNDS type="Window" left="6630" top="2115" width="13260" height="10365">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -233,7 +235,7 @@
    <NODE systemname="Kontrol_Client" filename="..\Kontrol_Client.v4p" nodename="..\Kontrol_Client.v4p" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="6210" top="3780" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="5625" top="1995" width="16095" height="14775">
+   <BOUNDS type="Window" left="19755" top="810" width="16095" height="14775">
    </BOUNDS>
    <PIN pinname="Dx11 Texture" visible="1">
    </PIN>
@@ -242,6 +244,8 @@
    <PIN pinname="DualScreen" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Mainloop" visible="1" slicecount="1" values="300">
+   </PIN>
+   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="20" dstpinname="Dx11 Texture">
@@ -275,7 +279,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
@@ -285,9 +289,9 @@
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="20" dstpinname="DualScreen">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="24" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6855" top="3405" width="795" height="240">
+   <BOUNDS type="Box" left="7380" top="2985" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6855" top="3405" width="0" height="0">
+   <BOUNDS type="Node" left="7380" top="2985" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="300">
    </PIN>
@@ -376,4 +380,18 @@
    <PIN pinname="Color Input" slicecount="1" values="|1.00000,0.33660,0.00000,1.00000|">
    </PIN>
    </NODE>
+   <LINK srcnodeid="1" srcpinname="Actual BackBuffer SizeXY" dstnodeid="20" dstpinname="Actual BackBuffer SizeXY">
+   <LINKPOINT x="2595" y="4980">
+   </LINKPOINT>
+   <LINKPOINT x="7215" y="3435">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 2">
+   <LINKPOINT x="6840" y="4665">
+   </LINKPOINT>
+   <LINKPOINT x="1845" y="3315">
+   </LINKPOINT>
+   </LINK>
    </PATCH>

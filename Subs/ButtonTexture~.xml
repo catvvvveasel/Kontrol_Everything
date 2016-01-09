@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ButtonTexture.v4p" systemname="ButtonTexture" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\ButtonTexture.v4p" scrollx="30" scrolly="0" bgcolor="11442563">
    <NODE systemname="Exists (File)" nodename="Exists (File)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2295" top="2820" width="100" height="100">
@@ -88,9 +88,9 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="0" top="5040" width="6465" height="6990">
+   <BOUNDS type="Window" left="3825" top="2580" width="6465" height="6990">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -169,6 +169,8 @@
    </PIN>
    <PIN pinname="Keep In Memory" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Is Valid" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="3" dstpinname="Filename">
    </LINK>
@@ -246,4 +248,24 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Texture Out" dstnodeid="7" dstpinname="Input Node">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3255" top="5925" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3255" top="5925" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Is Valid|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Is Valid" dstnodeid="22" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>

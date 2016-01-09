@@ -1,31 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\AudioPlayer.v4p" systemname="AudioPlayer" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\AudioPlayer.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="18780" top="1095" width="13635" height="12990">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\AudioPlayer.v4p" systemname="AudioPlayer" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\AudioPlayer.v4p" scrollx="0" scrolly="900" bgcolor="11442563">
+   <BOUNDS type="Window" left="23985" top="11790" width="13635" height="12990">
    </BOUNDS>
-   <NODE systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2370" top="4680" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Audio" visible="1">
-   </PIN>
-   <PIN pinname="Position" visible="1">
-   </PIN>
-   <PIN pinname="Seek Time" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Do Seek" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Duration" visible="1">
-   </PIN>
-   <PIN pinname="Loop End Time" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Loop Start Time" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Filename" visible="1" slicecount="1" values="file.avi">
-   </PIN>
-   <PIN pinname="Play" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Loop" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="AudioOut (DShow9)" nodename="AudioOut (DShow9)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2415" top="6975" width="100" height="100">
    </BOUNDS>
@@ -33,13 +9,13 @@
    </PIN>
    <PIN pinname="Volume" visible="1">
    </PIN>
-   <PIN pinname="Driver" slicecount="1" values="|Speakers (Realtek High Definition Audio)|">
+   <PIN pinname="Driver" slicecount="1" values="|Default WaveOut Device|">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6525" top="8430" width="795" height="240">
+   <BOUNDS type="Box" left="7485" top="9285" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6525" top="8430" width="0" height="0">
+   <BOUNDS type="Node" left="7485" top="9285" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -74,7 +50,7 @@
    <PIN pinname="Send String" slicecount="1" values="AudioPos">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="14" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="8115" top="8055" width="795" height="240">
@@ -86,8 +62,6 @@
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Audio" dstnodeid="2" dstpinname="Audio">
-   </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="3240" top="2865" width="100" height="100">
    </BOUNDS>
@@ -99,25 +73,21 @@
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="435" top="4575" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="AudioDuration">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="26" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="3420" top="5835" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="30" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="63">
-   <BOUNDS type="Node" left="8100" top="7545" width="100" height="100">
+   <BOUNDS type="Node" left="8085" top="7575" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -129,7 +99,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Layer 3" visible="1">
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
    </PIN>
@@ -239,7 +209,7 @@
    </PIN>
    <BOUNDS type="Node" left="8145" top="3465" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" pintype="Input">
+   <PIN pinname="Input" visible="1" pintype="Input" slicecount="1" values="|D:\Copy\Projects\Lima PixelFlow\fromPC\PixelFlow\Kontrol_Everything\Subs\Assets\5minClick.wav|">
    </PIN>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -403,9 +373,9 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Position" dstnodeid="90" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="TimecodeDisplay" filename="TimecodeDisplay.v4p" nodename="TimecodeDisplay.v4p" componentmode="Hidden" id="98">
    <BOUNDS type="Node" left="8625" top="6630" width="100" height="100">
    </BOUNDS>
@@ -415,15 +385,13 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="10920" top="300" width="9390" height="5595">
+   <BOUNDS type="Window" left="24930" top="5700" width="9390" height="5595">
    </BOUNDS>
    <PIN pinname="Horizontal Align" slicecount="1" values="Center">
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="98" srcpinname="Layer" dstnodeid="63" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="104">
    <BOUNDS type="Node" left="8520" top="1560" width="100" height="100">
    </BOUNDS>
@@ -458,8 +426,6 @@
    </NODE>
    <LINK srcnodeid="67" srcpinname="Filenames" dstnodeid="106" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="106" srcpinname="Output" dstnodeid="68" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="105" srcpinname="Output" dstnodeid="106" dstpinname="Switch">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="107" systemname="IOBox (Value Advanced)">
@@ -492,8 +458,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="111" srcpinname="Output" dstnodeid="0" dstpinname="Do Seek">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="113">
    <BOUNDS type="Node" left="690" top="5400" width="100" height="100">
    </BOUNDS>
@@ -592,11 +556,7 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="125" srcpinname="Input Value" dstnodeid="63" dstpinname="Enabled">
-   </LINK>
    <LINK srcnodeid="111" srcpinname="Output" dstnodeid="87" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="0" dstpinname="Filename">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="127" systemname="IOBox (String)">
    <BOUNDS type="Box" left="855" top="9015" width="795" height="240">
@@ -645,11 +605,11 @@
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="129" dstpinname="Input String">
    </LINK>
    <NODE systemname="AudioPlayer-InOuts" filename="AudioPlayer-InOuts.v4p" nodename="AudioPlayer-InOuts.v4p" componentmode="Hidden" id="62">
-   <BOUNDS type="Node" left="5957" top="6366" width="0" height="0">
+   <BOUNDS type="Node" left="6212" top="6681" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="2060" top="1989" width="7795" height="8755">
+   <BOUNDS type="Box" left="2315" top="2304" width="7795" height="8755">
    </BOUNDS>
-   <BOUNDS type="Window" left="1590" top="2580" width="14745" height="14295">
+   <BOUNDS type="Window" left="22470" top="4350" width="14745" height="14295">
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
@@ -657,25 +617,21 @@
    </PIN>
    <PIN pinname="TimeCursor" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Duration" visible="1">
+   <PIN pinname="Duration" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="62" srcpinname="Layer Out" dstnodeid="63" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="62" dstpinname="Duration">
-   </LINK>
    <NODE systemname="Waveform" filename="Waveform.v4p" componentmode="Hidden" id="12" nodename="Waveform.v4p">
    <BOUNDS type="Node" left="7020" top="4485" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7020" top="4485" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="3345" top="6390" width="15030" height="14085">
+   <BOUNDS type="Window" left="22110" top="3975" width="15030" height="14085">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Res" visible="1" slicecount="2" values="0,">
    </PIN>
-   <PIN pinname="Position" visible="1">
+   <PIN pinname="Position" visible="1" slicecount="1" values="4.812">
    </PIN>
    <PIN pinname="Start Time" visible="1" slicecount="1" values="0">
    </PIN>
@@ -692,8 +648,6 @@
    <PIN pinname="TimeNormalised" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Position" dstnodeid="12" dstpinname="Position">
-   </LINK>
    <LINK srcnodeid="12" srcpinname="Scrub" dstnodeid="25" dstpinname="Input 1">
    <LINKPOINT x="7635" y="5270">
    </LINKPOINT>
@@ -707,8 +661,6 @@
    <LINK srcnodeid="12" srcpinname="Scrub" dstnodeid="65" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="68" srcpinname="Output" dstnodeid="12" dstpinname="Filename">
-   </LINK>
-   <LINK srcnodeid="12" srcpinname="Layer" dstnodeid="63" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="12" srcpinname="TimeCursor" dstnodeid="98" dstpinname="Duration/position">
    </LINK>
@@ -750,17 +702,7 @@
    <LINKPOINT x="4365" y="1575">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="112" srcpinname="In" dstnodeid="0" dstpinname="Loop Start Time">
-   </LINK>
-   <LINK srcnodeid="112" srcpinname="Out" dstnodeid="0" dstpinname="Loop End Time">
-   </LINK>
-   <LINK srcnodeid="112" srcpinname="Position" dstnodeid="0" dstpinname="Seek Time">
-   </LINK>
    <LINK srcnodeid="112" srcpinname="DoSeek" dstnodeid="111" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="112" srcpinname="Loop" dstnodeid="0" dstpinname="Loop">
-   </LINK>
-   <LINK srcnodeid="112" srcpinname="Play" dstnodeid="0" dstpinname="Play">
    </LINK>
    <LINK srcnodeid="112" srcpinname="Play" dstnodeid="64" dstpinname="Input Value">
    </LINK>
@@ -769,9 +711,9 @@
    <LINK srcnodeid="112" srcpinname="Position" dstnodeid="87" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output" dstnodeid="112" dstpinname="Zoom">
-   <LINKPOINT x="6120" y="7780">
+   <LINKPOINT x="6290" y="7990">
    </LINKPOINT>
-   <LINKPOINT x="2760" y="1265">
+   <LINKPOINT x="2845" y="1370">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="12" srcpinname="TimeCursor" dstnodeid="112" dstpinname="TimeCurser">
@@ -785,5 +727,67 @@
    <LINK srcnodeid="112" srcpinname="Out" dstnodeid="12" dstpinname="End Time">
    </LINK>
    <LINK srcnodeid="112" srcpinname="Loop" dstnodeid="87" dstpinname="Input 5">
+   </LINK>
+   <NODE id="0" systemname="FileStream (DShow9)" nodename="FileStream (DShow9)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2370" top="4680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Audio" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Seek Time" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Do Seek" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Duration" visible="1">
+   </PIN>
+   <PIN pinname="Loop End Time" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Loop Start Time" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Filename" visible="1" slicecount="1" values="file.avi">
+   </PIN>
+   <PIN pinname="Play" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Loop" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="112" srcpinname="Play" dstnodeid="0" dstpinname="Play">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="Loop" dstnodeid="0" dstpinname="Loop">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="Position" dstnodeid="0" dstpinname="Seek Time">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="Out" dstnodeid="0" dstpinname="Loop End Time">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="In" dstnodeid="0" dstpinname="Loop Start Time">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Position" dstnodeid="12" dstpinname="Position">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="62" dstpinname="Duration">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="0" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="111" srcpinname="Output" dstnodeid="0" dstpinname="Do Seek">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Position" dstnodeid="90" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="30" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Duration" dstnodeid="26" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Audio" dstnodeid="2" dstpinname="Audio">
+   </LINK>
+   <LINK srcnodeid="108" srcpinname="Output String" dstnodeid="68" dstpinname="Input">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <LINK srcnodeid="98" srcpinname="Layer" dstnodeid="63" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="125" srcpinname="Input Value" dstnodeid="63" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="Layer Out" dstnodeid="63" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Layer" dstnodeid="63" dstpinname="Layer 1">
    </LINK>
    </PATCH>

@@ -59,7 +59,7 @@
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="GBR_Backwall_Chorus_Test1_v2.avi">
+   <PIN pinname="Input 2" visible="1" slicecount="4" values="Video,CatwalkTextures,GBR_Backwall_Chorus_Test1_v2.avi,Shiny-silver2.png">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -131,7 +131,7 @@
    </PIN>
    </NODE>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="3855" top="2265" width="100" height="100">
+   <BOUNDS type="Node" left="4815" top="1665" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" visible="1">
    </PIN>
@@ -143,7 +143,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="4215" top="2730" width="100" height="100">
+   <BOUNDS type="Node" left="5445" top="2160" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -157,7 +157,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="3840" top="3060" width="100" height="100">
+   <BOUNDS type="Node" left="4800" top="2460" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Operand 1" visible="1">
    </PIN>
@@ -169,7 +169,7 @@
    </PIN>
    </NODE>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="3825" top="3465" width="100" height="100">
+   <BOUNDS type="Node" left="4785" top="2865" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" visible="1" slicecount="1" values="file.foo">
    </PIN>
@@ -181,7 +181,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="4170" top="3930" width="100" height="100">
+   <BOUNDS type="Node" left="5130" top="3330" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -241,8 +241,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="6" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="6" dstpinname="Input 2">
    </LINK>
    <NODE id="21" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="IsFileName">
@@ -319,9 +317,9 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6930" top="1260" width="5325" height="3105">
+   <BOUNDS type="Box" left="11280" top="1725" width="5325" height="3105">
    </BOUNDS>
-   <BOUNDS type="Node" left="6930" top="1260" width="0" height="0">
+   <BOUNDS type="Node" left="11280" top="1725" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -331,7 +329,131 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="7">
    </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="4" values="Video,CatwalkTextures,GBR_Backwall_Chorus_Test1_v2.avi,Shiny-silver2.png">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Output String" dstnodeid="25" dstpinname="Input String">
+   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="6750" top="2565" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1" slicecount="2" values="D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\GBR_Cube_Projection_UnknownSection_v5.avi,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video\relay\League+of+Legends+Game.png">
+   </PIN>
+   <PIN pinname="Operand 2" visible="1" slicecount="2" values="D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video,D:\Copy\Projects\Nicoline\LoL_App\Projects\Paris\Video">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="Last">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="6900" top="1485" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1" slicecount="13" values="0,1.0000,0.8300,1.0000,1.0000,0,0.3200,|||1.1004,7.0000,0.9800,0.0000|||,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\GBR_Cube_Projection_UnknownSection_v5.avi,0.0000,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\relay\League+of+Legends+Game.png,Multiply,0.0000">
+   </PIN>
+   <PIN pinname="Path" visible="1">
+   </PIN>
+   <PIN pinname="Shortname" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Path" dstnodeid="32" dstpinname="Operand 1">
    </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="6405" top="3135" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="\,\CatwalkTextures\">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="6735" top="3675" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="2" values=",relay\">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="29" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="8700" top="2070" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1" slicecount="13" values="0,1.0000,0.8300,1.0000,1.0000,0,0.3200,|||1.1004,7.0000,0.9800,0.0000|||,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\GBR_Cube_Projection_UnknownSection_v5.avi,0.0000,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\relay\League+of+Legends+Game.png,Multiply,0.0000">
+   </PIN>
+   <PIN pinname="Path" visible="1">
+   </PIN>
+   <PIN pinname="Shortname" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Shortname" dstnodeid="29" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="7305" top="3030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" values="\">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Result" dstnodeid="27" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Result" dstnodeid="29" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Zip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (String)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="6735" top="4350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="26" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Shortname" dstnodeid="26" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="31" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8445" top="1170" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8445" top="1170" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="13" visible="1" values="0,1.0000,0.8300,1.0000,1.0000,0,0.3200,|||1.1004,7.0000,0.9800,0.0000|||,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\GBR_Cube_Projection_UnknownSection_v5.avi,0.0000,..\..\..\Nicoline\LoL_App\Projects\Paris\Video\relay\League+of+Legends+Game.png,Multiply,0.0000">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="file.foo">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="DirName">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output String" dstnodeid="28" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="25" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output String" dstnodeid="32" dstpinname="Operand 2">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Result" dstnodeid="30" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    </PATCH>
