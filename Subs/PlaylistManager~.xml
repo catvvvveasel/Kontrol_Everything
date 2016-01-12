@@ -669,7 +669,7 @@
    <LINK srcnodeid="222" srcpinname="TransFormX" dstnodeid="225" dstpinname="TransformX">
    </LINK>
    <NODE systemname="Kontrol-DrawKeyframes" filename="Kontrol-DrawKeyframes.v4p" nodename="Kontrol-DrawKeyframes.v4p" componentmode="Hidden" id="292">
-   <BOUNDS type="Node" left="11070" top="9585" width="100" height="100">
+   <BOUNDS type="Node" left="10050" top="9300" width="100" height="100">
    </BOUNDS>
    <PIN pinname="TranslateX" visible="1">
    </PIN>
@@ -688,8 +688,6 @@
    </NODE>
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="292" dstpinname="TranslateY">
    </LINK>
-   <LINK srcnodeid="292" srcpinname="Layer" dstnodeid="100" dstpinname="Layer 2">
-   </LINK>
    <LINK srcnodeid="222" srcpinname="TransFormX" dstnodeid="292" dstpinname="TranslateX">
    </LINK>
    <NODE systemname="Kontrol-Playlist-Text" filename="Kontrol-Playlist-Text.v4p" nodename="Kontrol-Playlist-Text.v4p" componentmode="Hidden" id="220">
@@ -697,7 +695,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9859" top="5420" width="5320" height="10975">
    </BOUNDS>
-   <BOUNDS type="Window" left="23550" top="1785" width="12675" height="13860">
+   <BOUNDS type="Window" left="13170" top="5055" width="12675" height="13860">
    </BOUNDS>
    <PIN pinname="TransformXtra" visible="1" slicecount="1" values="||">
    </PIN>
@@ -712,6 +710,8 @@
    <PIN pinname="Layer Out" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Update" visible="1">
+   </PIN>
+   <PIN pinname="Distance" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="143" srcpinname="Output" dstnodeid="220" dstpinname="Bin Size">
@@ -1144,8 +1144,6 @@
    </NODE>
    <LINK srcnodeid="345" srcpinname="Y Output Value" dstnodeid="302" dstpinname="ClearKeyFrames">
    </LINK>
-   <LINK srcnodeid="220" srcpinname="Layer Out" dstnodeid="100" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="347">
    <BOUNDS type="Node" left="8220" top="3450" width="100" height="100">
    </BOUNDS>
@@ -1528,8 +1526,64 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <LINK srcnodeid="220" srcpinname="Layer Out" dstnodeid="100" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="292" srcpinname="Layer" dstnodeid="100" dstpinname="Layer 3">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="378" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="16230" top="4605" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="16230" top="4605" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="222" srcpinname="TransFormX" dstnodeid="378" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Scroll (Spreads)" nodename="Scroll (Spreads)" componentmode="Hidden" id="380">
+   <BOUNDS type="Node" left="16620" top="5040" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="22">
+   </PIN>
+   <PIN pinname="Input Index" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="378" srcpinname="Y Output Value" dstnodeid="380" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="381">
+   <BOUNDS type="Node" left="16455" top="5775" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="378" srcpinname="Y Output Value" dstnodeid="381" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="380" srcpinname="Output" dstnodeid="381" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Sign (Value)" nodename="Sign (Value)" componentmode="Hidden" id="382">
+   <BOUNDS type="Node" left="16425" top="6225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Absolute Part" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="381" srcpinname="Output" dstnodeid="382" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="382" srcpinname="Absolute Part" dstnodeid="220" dstpinname="Distance">
+   </LINK>
    <LINK srcnodeid="350" srcpinname="Output" dstnodeid="220" dstpinname="Evaluate">
-   <LINKPOINT x="14040" y="10560">
-   </LINKPOINT>
    </LINK>
    </PATCH>
