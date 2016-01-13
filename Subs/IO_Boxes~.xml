@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="0" scrolly="5910" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IO_Boxes.v4p" systemname="IO_Boxes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IO_Boxes.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
    <NODE id="12" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
@@ -115,9 +115,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="175" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7425" top="13050" width="795" height="240">
+   <BOUNDS type="Box" left="7710" top="12705" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7425" top="13050" width="0" height="0">
+   <BOUNDS type="Node" left="7710" top="12705" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="29" visible="1" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
@@ -1031,9 +1031,9 @@
    <LINK srcnodeid="225" srcpinname="Lowest" dstnodeid="247" dstpinname="LowestPrevious">
    </LINK>
    <NODE systemname="MakeRowsThenColums" filename="MakeRowsThenColums.v4p" componentmode="Hidden" id="229" nodename="MakeRowsThenColums.v4p">
-   <BOUNDS type="Node" left="9180" top="4920" width="100" height="100">
+   <BOUNDS type="Node" left="8910" top="4950" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9180" top="4920" width="4800" height="3600">
+   <BOUNDS type="Box" left="8910" top="4950" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="12060" top="1335" width="15870" height="11655">
    </BOUNDS>
@@ -1257,9 +1257,9 @@
    </BOUNDS>
    <PIN pinname="FadeTimes" visible="1">
    </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="443" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 2">
-   </LINK>
    <LINK srcnodeid="125" srcpinname="Y Output Value" dstnodeid="443" dstpinname="MaxFade">
    </LINK>
    <LINK srcnodeid="340" srcpinname="Output Node" dstnodeid="443" dstpinname="Transform In">
@@ -1279,8 +1279,6 @@
    <LINK srcnodeid="441" srcpinname="DampedValues" dstnodeid="306" dstpinname="DampedValues">
    </LINK>
    <LINK srcnodeid="355" srcpinname="Output" dstnodeid="441" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="421" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="425" srcpinname="Output" dstnodeid="421" dstpinname="Evaluate">
    </LINK>
@@ -1477,7 +1475,7 @@
    <LINK srcnodeid="453" srcpinname="Transform Out" dstnodeid="163" dstpinname="Input Node">
    </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="454">
-   <BOUNDS type="Node" left="7080" top="13620" width="100" height="100">
+   <BOUNDS type="Node" left="6855" top="13335" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1522,11 +1520,7 @@
    <PIN pinname="Input 4" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="454" srcpinname="OnChange" dstnodeid="457" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="455" srcpinname="OnChange" dstnodeid="457" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="456" srcpinname="OnChange" dstnodeid="457" dstpinname="Input 3">
    </LINK>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="458">
    <BOUNDS type="Node" left="7665" top="14385" width="100" height="100">
@@ -1573,8 +1567,6 @@
    <LINK srcnodeid="126" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 4">
    </LINK>
    <LINK srcnodeid="341" srcpinname="Output" dstnodeid="441" dstpinname="Update" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="191" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="304" srcpinname="Output Node" dstnodeid="191" dstpinname="Render State">
    </LINK>
@@ -1663,5 +1655,35 @@
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
    <LINK srcnodeid="347" srcpinname="Output" dstnodeid="386" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="443" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="421" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Layer" dstnodeid="90" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="466">
+   <BOUNDS type="Node" left="6795" top="13725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="454" srcpinname="OnChange" dstnodeid="466" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="466" srcpinname="Output" dstnodeid="457" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="467">
+   <BOUNDS type="Node" left="8640" top="14010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="456" srcpinname="OnChange" dstnodeid="467" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="467" srcpinname="Output" dstnodeid="457" dstpinname="Input 3">
    </LINK>
    </PATCH>

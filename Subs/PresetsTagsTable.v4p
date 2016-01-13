@@ -293,7 +293,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="|0.0000tretretrewtretrwtrw|||" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="|0.0000tretretrewtretrwtrw|||">
    </PIN>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="13" dstpinname="Input">
@@ -825,5 +825,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="99" srcpinname="Output" dstnodeid="100" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="1695" top="7920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Bang" dstnodeid="7" dstpinname="Load">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="1605" top="8430" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Bang" dstnodeid="102" dstpinname="Input">
+   <LINKPOINT x="1590" y="8340">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output" dstnodeid="7" dstpinname="Auto Save">
    </LINK>
    </PATCH>

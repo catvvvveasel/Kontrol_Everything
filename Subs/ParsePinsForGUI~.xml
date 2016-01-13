@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ParsePinsForGUI.v4p" systemname="ParsePinsForGUI" filename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" scrollx="0" scrolly="1260" bgcolor="11442563">
-   <BOUNDS type="Window" left="7425" top="1830" width="21315" height="12045">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ParsePinsForGUI.v4p" systemname="ParsePinsForGUI" filename="D:\Copy\Projects\CatGui0.5\Subs\ParsePinsForGUI.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <BOUNDS type="Window" left="9360" top="1665" width="21315" height="12045">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2235" top="450" width="795" height="240">
@@ -31,7 +31,7 @@
    </BOUNDS>
    <PIN pinname="Bin Size" slicecount="1" values="14">
    </PIN>
-   <PIN pinname="Index" visible="1" slicecount="1" values="0">
+   <PIN pinname="Index" visible="1" slicecount="14" values="3,4,5,6,7,8,9,10,11,12,13,14,15,16">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="text">
    </PIN>
@@ -39,8 +39,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output String" dstnodeid="2" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Input Value" dstnodeid="2" dstpinname="Index">
    </LINK>
    <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="2235" top="1770" width="10620" height="270">
@@ -1108,4 +1106,52 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="147">
+   <BOUNDS type="Node" left="4155" top="1125" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Input Value" dstnodeid="147" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="147" srcpinname="Output" dstnodeid="2" dstpinname="Index">
+   </LINK>
+   <NODE systemname="I (Spreads)" filename="" nodename="I (Spreads)" componentmode="Hidden" id="148">
+   <BOUNDS type="Node" left="5025" top="855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname=".. To [" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="148" srcpinname="Output" dstnodeid="147" dstpinname="Input 2">
+   <LINKPOINT x="4605" y="1170">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="149" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="870" top="645" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="870" top="645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="149" srcpinname="Y Output Value" dstnodeid="147" dstpinname="Switch">
+   </LINK>
    </PATCH>

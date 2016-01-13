@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Kontrol_Client.v4p" systemname="Kontrol_Client" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" scrollx="1155" scrolly="4080">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Kontrol_Client.v4p" systemname="Kontrol_Client" filename="D:\Copy\Projects\CatGui0.5\Kontrol_Client.v4p" scrollx="1320" scrolly="120">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1575" top="3120" width="795" height="240">
    </BOUNDS>
@@ -64,7 +64,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="19755" top="810" width="16095" height="14775">
+   <BOUNDS type="Window" left="5625" top="1995" width="16095" height="14775">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -811,7 +811,7 @@
    <NODE id="125" systemname="Kontrol-DoFades_Client" filename="Kontrol_Client_Subs\Kontrol-DoFades_Client.v4p" nodename="Kontrol_Client_Subs\Kontrol-DoFades_Client.v4p" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="1965" top="15150" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="AllFadesString" visible="1" slicecount="17" pintype="Input" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="AllFadesString" visible="1" slicecount="1" pintype="Input" values="0">
    </PIN>
    <PIN pinname="Spread" visible="1" pintype="Input" slicecount="15" values="1,1,84.0000,255.0000,|||-0.1377,0.5100,0.4323,1.0000|||,-0.0000,0.0000,-0.0000,|0.0000,0.0000,0.0000|,|||1.0000,1.0000,-0.3137,1.0000|||,|0,0,0.0000|,Disabled,|0.0000,0.0000,0.0000|,|0,0|,|&lt;-- These menus control &cr;&lf;1 The Scene currently lod these are sdecific to your datch &cr;&lf;so you could for examdle have a VJ datch» with different &cr;&lf;scenes for different venues/acts but using the same datches.|">
    </PIN>
@@ -835,7 +835,7 @@
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
-   <PIN pinname="FadeType" visible="1" slicecount="17" values="|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,|2,2|,0">
+   <PIN pinname="FadeType" visible="1" slicecount="1" values="|2,2|">
    </PIN>
    <PIN pinname="PinType" visible="1" slicecount="86" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
    </PIN>
@@ -1197,7 +1197,7 @@
    <LINK srcnodeid="332" srcpinname="Output" dstnodeid="331" dstpinname="Count">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="343">
-   <BOUNDS type="Node" left="3615" top="11460" width="100" height="100">
+   <BOUNDS type="Node" left="5325" top="8820" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1321,7 +1321,7 @@
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="360">
    <BOUNDS type="Node" left="1965" top="13155" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="17" values="| DX11|,| 0.123|,| file__|,|||0.04000,0.07840,1.00000,1.00000|||,|1,3.0965,1|,Add,|2.0000,1.0000,0.0000|,| 1|,255,255,255.0000,0.9945,0.0000,0.0000,|0.9945,0.9945,0|,|0.0000,0.0039,0.0039,0.0000|,0.0000">
+   <PIN pinname="Input" visible="1" slicecount="1" values="Ttessttubng&apos;Ffrump">
    </PIN>
    <PIN pinname="From" slicecount="1" values="^">
    </PIN>
@@ -1912,48 +1912,214 @@
    </LINK>
    <LINK srcnodeid="381" srcpinname="Y Output Value" dstnodeid="373" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="ReceiveMQ (Network.ZeroMQ Raw) help" filename="Kontrol_Client_Subs\ReceiveMQ (Network.ZeroMQ Raw) help.v4p" nodename="Kontrol_Client_Subs\ReceiveMQ (Network.ZeroMQ Raw) help.v4p" componentmode="Hidden" id="394">
-   <BOUNDS type="Node" left="2940" top="12000" width="100" height="100">
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <NODE id="277" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4620" top="11580" width="2190" height="270">
    </BOUNDS>
-   <PIN pinname="Server" visible="1">
-   </PIN>
-   <PIN pinname="Port" visible="1" slicecount="1" values="2001">
-   </PIN>
-   <BOUNDS type="Window" left="21375" top="0" width="14445" height="10785">
+   <BOUNDS type="Box" left="4620" top="11580" width="2190" height="270">
    </BOUNDS>
-   <PIN pinname="Values" visible="1">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|We get the Data from the GUI|">
    </PIN>
-   <PIN pinname="FadeTimes" visible="1">
+   <PIN pinname="Output String" visible="0">
    </PIN>
-   <PIN pinname="FadeType" visible="1">
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="395" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3300" top="10680" width="795" height="240">
+   <NODE id="338" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5340" top="9720" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3300" top="10680" width="0" height="0">
+   <BOUNDS type="Node" left="5340" top="9720" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="127.0.0.1">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="¬¬¬¬¬¬">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="localhost">
+   <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
    <PIN pinname="File Mask" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Server">
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="395" srcpinname="Output String" dstnodeid="394" dstpinname="Server">
+   <NODE id="339" nodename="EQ (String)" systemname="EQ (String)">
+   <BOUNDS type="Node" height="0" left="5250" top="10470" width="0">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="340" nodename="S+H (String)" systemname="S+H (String)">
+   <BOUNDS type="Node" height="0" left="5130" top="10875" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="341" nodename="Tokenizer (String)" systemname="Tokenizer (String)">
+   <PIN pinname="Input" slicecount="1" visible="1" values="|/73/76/2/Y Input Value&cr;&lf;Max Radius&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;1&cr;&lf;NodesAndWords&cr;&lf;/73/76/52/Y Input Value&cr;&lf;Period o No&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;1&cr;&lf;NodesAndWords&cr;&lf;/73/76/56/Y Input Value&cr;&lf;ThresoldNo&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/57/Y Input Value&cr;&lf;Period2 Never&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 1, 0.01, 10, 0.01, s, 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;10&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;1&cr;&lf;NodesAndWords&cr;&lf;/73/76/58/Y Input Value&cr;&lf;ThresoldNever&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 1, 0, 0, 1, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;1&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/59/Y Input Value&cr;&lf;SwitchWords&cr;&lf;&cr;&lf;Value&cr;&lf;Slider, 1, 0, 0, 50, 1, , 4&cr;&lf;Integer&cr;&lf;Slider&cr;&lf;0&cr;&lf;50&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/60/Input Enum&cr;&lf;Text Rendering Mode&cr;&lf;&cr;&lf;Enumeration&cr;&lf;PullDown, TextRenderingMode, SingleLine&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;SingleLine, MultiLine, MultiLineWordWrap&cr;&lf;3&cr;&lf;SingleLine&cr;&lf;NodesAndWords&cr;&lf;/73/76/61/Y Input Value&cr;&lf;Enabled&cr;&lf;&cr;&lf;Value&cr;&lf;Toggle, 1, 1, 0, 1, 1, , 4&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;1&cr;&lf;NodesAndWords&cr;&lf;/73/76/62/Y Input Value&cr;&lf;Bang&cr;&lf;&cr;&lf;Value&cr;&lf;Bang, 1, 0, 0, 1, 1, , 4&cr;&lf;Boolean&cr;&lf;Endless&cr;&lf;-99999999&cr;&lf;99999999&cr;&lf;Bang&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/63/Input String&cr;&lf;text&cr;&lf;&cr;&lf;String&cr;&lf;String, , , -1&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;0&cr;&lf;NodesAndWords&cr;&lf;/73/76/64/Color Input&cr;&lf;Color&cr;&lf;&cr;&lf;Color&cr;&lf;HSVAField, r=100% g=100% b=100% a=100% , HasAlpha&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;0&cr;&lf;||0.00000,0.00000,1.00000,1.00000||&cr;&lf;NodesAndWords&cr;&lf;/73/88/1/Y Input Value&cr;&lf;Position&cr;&lf;&cr;&lf;Value&cr;&lf;Endless, 3, 0, -20, 20, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;-20&cr;&lf;20&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0,0,0&cr;&lf;ManualCam&cr;&lf;/73/88/5/Y Input Value&cr;&lf;FOV&cr;&lf;&cr;&lf;Value&cr;&lf;Rotary, 1, 0.25, 0, 0.5, 0.01, , 4&cr;&lf;Real&cr;&lf;Endless&cr;&lf;0&cr;&lf;0.5&cr;&lf;Toggle&cr;&lf;&cr;&lf;0&cr;&lf;0.25&cr;&lf;ManualCam&cr;&lf;¬¬¬¬¬¬|">
+   </PIN>
+   <BOUNDS type="Node" height="0" left="5130" top="10125" width="0">
+   </BOUNDS>
+   <PIN pinname="Separator" slicecount="1" visible="1" values="¬¬¬¬¬¬">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Queue Mode" slicecount="1" values="Discard">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="338" srcpinname="Output String" dstnodeid="341" dstpinname="Separator">
    </LINK>
-   <LINK srcnodeid="394" srcpinname="Values" dstnodeid="360" dstpinname="Input">
+   <LINK srcnodeid="341" srcpinname="Output" dstnodeid="339" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="394" srcpinname="FadeTimes" dstnodeid="125" dstpinname="AllFadesString">
+   <LINK srcnodeid="341" srcpinname="Output" dstnodeid="340" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="394" srcpinname="FadeType" dstnodeid="125" dstpinname="FadeType">
+   <LINK srcnodeid="339" srcpinname="Inverse Output" dstnodeid="340" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="343" srcpinname="Output" dstnodeid="394" dstpinname="Port">
+   <NODE id="388" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="7785" top="14805" width="7125" height="5205">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7785" top="14805" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="340" srcpinname="Output" dstnodeid="388" dstpinname="Input String">
    </LINK>
-   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
-   </PACK>
+   <NODE id="202" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3105" top="10050" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3105" top="10050" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="¬¬¬¬¬¬">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="202" srcpinname="Output String" dstnodeid="330" dstpinname="Filter">
+   </LINK>
+   <NODE id="239" systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2910" top="10410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1" slicecount="1" encoded="1" values="||">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" visible="1" values="¬¬¬¬¬¬">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="Last">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="340" srcpinname="Output" dstnodeid="239" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="202" srcpinname="Output String" dstnodeid="239" dstpinname="Operand 2">
+   </LINK>
+   <NODE id="97" systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2910" top="10920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" encoded="1" values="||">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="NewLineAutoDetection">
+   </PIN>
+   <PIN pinname="Intersperse String" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Ignore between" slicecount="1" values="Pipe">
+   </PIN>
+   <PIN pinname="Keep Quotes" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="102" systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2895" top="11340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Semicolon">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="328" systemname="CDR (String)" nodename="CDR (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2910" top="12105" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Remainder" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="327" systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2910" top="11715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1" slicecount="12" values="0.00~,|201.8,2.4,0.6~|,|2,2~|,0.00~,|-167.1,1377.0,1823.5~|,|2,2~|,0.00~,6.27~,|2,2~|,0.00~,8.0~,|2,2|">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" values="~">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="124" systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2925" top="12585" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="13" values="0~,|201.8,2.4,0.6~|,|2,2~|,0~,|-1649.3,1377.0,1823.5~|,|2,2~|,0~,5.00~,|2,2~|,0~,1.0~,|2,2|,|&cr;|">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   <PIN pinname="Output Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Output 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="328" srcpinname="Remainder" dstnodeid="124" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output" dstnodeid="327" dstpinname="Operand 1">
+   </LINK>
+   <LINK srcnodeid="327" srcpinname="Result" dstnodeid="328" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Output" dstnodeid="102" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="239" srcpinname="Result" dstnodeid="97" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 3" dstnodeid="125" dstpinname="FadeType">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="AllFadesString">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="360" dstpinname="Input">
+   </LINK>
+   <NODE id="333" systemname="UDP (Network Server String)" nodename="UDP (Network Server String)" componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\Network\UDP (Network Server String).v4p">
+   <BOUNDS type="Node" left="5145" top="9345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Local Port" slicecount="1" visible="1" values="2001">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="343" srcpinname="Output" dstnodeid="333" dstpinname="Local Port">
+   </LINK>
+   <LINK srcnodeid="333" srcpinname="Output" dstnodeid="341" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="282" srcpinname="Output" dstnodeid="144" dstpinname="Enabled">
+   </LINK>
    </PATCH>

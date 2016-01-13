@@ -84,7 +84,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Input Value" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="15240" top="9120" width="16575" height="11175">
+   <BOUNDS type="Window" left="18210" top="9720" width="16575" height="11175">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -153,9 +153,9 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="5">
    </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="89.2400">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="13" dstpinname="Input String">
-   </LINK>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="39">
    <BOUNDS type="Node" left="10950" top="5535" width="100" height="100">
    </BOUNDS>
@@ -373,7 +373,7 @@
    <LINK srcnodeid="23" srcpinname="PositionXY" dstnodeid="22" dstpinname="Input">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="9600" top="7095" width="100" height="100">
+   <BOUNDS type="Node" left="9270" top="6765" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -536,22 +536,6 @@
    </NODE>
    <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input 2">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="44" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6765" top="600" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6765" top="600" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="KeyFrameFades">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="45">
    <BOUNDS type="Node" left="6090" top="2715" width="100" height="100">
    </BOUNDS>
@@ -674,4 +658,16 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="13" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="7695" top="8595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="MultiSelectTime">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="61" dstpinname="Input Value">
+   </LINK>
    </PATCH>

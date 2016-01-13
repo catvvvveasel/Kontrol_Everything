@@ -38,7 +38,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="1335" top="4425" width="18480" height="10935">
+   <BOUNDS type="Window" left="300" top="7530" width="18480" height="10935">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -175,15 +175,13 @@
    </PIN>
    </NODE>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="5565" top="1305" width="100" height="100">
+   <BOUNDS type="Node" left="5475" top="1455" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="12" values="0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="OnChange" dstnodeid="29" dstpinname="Input">
-   </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="7425" top="1560" width="100" height="100">
    </BOUNDS>
@@ -340,8 +338,6 @@
    </LINK>
    <LINK srcnodeid="24" srcpinname="Geometry Out" dstnodeid="7" dstpinname="Geometry">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="3" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Apply">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Render State" dstnodeid="7" dstpinname="Render State">
@@ -453,7 +449,7 @@
    <LINK srcnodeid="45" srcpinname="Output" dstnodeid="46" dstpinname="Input 1">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="47">
-   <BOUNDS type="Node" left="13845" top="615" width="100" height="100">
+   <BOUNDS type="Node" left="15810" top="1335" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="StartEnd">
    </PIN>
@@ -461,7 +457,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="13830" top="1170" width="100" height="100">
+   <BOUNDS type="Node" left="15795" top="1890" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -473,7 +469,7 @@
    <LINK srcnodeid="47" srcpinname="Input Value" dstnodeid="48" dstpinname="Input">
    </LINK>
    <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="13785" top="1665" width="100" height="100">
+   <BOUNDS type="Node" left="15750" top="2385" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -617,7 +613,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="2">
+   <PIN pinname="Input 2" slicecount="1" values="2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -650,4 +646,42 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="13680" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="8">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="62" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13650" top="690" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13650" top="690" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Selected">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="59" dstpinname="Input 2">
+   <LINKPOINT x="13650" y="1620">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="OnChange" dstnodeid="29" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="3" dstpinname="Input Node">
+   </LINK>
    </PATCH>

@@ -280,7 +280,7 @@
    </NODE>
    <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="33" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="12420" top="1995" width="25125" height="16815">
+   <BOUNDS type="Window" left="17040" top="4035" width="25125" height="16815">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -781,7 +781,7 @@
    </PIN>
    <PIN pinname="From" slicecount="1" values="||||">
    </PIN>
-   <PIN pinname="To" slicecount="1" values="_">
+   <PIN pinname="To" slicecount="1" values="| |">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -887,7 +887,7 @@
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="|Patch1017 |">
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="|Text_001 gfgsjgfds_|,|Text_001 Redthing 2_|,AllControls_009">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -987,9 +987,9 @@
    <LINK srcnodeid="115" srcpinname="Result" dstnodeid="114" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="116" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="12585" top="11565" width="2775" height="1365">
+   <BOUNDS type="Box" left="12975" top="13215" width="2775" height="1365">
    </BOUNDS>
-   <BOUNDS type="Node" left="12585" top="11565" width="0" height="0">
+   <BOUNDS type="Node" left="12975" top="13215" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -997,7 +997,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="1" values="|Patch1_018  |">
+   <PIN pinname="Input String" visible="1" slicecount="1" values="| Patch1_002 iiiiirererew |">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="117" systemname="IOBox (Value Advanced)">
@@ -1013,11 +1013,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="113" srcpinname="Output" dstnodeid="117" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="107" srcpinname="Output" dstnodeid="116" dstpinname="Input String">
-   </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="118">
    <BOUNDS type="Node" left="11580" top="10680" width="100" height="100">
    </BOUNDS>
@@ -1037,21 +1035,65 @@
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="119">
    <BOUNDS type="Node" left="12030" top="11130" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="|Text||001 gfgsjgfds|||">
    </PIN>
    <PIN pinname="From" slicecount="1" values="||||">
    </PIN>
-   <PIN pinname="To" slicecount="1" values="_">
+   <PIN pinname="To" slicecount="1" values="| |">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="118" srcpinname="Output" dstnodeid="119" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="107" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="112" srcpinname="Inverse Output" dstnodeid="107" dstpinname="Switch">
    <LINKPOINT x="9030" y="12225">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="111" srcpinname="Input Value" dstnodeid="119" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="120">
+   <BOUNDS type="Node" left="12045" top="12345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="Text014">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Space">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="120" srcpinname="Output" dstnodeid="107" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="121">
+   <BOUNDS type="Node" left="13230" top="11325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operand 1" visible="1" slicecount="2" values=",">
+   </PIN>
+   <PIN pinname="Operand 2" slicecount="1" values="_">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="Last">
+   </PIN>
+   <PIN pinname="Result" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="121" dstpinname="Operand 1">
+   <LINKPOINT x="13185" y="11310">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Quote (String)" nodename="Quote (String)" componentmode="Hidden" id="122">
+   <BOUNDS type="Node" left="13200" top="11775" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="|Patch1_002 iiiiirererew|">
+   </PIN>
+   <PIN pinname="Quote Mode" slicecount="1" values="Space">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="122" srcpinname="Output" dstnodeid="120" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="112" srcpinname="Inverse Output" dstnodeid="117" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="120" srcpinname="Output" dstnodeid="116" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="122" dstpinname="Input">
    </LINK>
    </PATCH>

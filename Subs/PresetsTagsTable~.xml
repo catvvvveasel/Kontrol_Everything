@@ -293,7 +293,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="|0.0000tretretrewtretrwtrw|||" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="|0.0000tretretrewtretrwtrw|||">
    </PIN>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="13" dstpinname="Input">
@@ -801,5 +801,51 @@
    <LINK srcnodeid="75" srcpinname="Count" dstnodeid="89" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="57" srcpinname="Inverse Output" dstnodeid="89" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Zip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (String)" componentmode="Hidden" id="99">
+   <BOUNDS type="Node" left="4140" top="9360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="99" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="99" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="4125" top="9885" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="PresetTagsAll">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Output" dstnodeid="100" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="1695" top="7920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Bang" dstnodeid="7" dstpinname="Load">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="1605" top="8430" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Bang" dstnodeid="102" dstpinname="Input">
+   <LINKPOINT x="1590" y="8340">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Output" dstnodeid="7" dstpinname="Auto Save">
    </LINK>
    </PATCH>
