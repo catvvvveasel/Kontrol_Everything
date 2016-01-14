@@ -279,7 +279,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="UpdatePos" visible="1" slicecount="1" values="1">
+   <PIN pinname="UpdatePos" visible="1" slicecount="1" values="0">
    </PIN>
    <BOUNDS type="Window" left="21555" top="7530" width="15645" height="13620">
    </BOUNDS>
@@ -848,8 +848,6 @@
    </LINK>
    <LINK srcnodeid="83" srcpinname="Output" dstnodeid="86" dstpinname="TranslateXY">
    </LINK>
-   <LINK srcnodeid="51" srcpinname="Y Output Value" dstnodeid="32" dstpinname="UpdatePos">
-   </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="92">
    <BOUNDS type="Node" left="8100" top="3390" width="100" height="100">
    </BOUNDS>
@@ -896,6 +894,8 @@
    </LINK>
    <LINK srcnodeid="94" srcpinname="Output" dstnodeid="92" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="92" srcpinname="Output" dstnodeid="66" dstpinname="Evaluate">
+   <LINK srcnodeid="77" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="77" srcpinname="Y Output Value" dstnodeid="32" dstpinname="UpdatePos">
    </LINK>
    </PATCH>

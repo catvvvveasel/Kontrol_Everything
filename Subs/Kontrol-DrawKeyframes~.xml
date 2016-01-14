@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-DrawKeyframes.v4p" systemname="Kontrol-DrawKeyframes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-DrawKeyframes.v4p" scrollx="105" scrolly="15" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-DrawKeyframes.v4p" systemname="Kontrol-DrawKeyframes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-DrawKeyframes.v4p" scrollx="105" scrolly="0" bgcolor="11442563">
    <NODE systemname="Blend (DX11.RenderState)" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="2" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll">
    <BOUNDS type="Node" left="1140" top="5340" width="100" height="100">
    </BOUNDS>
@@ -38,7 +38,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="300" top="7530" width="18480" height="10935">
+   <BOUNDS type="Window" left="19575" top="2160" width="18480" height="10935">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -355,7 +355,7 @@
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="41">
    <BOUNDS type="Node" left="3870" top="1785" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="TranslateX" visible="1" slicecount="1" values="0">
+   <PIN pinname="TranslateX" visible="1" slicecount="7" values="0.264161073825503,-0.288859060402685,0.499597315436242,0.107651006711409,-0.746845637583893,-0.920268456375839,-0.809127516778524">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -405,8 +405,6 @@
    <LINK srcnodeid="43" srcpinname="Output" dstnodeid="24" dstpinname="Instance Count">
    </LINK>
    <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Apply">
-   </LINK>
-   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="41" dstpinname="TranslateX">
    </LINK>
    <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="41" dstpinname="TranslateY">
    </LINK>
@@ -525,7 +523,7 @@
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="53">
    <BOUNDS type="Node" left="1845" top="2490" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="TranslateX" visible="1">
+   <PIN pinname="TranslateX" visible="1" slicecount="7" values="0.264161073825503,-0.288859060402685,0.499597315436242,0.107651006711409,-0.746845637583893,-0.920268456375839,-0.809127516778524">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -538,8 +536,6 @@
    <PIN pinname="CenterX" slicecount="1" values="-0.5">
    </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="53" dstpinname="TranslateX">
-   </LINK>
    <LINK srcnodeid="50" srcpinname="Output" dstnodeid="53" dstpinname="ScaleX">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="54">
@@ -625,9 +621,9 @@
    <LINK srcnodeid="53" srcpinname="Transform Out" dstnodeid="40" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="60" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10830" top="390" width="795" height="480">
+   <BOUNDS type="Box" left="10500" top="30" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="10830" top="390" width="0" height="0">
+   <BOUNDS type="Node" left="10500" top="30" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1920,1080">
    </PIN>
@@ -640,6 +636,8 @@
    <PIN pinname="Vector Size" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="|0, 0|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="60" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Input 2">
@@ -683,5 +681,63 @@
    <LINK srcnodeid="9" srcpinname="OnChange" dstnodeid="29" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="3" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="1410" top="990" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="1920,1080">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="7" values="0.264161073825503,-0.288859060402685,0.499597315436242,0.107651006711409,-0.746845637583893,-0.920268456375839,-0.809127516778524">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Frac (Value)" nodename="Frac (Value)" componentmode="Hidden" id="66">
+   <BOUNDS type="Node" left="1425" top="1320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Whole Part" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="66" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="67">
+   <BOUNDS type="Node" left="1050" top="1740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="68">
+   <BOUNDS type="Node" left="1125" top="285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output 1" dstnodeid="65" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output 1" dstnodeid="67" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Whole Part" dstnodeid="67" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="41" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="65" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="53" dstpinname="TranslateX">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-Playlist-LayerBars.v4p" systemname="Kontrol-Playlist-LayerBars" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-Playlist-LayerBars.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-Playlist-LayerBars.v4p" systemname="Kontrol-Playlist-LayerBars" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-Playlist-LayerBars.v4p" bgcolor="11442563" scrollx="0" scrolly="75">
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3720" top="3630" width="100" height="100">
    </BOUNDS>
@@ -57,7 +57,7 @@
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
    </PIN>
-   <PIN pinname="PointsXY" visible="1">
+   <PIN pinname="PointsXY" visible="1" slicecount="2" values="-0.914871255911718,-0.319230769230769">
    </PIN>
    <PIN pinname="Object Hit" visible="1">
    </PIN>
@@ -134,18 +134,6 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Transform Out" dstnodeid="5" dstpinname="Transform In">
    </LINK>
-   <NODE id="12" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="MouseXY">
-   </PIN>
-   <BOUNDS type="Box" left="2175" top="350" width="750" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2175" top="350" width="750" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="5" dstpinname="PointsXY">
-   </LINK>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="8" dstpinname="Switch">
    </LINK>
    <NODE id="13" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -217,15 +205,13 @@
    <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="2730" top="1770" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="2" values="-0.914871255911718,-0.319230769230769">
    </PIN>
    <PIN pinname="Output 2" visible="1">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Input">
-   </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="150" top="5595" width="100" height="100">
    </BOUNDS>
@@ -414,4 +400,28 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="1785" top="255" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="MouseValues">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="1755" top="630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bin Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Input Value" dstnodeid="35" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="5" dstpinname="PointsXY">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="19" dstpinname="Input">
+   </LINK>
    </PATCH>

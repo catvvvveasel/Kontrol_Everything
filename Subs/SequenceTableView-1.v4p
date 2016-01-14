@@ -59,7 +59,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="2520" top="1560" width="100" height="100">
+   <BOUNDS type="Node" left="2730" top="1395" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -71,7 +71,7 @@
    <NODE systemname="TimerFlop (Animation)" filename="%VVVV%\addonpack\lib\nodes\plugins\TimerFlop.dll" nodename="TimerFlop (Animation)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="2520" top="1905" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Set" visible="1">
+   <PIN pinname="Set" visible="1" slicecount="13" values="0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Time" slicecount="1" values="0.1">
    </PIN>
@@ -138,8 +138,6 @@
    </NODE>
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="6" dstpinname="Set">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="3" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="Input">
@@ -149,9 +147,9 @@
    <NODE id="12" systemname="IOBox (Value Advanced)" componentmode="InABox">
    <PIN pinname="Descriptive Name" slicecount="1" values="Add">
    </PIN>
-   <BOUNDS type="Box" left="4365" top="4425" width="1680" height="900">
+   <BOUNDS type="Box" left="4680" top="5520" width="1680" height="900">
    </BOUNDS>
-   <BOUNDS type="Node" left="4365" top="4425" width="750" height="240">
+   <BOUNDS type="Node" left="4680" top="5520" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
@@ -185,9 +183,9 @@
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="5" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5730" top="3180" width="795" height="240">
+   <BOUNDS type="Box" left="60" top="2025" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5730" top="3180" width="0" height="0">
+   <BOUNDS type="Node" left="60" top="2025" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -200,7 +198,7 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="2" dstpinname="Index">
    </LINK>
-   <BOUNDS type="Window" left="855" top="8775" width="16170" height="10440">
+   <BOUNDS type="Window" left="11925" top="6225" width="16170" height="10440">
    </BOUNDS>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="12" dstpinname="Y Input Value">
    </LINK>
@@ -297,5 +295,25 @@
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="21" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="10" dstpinname="Input String">
+   </LINK>
+   <NODE id="25" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="6060" top="1470" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6060" top="1470" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="6" dstpinname="Set">
+   <LINKPOINT x="2625" y="1875">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="4860" top="2415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="26" dstpinname="Input">
    </LINK>
    </PATCH>

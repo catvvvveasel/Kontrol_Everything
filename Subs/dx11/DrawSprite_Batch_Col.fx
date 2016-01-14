@@ -11,8 +11,7 @@ SamplerState g_samLinear : IMMUTABLE
     AddressU = Wrap;
     AddressV = Wrap;
 };
-int ViewIndex: VIEWPORTINDEX;
-int InstanceStartIndex = 0;
+
 StructuredBuffer<float4x4> world;
 StructuredBuffer<float4x4> TexCords <bool uvspace=true; >;
 StructuredBuffer<float4> InstanceColour<bool color=true;>;
@@ -21,6 +20,8 @@ StructuredBuffer<float4> InstanceColour<bool color=true;>;
 cbuffer cbPerDraw : register( b0 )
 {
 	float4x4 tVP : VIEWPROJECTION;
+	int ViewIndex: VIEWPORTINDEX;
+	int InstanceStartIndex = 0;
 };
 
 

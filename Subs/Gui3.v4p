@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Gui3.v4p" systemname="Gui3" filename="D:\Copy\Projects\CatGui0.5\Subs\Gui3.v4p" scrollx="240" scrolly="630" bgcolor="11442563">
    <BOUNDS type="Window" left="17865" top="9330" width="15930" height="11610">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
@@ -418,7 +418,7 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="330" srcpinname="Input Value" dstnodeid="298" dstpinname="Switch">
+   <LINK srcnodeid="330" srcpinname="Input Value" dstnodeid="298" dstpinname="Switch" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="330" srcpinname="Input Value" dstnodeid="311" dstpinname="Input 1">
    </LINK>
@@ -434,7 +434,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="330" srcpinname="Input Value" dstnodeid="336" dstpinname="Input">
+   <LINK srcnodeid="330" srcpinname="Input Value" dstnodeid="336" dstpinname="Input" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="336" srcpinname="Output" dstnodeid="297" dstpinname="Set">
    </LINK>
@@ -756,7 +756,7 @@
    </NODE>
    <LINK srcnodeid="298" srcpinname="Output" dstnodeid="101" dstpinname="CurrentValues">
    </LINK>
-   <LINK srcnodeid="330" srcpinname="Input Value" dstnodeid="101" dstpinname="Switch">
+   <LINK srcnodeid="330" srcpinname="Input Value" dstnodeid="101" dstpinname="Switch" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="101" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 1">
    </LINK>
@@ -879,7 +879,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="345" top="9386" width="5095" height="5005">
    </BOUNDS>
-   <BOUNDS type="Window" left="19155" top="6870" width="20175" height="21150">
+   <BOUNDS type="Window" left="6615" top="2490" width="20175" height="21150">
    </BOUNDS>
    <PIN pinname="Name" visible="1" slicecount="11" values="|Max Radius|,|Period o No|,ThresoldNo,|Period2 Never|,ThresoldNever,SwitchWords,|Text Rendering Mode|,Enabled,Bang,,Color">
    </PIN>
@@ -942,7 +942,7 @@
    </NODE>
    <LINK srcnodeid="306" srcpinname="Output" dstnodeid="89" dstpinname="FadeTimes">
    </LINK>
-   <LINK srcnodeid="313" srcpinname="Y Output Value" dstnodeid="89" dstpinname="MaxFade">
+   <LINK srcnodeid="313" srcpinname="Y Output Value" dstnodeid="89" dstpinname="MaxFade" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="227" srcpinname="Render State" dstnodeid="89" dstpinname="Render State">
    </LINK>
@@ -1017,11 +1017,11 @@
    <LINK srcnodeid="290" srcpinname="Output" dstnodeid="237" dstpinname="FromTog">
    </LINK>
    <NODE systemname="KeyBoardEdit" filename="KeyBoardEdit.v4p" nodename="KeyBoardEdit.v4p" componentmode="Hidden" id="182">
-   <BOUNDS type="Node" left="8342" top="10691" width="1785" height="270">
+   <BOUNDS type="Node" left="8387" top="10661" width="1785" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4735" top="6629" width="7215" height="8125">
+   <BOUNDS type="Box" left="4780" top="6599" width="7215" height="8125">
    </BOUNDS>
-   <BOUNDS type="Window" left="20175" top="3570" width="13620" height="15540">
+   <BOUNDS type="Window" left="20175" top="3570" width="16965" height="15540">
    </BOUNDS>
    <PIN pinname="MinMax" visible="1" slicecount="8" values="-20,20,-20,20,-20,20,0,0.5">
    </PIN>
@@ -1051,7 +1051,7 @@
    </PIN>
    <PIN pinname="Mouse" visible="1">
    </PIN>
-   <PIN pinname="Output" visible="1">
+   <PIN pinname="Output" visible="1" slicecount="4" values="Ttessttubng&apos;Ffrump,-0.0646,-0.3874,D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Video\None">
    </PIN>
    <PIN pinname="IsEndless" visible="1" slicecount="1" values="0">
    </PIN>
@@ -1091,7 +1091,7 @@
    </PIN>
    <PIN pinname="Transforms" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="ValuesIn" visible="1" slicecount="62" values=",,,|FitIn, FitWidth, FitHeight, FitOut|,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   <PIN pinname="ValuesIn" visible="1" slicecount="4" values="text,text,text,text">
    </PIN>
    <PIN pinname="VectorSize" visible="1">
    </PIN>
@@ -1246,23 +1246,23 @@
    </LINK>
    <LINK srcnodeid="313" srcpinname="Y Output Value" dstnodeid="387" dstpinname="MaxFadeTime" hiddenwhenlocked="0">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="Subtype" dstnodeid="357" dstpinname="Input">
+   <LINK srcnodeid="387" srcpinname="Subtype" dstnodeid="357" dstpinname="Input" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="387" srcpinname="VectorSize" dstnodeid="101" dstpinname="VectorSize" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="101" dstpinname="IsColour">
+   <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="101" dstpinname="IsColour" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="387" srcpinname="Min/Max" dstnodeid="235" dstpinname="MinMax" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="IsString" dstnodeid="235" dstpinname="IsText">
+   <LINK srcnodeid="387" srcpinname="IsString" dstnodeid="235" dstpinname="IsText" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="235" dstpinname="IsEnum">
+   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="235" dstpinname="IsEnum" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="387" srcpinname="Min/Max" dstnodeid="87" dstpinname="MinMax" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="IsEndless" dstnodeid="87" dstpinname="IsEndless">
+   <LINK srcnodeid="387" srcpinname="IsEndless" dstnodeid="87" dstpinname="IsEndless" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="290" dstpinname="Is Button">
+   <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="290" dstpinname="Is Button" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="387" srcpinname="VectorSize" dstnodeid="290" dstpinname="VectorSize" hiddenwhenlocked="1">
    </LINK>
@@ -1270,27 +1270,27 @@
    </LINK>
    <LINK srcnodeid="387" srcpinname="VectorSize" dstnodeid="89" dstpinname="BinSize" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="89" dstpinname="Is Color">
+   <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="89" dstpinname="Is Color" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="Label" dstnodeid="89" dstpinname="Name">
+   <LINK srcnodeid="387" srcpinname="Label" dstnodeid="89" dstpinname="Name" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="IsString" dstnodeid="237" dstpinname="ISString">
+   <LINK srcnodeid="387" srcpinname="IsString" dstnodeid="237" dstpinname="ISString" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="237" dstpinname="IsEnum">
+   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="237" dstpinname="IsEnum" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="Precision" dstnodeid="237" dstpinname="Precision">
+   <LINK srcnodeid="387" srcpinname="Precision" dstnodeid="237" dstpinname="Precision" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="387" srcpinname="VectorSize" dstnodeid="182" dstpinname="VectorSize" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="IsEndless" dstnodeid="182" dstpinname="IsEndless">
+   <LINK srcnodeid="387" srcpinname="IsEndless" dstnodeid="182" dstpinname="IsEndless" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="Min/Max" dstnodeid="182" dstpinname="MinMax">
+   <LINK srcnodeid="387" srcpinname="Min/Max" dstnodeid="182" dstpinname="MinMax" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="EnumEntries" dstnodeid="346" dstpinname="EnumList">
+   <LINK srcnodeid="387" srcpinname="EnumEntries" dstnodeid="346" dstpinname="EnumList" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="346" dstpinname="IsEnum">
+   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="346" dstpinname="IsEnum" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="89" dstpinname="IsButton">
+   <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="89" dstpinname="IsButton" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="SetDefaults" filename="SetDefaults.v4p" componentmode="Hidden" id="397" nodename="SetDefaults.v4p">
    <BOUNDS type="Node" left="11595" top="15240" width="100" height="100">
@@ -1308,7 +1308,7 @@
    </NODE>
    <LINK srcnodeid="397" srcpinname="Output" dstnodeid="297" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="284" dstpinname="IsColour">
+   <LINK srcnodeid="387" srcpinname="IsColor" dstnodeid="284" dstpinname="IsColour" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="398">
    <BOUNDS type="Node" left="1665" top="7800" width="100" height="100">
@@ -1328,16 +1328,16 @@
    </LINK>
    <LINK srcnodeid="382" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 10">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="382" dstpinname="IsEnum">
+   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="382" dstpinname="IsEnum" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="382" dstpinname="IsButton">
+   <LINK srcnodeid="387" srcpinname="Tog/Bang" dstnodeid="382" dstpinname="IsButton" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="Tag" dstnodeid="346" dstpinname="Tags">
+   <LINK srcnodeid="387" srcpinname="Tag" dstnodeid="346" dstpinname="Tags" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="FileNameEnum" filename="FileNameEnum.v4p" componentmode="Hidden" id="400" nodename="FileNameEnum.v4p">
-   <BOUNDS type="Node" left="10590" top="14100" width="100" height="100">
+   <BOUNDS type="Node" left="10155" top="13920" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10590" top="14100" width="4800" height="3600">
+   <BOUNDS type="Box" left="10155" top="13920" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="9540" top="2880" width="23895" height="15075">
    </BOUNDS>
@@ -1358,14 +1358,14 @@
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="400" dstpinname="IsFileName">
+   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="400" dstpinname="IsFileName" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="89" srcpinname="All_IoBoxesTransforms" dstnodeid="400" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="89" srcpinname="Output Bin Size" dstnodeid="400" dstpinname="IoBin">
-   <LINKPOINT x="630" y="15015">
+   <LINKPOINT x="485" y="14955">
    </LINKPOINT>
-   <LINKPOINT x="11115" y="12735">
+   <LINKPOINT x="10825" y="12615">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="284" srcpinname="Output" dstnodeid="400" dstpinname="Input">
@@ -1390,7 +1390,7 @@
    </NODE>
    <LINK srcnodeid="295" srcpinname="Output" dstnodeid="402" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="StringNoBin" dstnodeid="402" dstpinname="Switch">
+   <LINK srcnodeid="387" srcpinname="StringNoBin" dstnodeid="402" dstpinname="Switch" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="403">
    <BOUNDS type="Node" left="6465" top="1965" width="100" height="100">
@@ -1516,7 +1516,7 @@
    </LINK>
    <LINK srcnodeid="387" srcpinname="VectorSize" dstnodeid="400" dstpinname="BinSize">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="182" dstpinname="IsEnum">
+   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="182" dstpinname="IsEnum" hiddenwhenlocked="1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="412" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="19995" top="3795" width="840" height="5955">
@@ -1564,7 +1564,7 @@
    </NODE>
    <LINK srcnodeid="387" srcpinname="VectorSize" dstnodeid="414" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="106" dstpinname="Bin Size">
+   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="106" dstpinname="Bin Size" hiddenwhenlocked="1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="415" systemname="IOBox (String)">
    <BOUNDS type="Box" left="18090" top="10155" width="11430" height="5430">
@@ -1590,18 +1590,18 @@
    <PIN pinname="Show SliceIndex" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="237" dstpinname="VectorSize">
+   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="237" dstpinname="VectorSize" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="237" dstpinname="IsFilename">
+   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="237" dstpinname="IsFilename" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="87" dstpinname="VectorSize">
+   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="87" dstpinname="VectorSize" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="89" dstpinname="IsFileBrowser">
+   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="89" dstpinname="IsFileBrowser" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="397" dstpinname="BinSize">
+   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="397" dstpinname="BinSize" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="182" dstpinname="BinSize">
-   <LINKPOINT x="10253" y="11010">
+   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="182" dstpinname="BinSize" hiddenwhenlocked="1">
+   <LINKPOINT x="10275" y="10995">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="89" srcpinname="LayerDX11" dstnodeid="197" dstpinname="Layer 4">
@@ -1616,7 +1616,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="416" dstpinname="Input">
+   <LINK srcnodeid="387" srcpinname="FileBrowser" dstnodeid="416" dstpinname="Input" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="417">
    <BOUNDS type="Node" left="11295" top="14640" width="100" height="100">
@@ -1644,12 +1644,12 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="418" dstpinname="Input">
+   <LINK srcnodeid="387" srcpinname="ISenum" dstnodeid="418" dstpinname="Input" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="419">
    <BOUNDS type="Node" left="10755" top="12630" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   <PIN pinname="Input 1" visible="1" slicecount="4" values="Ttessttubng&apos;,0.1230,-0.0042,Ttessttubng&apos;">
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="text">
    </PIN>
@@ -1720,7 +1720,7 @@
    </LINK>
    <LINK srcnodeid="423" srcpinname="Layer Out" dstnodeid="197" dstpinname="Layer 12">
    </LINK>
-   <LINK srcnodeid="357" srcpinname="Output" dstnodeid="387" dstpinname="Change">
+   <LINK srcnodeid="357" srcpinname="Output" dstnodeid="387" dstpinname="Change" hiddenwhenlocked="1">
    <LINKPOINT x="3405" y="4935">
    </LINKPOINT>
    <LINKPOINT x="7965" y="975">

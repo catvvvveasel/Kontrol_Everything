@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\KeyBoardEdit.v4p" systemname="KeyBoardEdit" filename="C:\Users\cat\Desktop\CatGui0.1\Subs\KeyBoardEdit.v4p" scrollx="105" scrolly="60" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\KeyBoardEdit.v4p" systemname="KeyBoardEdit" filename="C:\Users\cat\Desktop\CatGui0.1\Subs\KeyBoardEdit.v4p" scrollx="1515" scrolly="0" bgcolor="11442563">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="13125" top="2265" width="795" height="240">
    </BOUNDS>
@@ -14,20 +14,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Change">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="13" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
-   </PIN>
-   <BOUNDS type="Box" left="10650" top="9810" width="3585" height="7140">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10650" top="9810" width="750" height="240">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1" slicecount="30" values="Ttessttubng&apos;Ffrump,-0.0648,-0.3881,D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Video\None,0.94,0.96,1.00,1.00,1.0000,6.8440,1.0000,Disabled,2.0000,1.0000,0.0000,1,255,1.0000,1.0000,30.4204,162.7710,0.9945,0.9945,0.0000,0,1,1,0,0.0000,0.9600">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="30">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE id="16" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -631,7 +617,7 @@
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -682,18 +668,6 @@
    </LINK>
    <LINK srcnodeid="108" srcpinname="Y Output Value" dstnodeid="112" dstpinname="Input 2" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="113">
-   <BOUNDS type="Node" left="10650" top="9360" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Set" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="93" srcpinname="Output" dstnodeid="113" dstpinname="Input">
-   </LINK>
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="114">
    <BOUNDS type="Node" left="405" top="5640" width="100" height="100">
    </BOUNDS>
@@ -703,10 +677,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="108" srcpinname="Y Output Value" dstnodeid="114" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="114" srcpinname="Output" dstnodeid="113" dstpinname="Set" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="113" srcpinname="Output" dstnodeid="13" dstpinname="Input String">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="115">
    <BOUNDS type="Node" left="4455" top="5910" width="100" height="100">
@@ -919,5 +889,31 @@
    <LINK srcnodeid="128" srcpinname="Output" dstnodeid="125" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="126" srcpinname="Output" dstnodeid="127" dstpinname="Operand 1">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="129">
+   <BOUNDS type="Node" left="10785" top="8595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="114" srcpinname="Output" dstnodeid="129" dstpinname="Input 1">
+   </LINK>
+   <NODE id="13" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Input String" visible="1" slicecount="4" values="Ttessttubng&apos;Ffrump,-0.0646,-0.3874,D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Video\None">
+   </PIN>
+   <BOUNDS type="Box" left="10665" top="9735" width="3585" height="7140">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10665" top="9735" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="30">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Output" dstnodeid="13" dstpinname="Input String">
    </LINK>
    </PATCH>
