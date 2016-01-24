@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" systemname="PresetManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" scrollx="0" scrolly="1080" bgcolor="11442563">
-   <BOUNDS type="Window" left="17865" top="9330" width="15930" height="11610">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" systemname="PresetManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" scrollx="0" scrolly="1785" bgcolor="11442563">
+   <BOUNDS type="Window" left="11850" top="1110" width="18705" height="13155">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="245" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6420" top="4380" width="825" height="240">
@@ -699,15 +699,17 @@
    </BOUNDS>
    <BOUNDS type="Box" left="8833" top="2710" width="4000" height="3850">
    </BOUNDS>
-   <BOUNDS type="Window" left="25740" top="3570" width="7095" height="5400">
+   <BOUNDS type="Window" left="27450" top="465" width="7095" height="5400">
    </BOUNDS>
    <PIN pinname="Input 1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="94" values=",,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
    </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="PresetRead" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="871" srcpinname="Output 1" dstnodeid="856" dstpinname="Switch">
-   </LINK>
    <LINK srcnodeid="870" srcpinname="OnChange" dstnodeid="871" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Kontrol-StopLoopback" filename="Kontrol-StopLoopback.v4p" nodename="Kontrol-StopLoopback.v4p" componentmode="Hidden" id="570">
@@ -752,8 +754,6 @@
    <PIN pinname="Default" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="885" srcpinname="Output" dstnodeid="762" dstpinname="Init">
-   </LINK>
    <LINK srcnodeid="189" srcpinname="Former Slice" dstnodeid="762" dstpinname="FormerSlice">
    </LINK>
    <LINK srcnodeid="762" srcpinname="Output" dstnodeid="189" dstpinname="From Gui">
@@ -763,7 +763,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6150" top="8700" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="4350" top="975" width="21825" height="19530">
+   <BOUNDS type="Window" left="7710" top="6975" width="21825" height="16380">
    </BOUNDS>
    <PIN pinname="CurrentPreset" visible="1" slicecount="1" values="..\TestScene\Projects\Start3\Presets\PatchPreset_-001_0017.xml">
    </PIN>
@@ -1434,8 +1434,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="736" srcpinname="Output" dstnodeid="989" dstpinname="Input">
-   </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
    <NODE id="907" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
@@ -1571,5 +1569,17 @@
    <LINK srcnodeid="909" srcpinname="Output String" dstnodeid="952" dstpinname="Remote Host">
    </LINK>
    <LINK srcnodeid="912" srcpinname="Output" dstnodeid="952" dstpinname="Input">
+   </LINK>
+   <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="989">
+   <BOUNDS type="Node" left="13170" top="15270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="17" values="FirstTextL=Key,|0.1230,-0.0042|,Ttessttubng&apos;,|||0.04000,1.00000,0.30880,1.00000|||,|0.7696,1.0000,1.0000|,| Disabled|,|Ttessttubng&apos;,0,0.7696|,127,97,0.7696,1,97,115.8498,|0.0000,0,1|,|0.0000,0.0039,0.0039,0.0000|,97,0.96">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="871" srcpinname="Output 1" dstnodeid="856" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="885" srcpinname="Output" dstnodeid="762" dstpinname="Init">
+   </LINK>
+   <LINK srcnodeid="891" srcpinname="Read" dstnodeid="871" dstpinname="PresetRead">
    </LINK>
    </PATCH>

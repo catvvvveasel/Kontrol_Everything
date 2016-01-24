@@ -1,7 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer-XmlParse.v4p" systemname="PlaylistSequencer-XmlParse" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer-XmlParse.v4p">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer-XmlParse.v4p" systemname="PlaylistSequencer-XmlParse" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer-XmlParse.v4p" bgcolor="11442563">
    <NODE systemname="Reader (String)" filename="%VVVV%\lib\nodes\modules\String\Reader (String).v4p" nodename="Reader (String)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="4035" top="3090" width="100" height="100">
+   <BOUNDS type="Node" left="4035" top="1905" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" slicecount="2" visible="1" values="..\TestScene\Projects\NewScene\Playlists\playlist.xml,..\TestScene\Projects\NewScene\Playlists\Test2.xml">
    </PIN>
@@ -149,9 +149,9 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="6915" top="6300" width="100" height="100">
+   <BOUNDS type="Node" left="8175" top="6255" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="21" values="16.88,50.88,129,129,129,129,91.2,113.16,182.24,154.4,70.76,209.28,234.96,0,31.44,61.72,78.32,45.72,133.16,173.88,102.88">
+   <PIN pinname="Input" visible="1" slicecount="14" values="0,0,0,0,1,1,1,1,1,2,2,2,2,2">
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -159,9 +159,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4770" top="2250" width="480" height="480">
+   <BOUNDS type="Box" left="4770" top="1065" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4770" top="2250" width="0" height="0">
+   <BOUNDS type="Node" left="4770" top="1065" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -181,7 +181,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="1500" top="2940" width="100" height="100">
+   <BOUNDS type="Node" left="1155" top="2970" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -229,7 +229,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="20" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
-   <BOUNDS type="Node" left="1965" top="3345" width="100" height="100">
+   <BOUNDS type="Node" left="1080" top="3465" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="21" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1">
    </PIN>
@@ -241,7 +241,7 @@
    </PIN>
    </NODE>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="2010" top="3705" width="100" height="100">
+   <BOUNDS type="Node" left="2325" top="3735" width="450" height="270">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
@@ -251,7 +251,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="2400" top="2955" width="100" height="100">
+   <BOUNDS type="Node" left="2670" top="2985" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -273,9 +273,9 @@
    <NODE id="24" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Select">
    </PIN>
-   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   <BOUNDS type="Box" left="510" top="1655" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   <BOUNDS type="Node" left="510" top="1655" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Select">
@@ -392,26 +392,40 @@
    </NODE>
    <LINK srcnodeid="6" srcpinname="Former Index Bin Size" dstnodeid="29" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="XML Index" dstnodeid="13" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Former Slice" dstnodeid="13" dstpinname="Index">
    </LINK>
    <NODE id="30" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Output 3|">
    </PIN>
-   <BOUNDS type="Box" left="7785" top="7035" width="750" height="240">
+   <BOUNDS type="Box" left="8415" top="7050" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7785" top="7035" width="750" height="240">
+   <BOUNDS type="Node" left="8415" top="7050" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="30" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="17655" top="3525" width="13605" height="10080">
+   <BOUNDS type="Window" left="13485" top="2925" width="13605" height="10080">
    </BOUNDS>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Read">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="8205" top="5745" width="540" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="21" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Select" visible="1" slicecount="21" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="31" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="XML Index" dstnodeid="31" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="13" dstpinname="Input">
    </LINK>
    </PATCH>

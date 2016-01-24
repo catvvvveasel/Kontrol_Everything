@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistTable.v4p" systemname="PlaylistTable" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistTable.v4p" scrollx="0" scrolly="1080" bgcolor="11442563">
-   <BOUNDS type="Window" left="5655" top="1845" width="16515" height="18240">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistTable.v4p" systemname="PlaylistTable" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistTable.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <BOUNDS type="Window" left="3300" top="4770" width="16515" height="16380">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -483,7 +483,7 @@
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="168">
    <BOUNDS type="Node" left="13935" top="9405" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -495,7 +495,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Frames" slicecount="1" values="2">
+   <PIN pinname="Frames" slicecount="1" values="4">
    </PIN>
    </NODE>
    <NODE id="119" systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox">
@@ -508,8 +508,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="LeftClick">
    </PIN>
    </NODE>
-   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="168" dstpinname="Input">
-   </LINK>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="181">
    <BOUNDS type="Node" left="4665" top="600" width="100" height="100">
    </BOUNDS>
@@ -725,15 +723,13 @@
    </BOUNDS>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Table" slicecount="1" values="||">
+   <PIN pinname="Table" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Input - Set" visible="1" slicecount="18" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Input - Set" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="26" srcpinname="Table" dstnodeid="178" dstpinname="Table">
-   </LINK>
    <NODE systemname="MoveKeyFrameTable" filename="MoveKeyFrameTable.v4p" nodename="MoveKeyFrameTable.v4p" componentmode="Hidden" id="96">
    <BOUNDS type="Node" left="12360" top="11850" width="100" height="100">
    </BOUNDS>
@@ -749,13 +745,11 @@
    </BOUNDS>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="LeftClick" visible="1" slicecount="1" values="0">
+   <PIN pinname="LeftClick" visible="1" slicecount="5" values="0,0,0,0,0">
    </PIN>
    <PIN pinname="Input Bin Size" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="96" dstpinname="LeftClick">
-   </LINK>
    <LINK srcnodeid="26" srcpinname="Table" dstnodeid="96" dstpinname="Table">
    </LINK>
    <NODE id="163" systemname="SequenceTracksByType" filename="SequenceTracksByType.v4p" componentmode="Hidden" nodename="SequenceTracksByType.v4p" hiddenwhenlocked="0" managers="">
@@ -996,8 +990,6 @@
    </NODE>
    <LINK srcnodeid="296" srcpinname="DeleteTable" dstnodeid="327" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="327" srcpinname="Output" dstnodeid="26" dstpinname="Clear">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="329" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6495" top="7335" width="480" height="480">
    </BOUNDS>
@@ -1070,8 +1062,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="178" dstpinname="Input - Set">
-   </LINK>
    <LINK srcnodeid="277" srcpinname="Output" dstnodeid="255" dstpinname="Undo">
    </LINK>
    <NODE systemname="AvoidNIL (String)" filename="%VVVV%\lib\nodes\modules\String\AvoidNIL (String).v4p" nodename="AvoidNIL (String)" componentmode="Hidden" id="341">
@@ -1087,7 +1077,7 @@
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="343">
    <BOUNDS type="Node" left="6120" top="10500" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="26" values="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1104,8 +1094,6 @@
    <PIN pinname="Inverse Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="343" dstpinname="Input" hiddenwhenlocked="0">
-   </LINK>
    <LINK srcnodeid="343" srcpinname="Output" dstnodeid="347" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="347" srcpinname="Output" dstnodeid="178" dstpinname="Evaluate">
@@ -1257,11 +1245,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4638" top="8348" width="6280" height="6615">
    </BOUNDS>
-   <BOUNDS type="Window" left="15690" top="1710" width="14625" height="10155">
+   <BOUNDS type="Window" left="1110" top="5295" width="14625" height="10155">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Evaluate" pintype="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Evaluate" pintype="Input" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Window Handle" pintype="Output" visible="-1">
    </PIN>
@@ -1270,6 +1258,8 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    <PIN pinname="Drag" visible="1">
+   </PIN>
+   <PIN pinname="LeftClick" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="77" srcpinname="Output String" dstnodeid="385" dstpinname="Input">
@@ -1281,8 +1271,6 @@
    <LINK srcnodeid="385" srcpinname="Output 1" dstnodeid="297" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="26" srcpinname="Table" dstnodeid="385" dstpinname="Table">
-   </LINK>
-   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="385" dstpinname="LeftClick">
    </LINK>
    <LINK srcnodeid="299" srcpinname="Y Output Value" dstnodeid="385" dstpinname="Input Bin Size">
    </LINK>
@@ -1315,5 +1303,39 @@
    <LINK srcnodeid="385" srcpinname="Drag" dstnodeid="97" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="383" srcpinname="Output" dstnodeid="381" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="405">
+   <BOUNDS type="Node" left="6105" top="9915" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="405" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="405" srcpinname="Output" dstnodeid="343" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="405" srcpinname="Output" dstnodeid="178" dstpinname="Input - Set">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="406">
+   <BOUNDS type="Node" left="13665" top="8505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="406" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="406" srcpinname="Output" dstnodeid="168" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="406" srcpinname="Output" dstnodeid="96" dstpinname="LeftClick">
+   </LINK>
+   <LINK srcnodeid="406" srcpinname="Output" dstnodeid="385" dstpinname="LeftClick">
+   </LINK>
+   <LINK srcnodeid="327" srcpinname="Output" dstnodeid="26" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Table" dstnodeid="178" dstpinname="Table">
    </LINK>
    </PATCH>

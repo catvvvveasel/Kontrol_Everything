@@ -225,15 +225,13 @@
    </BOUNDS>
    <PIN pinname="XML Input" visible="1">
    </PIN>
-   <PIN pinname="Patch" visible="1">
+   <PIN pinname="Patch" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Force Update" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Add to UNDO history" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="26" dstpinname="Patch" srcnodeid="27" srcpinname="Patch">
-   </LINK>
    <NODE componentmode="Hidden" id="24" nodename="Switch (String Input)" systemname="Switch (String Input)">
    <BOUNDS height="0" left="2655" top="10515" type="Node" width="0">
    </BOUNDS>
@@ -617,7 +615,7 @@
    </BOUNDS>
    <PIN pinname="Spread" visible="1">
    </PIN>
-   <PIN pinname="Index" slicecount="1" values="5">
+   <PIN pinname="Index" slicecount="1" values="5" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -667,5 +665,27 @@
    <LINK srcnodeid="169" srcpinname="Output" dstnodeid="170" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="156" srcpinname="OnChange" dstnodeid="157" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="171" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6315" top="4530" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6315" top="4530" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,2,5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="171" srcpinname="Y Output Value" dstnodeid="163" dstpinname="Index">
    </LINK>
    </PATCH>

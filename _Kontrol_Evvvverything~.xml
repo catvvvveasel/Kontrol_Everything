@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="17865" top="9330" width="15930" height="11610">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\_Kontrol_Evvvverything.v4p" systemname="_Kontrol_Evvvverything" filename="D:\Copy\Projects\CatGui0.5\_Kontrol_Evvvverything.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
+   <BOUNDS type="Window" left="11850" top="1110" width="18705" height="13155">
    </BOUNDS>
    <NODE systemname="Renderer (TTY)" nodename="Renderer (TTY)" componentmode="InAWindow" id="108">
    <BOUNDS type="Node" left="7515" top="10320" width="3000" height="270">
@@ -327,7 +327,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6585" top="7020" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -339,7 +339,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Mute">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="398" systemname="IOBox (Value Advanced)">
@@ -653,7 +653,7 @@
    <LINK srcnodeid="357" srcpinname="Layer Out" dstnodeid="167" dstpinname="Layer 1">
    </LINK>
    <NODE id="78" systemname="PresetManager" filename="Subs\PresetManager.v4p" nodename="Subs\PresetManager.v4p" componentmode="InAWindow" stayontop="0">
-   <BOUNDS type="Window" left="17865" top="9330" width="15930" height="11610">
+   <BOUNDS type="Window" left="11850" top="1110" width="18705" height="13155">
    </BOUNDS>
    <BOUNDS type="Node" left="1605" top="4830" width="1605" height="270">
    </BOUNDS>
@@ -893,7 +893,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="360" top="2354" width="4510" height="6910">
    </BOUNDS>
-   <BOUNDS type="Window" left="17865" top="9330" width="15930" height="11610">
+   <BOUNDS type="Window" left="11850" top="1110" width="18705" height="13155">
    </BOUNDS>
    <PIN pinname="SubType" visible="1" slicecount="4" values="|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 3, 0, -100, 100, 0.01, , 4|,|Endless, 1, 1, 0.001, 160, 0.01, , 1|,|Endless, 3, 0, -100, 100, 0.01, , 4|">
    </PIN>
@@ -1119,7 +1119,7 @@
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
-   <BOUNDS type="Window" left="38400" top="0" width="28800" height="16200">
+   <BOUNDS type="Window" left="38340" top="-30" width="28860" height="16230">
    </BOUNDS>
    <BOUNDS type="Node" left="825" top="8415" width="100" height="100">
    </BOUNDS>
@@ -1463,5 +1463,31 @@
    <LINK srcnodeid="483" srcpinname="Y Output Value" dstnodeid="78" dstpinname="UseScheduler">
    </LINK>
    <LINK srcnodeid="483" srcpinname="Y Output Value" dstnodeid="361" dstpinname="Scheduler">
+   </LINK>
+   <NODE systemname="TimeToString (String)" nodename="TimeToString (String)" componentmode="Hidden" id="484">
+   <BOUNDS type="Node" left="3450" top="17460" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Time" visible="1" slicecount="1" values="42389.6472152315">
+   </PIN>
+   <PIN pinname="String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="485">
+   <BOUNDS type="Node" left="3315" top="18030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="CurrentTime">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="484" srcpinname="String" dstnodeid="485" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="CurrentTime (Astronomy)" nodename="CurrentTime (Astronomy)" componentmode="Hidden" id="486">
+   <BOUNDS type="Node" left="3405" top="17055" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="GMT" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="486" srcpinname="GMT" dstnodeid="484" dstpinname="Time">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistManager.v4p" systemname="PlaylistManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistManager.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="4350" top="975" width="21825" height="19530">
+   <BOUNDS type="Window" left="10860" top="7785" width="21825" height="16380">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -145,13 +145,15 @@
    </PIN>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="4">
+   <PIN pinname="Input Count" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="100" srcpinname="Layer Out" dstnodeid="84" dstpinname="Input Node">
@@ -377,7 +379,7 @@
    <LINK srcnodeid="243" srcpinname="Y Output Value" dstnodeid="313" dstpinname="Input 2">
    </LINK>
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="316">
-   <BOUNDS type="Node" left="2355" top="2280" width="100" height="100">
+   <BOUNDS type="Node" left="2355" top="2190" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="PlaylistFromMenu">
    </PIN>
@@ -627,7 +629,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3090" top="7545" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="5655" top="1845" width="16515" height="18240">
+   <BOUNDS type="Window" left="3300" top="4770" width="16515" height="16380">
    </BOUNDS>
    <PIN pinname="Insert" visible="1" slicecount="1" values="|&lt;Event&gt;&cr;&lf;  &lt;Preset&gt;PatchPreset_-001_0000.xml&lt;/Preset&gt;&cr;&lf;  &lt;Time&gt;0.0000&lt;/Time&gt;&cr;&lf;  &lt;Macro&gt;Play&lt;/Macro&gt;&cr;&lf;  &lt;Type&gt;0&lt;/Type&gt;&cr;&lf;&lt;/Event&gt;|">
    </PIN>
@@ -1115,6 +1117,8 @@
    </BOUNDS>
    <BOUNDS type="Window" left="19125" top="2310" width="12840" height="13635">
    </BOUNDS>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="372" srcpinname="Output" dstnodeid="370" dstpinname="Input 2">
    </LINK>
@@ -1277,11 +1281,17 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5213" top="8184" width="15945" height="14595">
    </BOUNDS>
-   <BOUNDS type="Window" left="10110" top="3105" width="19605" height="17100">
+   <BOUNDS type="Window" left="15495" top="11580" width="24345" height="16380">
    </BOUNDS>
    <PIN pinname="Read" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Preset" visible="1">
+   </PIN>
+   <PIN pinname="Short Filenames" visible="1">
+   </PIN>
+   <PIN pinname="Go" visible="1">
+   </PIN>
+   <PIN pinname="Progress" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="392" srcpinname="Output" dstnodeid="220" dstpinname="Evaluate">
@@ -1293,7 +1303,7 @@
    <LINK srcnodeid="302" srcpinname="Output" dstnodeid="215" dstpinname="Input 1">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="396">
-   <BOUNDS type="Node" left="13575" top="8370" width="100" height="100">
+   <BOUNDS type="Node" left="13200" top="8505" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1350,4 +1360,42 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="PlaylistButtons" filename="PlaylistButtons.v4p" componentmode="Hidden" id="400" nodename="PlaylistButtons.v4p">
+   <BOUNDS type="Node" left="13185" top="10650" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13185" top="10650" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16635" top="3585" width="21765" height="11460">
+   </BOUNDS>
+   <PIN pinname="Short Filenames" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="LClick" visible="1">
+   </PIN>
+   <PIN pinname="Pos" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="393" srcpinname="Short Filenames" dstnodeid="400" dstpinname="Short Filenames">
+   </LINK>
+   <LINK srcnodeid="400" srcpinname="Layer" dstnodeid="100" dstpinname="Layer 5">
+   </LINK>
+   <LINK srcnodeid="400" srcpinname="LClick" dstnodeid="393" dstpinname="Go">
+   <LINKPOINT x="13005" y="11325">
+   </LINKPOINT>
+   <LINKPOINT x="12285" y="9585">
+   </LINKPOINT>
+   <LINKPOINT x="13590" y="8925">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="393" srcpinname="Progress" dstnodeid="400" dstpinname="Progress">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="401">
+   <BOUNDS type="Node" left="4005" top="1335" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4005" top="1335" width="795" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="362" srcpinname="Y Output Value" dstnodeid="372" dstpinname="Evaluate">
+   </LINK>
    </PATCH>

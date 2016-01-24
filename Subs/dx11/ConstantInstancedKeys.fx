@@ -36,7 +36,7 @@ struct vs2ps
 {
     float4 PosWVP: SV_POSITION;	
 	float4 Color: TEXCOORD0;
- //   float2 TexCd: TEXCOORD1;
+    float2 TexCd: TEXCOORD1;
 	
 };
 
@@ -49,7 +49,7 @@ vs2ps VS(VS_IN input)
 	w=mul(w,tW);
     Out.PosWVP  = mul(input.PosO,mul(w,tVP));
 	Out.Color = sbColor[input.ii % colorcount];
-//    Out.TexCd = input.TexCd;
+    Out.TexCd = input.TexCd;
     return Out;
 }
 
@@ -59,7 +59,9 @@ vs2ps VS(VS_IN input)
 float4 PS_Tex(vs2ps In): SV_Target
 {
     //float4 col = texture2d.Sample( g_samLinear, In.TexCd) * In.Color;
-    return In.Color ;//col;
+	//float4 col = float4(In.Color.rgb, (In.TexCd.x<0.01)+0.1);
+	
+    return In.Color; //col;
 }
 
 

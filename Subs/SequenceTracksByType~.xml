@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SequenceTracksByType.v4p" systemname="SequenceTracksByType" filename="D:\App\EuroVision\CatGui0.5\Subs\SequenceTracksByType.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="12375" top="3420" width="17730" height="12930">
+   <BOUNDS type="Window" left="-225" top="765" width="17730" height="12930">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8130" top="2775" width="795" height="240">
@@ -208,9 +208,9 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="63" dstpinname="Input 1">
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="63" dstpinname="Type">
    </LINK>
-   <LINK srcnodeid="63" srcpinname="Output 1" dstnodeid="53" dstpinname="Input">
+   <LINK srcnodeid="63" srcpinname="Type" dstnodeid="53" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="63" dstpinname="Input">
    </LINK>
@@ -387,7 +387,7 @@
    </PIN>
    </NODE>
    <NODE systemname="LE (Value)" nodename="LE (Value)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="7845" top="4665" width="100" height="100">
+   <BOUNDS type="Node" left="7740" top="4530" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="25" values="0,5.2,26.2,16.04,20,25.92,30.4,35.92,39.48,39.64,39.76,39.88,39.88,39.92,40.16,40.16,40.2,43.48,57.4,57.4,77.76,58.12,58.12,62.16,67.44">
    </PIN>
@@ -563,7 +563,7 @@
    <LINK srcnodeid="63" srcpinname="Output" dstnodeid="84" dstpinname="Input">
    </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="85">
-   <BOUNDS type="Node" left="3660" top="5370" width="100" height="100">
+   <BOUNDS type="Node" left="2610" top="5970" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -577,7 +577,7 @@
    <LINK srcnodeid="84" srcpinname="Former Index" dstnodeid="85" dstpinname="Index">
    </LINK>
    <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="86">
-   <BOUNDS type="Node" left="3135" top="6360" width="100" height="100">
+   <BOUNDS type="Node" left="3735" top="6105" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -626,4 +626,24 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE systemname="LE (Value)" nodename="LE (Value)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="24885" top="12900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="25" values="0,5.2,26.2,16.04,20,25.92,30.4,35.92,39.48,39.64,39.76,39.88,39.88,39.92,40.16,40.16,40.2,43.48,57.4,57.4,77.76,58.12,58.12,62.16,67.44">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="150">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LE (Value)" nodename="LE (Value)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="24825" top="13275" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="25" values="0,5.2,26.2,16.04,20,25.92,30.4,35.92,39.48,39.64,39.76,39.88,39.88,39.92,40.16,40.16,40.2,43.48,57.4,57.4,77.76,58.12,58.12,62.16,67.44">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="150">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
    </PATCH>
