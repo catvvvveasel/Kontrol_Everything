@@ -63,7 +63,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 4" visible="1">
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="5">
@@ -78,6 +78,8 @@
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="5" values="0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="6">
@@ -196,8 +198,6 @@
    </NODE>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input 3">
    </LINK>
-   <LINK srcnodeid="10" srcpinname="Input Value" dstnodeid="4" dstpinname="Input 4">
-   </LINK>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="5" dstpinname="Input 2">
@@ -293,7 +293,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="9285" top="2370" width="9000" height="6900">
+   <BOUNDS type="Window" left="13350" top="1680" width="9000" height="6900">
    </BOUNDS>
    <BOUNDS type="Box" left="255" top="0" width="4800" height="3600">
    </BOUNDS>
@@ -399,5 +399,7 @@
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="0" dstpinname="Insert">
    <LINKPOINT x="7500" y="5130">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Input Value" dstnodeid="4" dstpinname="Input 4">
    </LINK>
    </PATCH>

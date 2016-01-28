@@ -89,7 +89,7 @@
    <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="30" dstpinname="Column Names">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="34" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4665" top="15" width="6150" height="255">
+   <BOUNDS type="Box" left="4665" top="15" width="8790" height="285">
    </BOUNDS>
    <BOUNDS type="Node" left="4665" top="15" width="0" height="0">
    </BOUNDS>
@@ -245,9 +245,9 @@
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="42" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="65" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4380" top="15120" width="795" height="240">
+   <BOUNDS type="Box" left="4860" top="14760" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4380" top="15120" width="0" height="0">
+   <BOUNDS type="Node" left="4860" top="14760" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.5">
    </PIN>
@@ -261,9 +261,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="69" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6480" top="18060" width="6915" height="1215">
+   <BOUNDS type="Box" left="2085" top="18660" width="6915" height="1215">
    </BOUNDS>
-   <BOUNDS type="Node" left="6480" top="18060" width="0" height="0">
+   <BOUNDS type="Node" left="2085" top="18660" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -755,15 +755,15 @@
    <NODE id="163" systemname="SequenceTracksByType" filename="SequenceTracksByType.v4p" componentmode="Hidden" nodename="SequenceTracksByType.v4p" hiddenwhenlocked="0" managers="">
    <PIN pinname="PatchNames" visible="1">
    </PIN>
-   <BOUNDS type="Node" left="3315" top="15615" width="100" height="100">
+   <BOUNDS type="Node" left="2295" top="15705" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3315" top="15615" width="4800" height="3600">
+   <BOUNDS type="Box" left="2295" top="15705" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="-225" top="765" width="17730" height="12930">
+   <BOUNDS type="Window" left="12255" top="675" width="17730" height="12930">
    </BOUNDS>
    <PIN pinname="Type" visible="1">
    </PIN>
-   <PIN pinname="Time" visible="1">
+   <PIN pinname="Time" visible="1" slicecount="1" values="text">
    </PIN>
    <PIN pinname="Times" visible="1">
    </PIN>
@@ -779,10 +779,12 @@
    </PIN>
    <PIN pinname="Change" visible="1" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Macros" visible="1">
+   </PIN>
+   <PIN pinname="PL_Macro_Time" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="163" dstpinname="Type">
-   </LINK>
-   <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="163" dstpinname="Time">
    </LINK>
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="163" dstpinname="Times">
    </LINK>
@@ -1219,9 +1221,9 @@
    <LINK srcnodeid="383" srcpinname="Output" dstnodeid="381" dstpinname="Input 3">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="384" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="13995" top="10485" width="480" height="480">
+   <BOUNDS type="Box" left="13800" top="10575" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="13995" top="10485" width="0" height="0">
+   <BOUNDS type="Node" left="13800" top="10575" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -1277,8 +1279,6 @@
    <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="385" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="96" dstpinname="Evaluate">
-   </LINK>
-   <LINK srcnodeid="169" srcpinname="Output" dstnodeid="384" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="404" systemname="IOBox (String)">
    <BOUNDS type="Node" left="13290" top="3420" width="390" height="270">
@@ -1337,5 +1337,25 @@
    <LINK srcnodeid="327" srcpinname="Output" dstnodeid="26" dstpinname="Clear">
    </LINK>
    <LINK srcnodeid="26" srcpinname="Table" dstnodeid="178" dstpinname="Table">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output 3" dstnodeid="163" dstpinname="Macros">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output 2" dstnodeid="163" dstpinname="Time">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="408" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5505" top="17055" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5505" top="17055" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="PL_Macro_Time">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="163" srcpinname="PL_Macro_Time" dstnodeid="408" dstpinname="Input String">
    </LINK>
    </PATCH>

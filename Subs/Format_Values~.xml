@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Format_Values.v4p" systemname="Format_Values" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Format_Values.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Format_Values.v4p" systemname="Format_Values" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\Format_Values.v4p" scrollx="0" scrolly="-360" bgcolor="11442563">
    <NODE systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3015" top="1755" width="100" height="100">
    </BOUNDS>
@@ -63,13 +63,13 @@
    <NODE id="6" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
-   <BOUNDS type="Box" left="2820" top="3810" width="750" height="240">
+   <BOUNDS type="Box" left="6750" top="6915" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2820" top="3810" width="750" height="240">
+   <BOUNDS type="Node" left="6750" top="6915" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Input String" visible="1" slicecount="46" values="Ttessttubng&apos;Ffrump,-0.0646,-0.3877,D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Video\None,1,1,1,1,1.0000,6.7040,1.0000,Add,2.0000,-0.2590,2.0000,10,255,1.0000,1.0000,0.0000,0.0000,0.9945,0.9945,0.0000,0,1,1,0,D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Video\Blank,0.9600,WaitTill,1.00,0.00,9999.00,LoopTill,-481.39,0.00,9999.00,Play,1.00,0.00,9999.00,Play,1.00,0.00,9999.00">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="6" dstpinname="Input String">
-   </LINK>
    <NODE id="7" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="FromTog">
    </PIN>
@@ -104,7 +104,7 @@
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="21630" top="465" width="16500" height="9345">
+   <BOUNDS type="Window" left="3780" top="5295" width="16500" height="9345">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -171,22 +171,6 @@
    <LINK srcnodeid="3" srcpinname="Output 1" dstnodeid="15" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output 1" dstnodeid="1" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="Select (String)" filename="" nodename="Select (String)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="5760" top="2580" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="9" values="0,0,0,0,0,0,0,0,0">
-   </PIN>
-   <PIN pinname="Select" visible="1" slicecount="4" values="1,3,1,4">
-   </PIN>
-   <PIN pinname="Former Slice" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="16" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="3" dstpinname="Input 1">
    </LINK>
@@ -266,4 +250,128 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="24">
+   <BOUNDS type="Node" left="10110" top="1695" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10110" top="1695" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="IsPlaylist">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="10110" top="2175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="9" values="0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Select" visible="1" slicecount="4" values="1,3,1,4">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="6750" top="5850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1" slicecount="46" values="0,1,1,2,3,3,3,3,4,4,4,5,6,6,6,7,8,9,10,11,12,13,13,13,14,14,14,14,15,16,17,17,17,17,18,18,18,18,19,19,19,19,20,20,20,20">
+   </PIN>
+   <PIN pinname="Spread" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="27" dstpinname="Spread">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="7215" top="4095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bin Size" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="46" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="28" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="9645" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="29" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Former Slice" dstnodeid="28" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="6960" top="4950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Switch" slicecount="4" values="0,0,1,1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="31" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="27" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Former Slice" dstnodeid="27" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Time-Timecode" filename="Time-Timecode.v4p" nodename="Time-Timecode.v4p" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="9300" top="4950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Duration/position" visible="1">
+   </PIN>
+   <PIN pinname="Timecode" visible="1">
+   </PIN>
+   <PIN pinname="FPS" slicecount="1" visible="1" values="25">
+   </PIN>
+   <PIN pinname="NoHours?" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsValue (String)" nodename="AsValue (String)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="9315" top="4215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="33" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="32" dstpinname="Duration/position">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Timecode" dstnodeid="31" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="10560" top="4530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="FPS_tc">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Input Value" dstnodeid="32" dstpinname="FPS">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="6" dstpinname="Input String">
+   </LINK>
    </PATCH>

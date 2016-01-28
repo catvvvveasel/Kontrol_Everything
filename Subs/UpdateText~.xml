@@ -19,7 +19,7 @@
    </PIN>
    <PIN pinname="Input 6" visible="1">
    </PIN>
-   <PIN pinname="Input 7" visible="1">
+   <PIN pinname="Input 7" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 8" visible="1">
    </PIN>
@@ -111,8 +111,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Input Value" dstnodeid="0" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="OnChange" dstnodeid="12" dstpinname="Input 7">
    </LINK>
    <BOUNDS type="Window" left="0" top="0" width="10500" height="8760">
    </BOUNDS>
@@ -213,5 +211,17 @@
    <LINK srcnodeid="18" srcpinname="Input Value" dstnodeid="19" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="19" srcpinname="Output" dstnodeid="12" dstpinname="Input 8">
+   </LINK>
+   <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="7350" top="6240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="OnChange" dstnodeid="20" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="12" dstpinname="Input 7">
    </LINK>
    </PATCH>

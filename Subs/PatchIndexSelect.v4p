@@ -161,7 +161,7 @@
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="9" dstpinname="Input 3">
    </LINK>
    <NODE id="24" systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="1365" top="9120" width="100" height="100">
+   <BOUNDS type="Node" left="1440" top="9735" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
@@ -335,7 +335,7 @@
    <LINK srcnodeid="43" srcpinname="Output 1" dstnodeid="35" dstpinname="Switch">
    </LINK>
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="1725" top="6900" width="100" height="100">
+   <BOUNDS type="Node" left="1005" top="6240" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -347,9 +347,9 @@
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="45" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="46" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1155" top="7995" width="795" height="240">
+   <BOUNDS type="Box" left="1470" top="7725" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1155" top="7995" width="0" height="0">
+   <BOUNDS type="Node" left="1470" top="7725" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -544,4 +544,64 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="270" top="7005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="PatchNamesExposed">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="62">
+   <BOUNDS type="Node" left="285" top="7590" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Input Value" dstnodeid="62" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="555" top="8145" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Count" dstnodeid="63" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="63" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="64" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="540" top="9180" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="540" top="9180" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Playlists">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="64" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="645" top="8625" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="PlaylistGUI">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="65" dstpinname="Input Value">
+   </LINK>
    </PATCH>

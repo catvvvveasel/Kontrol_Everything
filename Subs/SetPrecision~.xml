@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SetPrecision.v4p" systemname="SetPrecision" filename="D:\Copy\Projects\CatGui0.5\Subs\SetPrecision.v4p" bgcolor="11442563" scrollx="0" scrolly="1365">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\SetPrecision.v4p" systemname="SetPrecision" filename="D:\Copy\Projects\CatGui0.5\Subs\SetPrecision.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
    <NODE systemname="Pad (String)" nodename="Pad (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2250" top="2670" width="100" height="100">
    </BOUNDS>
@@ -51,7 +51,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -126,8 +126,6 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Inverse Output" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="4" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="1" dstpinname="Input">
    </LINK>
    <NODE id="11" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
@@ -140,7 +138,7 @@
    </NODE>
    <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="0" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="4605" top="6360" width="7290" height="6435">
+   <BOUNDS type="Window" left="4605" top="6360" width="10905" height="9525">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -165,17 +163,63 @@
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input 1" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="13" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="12" srcpinname="Output 2" dstnodeid="13" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="6" dstpinname="Input 1">
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="4" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="14">
+   <BOUNDS type="Node" left="5505" top="540" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5505" top="540" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Playlist">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="2280" top="4620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="15" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="13" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3975" top="4155" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3975" top="4155" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Input 2">
+   </LINK>
    </PATCH>

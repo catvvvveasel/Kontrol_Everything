@@ -168,7 +168,7 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Former Index" dstnodeid="12" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="1140" top="1050" width="14235" height="13980">
+   <BOUNDS type="Window" left="810" top="5565" width="14235" height="13980">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -255,7 +255,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="18">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="15" values="|AllControls||001|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||007|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||010|,|TakeCamera-Kontrols||009|,|TakeCamera-Kontrols||008|,|TakeCamera-Kontrols||002|,|TakeCamera-Kontrols||001|,|TakeCamera-Kontrols||000|,|TakeCamera-Kontrols||005|,|TakeCamera-Kontrols||004|,|TakeCamera-Kontrols||003|,|Lights-Kontrols||009|,|PonyLED||000|">
+   <PIN pinname="Input String" visible="1" slicecount="9" values="Loop,Loop,Loop,Loop,Loop,Loop,Loop,|Pause,0.34,0.00,1.49|,|Pause,0.34,0.00,1.49|">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23" systemname="IOBox (Value Advanced)">
@@ -280,10 +280,158 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="23" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="24" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="16" dstpinname="Input String">
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="28" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8235" top="660" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8235" top="660" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="text">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Macros">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="8220" top="2025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Offset" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="7" values="0,1,3,2,4,6,5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output String" dstnodeid="27" dstpinname="Input">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="8220" top="2895" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="34" values="PatchPreset_0007_0000.xml,PatchPreset_-001_0000.xml,PatchPreset_0008_0000.xml,PatchPreset_0008_0001.xml,PatchPreset_0008_0001.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0001.xml,PatchPreset_0005_0000.xml,PatchPreset_0005_0001.xml,PatchPreset_0007_0000.xml,PatchPreset_0007_0002.xml,PatchPreset_0006_0002.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0000.xml,PatchPreset_0001_0000.xml,PatchPreset_0001_0001.xml,PatchPreset_0007_0000.xml,PatchPreset_0001_0001.xml,PatchPreset_0006_0001.xml,PatchPreset_0000_0000.xml,PatchPreset_0000_0024.xml,PatchPreset_0000_0002.xml,PatchPreset_0000_0003.xml,PatchPreset_0000_0009.xml,PatchPreset_0000_0008.xml,PatchPreset_0000_0016.xml,PatchPreset_0000_0013.xml,PatchPreset_0000_0006.xml,PatchPreset_0000_0019.xml,PatchPreset_0000_0020.xml,PatchPreset_0000_0023.xml,PatchPreset_0000_0028.xml,PatchPreset_0000_0026.xml,PatchPreset_0000_0005.xml">
+   </PIN>
+   <PIN pinname="Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Offset" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="15" values="0,9,8,7,12,11,10,3,2,1,6,5,4,13,14">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="26" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="8235" top="3465" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8235" top="3465" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Macros">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="15" values="|AllControls||001|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||007|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||010|,|TakeCamera-Kontrols||009|,|TakeCamera-Kontrols||008|,|TakeCamera-Kontrols||002|,|TakeCamera-Kontrols||001|,|TakeCamera-Kontrols||000|,|TakeCamera-Kontrols||005|,|TakeCamera-Kontrols||004|,|TakeCamera-Kontrols||003|,|Lights-Kontrols||009|,|PonyLED||000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Former Index" dstnodeid="27" dstpinname="Index">
+   <LINKPOINT x="7567" y="2018">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Former Slice" dstnodeid="26" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="25" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="32" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="10140" top="735" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10140" top="735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="text">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Time">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="10125" top="2100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Offset" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="7" values="0,1,3,2,4,6,5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="31" dstpinname="Input">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="10125" top="2970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="34" values="PatchPreset_0007_0000.xml,PatchPreset_-001_0000.xml,PatchPreset_0008_0000.xml,PatchPreset_0008_0001.xml,PatchPreset_0008_0001.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0001.xml,PatchPreset_0005_0000.xml,PatchPreset_0005_0001.xml,PatchPreset_0007_0000.xml,PatchPreset_0007_0002.xml,PatchPreset_0006_0002.xml,PatchPreset_0006_0000.xml,PatchPreset_0006_0000.xml,PatchPreset_0001_0000.xml,PatchPreset_0001_0001.xml,PatchPreset_0007_0000.xml,PatchPreset_0001_0001.xml,PatchPreset_0006_0001.xml,PatchPreset_0000_0000.xml,PatchPreset_0000_0024.xml,PatchPreset_0000_0002.xml,PatchPreset_0000_0003.xml,PatchPreset_0000_0009.xml,PatchPreset_0000_0008.xml,PatchPreset_0000_0016.xml,PatchPreset_0000_0013.xml,PatchPreset_0000_0006.xml,PatchPreset_0000_0019.xml,PatchPreset_0000_0020.xml,PatchPreset_0000_0023.xml,PatchPreset_0000_0028.xml,PatchPreset_0000_0026.xml,PatchPreset_0000_0005.xml">
+   </PIN>
+   <PIN pinname="Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Offset" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="15" values="0,9,8,7,12,11,10,3,2,1,6,5,4,13,14">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="30" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="29" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="10140" top="3540" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10140" top="3540" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Time">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="15" values="|AllControls||001|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||007|,|TakeCamera-Kontrols||006|,|TakeCamera-Kontrols||010|,|TakeCamera-Kontrols||009|,|TakeCamera-Kontrols||008|,|TakeCamera-Kontrols||002|,|TakeCamera-Kontrols||001|,|TakeCamera-Kontrols||000|,|TakeCamera-Kontrols||005|,|TakeCamera-Kontrols||004|,|TakeCamera-Kontrols||003|,|Lights-Kontrols||009|,|PonyLED||000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Former Index" dstnodeid="31" dstpinname="Index">
+   <LINKPOINT x="8520" y="2055">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Former Slice" dstnodeid="30" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="29" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="24" dstpinname="Input String">
+   </LINK>
    </PATCH>

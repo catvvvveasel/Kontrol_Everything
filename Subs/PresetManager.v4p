@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" systemname="PresetManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" scrollx="0" scrolly="1380" bgcolor="11442563">
-   <BOUNDS type="Window" left="14490" top="5415" width="18705" height="13155">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" systemname="PresetManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" scrollx="0" scrolly="1710" bgcolor="11442563">
+   <BOUNDS type="Window" left="9135" top="315" width="22410" height="20580">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="245" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6420" top="4380" width="825" height="240">
@@ -43,7 +43,7 @@
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="279">
    <BOUNDS type="Node" left="10635" top="3585" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10635" top="3585" width="720" height="240">
+   <BOUNDS type="Box" left="10635" top="3585" width="2790" height="375">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="GUI">
    </PIN>
@@ -601,7 +601,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1377" top="1545" width="7045" height="7360">
    </BOUNDS>
-   <BOUNDS type="Window" left="11805" top="3000" width="22530" height="11655">
+   <BOUNDS type="Window" left="11475" top="4515" width="26730" height="16845">
    </BOUNDS>
    <PIN pinname="SubType" visible="1">
    </PIN>
@@ -652,6 +652,10 @@
    <PIN pinname="Port" visible="1">
    </PIN>
    <PIN pinname="Loaded" visible="1">
+   </PIN>
+   <PIN pinname="PlaylistSeq" visible="1">
+   </PIN>
+   <PIN pinname="IsPlaylist" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="SubType" dstnodeid="245" dstpinname="Input String">
@@ -763,7 +767,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6150" top="8700" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="10860" top="7785" width="21825" height="16380">
+   <BOUNDS type="Window" left="8550" top="3930" width="21825" height="16380">
    </BOUNDS>
    <PIN pinname="CurrentPreset" visible="1" slicecount="1" values="..\TestScene\Projects\Start3\Presets\PatchPreset_-001_0017.xml">
    </PIN>
@@ -797,9 +801,9 @@
    <LINK srcnodeid="753" srcpinname="Layer" dstnodeid="865" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="PresetsTable" filename="PresetsTable.v4p" componentmode="Hidden" id="891" nodename="PresetsTable.v4p">
-   <BOUNDS type="Node" left="5010" top="9675" width="1620" height="270">
+   <BOUNDS type="Node" left="4860" top="9720" width="1620" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="5010" top="9675" width="4800" height="3600">
+   <BOUNDS type="Box" left="4860" top="9720" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="8865" top="6255" width="25965" height="19875">
    </BOUNDS>
@@ -839,19 +843,19 @@
    <LINK srcnodeid="189" srcpinname="PresetSpread" dstnodeid="891" dstpinname="Insert">
    </LINK>
    <LINK srcnodeid="891" srcpinname="ActivePreset" dstnodeid="753" dstpinname="CurrentPreset">
-   <LINKPOINT x="6337" y="10699">
+   <LINKPOINT x="6225" y="10733">
    </LINKPOINT>
-   <LINKPOINT x="7650" y="9967">
+   <LINKPOINT x="7575" y="9989">
    </LINKPOINT>
-   <LINKPOINT x="7493" y="8381">
+   <LINKPOINT x="7455" y="8392">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="753" srcpinname="SequencePreset" dstnodeid="891" dstpinname="SeqPreset" linkstyle="PolyLine">
    </LINK>
    <NODE systemname="Kontrol-GetIndexes" filename="Kontrol-GetIndexes.v4p" nodename="Kontrol-GetIndexes.v4p" componentmode="Hidden" id="566">
-   <BOUNDS type="Node" left="5187" top="12541" width="0" height="0">
+   <BOUNDS type="Node" left="4632" top="11791" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="3900" top="9024" width="4770" height="7035">
+   <BOUNDS type="Box" left="3345" top="8274" width="4770" height="7035">
    </BOUNDS>
    <BOUNDS type="Window" left="3135" top="2550" width="27195" height="14670">
    </BOUNDS>
@@ -955,15 +959,17 @@
    </PIN>
    </NODE>
    <NODE systemname="EnumFix" filename="EnumFix.v4p" componentmode="Hidden" id="937" nodename="EnumFix.v4p">
-   <BOUNDS type="Node" left="9030" top="8025" width="100" height="100">
+   <BOUNDS type="Node" left="8790" top="8190" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9030" top="8025" width="4800" height="3600">
+   <BOUNDS type="Box" left="8790" top="8190" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="8055" top="1050" width="7110" height="9240">
+   <BOUNDS type="Window" left="2565" top="570" width="11250" height="11835">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="IsPlaylist" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="762" srcpinname="Output" dstnodeid="937" dstpinname="Input 1">
@@ -1057,7 +1063,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1440" top="9179" width="6690" height="10380">
    </BOUNDS>
-   <BOUNDS type="Window" left="9405" top="3045" width="24015" height="16380">
+   <BOUNDS type="Window" left="4200" top="5415" width="24015" height="16380">
    </BOUNDS>
    <PIN pinname="FromFile" visible="1">
    </PIN>
@@ -1096,6 +1102,8 @@
    <PIN pinname="Changed" visible="1">
    </PIN>
    <PIN pinname="SendRaw" visible="1">
+   </PIN>
+   <PIN pinname="Is Playlist" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="575" srcpinname="Output" dstnodeid="736" dstpinname="Init" hiddenwhenlocked="1">
@@ -1584,4 +1592,62 @@
    </LINK>
    <LINK srcnodeid="891" srcpinname="Read" dstnodeid="871" dstpinname="PresetRead">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="990" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3975" top="1305" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3975" top="1305" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="PlaylistSeq">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="990" srcpinname="Y Output Value" dstnodeid="189" dstpinname="PlaylistSeq">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="991" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="15510" top="11670" width="1230" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15510" top="11670" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|Playlist&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="IsPlaylist" dstnodeid="736" dstpinname="Is Playlist">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="IsPlaylist" dstnodeid="937" dstpinname="IsPlaylist">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="992" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9975" top="8055" width="1185" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9975" top="8055" width="1185" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|is this needed?|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
