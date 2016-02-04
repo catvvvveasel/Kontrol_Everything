@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\FileNameEnum.v4p" scrollx="0" scrolly="0" systemname="FileNameEnum" filename="D:\Copy\Projects\CatGui0.5\Subs\FileNameEnum.v4p" bgcolor="11442563">
-   <BOUNDS type="Window" left="9540" top="2880" width="23895" height="15075">
+   <BOUNDS type="Window" left="4050" top="5895" width="23895" height="15075">
    </BOUNDS>
    <NODE systemname="MenuEnums" filename="MenuEnums.v4p" componentmode="Hidden" id="84" nodename="MenuEnums.v4p">
    <BOUNDS type="Node" left="5325" top="8505" width="100" height="100">
@@ -198,20 +198,10 @@
    <PIN pinname="OnChange" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="6">
-   <BOUNDS type="Node" left="9465" top="255" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9465" top="255" width="810" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="IsFileName">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="4500" top="4470" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Select" visible="1" slicecount="13" values="1,1,1,1,1,1,1,1,1,1,1,1,0">
+   <PIN pinname="Select" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
@@ -232,8 +222,6 @@
    </NODE>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Select" hiddenwhenlocked="1">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="86">
    <BOUNDS type="Node" left="5025" top="1530" width="100" height="100">
    </BOUNDS>
@@ -533,9 +521,9 @@
    </PIN>
    </NODE>
    <NODE systemname="DefaultFileNameEnum" filename="DefaultFileNameEnum.v4p" componentmode="Hidden" id="170" nodename="DefaultFileNameEnum.v4p">
-   <BOUNDS type="Node" left="9165" top="1005" width="100" height="100">
+   <BOUNDS type="Node" left="9165" top="1275" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9165" top="1005" width="4800" height="3600">
+   <BOUNDS type="Box" left="9165" top="1275" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="22965" top="360" width="13365" height="11655">
    </BOUNDS>
@@ -545,7 +533,7 @@
    </PIN>
    <PIN pinname="SubDirs" visible="1" slicecount="1" values="text">
    </PIN>
-   <PIN pinname="IsFileName" visible="1" slicecount="25" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0">
+   <PIN pinname="IsFileName" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -772,12 +760,10 @@
    </LINK>
    <LINK srcnodeid="115" srcpinname="Output" dstnodeid="153" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="170" dstpinname="IsFileName" hiddenwhenlocked="1">
-   </LINK>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="202">
    <BOUNDS type="Node" left="13680" top="2520" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Select" visible="1" slicecount="26" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Select" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="28" values="337,89,1.0914,-0.9988,|0.4500,0.0500,-0.1215,1.0000|,-0.0165,60.0000,65.0000,|0.0000,0.0000,0.0000|,|1.0000,0.1294,0.0157,0.1686|,16581375.0000,|0.3112,19.2339,0.0000|,,|0.0000,0.0000,0|,0,337,89,1.0914,|-0.9988,0.05,1.27,0.45|,1.00,-0.0165,60.0000,|65.0000,0.0000,0.0000|,|0.0000,255,33,4|,43,|16581375.0000,0.3112,19.2339|,,|0.0000,0.0000,0.0000|">
    </PIN>
@@ -787,8 +773,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="149" srcpinname="Output" dstnodeid="202" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="202" dstpinname="Select" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="149" srcpinname="Output" dstnodeid="50" dstpinname="Spread">
    </LINK>
@@ -835,13 +819,11 @@
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="222">
    <BOUNDS type="Node" left="6945" top="3390" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="222" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="222" srcpinname="Output" dstnodeid="221" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="221" srcpinname="Output" dstnodeid="84" dstpinname="Evaluate">
@@ -887,13 +869,11 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="240" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
    <NODE systemname="FileNameText" filename="FileNameText.v4p" nodename="FileNameText.v4p" componentmode="Hidden" id="254">
    <BOUNDS type="Node" left="5001" top="12963" width="0" height="0">
    </BOUNDS>
@@ -1043,9 +1023,9 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Select" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="281" dstpinname="Select">
-   </LINK>
    <LINK srcnodeid="281" srcpinname="Output" dstnodeid="254" dstpinname="Root">
    </LINK>
    <LINK srcnodeid="170" srcpinname="FileMask" dstnodeid="281" dstpinname="Mask">
@@ -1213,14 +1193,14 @@
    </PIN>
    <PIN pinname="Filename" visible="1">
    </PIN>
+   <PIN pinname="IsFileName" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,0,1,0,0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="110" srcpinname="Output 1" dstnodeid="324" dstpinname="Input 1" hiddenwhenlocked="1">
    <LINKPOINT x="8525" y="11175">
    </LINKPOINT>
    <LINKPOINT x="11995" y="3855">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="324" dstpinname="IsFileName">
    </LINK>
    <LINK srcnodeid="324" srcpinname="Output" dstnodeid="157" dstpinname="Input">
    </LINK>
@@ -1477,5 +1457,57 @@
    <LINK srcnodeid="343" srcpinname="OnChange" dstnodeid="344" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="344" srcpinname="Output" dstnodeid="254" dstpinname="Evaluate">
+   </LINK>
+   <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="356">
+   <BOUNDS type="Node" left="6735" top="45" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="SliderType">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="350">
+   <BOUNDS type="Node" left="7725" top="630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="String">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="356" srcpinname="Input Value" dstnodeid="350" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="349" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="7905" top="15" width="1080" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7905" top="15" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="Filename">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="349" srcpinname="Output String" dstnodeid="350" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="350" srcpinname="Output" dstnodeid="202" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="350" srcpinname="Output" dstnodeid="170" dstpinname="IsFileName">
+   </LINK>
+   <LINK srcnodeid="350" srcpinname="Output" dstnodeid="240" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="350" srcpinname="Output" dstnodeid="222" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="350" srcpinname="Output" dstnodeid="4" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="350" srcpinname="Output" dstnodeid="281" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="350" srcpinname="Output" dstnodeid="324" dstpinname="IsFileName">
    </LINK>
    </PATCH>

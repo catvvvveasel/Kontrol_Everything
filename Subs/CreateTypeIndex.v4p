@@ -1,0 +1,111 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\CreateTypeIndex.v4p" systemname="CreateTypeIndex" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\CreateTypeIndex.v4p">
+   <NODE systemname="Separate (String)" nodename="Separate (String)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="2850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="45" values="|Patch1||027|,22.0000,Loop,2,0.0000,|Patch1||026|,11.8400,Loop,2,0.0000,|Patch1||025|,30.6000,Loop,2,0.0000,|Patch1||024|,118.1200,Loop,2,0.0000,|Patch1||026|,0.7600,Loop,2,0.0000,|Patch1||027|,3.7200,Loop,2,0.0000,|Patch1||027|,41.2400,Loop,2,0.0000,|PL_count||000|,92.6400,|Play, 1, 0, 59:59:00|,3,0.0000,|PL_playlist||000|,126.0800,|Play, 1, 0, 59:59:00|,4,0.0000">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Pipe">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1515" top="3465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2100" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="PatchNamesExposed">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1530" top="4710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filter" visible="1" slicecount="6" values="Text,Patch1,PL_count,PL_playlist,PL_Test2,PL_text">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="18" values="Patch1,027,Patch1,026,Patch1,025,Patch1,024,Patch1,026,Patch1,027,Patch1,027,PL_count,000,PL_playlist,000">
+   </PIN>
+   <PIN pinname="Comparison" slicecount="1" values="Contains">
+   </PIN>
+   <PIN pinname="Filter Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2025" top="3720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="6" values="Text,Patch1,PL_count,PL_playlist,PL_Test2,PL_text">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (String)" filename="" nodename="Select (String)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1530" top="4200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="18" values="Patch1,027,Patch1,026,Patch1,025,Patch1,024,Patch1,026,Patch1,027,Patch1,027,PL_count,000,PL_playlist,000">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1665" top="2100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="AllControls">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="7" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="3" dstpinname="Filter">
+   </LINK>
+   <NODE id="8" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Filter Index|">
+   </PIN>
+   <BOUNDS type="Box" left="1530" top="5310" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1530" top="5310" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Filter Index" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output 1" dstnodeid="5" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Count" dstnodeid="5" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Input Value" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="3700" height="6310">
+   </BOUNDS>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   </PATCH>

@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="2085" bgcolor="11442563">
-   <BOUNDS type="Window" left="12015" top="2625" width="14880" height="12585">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\IoBoxes_Hitest.v4p" systemname="IoBoxes_Hitest" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\IoBoxes_Hitest.v4p" scrollx="0" scrolly="495" bgcolor="11442563">
+   <BOUNDS type="Window" left="2865" top="6645" width="14880" height="12585">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -825,5 +825,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="OverPresets" dstnodeid="141" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="DoubleClick" filename="DoubleClick.v4p" nodename="DoubleClick.v4p" componentmode="Hidden" id="143">
+   <BOUNDS type="Node" left="11580" top="6975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="27" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="16125" top="4635" width="4320" height="6000">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="142">
+   <BOUNDS type="Node" left="11580" top="7425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="DoubleLeftClickSlider">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="143" srcpinname="Output" dstnodeid="142" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="LSliders" dstnodeid="143" dstpinname="Set">
    </LINK>
    </PATCH>

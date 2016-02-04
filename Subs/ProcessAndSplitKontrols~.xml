@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="240" bgcolor="11442563">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ProcessAndSplitKontrols.v4p" systemname="ProcessAndSplitKontrols" filename="D:\Copy\Projects\CatGui0.5\Subs\ProcessAndSplitKontrols.v4p" scrollx="0" scrolly="2265" bgcolor="11442563">
    <NODE id="21" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Label">
    </PIN>
@@ -1165,7 +1165,7 @@
    <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="266" dstpinname="PatchNames">
    </LINK>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="269">
-   <BOUNDS type="Node" left="14475" top="5625" width="100" height="100">
+   <BOUNDS type="Node" left="15450" top="5265" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Operand 1" visible="1">
    </PIN>
@@ -1205,7 +1205,7 @@
    </PIN>
    <PIN pinname="IsEnum" visible="1">
    </PIN>
-   <PIN pinname="Playlist" visible="1">
+   <PIN pinname="Playlist" visible="1" slicecount="21" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    </NODE>
    <LINK srcnodeid="212" srcpinname="Output 5" dstnodeid="270" dstpinname="SubTypes">
@@ -1787,7 +1787,7 @@
    </PIN>
    <PIN pinname="Spread Count" visible="1" slicecount="1" values="126">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="|Playlist&cr;&lf;|">
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="17" values="String_,xy,Name,Color,|Scale XYZ|,Mode,|Center XYZ|,|Spread Count|,|Spread Count2|,Width,Width2,Period,Period2,|Translate XYZ|,|RGB color|,test,">
    </PIN>
@@ -1870,8 +1870,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="315" srcpinname="Output String" dstnodeid="311" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="318">
    <BOUNDS type="Node" left="9780" top="18405" width="100" height="100">
    </BOUNDS>
@@ -1979,7 +1977,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 14" slicecount="1" values="Playlists">
+   <PIN pinname="Input 14" slicecount="1" visible="1" values="Playlists">
    </PIN>
    <PIN pinname="Input 12" slicecount="1" values="5">
    </PIN>
@@ -2077,7 +2075,7 @@
    <LINK srcnodeid="303" srcpinname="Y Output Value" dstnodeid="270" dstpinname="Evaluate">
    </LINK>
    <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="335">
-   <BOUNDS type="Node" left="13125" top="4575" width="100" height="100">
+   <BOUNDS type="Node" left="13725" top="4065" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -2087,8 +2085,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="335" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="335" srcpinname="Output" dstnodeid="270" dstpinname="Playlist">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="336" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="13815" top="5205" width="480" height="480">
@@ -2105,7 +2101,43 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="IsPlaylist">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="21" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="335" srcpinname="Output" dstnodeid="336" dstpinname="Y Input Value">
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="311" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="337">
+   <BOUNDS type="Node" left="23370" top="4305" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="PL_">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="326" srcpinname="Result" dstnodeid="337" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="337" srcpinname="Output" dstnodeid="327" dstpinname="Input 14">
+   </LINK>
+   <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="338">
+   <BOUNDS type="Node" left="13335" top="4605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Filter" slicecount="1" values="PL_">
+   </PIN>
+   <PIN pinname="Comparison" slicecount="1" values="Contains">
+   </PIN>
+   <PIN pinname="Case Sensitive" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Hits" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="212" srcpinname="Output 14" dstnodeid="338" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="Hits" dstnodeid="336" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="Hits" dstnodeid="270" dstpinname="Playlist">
    </LINK>
    </PATCH>

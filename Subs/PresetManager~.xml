@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" systemname="PresetManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" scrollx="0" scrolly="1710" bgcolor="11442563">
-   <BOUNDS type="Window" left="14700" top="375" width="22410" height="20580">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" systemname="PresetManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetManager.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <BOUNDS type="Window" left="10905" top="735" width="21690" height="17925">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="245" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6420" top="4380" width="825" height="240">
@@ -736,7 +736,7 @@
    </LINK>
    <LINK srcnodeid="871" srcpinname="Output" dstnodeid="570" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="Kontrol-UpdateFromGUI" filename="Kontrol-UpdateFromGUI.v4p" nodename="Kontrol-UpdateFromGUI.v4p" componentmode="InAWindow" id="762">
+   <NODE systemname="Kontrol-UpdateFromGUI" filename="Kontrol-UpdateFromGUI.v4p" nodename="Kontrol-UpdateFromGUI.v4p" componentmode="Hidden" id="762">
    <BOUNDS type="Node" left="9025" top="6261" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="5763" top="3156" width="6525" height="6210">
@@ -767,7 +767,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6150" top="8700" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="8550" top="3930" width="21825" height="16380">
+   <BOUNDS type="Window" left="12585" top="2640" width="21825" height="16380">
    </BOUNDS>
    <PIN pinname="CurrentPreset" visible="1" slicecount="1" values="..\TestScene\Projects\Start3\Presets\PatchPreset_-001_0017.xml">
    </PIN>
@@ -805,7 +805,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4860" top="9720" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="8865" top="6255" width="25965" height="19875">
+   <BOUNDS type="Window" left="5130" top="4695" width="25965" height="19875">
    </BOUNDS>
    <PIN pinname="Insert" visible="1" slicecount="54" values="|/73/4/12/Y Input Value|,|Spread Count|,,|Endless, 1, 1, 1, 500, 1, , 4|,223,S,0,0,0,|/73/4/14/Y Input Value|,|Spread Count2|,,|Endless, 1, 1, 1, 500, 1, , 4|,11,S,0,0,0,|/73/4/2/Color Input|,Color,,|HSVAField, r=100% g=100% b=100% a=100% , HasAlpha|,|0.0000,0.2486,1.1300,0.9400|,S,0,0,0,|/73/4/4/Y Input Value|,|Scale XYZ|,,|Endless, 3, 1, 0, 4, 0.01, , 4|,|0.0495,3.0844,0.3080|,S,0,0,0,|/73/4/7/Input Enum|,Mode,,|PullDown, DX11.BlendPresets, Disabled|,Add,S,0,0,0,|/73/4/8/Y Input Value|,|Center XYZ|,,|Slider, 3, 0, -2, 2, 0.01, , 4|,|4.0167,-0.3170,1.7586|,S,0,0,0">
    </PIN>
@@ -857,7 +857,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3345" top="8274" width="4770" height="7035">
    </BOUNDS>
-   <BOUNDS type="Window" left="3135" top="2550" width="27195" height="14670">
+   <BOUNDS type="Window" left="10905" top="9495" width="27195" height="14670">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="3" values="|076/004/017/Input String|,|076/004/010/Y Input Value|,|076/004/004/Input String|">
    </PIN>
@@ -878,6 +878,8 @@
    <PIN pinname="Values" visible="1">
    </PIN>
    <PIN pinname="Fades" visible="1">
+   </PIN>
+   <PIN pinname="FadesType" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="566" srcpinname="Former Slice" dstnodeid="770" dstpinname="Index" hiddenwhenlocked="0">
@@ -1059,11 +1061,11 @@
    <LINK srcnodeid="367" srcpinname="Output" dstnodeid="251" dstpinname="Input String">
    </LINK>
    <NODE systemname="Kontrol-FadeTimes3" filename="Kontrol-FadeTimes3.v4p" nodename="Kontrol-FadeTimes3.v4p" componentmode="Hidden" id="736">
-   <BOUNDS type="Node" left="1862" top="14369" width="0" height="0">
+   <BOUNDS type="Node" left="1862" top="14369" width="2355" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="1440" top="9179" width="6690" height="10380">
    </BOUNDS>
-   <BOUNDS type="Window" left="4200" top="5415" width="24015" height="16380">
+   <BOUNDS type="Window" left="8085" top="2670" width="24015" height="16380">
    </BOUNDS>
    <PIN pinname="FromFile" visible="1">
    </PIN>
@@ -1104,6 +1106,8 @@
    <PIN pinname="SendRaw" visible="1">
    </PIN>
    <PIN pinname="Is Playlist" visible="1">
+   </PIN>
+   <PIN pinname="FadesType" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="575" srcpinname="Output" dstnodeid="736" dstpinname="Init" hiddenwhenlocked="1">
@@ -1650,4 +1654,8 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="891" srcpinname="FadeType" dstnodeid="566" dstpinname="FadesType">
+   </LINK>
+   <LINK srcnodeid="566" srcpinname="FadesType" dstnodeid="736" dstpinname="FadesType">
+   </LINK>
    </PATCH>

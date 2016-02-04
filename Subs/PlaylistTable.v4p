@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistTable.v4p" systemname="PlaylistTable" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistTable.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="3300" top="4770" width="16515" height="16380">
+   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistTable.v4p" systemname="PlaylistTable" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistTable.v4p" scrollx="75" scrolly="5385" bgcolor="11442563">
+   <BOUNDS type="Window" left="3105" top="7965" width="20280" height="16380">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -193,9 +193,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Type">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="9" values="2,2,2,2,2,2,2,3,4">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="53" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="Unzip (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (String)" componentmode="Hidden" id="54">
    <BOUNDS type="Node" left="840" top="13275" width="3645" height="270">
    </BOUNDS>
@@ -245,9 +245,9 @@
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="42" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="65" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4860" top="14760" width="795" height="240">
+   <BOUNDS type="Box" left="5145" top="14625" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4860" top="14760" width="0" height="0">
+   <BOUNDS type="Node" left="5145" top="14625" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.5">
    </PIN>
@@ -715,9 +715,9 @@
    <LINK srcnodeid="277" srcpinname="Output 1" dstnodeid="266" dstpinname="Input 1">
    </LINK>
    <NODE systemname="SequenceTableView-RemoveKey" filename="SequenceTableView-RemoveKey.v4p" nodename="SequenceTableView-RemoveKey.v4p" componentmode="Hidden" id="178">
-   <BOUNDS type="Node" left="3748" top="11598" width="0" height="0">
+   <BOUNDS type="Node" left="4843" top="11523" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="1051" top="8316" width="5395" height="6565">
+   <BOUNDS type="Box" left="2146" top="8241" width="5395" height="6565">
    </BOUNDS>
    <BOUNDS type="Window" left="14085" top="2415" width="9960" height="8145">
    </BOUNDS>
@@ -759,11 +759,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2295" top="15705" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="12255" top="675" width="17730" height="12930">
+   <BOUNDS type="Window" left="3390" top="1095" width="17730" height="12930">
    </BOUNDS>
-   <PIN pinname="Type" visible="1">
+   <PIN pinname="Type" visible="1" slicecount="9" values="3,3,3,3,3,3,3,4,5">
    </PIN>
-   <PIN pinname="Time" visible="1" slicecount="1" values="text">
+   <PIN pinname="Time" visible="1" slicecount="9" values="54.8400,28.7200,99.8400,148.7600,3.5600,8.4800,79.2000,75.8000,110.0400">
    </PIN>
    <PIN pinname="Times" visible="1">
    </PIN>
@@ -783,9 +783,9 @@
    </PIN>
    <PIN pinname="PL_Macro_Time" visible="1">
    </PIN>
+   <PIN pinname="TimeTrack" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="163" dstpinname="Type">
-   </LINK>
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="163" dstpinname="Times">
    </LINK>
    <LINK srcnodeid="54" srcpinname="Output 1" dstnodeid="163" dstpinname="PatchNames">
@@ -1340,8 +1340,6 @@
    </LINK>
    <LINK srcnodeid="54" srcpinname="Output 3" dstnodeid="163" dstpinname="Macros">
    </LINK>
-   <LINK srcnodeid="54" srcpinname="Output 2" dstnodeid="163" dstpinname="Time">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="408" systemname="IOBox (String)">
    <BOUNDS type="Box" left="5505" top="17055" width="795" height="240">
    </BOUNDS>
@@ -1357,5 +1355,41 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="163" srcpinname="PL_Macro_Time" dstnodeid="408" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="409">
+   <BOUNDS type="Node" left="5145" top="15615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="409" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="TableView (DataTable)" filename="plugins\plugins\Table.dll" nodename="TableView (DataTable)" componentmode="InAWindow" id="410">
+   <BOUNDS type="Node" left="2520" top="9525" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Table" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Window" left="0" top="0" width="11340" height="4380">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="163" dstpinname="TimeTrack">
+   </LINK>
+   <NODE systemname="CreateTypeIndex" filename="CreateTypeIndex.v4p" nodename="CreateTypeIndex.v4p" componentmode="Hidden" id="435">
+   <BOUNDS type="Node" left="2835" top="14995" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="985" top="11840" width="3700" height="6310">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="3700" height="6310">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="435" srcpinname="Filter Index" dstnodeid="53" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="435" srcpinname="Filter Index" dstnodeid="163" dstpinname="Type">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output 1" dstnodeid="435" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="317" srcpinname="Output Node" dstnodeid="410" dstpinname="Table">
    </LINK>
    </PATCH>

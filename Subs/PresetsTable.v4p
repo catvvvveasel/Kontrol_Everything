@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="8055" systemname="PresetsTable" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetsTable.v4p">
-   <BOUNDS type="Window" left="8865" top="6255" width="25965" height="19875">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetsTable.v4p" bgcolor="11442563" scrollx="0" scrolly="225" systemname="PresetsTable" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetsTable.v4p">
+   <BOUNDS type="Window" left="7125" top="720" width="25965" height="19875">
    </BOUNDS>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="80">
    <BOUNDS type="Node" left="7260" top="5040" width="855" height="270">
@@ -537,9 +537,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="152" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="14025" top="8070" width="2145" height="750">
+   <BOUNDS type="Box" left="14325" top="7905" width="2145" height="750">
    </BOUNDS>
-   <BOUNDS type="Node" left="14025" top="8070" width="0" height="0">
+   <BOUNDS type="Node" left="14325" top="7905" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -1123,7 +1123,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9682" top="1200" width="8470" height="6475">
    </BOUNDS>
-   <BOUNDS type="Window" left="1920" top="375" width="12495" height="13545">
+   <BOUNDS type="Window" left="2850" top="4515" width="12495" height="13545">
    </BOUNDS>
    <PIN pinname="PresetName" visible="1">
    </PIN>
@@ -1150,6 +1150,8 @@
    <PIN pinname="Input Index" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Table Name" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="270" srcpinname="Input Index" dstnodeid="256" dstpinname="Input">
@@ -1243,9 +1245,9 @@
    <LINK srcnodeid="270" srcpinname="Input Index" dstnodeid="276" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="277" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="12285" top="4440" width="1545" height="270">
+   <BOUNDS type="Box" left="11790" top="5385" width="1545" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="12285" top="4440" width="0" height="0">
+   <BOUNDS type="Node" left="11790" top="5385" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -1402,10 +1404,6 @@
    </NODE>
    <LINK srcnodeid="295" srcpinname="Output" dstnodeid="215" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="296">
-   <BOUNDS type="Node" left="9945" top="8970" width="100" height="100">
-   </BOUNDS>
-   </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="297" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="5370" top="8685" width="795" height="240">
    </BOUNDS>
@@ -1587,5 +1585,37 @@
    <LINK srcnodeid="60" srcpinname="Output 6" dstnodeid="206" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="60" srcpinname="Output 7" dstnodeid="169" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="S (String)" nodename="S (String)" componentmode="Hidden" id="318">
+   <BOUNDS type="Node" left="2955" top="14265" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="CurrentPresetValues">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Output 5" dstnodeid="318" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="GetPlaylistPresets" filename="GetPlaylistPresets.v4p" nodename="GetPlaylistPresets.v4p" componentmode="Hidden" id="337">
+   <BOUNDS type="Node" left="18371" top="16781" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14721" top="12019" width="7300" height="9525">
+   </BOUNDS>
+   <BOUNDS type="Window" left="17940" top="2190" width="12960" height="14145">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Table" dstnodeid="337" dstpinname="Table">
+   </LINK>
+   <LINK srcnodeid="270" srcpinname="Table Name" dstnodeid="337" dstpinname="Table Name">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="338">
+   <BOUNDS type="Node" left="5400" top="8160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="PresetsTable">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Table" dstnodeid="338" dstpinname="Input Value">
    </LINK>
    </PATCH>

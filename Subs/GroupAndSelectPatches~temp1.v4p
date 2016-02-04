@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\GroupAndSelectPatches.v4p" systemname="GroupAndSelectPatches" filename="D:\Copy\Projects\CatGui0.5\Subs\GroupAndSelectPatches.v4p" bgcolor="11442563" scrollx="15" scrolly="15">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\GroupAndSelectPatches.v4p" systemname="GroupAndSelectPatches" filename="D:\Copy\Projects\CatGui0.5\Subs\GroupAndSelectPatches.v4p" bgcolor="11442563" scrollx="15" scrolly="15">
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="555" top="5340" width="100" height="100">
    </BOUNDS>
@@ -38,7 +38,7 @@
    <PIN pinname="Y Input Value" visible="1" slicecount="25" values="1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="3765" top="675" width="13350" height="12480">
+   <BOUNDS type="Window" left="12315" top="210" width="13350" height="12480">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -91,7 +91,7 @@
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="570" top="7515" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Switch" visible="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -100,8 +100,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="24" dstpinname="Switch">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="24" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="14" dstpinname="Y Input Value">
@@ -158,18 +156,6 @@
    <PIN pinname="Y Input Value" visible="1" slicecount="4" values="0,10,20,30">
    </PIN>
    </NODE>
-   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="32">
-   <BOUNDS type="Node" left="1665" top="7125" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="49" values="0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="32" dstpinname="Select">
-   </LINK>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="24" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="25" dstpinname="Input 1">
@@ -208,8 +194,6 @@
    </LINK>
    <LINK srcnodeid="38" srcpinname="First Occurrence" dstnodeid="19" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="38" srcpinname="Unique Index" dstnodeid="32" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="38" srcpinname="Unique Index" dstnodeid="25" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="38" srcpinname="Unique Index" dstnodeid="22" dstpinname="Input 1">
@@ -220,4 +204,6 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="24" dstpinname="Switch">
+   </LINK>
    </PATCH>

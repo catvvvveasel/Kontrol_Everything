@@ -13,7 +13,7 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Time">
+   <PIN pinname="Descriptive Name" slicecount="1" values="TimeTrack">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -21,13 +21,11 @@
    <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="8040" top="3675" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="9" values="54.84,28.72,99.84,148.76,3.56,8.48,79.2,75.8,110.04">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Input 1" linkstyle="PolyLine">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2985" top="615" width="795" height="240">
    </BOUNDS>
@@ -393,7 +391,7 @@
    </PIN>
    </NODE>
    <NODE systemname="LE (Value)" nodename="LE (Value)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="7740" top="4530" width="100" height="100">
+   <BOUNDS type="Node" left="7740" top="4530" width="300" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="25" values="0,5.2,26.2,16.04,20,25.92,30.4,35.92,39.48,39.64,39.76,39.88,39.88,39.92,40.16,40.16,40.2,43.48,57.4,57.4,77.76,58.12,58.12,62.16,67.44">
    </PIN>
@@ -591,11 +589,11 @@
    <LINK srcnodeid="92" srcpinname="Output String" dstnodeid="63" dstpinname="Macros">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="93" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="7080" top="105" width="795" height="240">
+   <BOUNDS type="Box" left="7035" top="600" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7080" top="105" width="0" height="0">
+   <BOUNDS type="Node" left="7035" top="600" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="text">
+   <PIN pinname="Input String" slicecount="9" visible="1" values="54.8400,28.7200,99.8400,148.7600,3.5600,8.4800,79.2000,75.8000,110.0400">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -604,6 +602,8 @@
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Time">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="93" srcpinname="Output String" dstnodeid="63" dstpinname="Time">
@@ -653,9 +653,9 @@
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="96" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="97" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="9675" top="9285" width="795" height="240">
+   <BOUNDS type="Box" left="9645" top="10245" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9675" top="9285" width="0" height="0">
+   <BOUNDS type="Node" left="9645" top="10245" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -665,9 +665,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="PL_Macro_Time">
    </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="97" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="75" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="98" systemname="IOBox (String)">
@@ -719,5 +719,29 @@
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="100" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="100" srcpinname="Output" dstnodeid="96" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="FrameDelay (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (String)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="9900" top="9270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="101" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="97" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="AsValue (String)" nodename="AsValue (String)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="7695" top="1965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Output String" dstnodeid="102" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Input 1">
    </LINK>
    </PATCH>

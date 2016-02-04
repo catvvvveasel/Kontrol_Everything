@@ -1,17 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ColourField.v4p" systemname="ColourField" filename="C:\Users\cat\Desktop\KontroleurGui\expo\Subs\ColourField.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="6480" top="0" width="10815" height="9165">
+   <BOUNDS type="Window" left="2970" top="6330" width="14010" height="9165">
    </BOUNDS>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="0">
-   <BOUNDS type="Node" left="4530" top="390" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4530" top="390" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="IsColour">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Separate (String Legacy)" nodename="Separate (String)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="3270" top="2595" width="100" height="100">
    </BOUNDS>
@@ -26,22 +16,10 @@
    <PIN pinname="Ignore between" slicecount="1" values="None">
    </PIN>
    </NODE>
-   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="4515" top="1305" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 2" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Input">
-   </LINK>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="12">
-   <BOUNDS type="Node" left="3465" top="540" width="100" height="100">
+   <BOUNDS type="Node" left="2865" top="285" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3465" top="540" width="795" height="240">
+   <BOUNDS type="Box" left="2865" top="285" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="CurrentValues">
    </PIN>
@@ -51,7 +29,7 @@
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="2835" top="1305" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Select" visible="1" slicecount="9" values="0,0,0,0,1">
+   <PIN pinname="Select" visible="1" slicecount="15" values="1,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -105,12 +83,10 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Bin Size" visible="1">
+   <PIN pinname="Bin Size" visible="1" slicecount="1" values="4">
    </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="20" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Output 1" dstnodeid="14" dstpinname="Select">
    </LINK>
    <NODE systemname="Quad (DX11.Layer)" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="22" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll">
    <BOUNDS type="Node" left="2085" top="6420" width="100" height="100">
@@ -255,7 +231,7 @@
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="51">
    <BOUNDS type="Node" left="4485" top="2190" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Select" visible="1">
+   <PIN pinname="Select" visible="1" slicecount="15" values="0,0,0,0,0,0,0,0,0,0,0,1,0,0,0">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -295,8 +271,6 @@
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="49" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="49" srcpinname="Output" dstnodeid="50" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Output 2" dstnodeid="51" dstpinname="Select">
    </LINK>
    <NODE systemname="Cons (Color)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Color)" componentmode="Hidden" id="53">
    <BOUNDS type="Node" left="2910" top="5280" width="100" height="100">
@@ -444,18 +418,6 @@
    </LINK>
    <LINK srcnodeid="55" srcpinname="Transform Out" dstnodeid="22" dstpinname="Transform">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="59">
-   <BOUNDS type="Node" left="7425" top="825" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7425" top="825" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="VectorSize">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Bin Size">
-   </LINK>
    <NODE systemname="Select (Color)" nodename="Select (Color)" componentmode="Hidden" id="61">
    <BOUNDS type="Node" left="2895" top="5745" width="100" height="100">
    </BOUNDS>
@@ -542,26 +504,12 @@
    </NODE>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="65" dstpinname="Y Input Value">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="68" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="4845" top="735" width="780" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4845" top="735" width="780" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|HSV, RGB|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="69" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="8460" top="5040" width="6825" height="270">
+   <BOUNDS type="Node" left="8985" top="4980" width="6825" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="8460" top="5040" width="2250" height="1455">
+   <BOUNDS type="Box" left="8985" top="4980" width="3180" height="2280">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|covert RGB colours as sent via konroleur to HSV for the gui, we have to reconvert back again afterwards too|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|kontroleur uses RGB colours so we have to convert to hsv and reconvert on exiting the gui|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -581,12 +529,10 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Bin Size" visible="1">
+   <PIN pinname="Bin Size" visible="1" slicecount="1" values="4">
    </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="71" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="71" dstpinname="Bin Size">
    </LINK>
    <LINK srcnodeid="51" srcpinname="Former Slice" dstnodeid="71" dstpinname="Index">
    </LINK>
@@ -734,4 +680,52 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="85">
+   <BOUNDS type="Node" left="10050" top="765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="SliderType">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="8655" top="480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="SliderBinSize">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="83">
+   <BOUNDS type="Node" left="10050" top="1320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="RGB">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Input Value" dstnodeid="83" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Input Value" dstnodeid="20" dstpinname="Bin Size">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Input Value" dstnodeid="71" dstpinname="Bin Size">
+   </LINK>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="8970" top="1260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="HSV">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Input Value" dstnodeid="86" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="14" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="51" dstpinname="Select">
+   </LINK>
    </PATCH>

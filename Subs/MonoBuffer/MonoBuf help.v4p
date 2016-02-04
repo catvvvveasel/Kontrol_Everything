@@ -1,0 +1,289 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
+   <PATCH nodename="D:\Video Screen\Work\vvvv\Tests\MonoBuf\MonoBuf help.v4p" filename="D:\Video Screen\Work\vvvv\Tests\MonoBuf (help).v4p" systemname="MonoBuf (help)">
+   <BOUNDS height="8820" left="285" top="1155" type="Window" width="8850">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" filename="MonoBuf.v4p" id="33" nodename="MonoBuf.v4p" systemname="MonoBuf" path="D:\Video Screen\Work\vvvv\Tests\MonoBuf\">
+   <BOUNDS height="100" left="2595" top="2490" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="10650" left="4575" top="345" type="Window" width="7695">
+   </BOUNDS>
+   <PIN pinname="Add" visible="1">
+   </PIN>
+   <PIN pinname="Life Time" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="DataIn" visible="1">
+   </PIN>
+   <PIN pinname="DataOutput" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="31" nodename="Quad (DX9)" systemname="Quad (DX9)">
+   <BOUNDS height="0" left="2025" top="5070" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="29" nodename="HSL (Color Join)" systemname="HSL (Color Join)">
+   <BOUNDS height="0" left="3345" top="4710" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Lightness" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Hue" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="31" dstpinname="Color" srcnodeid="29" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" filename="MonoData.v4p" id="20" nodename="MonoData.v4p" systemname="MonoData" path="D:\Video Screen\Work\vvvv\Tests\MonoBuf\">
+   <BOUNDS height="100" left="1875" top="3675" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Add" visible="1">
+   </PIN>
+   <PIN pinname="DataIn" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="DataOutput" visible="1">
+   </PIN>
+   <BOUNDS height="8985" left="14205" top="5880" type="Window" width="3435">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="X">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" filename="MonoData.v4p" id="14" nodename="MonoData.v4p" systemname="MonoData" path="D:\Video Screen\Work\vvvv\Tests\MonoBuf\">
+   <BOUNDS height="100" left="3375" top="3675" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Add" visible="1">
+   </PIN>
+   <PIN pinname="DataIn" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="DataOutput" visible="1">
+   </PIN>
+   <BOUNDS height="8985" left="10305" top="480" type="Window" width="3435">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Y">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="MonoData.v4p" id="60" nodename="MonoData.v4p" systemname="MonoData" path="D:\Video Screen\Work\vvvv\Tests\MonoBuf\">
+   <BOUNDS height="100" left="4920" top="3675" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Add" visible="1">
+   </PIN>
+   <PIN pinname="DataIn" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="DataOutput" visible="1">
+   </PIN>
+   <BOUNDS height="8985" left="14205" top="5880" type="Window" width="3435">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Hue">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="60" dstpinname="Select" srcnodeid="33" srcpinname="Select">
+   </LINK>
+   <NODE componentmode="InABox" id="68" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <BOUNDS height="100" left="2025" top="5490" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="2025" top="5490" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="4860" left="18765" top="10380" type="Window" width="6120">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="68" dstpinname="Layers" srcnodeid="31" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="69" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="2745" top="1845" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2745" top="1845" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Time To Live|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="33" dstpinname="Life Time" srcnodeid="69" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="73" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
+   <BOUNDS height="100" left="1995" top="4590" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.3">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="20" dstpinname="Select" srcnodeid="33" srcpinname="Select">
+   </LINK>
+   <LINK dstnodeid="31" dstpinname="Transform" srcnodeid="73" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="InABox" id="74" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="795" top="1785" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="795" top="1785" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Create">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="33" dstpinname="Add" srcnodeid="74" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="74" dstpinname="Y Input Value" srcnodeid="68" srcpinname="Left Button">
+   <LINKPOINT x="1875" y="7920">
+   </LINKPOINT>
+   <LINKPOINT x="945" y="7875">
+   </LINKPOINT>
+   <LINKPOINT x="555" y="1545">
+   </LINKPOINT>
+   <LINKPOINT x="1065" y="1560">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="20" dstpinname="Add" srcnodeid="33" srcpinname="Add">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Add" srcnodeid="33" srcpinname="Add">
+   </LINK>
+   <LINK dstnodeid="60" dstpinname="Add" srcnodeid="33" srcpinname="Add">
+   </LINK>
+   <NODE componentmode="Hidden" id="75" nodename="LFO (Animation)" systemname="LFO (Animation)">
+   <BOUNDS height="100" left="6045" top="3270" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Select" srcnodeid="33" srcpinname="Select">
+   </LINK>
+   <NODE componentmode="InABox" id="78" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="600" top="405" type="Node" width="1545">
+   </BOUNDS>
+   <BOUNDS height="1080" left="600" top="405" type="Box" width="4770">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|MonoBuf &amp; MonoData&cr;&lf;MonoBuf - Add an item to a spread with a specified lifetime.&cr;&lf;MonoData - Keep a spread of values assiciated with a MonoBuf.&cr;&lf;Based on work by West, wirmachenbunt and tonfilm, by MediaDog|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="79" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="4635" top="6015" type="Node" width="2850">
+   </BOUNDS>
+   <BOUNDS height="270" left="4635" top="6015" type="Box" width="2850">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;-- Left click or click and drag in here|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="80" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="5025" top="4125" type="Node" width="9570">
+   </BOUNDS>
+   <BOUNDS height="1050" left="5025" top="4125" type="Box" width="3495">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Create as many data spreads with MonoData&cr;&lf;as you like, just connect the Add and Select pins&cr;&lf;from the parent MonoBuf, and the input pin to&cr;&lf;whatever.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="81" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="3945" top="2190" type="Node" width="3705">
+   </BOUNDS>
+   <BOUNDS height="750" left="3945" top="2190" type="Box" width="4110">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|       Add and Select pins go to all MonoData nodes.&cr;&lf;&lt;-- Time Left pin gives time in seconds before death,&cr;&lf;       Value pin gives normalized (1 to 0) value of time left|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="X" dstnodeid="20" dstpinname="Input">
+   <LINKPOINT x="1695" y="7500">
+   </LINKPOINT>
+   <LINKPOINT x="1350" y="7185">
+   </LINKPOINT>
+   <LINKPOINT x="1290" y="3450">
+   </LINKPOINT>
+   <LINKPOINT x="2835" y="3465">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="73" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Y" dstnodeid="14" dstpinname="Input">
+   <LINKPOINT x="1725" y="7740">
+   </LINKPOINT>
+   <LINKPOINT x="1185" y="7425">
+   </LINKPOINT>
+   <LINKPOINT x="1065" y="3150">
+   </LINKPOINT>
+   <LINKPOINT x="3885" y="3345">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="73" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="29" dstpinname="Hue">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Value" dstnodeid="29" dstpinname="Lightness">
+   </LINK>
+   </PATCH>
