@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-GetIndexes.v4p" systemname="Kontrol-GetIndexes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-GetIndexes.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Kontrol-GetIndexes.v4p" systemname="Kontrol-GetIndexes" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Kontrol-GetIndexes.v4p" scrollx="0" scrolly="810" bgcolor="11442563">
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2475" top="4020" width="100" height="100">
    </BOUNDS>
@@ -72,7 +72,7 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="3135" top="2550" width="27195" height="14670">
+   <BOUNDS type="Window" left="10905" top="9495" width="27195" height="14670">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
    </PACK>
@@ -529,7 +529,7 @@
    </PIN>
    <PIN pinname="Show SliceIndex" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="15" values="0,2.75,0,0,0,0,0,0,0,0,0,0,0,0,0">
+   <PIN pinname="Input String" visible="1" slicecount="15" values="0.00,4.78,0,0.00,4.78,0.00,0.00,4.78,0.00,0.00,4.78,0.00,0,4.78,0.00">
    </PIN>
    </NODE>
    <LINK srcnodeid="66" srcpinname="Output" dstnodeid="38" dstpinname="Input String">
@@ -605,8 +605,6 @@
    <LINK srcnodeid="25" srcpinname="Output String" dstnodeid="71" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="66" srcpinname="Output" dstnodeid="63" dstpinname="Input String">
-   </LINK>
-   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="69" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="25" srcpinname="Output String" dstnodeid="0" dstpinname="Filter">
    </LINK>
@@ -702,4 +700,58 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="69" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="83">
+   <BOUNDS type="Node" left="14580" top="3000" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14580" top="3000" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="FadesType">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="14550" top="4095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1" slicecount="15" values="10,9,8,11,14,13,12,7,2,1,0,3,6,5,4">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Output String" dstnodeid="82" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="81">
+   <BOUNDS type="Node" left="14565" top="5295" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14565" top="5295" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="FadesType">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="15" values="0.00,0,0.00,2.40,0.00,0.00,0.00,0.00,0.00,2.78,2.71,2.40,2.69,0,0">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="80">
+   <BOUNDS type="Node" left="14565" top="4620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="2" values="0,1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="80" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="81" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="First Occurrence" dstnodeid="82" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Filter Index" dstnodeid="80" dstpinname="Index">
+   </LINK>
    </PATCH>

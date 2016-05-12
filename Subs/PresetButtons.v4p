@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetButtons.v4p" systemname="PresetButtons" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\PresetButtons.v4p" scrollx="0" scrolly="3255" bgcolor="11442563">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PresetButtons.v4p" systemname="PresetButtons" filename="D:\Copy\Projects\ScratchBox\KontroleurGui\CatGui0.1 -DX11\Subs\PresetButtons.v4p" scrollx="0" scrolly="3255" bgcolor="11442563">
    <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="3345" top="8685" width="555" height="270">
    </BOUNDS>
@@ -411,7 +411,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="713" top="4138" width="4035" height="6615">
    </BOUNDS>
-   <BOUNDS type="Window" left="3825" top="2580" width="6465" height="6990">
+   <BOUNDS type="Window" left="420" top="4485" width="6450" height="6990">
    </BOUNDS>
    <PIN pinname="Exists" visible="1">
    </PIN>
@@ -492,8 +492,6 @@
    </LINK>
    <LINK srcnodeid="30" srcpinname="Texture Out" dstnodeid="28" dstpinname="Texture">
    </LINK>
-   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="30" dstpinname="Reload">
-   </LINK>
    <LINK srcnodeid="67" srcpinname="Layer" dstnodeid="66" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="77" srcpinname="Output" dstnodeid="96" dstpinname="Input 1">
@@ -502,4 +500,22 @@
    </LINK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="105" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4215" top="6525" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4215" top="6525" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="30" dstpinname="Reload">
+   </LINK>
    </PATCH>

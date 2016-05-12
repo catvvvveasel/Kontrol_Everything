@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\UpdateText.v4p" systemname="UpdateText" filename="D:\Copy\Projects\CatGui0.5\Subs\UpdateText.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\UpdateText.v4p" systemname="UpdateText" filename="D:\Copy\Projects\CatGui0.5\Subs\UpdateText.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="4470" top="6585" width="1110" height="270">
    </BOUNDS>
@@ -223,5 +223,21 @@
    <LINK srcnodeid="0" srcpinname="OnChange" dstnodeid="20" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Output" dstnodeid="12" dstpinname="Input 7">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8760" top="6240" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8760" top="6240" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="21" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

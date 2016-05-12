@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\Enums.v4p" systemname="Enums" filename="C:\Users\chris\Desktop\CatGui0.3_DB1\Subs\Enums.v4p" scrollx="0" scrolly="5070" bgcolor="11442563">
    <BOUNDS type="Window" left="7890" top="2370" width="22575" height="18450">
    </BOUNDS>
    <PACK Name="imagepack" Version="0.1.0">
@@ -1234,12 +1234,12 @@
    </LINK>
    <LINK srcnodeid="130" srcpinname="Output" dstnodeid="264" dstpinname="Input">
    </LINK>
-   <NODE systemname="Enums-Bars" filename="Enums-Bars.v4p" nodename="Enums-Bars.v4p" componentmode="InAWindow" id="265">
+   <NODE systemname="Enums-Bars" filename="Enums-Bars.v4p" nodename="Enums-Bars.v4p" componentmode="Hidden" id="265">
    <BOUNDS type="Node" left="3925" top="11925" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="1745" top="8995" width="4360" height="5860">
    </BOUNDS>
-   <BOUNDS type="Window" left="17925" top="3465" width="10200" height="7335">
+   <BOUNDS type="Window" left="25665" top="8010" width="10200" height="7335">
    </BOUNDS>
    <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
@@ -1261,9 +1261,9 @@
    <LINK srcnodeid="265" srcpinname="Transform Out" dstnodeid="52" dstpinname="Transform In">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="266" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9450" top="14100" width="480" height="480">
+   <BOUNDS type="Box" left="9360" top="13815" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="9450" top="14100" width="0" height="0">
+   <BOUNDS type="Node" left="9360" top="13815" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1339,7 +1339,7 @@
    </BOUNDS>
    <PIN pinname="Frames" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   <PIN pinname="Set" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1394,8 +1394,6 @@
    </LINK>
    <LINK srcnodeid="22" srcpinname="Layer" dstnodeid="28" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="28" srcpinname="Layer Out" dstnodeid="11" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="272" systemname="IOBox (String)">
    <BOUNDS type="Node" left="18000" top="6825" width="855" height="270">
    </BOUNDS>
@@ -1413,8 +1411,6 @@
    <LINK srcnodeid="271" srcpinname="Output" dstnodeid="265" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="126" srcpinname="Inverse Output" dstnodeid="266" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="126" srcpinname="Inverse Output" dstnodeid="271" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="64" srcpinname="Down Edge" dstnodeid="65" dstpinname="Switch">
    </LINK>
@@ -1867,5 +1863,21 @@
    <LINK srcnodeid="277" srcpinname="Output" dstnodeid="304" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="304" srcpinname="Output" dstnodeid="275" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="305">
+   <BOUNDS type="Node" left="7560" top="13080" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7560" top="13080" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="126" srcpinname="Inverse Output" dstnodeid="271" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Layer Out" dstnodeid="11" dstpinname="Input Node">
    </LINK>
    </PATCH>

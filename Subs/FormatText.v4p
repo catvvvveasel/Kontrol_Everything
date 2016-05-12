@@ -275,7 +275,7 @@
    <NODE systemname="Pad (String)" nodename="Pad (String)" componentmode="Hidden" id="39">
    <BOUNDS type="Node" left="3990" top="12120" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="2" values="Patch1,Text">
+   <PIN pinname="Input" visible="1" slicecount="6" values="Text,Patch1,PL_count,PL_playlist,PL_Test2,PL_text">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -428,8 +428,6 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="102" srcpinname="Input Value" dstnodeid="39" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="39" srcpinname="Output" dstnodeid="31" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="104">
@@ -843,5 +841,23 @@
    <LINK srcnodeid="153" srcpinname="Timecode" dstnodeid="151" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="150" srcpinname="Output" dstnodeid="2" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="155" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2565" top="10605" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2565" top="10605" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="6" visible="1" values="Text,Patch1,PL_count,PL_playlist,PL_Test2,PL_text">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="PatchNames">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Output String" dstnodeid="39" dstpinname="Input">
    </LINK>
    </PATCH>

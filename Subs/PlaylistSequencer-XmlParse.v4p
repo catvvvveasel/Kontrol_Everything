@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer-XmlParse.v4p" systemname="PlaylistSequencer-XmlParse" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer-XmlParse.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer-XmlParse.v4p" systemname="PlaylistSequencer-XmlParse" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer-XmlParse.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
    <NODE systemname="Reader (String)" filename="%VVVV%\lib\nodes\modules\String\Reader (String).v4p" nodename="Reader (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4770" top="3270" width="100" height="100">
    </BOUNDS>
@@ -427,86 +427,6 @@
    <LINK srcnodeid="3" srcpinname="XML Index" dstnodeid="31" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="13" dstpinname="Input">
-   </LINK>
-   <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="10305" top="8085" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="Filter" slicecount="1" values="|PL|||">
-   </PIN>
-   <PIN pinname="Comparison" slicecount="1" values="ContainsAll">
-   </PIN>
-   <PIN pinname="Hits" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="47">
-   <BOUNDS type="Node" left="9840" top="8460" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="48" srcpinname="Hits" dstnodeid="47" dstpinname="Select">
-   </LINK>
-   <NODE systemname="Subtract (String)" nodename="Subtract (String)" componentmode="Hidden" id="46">
-   <BOUNDS type="Node" left="9840" top="8865" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Operand 1" visible="1">
-   </PIN>
-   <PIN pinname="Operand 2" slicecount="1" values="|PL|||">
-   </PIN>
-   <PIN pinname="Result" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="46" dstpinname="Operand 1">
-   </LINK>
-   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="10155" top="9255" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="count.xml">
-   </PIN>
-   <PIN pinname="Count" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="9660" top="10020" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="4" values="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Playlists\count.xml,D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Playlists\playlist.xml,D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Playlists\Test2.xml,D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\TestScene\Projects\NewScene\Playlists\text.xml">
-   </PIN>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="45" srcpinname="Count" dstnodeid="44" dstpinname="Select">
-   </LINK>
-   <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="9660" top="10440" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Filter" visible="1" slicecount="1" values="count.xml">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="43" dstpinname="Input">
-   </LINK>
-   <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="9330" top="7470" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" visible="1" slicecount="1" values="file.foo">
-   </PIN>
-   <PIN pinname="Shortname" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="42" srcpinname="Shortname" dstnodeid="44" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="46" srcpinname="Result" dstnodeid="43" dstpinname="Filter">
-   </LINK>
-   <LINK srcnodeid="46" srcpinname="Result" dstnodeid="45" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Read">
    </LINK>

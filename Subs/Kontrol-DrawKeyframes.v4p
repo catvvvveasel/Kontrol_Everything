@@ -1247,6 +1247,8 @@
    </PIN>
    <PIN pinname="Rotate" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="CenterY" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="114" dstpinname="TranslateY">
    </LINK>
@@ -1259,5 +1261,15 @@
    <LINK srcnodeid="40" srcpinname="Output Bin Size" dstnodeid="42" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="113" srcpinname="Output" dstnodeid="7" dstpinname="colorcount">
+   </LINK>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="115">
+   <BOUNDS type="Node" left="12405" top="11325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname=".. To [" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="115" srcpinname="Output" dstnodeid="114" dstpinname="CenterY">
    </LINK>
    </PATCH>

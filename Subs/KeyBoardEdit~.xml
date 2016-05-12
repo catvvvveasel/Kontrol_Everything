@@ -36,7 +36,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="14535" top="4800" width="21615" height="15540">
+   <BOUNDS type="Window" left="18495" top="4935" width="21615" height="15540">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4035" top="8685" width="555" height="240">
@@ -1143,5 +1143,15 @@
    <LINK srcnodeid="0" srcpinname="Active" dstnodeid="155" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="155" srcpinname="Y Output Value" dstnodeid="104" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="156">
+   <BOUNDS type="Node" left="5640" top="11475" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="KeyBoardEditActive">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Y Output Value" dstnodeid="156" dstpinname="Input Value">
    </LINK>
    </PATCH>

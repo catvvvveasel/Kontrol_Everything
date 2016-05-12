@@ -36,7 +36,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="18495" top="4935" width="21615" height="15540">
+   <BOUNDS type="Window" left="13860" top="5820" width="21615" height="15540">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4035" top="8685" width="555" height="240">
@@ -711,6 +711,10 @@
    </PIN>
    <PIN pinname="LayerDX9" visible="1">
    </PIN>
+   <PIN pinname="LayerDX11" visible="1">
+   </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="118" srcpinname="Output" dstnodeid="48" dstpinname="Xscale">
    </LINK>
@@ -725,8 +729,6 @@
    <LINK srcnodeid="0" srcpinname="TextBuffer" dstnodeid="48" dstpinname="Text">
    </LINK>
    <LINK srcnodeid="0" srcpinname="EditingSlice" dstnodeid="48" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="48" srcpinname="LayerDX11" dstnodeid="53" dstpinname="Layer 2">
    </LINK>
    <LINK srcnodeid="23" srcpinname="Output Enum" dstnodeid="48" dstpinname="Font">
    </LINK>
@@ -1153,5 +1155,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="155" srcpinname="Y Output Value" dstnodeid="156" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Output 1" dstnodeid="69" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="LayerDX11" dstnodeid="53" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Output 1" dstnodeid="48" dstpinname="Evaluate">
    </LINK>
    </PATCH>
