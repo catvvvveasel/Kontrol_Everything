@@ -135,7 +135,7 @@ namespace VVVV.Nodes
 							if (pin != null){
 								FSubtype[i] = pin.SubType;
 								FType[i] = pin.Type;
-								FValues[i] = pin.Spread;
+							FValues[i] = pin.Spread;
 //								FId[i] = node.ID;
 								
 								if (pin.Type == "Value"){

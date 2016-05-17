@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ShowThumbnails.v4p" systemname="ShowThumbnails" filename="D:\Copy\Projects\CatGui0.5\Subs\ShowThumbnails.v4p" bgcolor="11442563" scrollx="405" scrolly="255">
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\ShowThumbnails.v4p" systemname="ShowThumbnails" filename="D:\Copy\Projects\CatGui0.5\Subs\ShowThumbnails.v4p" bgcolor="11442563" scrollx="405" scrolly="255">
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2280" top="8190" width="100" height="100">
    </BOUNDS>
@@ -880,6 +880,28 @@
    </LINK>
    <LINK srcnodeid="134" srcpinname="Output" dstnodeid="129" dstpinname="Input">
    </LINK>
+   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="125">
+   <BOUNDS type="Node" left="12690" top="10245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Down" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="256">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="125" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="125" srcpinname="Output" dstnodeid="126" dstpinname="Input 1">
+   </LINK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
    <NODE id="2" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="1500" top="4755" width="100" height="100">
    </BOUNDS>
@@ -906,32 +928,10 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
-   </LINK>
-   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="125">
-   <BOUNDS type="Node" left="12690" top="10245" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Down" visible="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Clamp">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="256">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="125" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="124" srcpinname="Output 2" dstnodeid="125" dstpinname="Down">
-   </LINK>
-   <LINK srcnodeid="125" srcpinname="Output" dstnodeid="126" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="2" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="2" dstpinname="Transform In">
    </LINK>
-   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
-   </PACK>
    </PATCH>

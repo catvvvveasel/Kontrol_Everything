@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer.v4p" systemname="PlaylistSequencer" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer.v4p" bgcolor="11442563" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer.v4p" systemname="PlaylistSequencer" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistSequencer.v4p" bgcolor="11442563" scrollx="5850" scrolly="0">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4290" top="15405" width="1635" height="1995">
    </BOUNDS>
@@ -1649,7 +1649,7 @@
    </BOUNDS>
    <BOUNDS type="Window" left="2205" top="9600" width="12960" height="14145">
    </BOUNDS>
-   <PIN pinname="Table" visible="1">
+   <PIN pinname="Table" visible="1" slicecount="69" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
    </PIN>
    <PIN pinname="Preset" visible="1" slicecount="3" values="|PL_playlist||000|,|PL_count||000|,|Patch1||024|">
    </PIN>
@@ -1985,13 +1985,17 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="263" srcpinname="OnChange" dstnodeid="266" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="265" srcpinname="OnChange" dstnodeid="266" dstpinname="Input 2">
    </LINK>
    <NODE systemname="OR (Boolean Spectral)" nodename="OR (Boolean Spectral)" componentmode="Hidden" id="267">
-   <BOUNDS type="Node" left="26310" top="4155" width="100" height="100">
+   <BOUNDS type="Node" left="26190" top="4440" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1999,8 +2003,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="266" srcpinname="Output" dstnodeid="267" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="267" srcpinname="Output" dstnodeid="189" dstpinname="Evaluate">
    </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="268">
    <BOUNDS type="Node" left="7425" top="2220" width="100" height="100">
@@ -2013,5 +2015,39 @@
    <LINK srcnodeid="150" srcpinname="Count" dstnodeid="268" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="268" srcpinname="OnChange" dstnodeid="103" dstpinname="Input 4">
+   </LINK>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="269">
+   <BOUNDS type="Node" left="27765" top="4185" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Name" dstnodeid="269" dstpinname="Input">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="270">
+   <BOUNDS type="Node" left="27795" top="4710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="269" srcpinname="Count" dstnodeid="270" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="271">
+   <BOUNDS type="Node" left="27825" top="5175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="270" srcpinname="Output" dstnodeid="271" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="271" srcpinname="Output 1" dstnodeid="266" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="267" srcpinname="Output" dstnodeid="189" dstpinname="Evaluate">
    </LINK>
    </PATCH>

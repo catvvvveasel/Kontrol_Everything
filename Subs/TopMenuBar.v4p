@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
    <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\TopMenuBar.v4p" systemname="TopMenuBar" filename="D:\Copy\Projects\CatGui0.5\Subs\TopMenuBar.v4p" scrollx="0" scrolly="0" bgcolor="11442563">
-   <BOUNDS type="Window" left="12930" top="210" width="22350" height="14385">
+   <BOUNDS type="Window" left="11790" top="5880" width="22350" height="14385">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -1373,18 +1373,14 @@
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="303">
    <BOUNDS type="Node" left="16110" top="7845" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0.91">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="301" srcpinname="Output" dstnodeid="303" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="302" srcpinname="Output" dstnodeid="176" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="302" srcpinname="Output" dstnodeid="300" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="302" srcpinname="Output" dstnodeid="122" dstpinname="Evaluate">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="304">
    <BOUNDS type="Node" left="16185" top="8250" width="100" height="100">
@@ -1666,4 +1662,176 @@
    </PACK>
    <LINK srcnodeid="286" srcpinname="Output" dstnodeid="271" dstpinname="Set">
    </LINK>
+   <NODE nodename="PID (Windows)" componentmode="Hidden" id="332" systemname="PID (WINDOWS)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" left="19920" top="2660" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="19920" top="2660" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Process ID Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Process ID" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="331" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="19925" top="900" width="990" height="975">
+   </BOUNDS>
+   <BOUNDS type="Node" left="19925" top="900" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="331" srcpinname="Output String" dstnodeid="332" dstpinname="Process Name">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="330" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="20435" top="2040" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20435" top="2040" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="330" srcpinname="Y Output Value" dstnodeid="332" dstpinname="Update">
+   </LINK>
+   <NODE systemname="PID (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="PID (VVVV)" componentmode="Hidden" id="329">
+   <BOUNDS type="Node" left="21465" top="2415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Process ID" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="328">
+   <BOUNDS type="Node" left="21330" top="2820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filter" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Hits" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="329" srcpinname="Process ID" dstnodeid="328" dstpinname="Filter">
+   </LINK>
+   <LINK srcnodeid="332" srcpinname="Process ID" dstnodeid="328" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="327">
+   <BOUNDS type="Node" left="19905" top="3465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="332" srcpinname="Process ID" dstnodeid="327" dstpinname="Input">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="326">
+   <BOUNDS type="Node" left="21330" top="3465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="328" srcpinname="Hits" dstnodeid="326" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="326" srcpinname="Output" dstnodeid="327" dstpinname="Select">
+   </LINK>
+   <NODE systemname="Kill (Windows)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Kill (Windows)" componentmode="Hidden" id="325">
+   <BOUNDS type="Node" left="19905" top="5010" width="390" height="270">
+   </BOUNDS>
+   <PIN pinname="Process ID" visible="1">
+   </PIN>
+   <PIN pinname="Kill" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="327" srcpinname="Output" dstnodeid="325" dstpinname="Process ID">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="324">
+   <BOUNDS type="Node" left="20235" top="4605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="324" srcpinname="Up Edge" dstnodeid="325" dstpinname="Kill">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="333" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="20235" top="3885" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20235" top="3885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="333" srcpinname="Y Output Value" dstnodeid="324" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="301" srcpinname="Output" dstnodeid="303" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="334" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="14295" top="4590" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14295" top="4590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="302" srcpinname="Output" dstnodeid="334" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="334" srcpinname="Y Output Value" dstnodeid="122" dstpinname="Evaluate">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="335" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9465" top="135" width="7185" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9465" top="135" width="6495" height="2205">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Need to remake this patch to have a gui on startup, default loader, and switch projects when loaded|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="21">
+   </PIN>
+   </NODE>
    </PATCH>

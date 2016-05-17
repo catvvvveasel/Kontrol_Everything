@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.1.dtd" >
-   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistManager.v4p" systemname="PlaylistManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistManager.v4p" scrollx="0" scrolly="1515" bgcolor="11442563">
+   <PATCH nodename="D:\Dropbox\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistManager.v4p" systemname="PlaylistManager" filename="D:\Copy\Projects\Kontrol_Everything\Kontrol_Everything\Subs\PlaylistManager.v4p" scrollx="0" scrolly="5145" bgcolor="11442563">
    <BOUNDS type="Window" left="12585" top="2640" width="21825" height="16380">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -153,7 +153,7 @@
    </PIN>
    <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Layer 5" visible="1">
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="100" srcpinname="Layer Out" dstnodeid="84" dstpinname="Input Node">
@@ -481,9 +481,9 @@
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="228" dstpinname="AudioPos">
    </LINK>
    <NODE systemname="Kontrol-Playlist-HitTest" filename="Kontrol-Playlist-HitTest.v4p" nodename="Kontrol-Playlist-HitTest.v4p" componentmode="Hidden" id="222">
-   <BOUNDS type="Node" left="7419" top="5040" width="0" height="0">
+   <BOUNDS type="Node" left="7479" top="4965" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="4332" top="4230" width="6175" height="8860">
+   <BOUNDS type="Box" left="4392" top="4155" width="6175" height="8860">
    </BOUNDS>
    <BOUNDS type="Window" left="19275" top="4260" width="20340" height="16230">
    </BOUNDS>
@@ -511,9 +511,9 @@
    <LINK srcnodeid="81" srcpinname="Transform Out" dstnodeid="222" dstpinname="Transform In" hiddenwhenlocked="0" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="222" srcpinname="TransFormX" dstnodeid="81" dstpinname="TranslateX" hiddenwhenlocked="1">
-   <LINKPOINT x="7950" y="5820">
+   <LINKPOINT x="7990" y="5770">
    </LINKPOINT>
-   <LINKPOINT x="7785" y="4080">
+   <LINKPOINT x="7805" y="4055">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="222" srcpinname="RightClicked" dstnodeid="312" dstpinname="Input">
@@ -691,11 +691,11 @@
    <LINK srcnodeid="228" srcpinname="Output" dstnodeid="302" dstpinname="Insert">
    </LINK>
    <LINK srcnodeid="302" srcpinname="SortedTimes" dstnodeid="222" dstpinname="SortedTimes" hiddenwhenlocked="1">
-   <LINKPOINT x="2884" y="8427">
+   <LINKPOINT x="2899" y="8408">
    </LINKPOINT>
-   <LINKPOINT x="8647" y="3622">
+   <LINKPOINT x="8677" y="3584">
    </LINKPOINT>
-   <LINKPOINT x="9776" y="4413">
+   <LINKPOINT x="9821" y="4357">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="222" srcpinname="RightClicked" dstnodeid="302" dstpinname="RightClicked">
@@ -1251,9 +1251,9 @@
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="222" dstpinname="Y">
    </LINK>
    <LINK srcnodeid="225" srcpinname="OverLayers" dstnodeid="222" dstpinname="WithinLayers">
-   <LINKPOINT x="9985" y="9480">
+   <LINKPOINT x="10005" y="9455">
    </LINKPOINT>
-   <LINKPOINT x="6200" y="4605">
+   <LINKPOINT x="6240" y="4555">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="222" srcpinname="LayerSelectRect" dstnodeid="100" dstpinname="Layer 4">
@@ -1355,9 +1355,9 @@
    </PIN>
    </NODE>
    <NODE systemname="PlaylistButtons" filename="PlaylistButtons.v4p" componentmode="Hidden" id="400" nodename="PlaylistButtons.v4p">
-   <BOUNDS type="Node" left="13185" top="10650" width="100" height="100">
+   <BOUNDS type="Node" left="13275" top="11685" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13185" top="10650" width="4800" height="3600">
+   <BOUNDS type="Box" left="13275" top="11685" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="16635" top="3585" width="21765" height="11460">
    </BOUNDS>
@@ -1372,14 +1372,12 @@
    </NODE>
    <LINK srcnodeid="393" srcpinname="Short Filenames" dstnodeid="400" dstpinname="Short Filenames">
    </LINK>
-   <LINK srcnodeid="400" srcpinname="Layer" dstnodeid="100" dstpinname="Layer 5">
-   </LINK>
    <LINK srcnodeid="400" srcpinname="LClick" dstnodeid="393" dstpinname="Go">
-   <LINKPOINT x="13005" y="11325">
+   <LINKPOINT x="13073" y="12101">
    </LINKPOINT>
-   <LINKPOINT x="12285" y="9585">
+   <LINKPOINT x="12330" y="10103">
    </LINKPOINT>
-   <LINKPOINT x="13590" y="8925">
+   <LINKPOINT x="13612" y="9184">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="393" srcpinname="Progress" dstnodeid="400" dstpinname="Progress">
@@ -1675,5 +1673,49 @@
    <LINK srcnodeid="392" srcpinname="Output" dstnodeid="351" dstpinname="Y Input Value">
    <LINKPOINT x="10965" y="10590">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="425">
+   <BOUNDS type="Node" left="7995" top="1230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="SequenceTopLine">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="426">
+   <BOUNDS type="Node" left="6570" top="1245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="MouseValues">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="427">
+   <BOUNDS type="Node" left="6615" top="1680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="426" srcpinname="Input Value" dstnodeid="427" dstpinname="Input">
+   </LINK>
+   <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="428">
+   <BOUNDS type="Node" left="7785" top="2475" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="425" srcpinname="Input Value" dstnodeid="428" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="427" srcpinname="Output" dstnodeid="428" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="428" srcpinname="Output" dstnodeid="222" dstpinname="Evaluate">
    </LINK>
    </PATCH>
